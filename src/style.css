@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --main-text-color: #97d28b;   /* Define a text color variable */
+    --bg-color: #262d29;     /* Define a background color variable */
+    --main-font-size: 16px;    /* Define a font size variable */
+    --box-color: border-radius: 24px;
+    background: #303C36;
+  }
+  
+  .img-overlay{
+    background: url("./assets/Section.jpg.png");
+    background-size: cover;
+    z-index: -1;
+  }
+
+.p-color{
+    color: rgb(147, 176, 160);
+}
+
+.custom-container{
+margin: 3% 3%;
+}
+.font-7{
+    font-size: 7rem;
+}
+
+.font-1{
+    font-size: 1rem;
+}
+
+.font-3{
+    font-size: 3rem;
+}
+
+.custom-button {
+    padding: 2rem 4rem; /* Example padding values with rem units */
+    margin-left: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #36453d; /* Button background color */
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  
+  .green-border {
+    padding: 3%;
+    border-top: 0.8px solid #50684c; /* Adjust the color and size as needed */
+    width: 120%; /* Increase the width to extend beyond the available width */
+  }
+
+  .custom-button-2 {
+    padding: 0;
+    margin-right: 2rem;
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    display: inline-block; /* or inline-flex based on your layout needs */
+    overflow: hidden; /* Prevent image overflow */
+  }
+  
+  .button {
+    height: 5%;
+    width: 20%; /* Make the image fill the container */
+    display: block; /* Remove any default inline spacing */
+    transition: transform 0.3s ease; /* Example transition for hover effect */
+  }
+  
+  .custom-button:hover .button {
+    transform: scale(1.05); /* or any other transform value for hover effect */
+  }
+
+  .h1 {
+    padding-bottom: 100vh;
+  }
+
+  text p {
+    background: linear-gradient(to right, #ffffff 50%, #252525 50%);
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    user-select: none;
+    font-size: 2rem;
+  }
+  to {
+    transform: translateX(-100%);
+  }
+
+  .main{
+    overflow: auto;
+  }
