@@ -2,11 +2,13 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Navbar from "../Components/Navbar";
 import "../style.css";
-import asteriskIcon from "../assets/asterisk.svg";
+import image from "../assets/Section.jpg.png";
+import icon from "../assets/asterisk.svg";
 import Services from "../Components/Services";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Scrollbar from "smooth-scrollbar";
 import WhyMarketeer from "../Components/WhyMarketeer";
+import Ratings from "../Components/Ratings";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,11 +83,19 @@ const LandingPage = () => {
   
 
   return (
-    <div className="main " >
-      <Navbar />
-       <div className="container img-container  p-5">
-        <div className="header img-overlay vh-100 text-center d-flex justify-content-center align-items-center flex-column">
-          <h4 className="mb-0">Competitive Edge through Creativity & Technology</h4>
+    <div className="main">
+  <Navbar />
+  <div className=" w-100 img-container position-relative p-5">
+    <div className="img-overlay position-absolute right-0">
+      <img src={image} alt="" className="" />
+    </div>
+    <div className="img-overlay-2 position-absolute">
+      <img src={image} alt="" className="" />
+    </div>
+    <div className="content-wrapper ">
+      <div className="header-container vh-100 d-flex justify-content-center align-items-center">
+        <div className="header text-center d-flex justify-content-center align-items-center flex-column">
+          <h4 className="mb-0" style={{ color: 'var(--text-color)', fontSize: '1.2rem' }}>Competitive Edge through Creativity & Technology</h4>
           <h1 className="p-3 text-light font-7">
             Market Insights
             <img
@@ -100,18 +110,22 @@ const LandingPage = () => {
                 className="button custom-button-2"
               />
               <span className="switch">
-              that Make a
+                that Make a
               </span>
             </span>
             <span className="text-color switch">Difference</span>
           </h1>
         </div>
-        <div className="spacer vh-50"></div>
-        <div className="green-border w-100 d-flex justify-content-center "></div>
-        <WhyMarketeer/>
       </div>
-      <Services/>
     </div>
+    <div className="spacer vh-50" style={{marginBottom: '40rem'}}></div>
+    <div className="green-border w-75 d-flex justify-content-center pt-4 position-absolute " style={{ left: '50%', transform: 'translateX(-50%)' }}></div>
+    <WhyMarketeer />
+    <Services />
+    <Ratings/>
+  </div>
+</div>
+
   );
 };
 

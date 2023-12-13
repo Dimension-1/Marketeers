@@ -3,13 +3,14 @@ import gsap from "gsap";
 import "../style.css";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Scrollbar from "smooth-scrollbar";
+import image from "../assets/Section.jpg.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const WhyMarketeer = () => {
 
 useEffect(() => {
-        const scrollBar = Scrollbar.init(document.querySelector(".main"), {
+        const scrollBar = Scrollbar.init(document.querySelector(".scroll-target"), {
           damping: 0.01,
           delegateTo: document,
           alwaysShowTracks: true,
@@ -17,9 +18,9 @@ useEffect(() => {
         });
     
         ScrollTrigger.defaults({
-          scroller: ".main",
+          scroller: ".scroll-target",
         });
-        ScrollTrigger.scrollerProxy(".main", {
+        ScrollTrigger.scrollerProxy(".scroll-target", {
           scrollTop(value) {
             if (arguments.length) {
               scrollBar.scrollTop = value;
@@ -40,8 +41,8 @@ useEffect(() => {
               markers: true,
               trigger: target,
               scrub: true,
-              start: "top center",
-          end: "bottom 50%",
+              start: "top 25%",
+          end: "bottom 5%",
             },
           });
         });
@@ -50,9 +51,14 @@ useEffect(() => {
       }, []);
 
   return (
-    <div className="main">
-        <div className="exist d-flex justify-content-between flex-column">
-          <h4 className="col-6 font-1">Why we exist?</h4>
+    <div className="main custom-container pt-5 overflow-hidden">
+        <div className="exist d-flex justify-content-between ">
+          <div className="col-6">
+          <h4 className=" font-1 z-3 position-fixed " style={{color: 'var(--text-color)'}}>Why we exist?</h4>
+          </div>
+          <div className="img-overlay position-absolute" style={{top: '50%'}}>
+      <img src={image} alt="" className="" />
+    </div>
           {/* <h3 className="col-6 font-3 your-text" >
             At Addifico Consulting, we use human creativity and the latest
             <span className="your-text">technologies to help business leaders, investors, and entrepreneurs</span>
@@ -60,7 +66,7 @@ useEffect(() => {
             and optimize their chances for success.
             
           </h3> */}
-          <text className="scroll-target">
+          <div className="col-6 scroll-target z-3 ">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ut aut exercitationem!
           </p>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, deleniti repellendus. Rem!
@@ -71,7 +77,7 @@ useEffect(() => {
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, deleniti repellendus. Rem!
           </p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, placeat consequatur? Officiis?</p>
-          </text>
+          </div>
         </div>
     </div>
   )

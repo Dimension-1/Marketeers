@@ -1,0 +1,33 @@
+.rating-container{
+    border-radius: 2rem;
+    padding-right: 10%;
+    padding-left: 10%;
+    
+    
+}
+
+.padding{
+    padding-top: 2%;
+    padding-bottom: 10%;
+}
+.card{
+    /* height: 30%;
+    width: 30%; */
+    grid-row-gap: 0.2em;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1.6em;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem !important;
+}
+
+.text-effect{
+    display: inline-block;
+    translate: none;
+    rotate: none;
+    scale: none;
+    transform: translate(0px, 0px);
+}

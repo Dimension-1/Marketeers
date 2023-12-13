@@ -9,28 +9,42 @@
     --bg-color: #262d29;     /* Define a background color variable */
     --main-font-size: 16px;    /* Define a font size variable */
     --box-color: border-radius: 24px;
-    background: #303C36;
-  }
-  
-  .img-overlay{
-    background: url("./assets/Section.jpg.png");
-    background-size: cover;
-    z-index: -1;
+    --background-color: rgb(62, 102, 81);
+    --text-color: #9da49c;
+    --secondary-bg: #DCEFD8;
   }
 
-.p-color{
-    color: rgb(147, 176, 160);
-}
+  
+  .img-overlay{
+    /* background: url("./assets/Section.jpg.png"); */
+    background-size: cover;
+    /* z-index: -1; */
+    transform: rotate(220deg);
+    left: -1100px;
+    top: -150px;
+  }
+
+  .img-overlay-2{
+    /* z-index: -10; */
+    transform: rotate(-357deg);
+    top: -316px;
+    right: -600px;
+  }
 
 .custom-container{
 margin: 3% 3%;
 }
+
 .font-7{
     font-size: 7rem;
 }
 
 .font-1{
-    font-size: 1rem;
+    font-size: 1.4rem;
+}
+
+.font-2{
+  font-size: 1.7rem;
 }
 
 .font-3{
@@ -52,9 +66,8 @@ margin: 3% 3%;
   
   
   .green-border {
-    padding: 3%;
+    padding-top: 3% !important;
     border-top: 0.8px solid #50684c; /* Adjust the color and size as needed */
-    width: 120%; /* Increase the width to extend beyond the available width */
   }
 
   .custom-button-2 {
@@ -102,5 +115,24 @@ margin: 3% 3%;
   }
 
   .main{
-    overflow: auto;
+    overflow: hidden;
   }
+
+  .container {
+    position: relative;
+  }
+  
+  .content-wrapper {
+    position: relative;
+    margin-top: 3%;
+  }
+  
+  .header-container {
+    background-color: rgba(36, 48, 42, 0.2);
+    width: 100%;
+    padding: 20px; /* Adjust the padding as needed */
+    box-sizing: border-box;
+    border-radius: 20px;
+    
+  }
+  
