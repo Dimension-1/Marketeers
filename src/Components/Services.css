@@ -1,10 +1,10 @@
 .service-box{
     height: 35vh;
-    width: 25%;
+    width: 30%;
     padding: 1rem 1rem; /* Example padding values with rem units */
-    margin-left: 2rem;
+    margin-left: 1rem;
     background-color: #36453d; /* Button background color */
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-sizing: border-box;

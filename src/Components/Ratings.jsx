@@ -11,7 +11,7 @@ const Ratings = () => {
         style={{ backgroundColor: "var(--secondary-bg)" }}
       >
         <div className="col h-100 padding d-flex flex-column gap-4 ">
-          <div className="card h-50 d-flex justify-content-between">
+          <div className="card h-50 d-flex justify-content-between" >
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
@@ -20,10 +20,10 @@ const Ratings = () => {
               >
                 10k
               </h2>
-              <h4 style={{ color: "var(--text-color)" }}>Business Analyzed</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem'}}>Business Analyzed</h4>
             </div>
           </div>
-          <div className="card h-50 d-flex justify-content-between">
+          <div className="card h-50 d-flex justify-content-between" style={{backgroundColor: "var(--main-text-color)"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
@@ -32,21 +32,21 @@ const Ratings = () => {
               >
                 10k
               </h2>
-              <h4 style={{ color: "var(--text-color)" }}>Business Analyzed</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Business Analyzed</h4>
             </div>
           </div>
         </div>
         <div className="col h-100  d-flex flex-column gap-4" style={{paddingBottom: '2%', paddingTop: '10%'}}>
-        <div className="card h-50 d-flex justify-content-between">
+        <div className="card h-50 d-flex justify-content-between" style={{backgroundColor: "var(--bg-color)"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
-                className="m-0"
-                style={{ color: "var(--bg-color)", fontSize: "5rem" }}
+                className="m-0 text-light"
+                style={{ fontSize: "5rem" }}
               >
-                10k
+                <span style={{color: "var(--background-color))"}}>$</span>50M+
               </h2>
-              <h4 style={{ color: "var(--text-color)" }}>Business Analyzed</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Business Analyzed</h4>
             </div>
           </div>
           <div className="card h-50 d-flex justify-content-between">
@@ -56,14 +56,14 @@ const Ratings = () => {
                 className="m-0"
                 style={{ color: "var(--bg-color)", fontSize: "5rem" }}
               >
-                10k
+                700
               </h2>
-              <h4 style={{ color: "var(--text-color)" }}>Business Analyzed</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Completed Projects</h4>
             </div>
           </div>
         </div>
-        <div className="col h-100 padding d-flex flex-column gap-4">
-        <div className="card h-50 d-flex justify-content-between">
+        <div className="col h-100 padding d-flex flex-column gap-4" >
+        <div className="card h-50 d-flex justify-content-between" style={{backgroundColor: "var(--main-text-color)"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
@@ -72,19 +72,19 @@ const Ratings = () => {
               >
                 10k
               </h2>
-              <h4 style={{ color: "var(--text-color)" }}>Business Analyzed</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Business Analyzed</h4>
             </div>
           </div>
-          <div className="card h-50 d-flex justify-content-between">
+          <div className="card h-50 d-flex justify-content-between" style={{backgroundColor: "var(--bg-color)"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
                 className="m-0"
-                style={{ color: "var(--bg-color)", fontSize: "5rem" }}
+                style={{ color: "var(--main-text-color)", fontSize: "5rem" }}
               >
-                10k
+                4.9/5
               </h2>
-              <h4 style={{ color: "var(--text-color)" }}>Business Analyzed</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Business Analyzed</h4>
             </div>
           </div>
         </div>

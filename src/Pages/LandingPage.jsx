@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Scrollbar from "smooth-scrollbar";
 import WhyMarketeer from "../Components/WhyMarketeer";
 import Ratings from "../Components/Ratings";
+import WhyUs from "../Components/WhyUs";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,7 +94,7 @@ const LandingPage = () => {
       <img src={image} alt="" className="" />
     </div>
     <div className="content-wrapper ">
-      <div className="header-container vh-100 d-flex justify-content-center align-items-center">
+      <div className="header-container vh-90 d-flex justify-content-center align-items-center">
         <div className="header text-center d-flex justify-content-center align-items-center flex-column">
           <h4 className="mb-0" style={{ color: 'var(--text-color)', fontSize: '1.2rem' }}>Competitive Edge through Creativity & Technology</h4>
           <h1 className="p-3 text-light font-7">
@@ -109,11 +110,11 @@ const LandingPage = () => {
                 alt="button"
                 className="button custom-button-2"
               />
-              <span className="switch">
-                that Make a
+              <span className="switch" >
+                that <span style={{color: 'var(--main-text-color)'}}>Make a</span> 
               </span>
             </span>
-            <span className="text-color switch">Difference</span>
+            <span className="text-color switch d-flex justify-content-center" style={{marginRight: "4%", color: 'var(--main-text-color)'}}>Difference</span>
           </h1>
         </div>
       </div>
@@ -123,6 +124,7 @@ const LandingPage = () => {
     <WhyMarketeer />
     <Services />
     <Ratings/>
+    <WhyUs/>
   </div>
 </div>
 
