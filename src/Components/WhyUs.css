@@ -6,5 +6,14 @@ font-weight: 500;
 
 }
 
+.faq-question:hover span {
+    color: var(--text-color-with-opacity) !important;
+    cursor: pointer;
+  }
+  
+ 
+  .faq-question.open span {
+    color: var(--main-text-color) !important;
+  }
 
   

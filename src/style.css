@@ -13,6 +13,11 @@
     --text-color: #9da49c;
     --secondary-bg: #DCEFD8;
     --primary-text: #43554b;
+    --custom-btn: #313935;
+    --border: #CADCC7;
+    --text-color-with-opacity: rgba(178, 211, 193, 0.33);
+    --input-fields: rgba(220, 239, 216, 0.05);
+    --transparent-bg: #36453d;
   }
 
   
@@ -30,6 +35,13 @@
     transform: rotate(-357deg);
     top: -316px;
     right: -600px;
+  }
+
+  .img-overlay-3{
+    background-size: cover;
+     transform: rotate(340deg) scale(1.5);
+     left: -1000px; 
+    /* /* bottom: 3600px; */
   }
 
 .custom-container{
@@ -64,7 +76,7 @@ margin: 3% 3%;
     margin-left: 2rem;
     align-items: center;
     justify-content: center;
-    background-color: #313935; /* Button background color */
+    background-color: var(--custom-btn); /* Button background color */
     border: none;
     border-radius: 3rem;
     cursor: pointer;
@@ -138,11 +150,73 @@ margin: 3% 3%;
   }
   
   .header-container {
-    background-color: rgba(36, 48, 42, 0.2);
+    background-color: rgba(27, 29, 27, 0.2);
     width: 100%;
     padding: 20px; /* Adjust the padding as needed */
     box-sizing: border-box;
     border-radius: 20px;
     
   }
+
+  .sidecut-image {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
+    z-index: 1; /* Ensure it appears above other elements */
+    background: none !important;
+  }
   
+  .company-cards{
+    height: 15rem;
+    /* width: 30rem; */
+    padding: 0.6em;
+    border-radius: 1rem !important;
+    border: 2px solid var(--border);
+    background-color:#d0e6cc; 
+}
+
+.company-cards-border{
+  height: 15rem;
+  /* width: 30rem; */
+  padding: 1.6em;
+}
+
+/* Hover state */
+.company-cards:hover {
+  background-color: #f0f5f5; 
+}
+
+.review-card{
+  border-radius: 24px;
+background: #E4ECE3;
+/* height: 50%; */
+height: 35rem;
+     width: 30rem; 
+    padding: 0.6em;
+    border-radius: 1rem !important;
+    border: 2px solid var(--border);
+    background-color:#d0e6cc; 
+}
+
+.rounded-border{
+  border-radius: 1000px;
+border: 2px solid #C9DCC6;
+}
+
+.btn{
+  border-radius: 1000px !important;
+background-color: var(--border) !important;
+}
+
+.blog{
+  border-radius: 15px !important;
+}
+
+.subscribe{
+  border-radius: 16px;
+background: rgba(151, 210, 139, 0.40);
+}
+
+.custom-input::placeholder {
+  color: var(--text-color) !important;
+  /* Add any other styles you want for the placeholder */
+}

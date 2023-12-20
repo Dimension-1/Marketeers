@@ -14,7 +14,7 @@ gsap.to(".nav-text", {
 const Navbar = () => {
   return (
     <>
-    <div class="nav justify-content-end ">
+    <div class="nav justify-content-end " >
       <div class="navigation">
        
         <div class="nav__logo-cta-wrapper">

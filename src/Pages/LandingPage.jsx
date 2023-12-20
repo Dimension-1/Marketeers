@@ -10,6 +10,12 @@ import Scrollbar from "smooth-scrollbar";
 import WhyMarketeer from "../Components/WhyMarketeer";
 import Ratings from "../Components/Ratings";
 import WhyUs from "../Components/WhyUs";
+import Sidecut from "../assets/Sidecut.svg.svg"
+import WhoTrustsUs from "../Components/WhoTrustsUs";
+import Testimonials from "../Components/Testimonials";
+import Blogs from "../Components/Blogs";
+import Contact from "../Components/Contact";
+import Footer from "../Components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -117,6 +123,12 @@ const LandingPage = () => {
             <span className="text-color switch d-flex justify-content-center" style={{marginRight: "4%", color: 'var(--main-text-color)'}}>Difference</span>
           </h1>
         </div>
+        <img
+    src={Sidecut}
+    alt="Sidecut"
+    className="sidecut-image position-absolute bottom-0 right-0"
+    style={{right: "0"}}
+  />
       </div>
     </div>
     <div className="spacer vh-50" style={{marginBottom: '40rem'}}></div>
@@ -125,6 +137,12 @@ const LandingPage = () => {
     <Services />
     <Ratings/>
     <WhyUs/>
+   
+    <WhoTrustsUs/>
+    <Testimonials/>
+    <Blogs/>
+    <Contact/>
+    <Footer/>
   </div>
 </div>
 

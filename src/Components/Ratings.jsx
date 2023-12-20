@@ -2,16 +2,23 @@ import React from "react";
 import "./Ratings.css";
 import Clippath from "../assets/Clippath.svg";
 import Clip from "../assets/Clip.svg";
+import record from "../assets/div.record-div.png";
 
 const Ratings = () => {
   return (
-    <div style={{ height: "100vh" }}>
+    <div >
+      <img src={record} alt="" className=""  style={{ width: '26%', height: '1.2%',           
+          position: "absolute",
+          zIndex: 999,
+          left: '11%',
+ }}/>
       <div
-        className="d-flex h-100 z-3 position-relative rating-container gap-4"
+        className="d-flex z-3 position-relative rating-container gap-4"
         style={{ backgroundColor: "var(--secondary-bg)" }}
       >
+        
         <div className="col h-100 padding d-flex flex-column gap-4 ">
-          <div className="card h-50 d-flex justify-content-between" >
+          <div className="card d-flex justify-content-between" style={{height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
@@ -23,7 +30,7 @@ const Ratings = () => {
               <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem'}}>Business Analyzed</h4>
             </div>
           </div>
-          <div className="card h-50 d-flex justify-content-between" style={{backgroundColor: "var(--main-text-color)"}}>
+          <div className="card d-flex justify-content-between" style={{backgroundColor: "var(--main-text-color)", height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
@@ -36,8 +43,8 @@ const Ratings = () => {
             </div>
           </div>
         </div>
-        <div className="col h-100  d-flex flex-column gap-4" style={{paddingBottom: '2%', paddingTop: '10%'}}>
-        <div className="card h-50 d-flex justify-content-between" style={{backgroundColor: "var(--bg-color)"}}>
+        <div className="col h-100  d-flex flex-column gap-4" style={{paddingBottom: '2%', paddingTop: '12%'}}>
+        <div className="card  d-flex justify-content-between" style={{backgroundColor: "var(--bg-color)", height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
@@ -49,7 +56,7 @@ const Ratings = () => {
               <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Business Analyzed</h4>
             </div>
           </div>
-          <div className="card h-50 d-flex justify-content-between">
+          <div className="card d-flex justify-content-between" style={{height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
@@ -63,7 +70,7 @@ const Ratings = () => {
           </div>
         </div>
         <div className="col h-100 padding d-flex flex-column gap-4" >
-        <div className="card h-50 d-flex justify-content-between" style={{backgroundColor: "var(--main-text-color)"}}>
+        <div className="card d-flex justify-content-between" style={{backgroundColor: "var(--main-text-color)", height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
@@ -75,7 +82,7 @@ const Ratings = () => {
               <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Business Analyzed</h4>
             </div>
           </div>
-          <div className="card h-50 d-flex justify-content-between" style={{backgroundColor: "var(--bg-color)"}}>
+          <div className="card d-flex justify-content-between" style={{backgroundColor: "var(--bg-color)", height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
