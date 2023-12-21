@@ -144,7 +144,7 @@ const Contact = () => {
                     border: "none", // Set border to none
                     color: "var(--text-color)",
                   }}
-                  placeholder="Name*"
+                  placeholder="Email*"
                 />
               </div>
             </div>
@@ -162,7 +162,7 @@ const Contact = () => {
                     border: "none", // Set border to none
                     color: "var(--text-color)",
                   }}
-                  placeholder="Name*"
+                  placeholder="Phone"
                 />
               </div>
               <div className="col-6">
@@ -178,7 +178,7 @@ const Contact = () => {
                     border: "none", // Set border to none
                     color: "var(--text-color)",
                   }}
-                  placeholder="Name*"
+                  placeholder="Subject*"
                 />
               </div>
             </div>
@@ -195,6 +195,7 @@ const Contact = () => {
                   border: "none", // Set border to none
                   color: "var(--text-color)",
                 }}
+                placeholder="Your message*"
               />
             </div>
             <button

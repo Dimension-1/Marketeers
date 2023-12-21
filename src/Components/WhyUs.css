@@ -11,9 +11,14 @@ font-weight: 500;
     cursor: pointer;
   }
   
+  .faq-question:hover{
+    color: var(--text-color-with-opacity) !important;
+    cursor: pointer;
+  }
  
   .faq-question.open span {
     color: var(--main-text-color) !important;
+    cursor: pointer;
   }
 
   

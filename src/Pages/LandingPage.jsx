@@ -102,9 +102,9 @@ const LandingPage = () => {
     <div className="content-wrapper ">
       <div className="header-container vh-90 d-flex justify-content-center align-items-center">
         <div className="header text-center d-flex justify-content-center align-items-center flex-column">
-          <h4 className="mb-0" style={{ color: 'var(--text-color)', fontSize: '1.2rem' }}>Competitive Edge through Creativity & Technology</h4>
+          <h4 className="mb-0" style={{ color: 'var(--text-color)', fontSize: '1.2rem' }}>Crafting Campaigns That Captivate & Convert</h4>
           <h1 className="p-3 text-light font-7">
-            Market Insights
+          Empowering Businesses
             <img
               src="https://assets-global.website-files.com/63793925c7db23ce040b0824/64f5c2e6bc77c145a44f4842_Star.svg"
               alt="star"
@@ -117,10 +117,10 @@ const LandingPage = () => {
                 className="button custom-button-2"
               />
               <span className="switch" >
-                that <span style={{color: 'var(--main-text-color)'}}>Make a</span> 
+              to <span style={{color: 'var(--main-text-color)'}}>Conquer Their</span> 
               </span>
             </span>
-            <span className="text-color switch d-flex justify-content-center" style={{marginRight: "4%", color: 'var(--main-text-color)'}}>Difference</span>
+            <span className="text-color switch d-flex justify-content-center" style={{marginRight: "4%", color: 'var(--main-text-color)'}}>Markets</span>
           </h1>
         </div>
         <img

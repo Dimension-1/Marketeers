@@ -16,20 +16,20 @@ const WhyUs = () => {
 
   const questionAnswers = [
     {
-      question: 'Result Driven',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...',
+      question: 'Strategic Marketing Visionaries',
+      answer: 'Crafting campaigns that merge innovative strategies with real-world results.',
     },
     {
-      question: 'Cost Effective Value Add',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...',
+      question: 'Maximized ROI, Minimized Spend',
+      answer: 'Achieve significant marketing results at a fraction of the cost',
     },
     {
-      question: 'Tech Driven Creativity',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...',
+      question: 'Data-Driven, Creatively Inspired',
+      answer: 'Harnessing the power of analytics infused with creative brilliance.',
     },
     {
-      question: 'Tech Driven Expertise',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...',
+      question: 'Versatile Expertise, Diverse Impact',
+      answer: 'Proven success across various industries with tailored marketing strategies.',
     },
   ];
 
@@ -44,7 +44,7 @@ const WhyUs = () => {
     <div className="frequent-que col-md-6 col-12">
       <div className="faq-containers">
         {questionAnswers.map((qa, index) => (
-          <div key={index} className="mb-4 faq-padding green-border pt-5 pb-4">
+          <div key={index} className="mb-4 faq-padding green-border">
             <div
               className={`question faq-question mb-0 text d-flex justify-content-between align-items-center ${openAnswers[index] ? 'open' : ''}`}
               id={`question${index + 1}`}
@@ -53,7 +53,7 @@ const WhyUs = () => {
               
                 
               
-              <span className="" style={{ color: 'white' }}>
+              <span className="span" style={{ color: 'white',  zIndex: 1 }}>
                 {` ${qa.question}`}
               </span>
               <img src={plusIcon} alt=""  style={{ height: '100%', width: "6%" }}/>
