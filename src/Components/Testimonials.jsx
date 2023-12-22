@@ -9,7 +9,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className=" vh-100 d-flex justify-content-center align-items-center">
+    <div className="d-flex justify-content-center align-items-center z-3 position-relative ">
       <div className="col-5 p-md-5 ">
         <h1 className="p-3 text-light" style={{ fontSize: "5rem" }}>
           Hear it from our clients

@@ -117,10 +117,10 @@ const LandingPage = () => {
                 className="button custom-button-2"
               />
               <span className="switch" >
-              businesses <span style={{color: 'var(--main-text-color)'}}>  for</span> 
+              Businesses <span style={{color: 'var(--main-text-color)'}}>  for</span> 
               </span>
             </span>
-            <span className="text-color switch d-flex justify-content-center" style={{marginRight: "4%", color: 'var(--main-text-color)'}}>market leadership</span>
+            <span className="text-color switch d-flex justify-content-center" style={{marginRight: "4%", color: 'var(--main-text-color)'}}>Market Leadership</span>
           </h1>
         </div>
         <img

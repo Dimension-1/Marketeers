@@ -14,11 +14,12 @@
     --secondary-bg: #DCEFD8;
     --primary-text: #43554b;
     --custom-btn: #313935;
-    --border: #CADCC7;
+    --border: rgb(202, 220, 199);
     --text-color-with-opacity: rgba(178, 211, 193, 0.33);
     --input-fields: rgba(220, 239, 216, 0.05);
     --transparent-bg: #36453d;
     --secondary-text-color: #a3b3a2;
+
   }
 
   
@@ -203,10 +204,11 @@ height: 35rem;
 border: 2px solid #C9DCC6;
 }
 
-.btn{
+.btn {
   border-radius: 1000px !important;
-background-color: var(--border) !important;
+  background-color: rgba(202, 220, 199, 0.5) !important; /* Adjust the RGB values as needed */
 }
+
 
 .blog{
   border-radius: 15px !important;
@@ -266,6 +268,12 @@ background: rgba(151, 210, 139, 0.40);
   .font-10{
     font-size: 5rem;
   }
+  .subscription{
+    font-size: 2rem;
+  }
+  .blog-headline{
+    font-size: 3rem !important;
+  }
 }
 
 
@@ -273,6 +281,7 @@ background: rgba(151, 210, 139, 0.40);
   .img-overlay{
     display: none;
   }
+
 }
 
 
