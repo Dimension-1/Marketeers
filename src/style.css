@@ -18,6 +18,7 @@
     --text-color-with-opacity: rgba(178, 211, 193, 0.33);
     --input-fields: rgba(220, 239, 216, 0.05);
     --transparent-bg: #36453d;
+    --secondary-text-color: #a3b3a2;
   }
 
   
@@ -224,6 +225,18 @@ background: rgba(151, 210, 139, 0.40);
 .img-container{
   padding: 3rem;
 }
+
+.sticky {
+  position: sticky;
+  top: 0; /* Adjust this value based on your design */
+  /* Additional styles as needed */
+}
+
+.footer-font{
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+}
+
 
 @media (max-width: 830px) {
   .main-heading{

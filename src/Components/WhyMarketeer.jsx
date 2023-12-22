@@ -56,7 +56,9 @@ const WhyMarketeer = () => {
         </div>
       <div className="exist d-flex justify-content-between ">
         <div className="col-6">
+          <div style={{ position: 'sticky', top: '0', zIndex: '1000' }}>
           <h4 className=" font-1" style={{color: 'var(--text-color)'}}>Why we exist?</h4>
+          </div>
         </div>
         
         {/* <h3 className="col-6 font-3 your-text" >
@@ -67,7 +69,7 @@ const WhyMarketeer = () => {
             
           </h3> */}
         <div className="col-6 scroll-target z-3 fw-semibold">
-          <p className="marketeer" style={{ fontSize: "3rem", color: "var(--text-color)" }}>
+          <p className="marketeer " style={{ fontSize: "3rem", color: "var(--text-color)" }}>
           At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape.
           </p>
         </div>

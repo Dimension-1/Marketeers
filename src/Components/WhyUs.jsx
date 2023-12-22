@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './WhyUs.css';
 import plusIcon from "../assets/div.whyus__expand.svg";
 import image from "../assets/Section.jpg.png";
+import minusIcon from "../assets/minusIcon.svg";
 
 const WhyUs = () => {
   const [openAnswers, setOpenAnswers] = useState([false, false, false]);
@@ -56,7 +57,7 @@ const WhyUs = () => {
               <span className="span" style={{ color: 'white',  zIndex: 1 }}>
                 {` ${qa.question}`}
               </span>
-              <img src={plusIcon} alt=""  style={{ height: '100%', width: "6%" }}/>
+              <img src={openAnswers[index] ? minusIcon : plusIcon} alt=""  style={{ height: '100%', width: "6%" }}/>
             </div>
             <div className="answer faq-answer text border-none" id={`answer${index + 1}`} style={{ color: 'var(--text-color)', fontSize: "1.25rem", display: openAnswers[index] ? 'block' : 'none' }}>
               {qa.answer}

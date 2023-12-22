@@ -92,7 +92,7 @@ const LandingPage = () => {
   return (
     <div className="main">
   <Navbar />
-  <div className=" w-100 img-container position-relative">
+  <div className=" w-100 pb-3 img-container position-relative">
     <div className="img-overlay position-absolute right-0">
       <img src={image} alt="" className="" />
     </div>

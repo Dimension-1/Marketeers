@@ -1,4 +1,8 @@
 import React from "react";
+import upwork from "../assets/upwork.svg";
+import Fiverr from "../assets/fiver.svg";
+import linkedin from "../assets/linkedin.svg";
+import meet from "../assets/meet.svg";
 
 const Contact = () => {
   return (
@@ -18,14 +22,21 @@ const Contact = () => {
                 alignItems: "center",
               }}
             >
-              {/* Content goes here */}
+              <img
+    src={upwork} // Replace with the path to your image
+    alt="Circle Image"
+    style={{
+      width: "100%", // Ensure the image takes the full width of the circle
+      height: "100%", // Ensure the image takes the full height of the circle
+    }}
+  />
             </div>
             <div>
               <p
                 className="p-color font-2 fw-medium pl-2"
                 style={{ color: "var(--text-color)" }}
               >
-                Fiverr
+                UpWork
               </p>
             </div>
           </div>
@@ -42,14 +53,21 @@ const Contact = () => {
                 alignItems: "center",
               }}
             >
-              {/* Content goes here */}
+                   <img
+    src={linkedin} // Replace with the path to your image
+    alt="Circle Image"
+    style={{
+      width: "100%", // Ensure the image takes the full width of the circle
+      height: "100%", // Ensure the image takes the full height of the circle
+    }}
+  />
             </div>
             <div>
               <p
                 className="p-color font-2 fw-medium pl-2"
                 style={{ color: "var(--text-color)" }}
               >
-                Fiverr
+                Linkedin
               </p>
             </div>
           </div>
@@ -69,14 +87,21 @@ const Contact = () => {
                 alignItems: "center",
               }}
             >
-              {/* Content goes here */}
+                  <img
+    src={Fiverr} // Replace with the path to your image
+    alt="Circle Image"
+    style={{
+      width: "100%", // Ensure the image takes the full width of the circle
+      height: "100%", // Ensure the image takes the full height of the circle
+    }}
+  />
             </div>
             <div>
               <p
                 className="p-color font-2 fw-medium pl-2"
                 style={{ color: "var(--text-color)" }}
               >
-                Fiverr
+                Fiverr 
               </p>
             </div>
           </div>
@@ -93,14 +118,21 @@ const Contact = () => {
                 alignItems: "center",
               }}
             >
-              {/* Content goes here */}
+                  <img
+    src={meet} // Replace with the path to your image
+    alt="Circle Image"
+    style={{
+      width: "100%", // Ensure the image takes the full width of the circle
+      height: "100%", // Ensure the image takes the full height of the circle
+    }}
+  />
             </div>
             <div>
               <p
                 className="p-color font-2 fw-medium pl-2"
                 style={{ color: "var(--text-color)" }}
               >
-                Fiverr
+                Book a meeting
               </p>
             </div>
           </div>
