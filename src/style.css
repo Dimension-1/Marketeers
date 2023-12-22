@@ -220,3 +220,42 @@ background: rgba(151, 210, 139, 0.40);
   color: var(--text-color) !important;
   /* Add any other styles you want for the placeholder */
 }
+
+.img-container{
+  padding: 3rem;
+}
+
+@media (max-width: 830px) {
+  .main-heading{
+    font-size: 3rem !important;
+  }
+  .custom-button{
+    padding: 1rem 3rem; 
+  }
+  .img-container{
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .main-heading{
+    font-size: 5rem ;
+  }
+  .marketeer{
+    font-size: 2rem !important;
+  }
+  .font-10{
+    font-size: 5rem;
+  }
+}
+
+
+@media (max-width: 1400px) {
+  .img-overlay{
+    display: none;
+  }
+}
+
+

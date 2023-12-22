@@ -34,7 +34,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <div className="container d-flex vh-100" style={{paddingTop: '10%'}}>
+    <div className="container d-flex vh-100" style={{paddingTop: '10%', marginBottom: '10%'}}>
        <div className="img-overlay-3 position-absolute right-0" >
       <img src={image} alt="" className="h-75 w-75 " />
     </div>

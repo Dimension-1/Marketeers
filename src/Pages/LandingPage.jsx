@@ -92,7 +92,7 @@ const LandingPage = () => {
   return (
     <div className="main">
   <Navbar />
-  <div className=" w-100 img-container position-relative p-5">
+  <div className=" w-100 img-container position-relative">
     <div className="img-overlay position-absolute right-0">
       <img src={image} alt="" className="" />
     </div>
@@ -103,8 +103,8 @@ const LandingPage = () => {
       <div className="header-container vh-90 d-flex justify-content-center align-items-center">
         <div className="header text-center d-flex justify-content-center align-items-center flex-column">
           <h4 className="mb-0" style={{ color: 'var(--text-color)', fontSize: '1.2rem' }}>Crafting Campaigns That Captivate & Convert</h4>
-          <h1 className="p-3 text-light font-7">
-          Empowering Businesses
+          <h1 className="p-3 main-heading text-light font-7">
+          Empowering  
             <img
               src="https://assets-global.website-files.com/63793925c7db23ce040b0824/64f5c2e6bc77c145a44f4842_Star.svg"
               alt="star"
@@ -117,10 +117,10 @@ const LandingPage = () => {
                 className="button custom-button-2"
               />
               <span className="switch" >
-              to <span style={{color: 'var(--main-text-color)'}}>Conquer Their</span> 
+              businesses <span style={{color: 'var(--main-text-color)'}}>  for</span> 
               </span>
             </span>
-            <span className="text-color switch d-flex justify-content-center" style={{marginRight: "4%", color: 'var(--main-text-color)'}}>Markets</span>
+            <span className="text-color switch d-flex justify-content-center" style={{marginRight: "4%", color: 'var(--main-text-color)'}}>market leadership</span>
           </h1>
         </div>
         <img

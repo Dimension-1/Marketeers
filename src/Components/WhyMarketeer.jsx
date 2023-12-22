@@ -67,7 +67,7 @@ const WhyMarketeer = () => {
             
           </h3> */}
         <div className="col-6 scroll-target z-3 fw-semibold">
-          <p style={{ fontSize: "3rem", color: "var(--text-color)" }}>
+          <p className="marketeer" style={{ fontSize: "3rem", color: "var(--text-color)" }}>
           At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape.
           </p>
         </div>
