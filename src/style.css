@@ -237,6 +237,10 @@ background: rgba(151, 210, 139, 0.40);
   color: var(--secondary-text-color);
 }
 
+@media (max-width: 770px) {
+
+}
+
 
 @media (max-width: 830px) {
   .main-heading{

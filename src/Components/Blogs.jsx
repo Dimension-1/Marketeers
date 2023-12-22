@@ -63,7 +63,7 @@ const Blogs = () => {
 
       <div className="subscribe d-flex pt-3 pb-3 m-md-5"  style={{height: "15rem", paddingLeft: "5rem", paddingRight: "5rem",}}>
         <div className="col-6 d-flex flex-column justify-content-between "  >
-<h2 style={{ fontSize: "2.5rem", color: "var( --primary-text)", fontWeight: "500"}}>Don't want to
+<h2 className="w-75" style={{ fontSize: "2.5rem", color: "var( --primary-text)", fontWeight: "500"}}>Don't want to
 miss anything?</h2>
 <div>
   <input
@@ -83,7 +83,7 @@ miss anything?</h2>
 
         </div>
         <div className="col-6 d-flex flex-column justify-content-between ">
-<p style={{color: "var(--primary-text)", fontSize: "1.3rem", fontWeight: "500"}}>Sign up for our newsletter to discover
+<p className="w-75" style={{color: "var(--primary-text)", fontSize: "1.3rem", fontWeight: "500"}}>Sign up for our newsletter to discover
 winning trends before your competition!</p>
 <div>
   <p className="fw-medium"

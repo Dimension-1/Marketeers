@@ -1,10 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import upwork from "../assets/upwork.svg";
 import Fiverr from "../assets/fiver.svg";
 import linkedin from "../assets/linkedin.svg";
 import meet from "../assets/meet.svg";
+import copyIcon from "../assets/copyIcon.svg"
 
 const Contact = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyClick = () => {
+    const emailText = 'hristo@addifico.com';
+    navigator.clipboard.writeText(emailText);
+    setCopied(true);
+
+    // Reset the copied state after a short delay (e.g., 2 seconds)
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
+  };
+
   return (
     <div className="row p-md-4">
       <div className="col-6 d-flex" style={{ gap: "2.2rem" }}>
@@ -235,9 +249,10 @@ const Contact = () => {
               style={{
                 borderRadius: "14px",
                 background: "var(--main-text-color)",
-                padding: "25px",
+                padding: "28px",
                 border: "none", // Set border to none
                 color: "var(--bg-color)",
+                fontSize: "1.25rem"
               }}
             >
               Send Message
@@ -245,19 +260,27 @@ const Contact = () => {
           </div>
 
           <div>
-            <p>Or email us at:</p>
-            <button
-              className="button w-100 m-1 mt-3 d-flex align-items-center fw-medium justify-content-center "
-              style={{
-                borderRadius: "14px",
-                background: "transparent",
-                padding: "25px",
-                border: "3px solid var(--input-fields)", // Set border to none
-                color: "var(--secondary-bg)",
-              }}
-            >
-              hristo@addifico.com
-            </button>
+            <p style={{color: "var(--text-color)"}}>Or email us at:</p>
+            <div
+  className="button w-100 m-1 mt-3 d-flex align-items-center fw-medium"
+  style={{
+    borderRadius: '14px',
+    background: 'transparent',
+    padding: '28px',
+    border: '3px solid var(--input-fields)',
+    color: 'var(--secondary-bg)',
+    fontSize: '1.25rem',
+    opacity: '0.8',
+    position: 'relative',
+  }}
+  onClick={handleCopyClick}
+>
+  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start', width: '100%' }}>
+    <img src={copied ? 'Copied!' : copyIcon} alt="" style={{ marginRight: '10px' }} />
+    <span style={{ textAlign: 'center' }}>hristo@addifico.com</span>
+  </div>
+</div>
+
           </div>
         </div>
       </div>
