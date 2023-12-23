@@ -254,6 +254,7 @@ const Contact = () => {
                 color: "var(--bg-color)",
                 fontSize: "1.25rem"
               }}
+           
             >
               Send Message
             </button>

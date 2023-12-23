@@ -3,11 +3,12 @@ import "./Ratings.css";
 import Clippath from "../assets/Clippath.svg";
 import Clip from "../assets/Clip.svg";
 import record from "../assets/div.record-div.png";
+import section from "../assets/Section10k.png"
 
 const Ratings = () => {
   return (
     <div >
-      <img src={record} alt="" className=""  style={{ width: '26%', height: '1.2%',           
+   <img src={record} alt="" className=""  style={{ width: '26%', height: '1.2%',           
           position: "absolute",
           zIndex: 999,
           left: '11%',
@@ -15,7 +16,7 @@ const Ratings = () => {
       <div
         className="d-flex z-3 position-relative rating-container gap-4"
         style={{ backgroundColor: "var(--secondary-bg)" }}
-      >
+              >
         
         <div className="col-4 h-100 padding d-flex flex-column gap-4 ">
           <div className="card d-flex justify-content-between" style={{height: "25rem"}}>
