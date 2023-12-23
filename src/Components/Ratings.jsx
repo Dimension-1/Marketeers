@@ -17,12 +17,12 @@ const Ratings = () => {
         style={{ backgroundColor: "var(--secondary-bg)" }}
       >
         
-        <div className="col h-100 padding d-flex flex-column gap-4 ">
+        <div className="col-4 h-100 padding d-flex flex-column gap-4 ">
           <div className="card d-flex justify-content-between" style={{height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
-                className="m-0"
+                className="m-0 rating-sm"
                 style={{ color: "var(--bg-color)", fontSize: "5rem" }}
               >
                 10k
@@ -34,7 +34,7 @@ const Ratings = () => {
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
-                className="m-0"
+                className="m-0 rating-sm"
                 style={{ color: "var(--bg-color)", fontSize: "5rem" }}
               >
                 10k
@@ -43,12 +43,12 @@ const Ratings = () => {
             </div>
           </div>
         </div>
-        <div className="col h-100  d-flex flex-column gap-4" style={{paddingBottom: '2%', paddingTop: '12%'}}>
+        <div className="col-4 h-100  d-flex flex-column gap-4" style={{paddingBottom: '2%', paddingTop: '12%'}}>
         <div className="card  d-flex justify-content-between" style={{backgroundColor: "var(--bg-color)", height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
-                className="m-0 text-light"
+                className="m-0 text-light rating-sm"
                 style={{ fontSize: "5rem" }}
               >
                 <span style={{color: "var(--background-color))"}}>$</span>50M+
@@ -60,7 +60,7 @@ const Ratings = () => {
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
-                className="m-0"
+                className="m-0 rating-sm"
                 style={{ color: "var(--bg-color)", fontSize: "5rem" }}
               >
                 700
@@ -69,12 +69,12 @@ const Ratings = () => {
             </div>
           </div>
         </div>
-        <div className="col h-100 padding d-flex flex-column gap-4" >
+        <div className="col-4 h-100 padding d-flex flex-column gap-4" >
         <div className="card d-flex justify-content-between" style={{backgroundColor: "var(--main-text-color)", height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
-                className="m-0"
+                className="m-0 rating-sm"
                 style={{ color: "var(--bg-color)", fontSize: "5rem" }}
               >
                 10k
@@ -86,7 +86,7 @@ const Ratings = () => {
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
-                className="m-0"
+                className="m-0 rating-sm"
                 style={{ color: "var(--main-text-color)", fontSize: "5rem" }}
               >
                 4.9/5

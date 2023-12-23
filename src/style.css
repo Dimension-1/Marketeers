@@ -10,6 +10,7 @@
     --main-font-size: 16px;    /* Define a font size variable */
     --box-color: border-radius: 24px;
     --background-color: rgb(62, 102, 81);
+    --background-color-opacity: rgb(62, 102, 81, 0.2);
     --text-color: #9da49c;
     --secondary-bg: #DCEFD8;
     --primary-text: #43554b;
@@ -72,6 +73,45 @@ margin: 3% 3%;
 .vh-90{
   height: 85vh;
 }
+
+.button-container {
+  position: relative;
+}
+
+.primary-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.content-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.active-content {
+  transform: translateX(0%);
+}
+
+.inactive-content {
+  transform: translateX(-100%);
+}
+
+.bg-opacity{
+  background-color: "var(--background-color-opacity)"  !important;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
 
 .custom-button {
     padding: 2rem 4rem; /* Example padding values with rem units */
@@ -274,6 +314,12 @@ background: rgba(151, 210, 139, 0.40);
   .blog-headline{
     font-size: 3rem !important;
   }
+}
+
+@media (max-width: 1200px) {
+.rating-sm{
+  font-size: 3rem !important;
+}
 }
 
 

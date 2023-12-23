@@ -132,7 +132,7 @@ const LandingPage = () => {
       </div>
     </div>
     <div className="spacer vh-50" style={{marginBottom: '40rem'}}></div>
-    <div className="green-border w-75 d-flex justify-content-center pt-4 position-absolute " style={{ left: '50%', transform: 'translateX(-50%)' }}></div>
+    <div className="green-border d-flex justify-content-center pt-0 z-3 position-sticky" style={{ left: '50%', marginRight: "1rem", marginLeft: "1rem"}}></div>
     <WhyMarketeer />
     <Services />
     <Ratings/>
