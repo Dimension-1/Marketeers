@@ -2,6 +2,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import "./Navbar.css";
+import logo from "../assets/mainLogo.png"
 
 
 gsap.to(".nav-text", { 
@@ -14,7 +15,7 @@ gsap.to(".nav-text", {
 const Navbar = () => {
   return (
     <>
-    <div class="nav justify-content-end " >
+        <div class="nav justify-content-end " >
       <div class="navigation">
        
         <div class="nav__logo-cta-wrapper">

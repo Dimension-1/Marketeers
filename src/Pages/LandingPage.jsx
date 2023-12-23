@@ -16,6 +16,7 @@ import Testimonials from "../Components/Testimonials";
 import Blogs from "../Components/Blogs";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
+import greaterThan from "../assets/greater-than.svg"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -120,7 +121,14 @@ const LandingPage = () => {
               Businesses <span style={{color: 'var(--main-text-color)'}}>  for</span> 
               </span>
             </span>
-            <span className="text-color switch d-flex justify-content-center" style={{marginRight: "4%", color: 'var(--main-text-color)'}}>Market Leadership</span>
+            <span className="text-color switch d-flex justify-content-center align-items-center " style={{ color: 'var(--main-text-color)'}}>Market Leadership
+            <img
+              src={greaterThan}
+              alt="star"
+              style={{width: "12%"}}
+              className="svg-icon custom-button"
+            />
+            </span>
           </h1>
         </div>
         <img
