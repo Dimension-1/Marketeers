@@ -39,24 +39,28 @@ const Footer = () => {
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
             <div className='footer-font'>
-              Services
+              Resources
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
             <div className='footer-font'>
-              Services
+              About
+            </div>
+            <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
+            <div className='footer-font'>
+            Get in touch
             </div>
           </div>
           <div className='col-6 d-flex justify-content-end p-4 gap-4'>
             <div className='footer-font'>
-              Services
+              Twitter
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
             <div className='footer-font'>
-              Services
+              Instagram
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
             <div className='footer-font'>
-              Services
+              Facebook
             </div>
           </div>
         </div>
