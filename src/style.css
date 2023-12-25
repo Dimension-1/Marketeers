@@ -213,7 +213,7 @@ margin: 3% 3%;
     padding: 0.6em;
     border-radius: 1rem !important;
     border: 2px solid var(--border);
-    background-color:#d0e6cc; 
+    background-color: var(--custom-btn); 
 }
 
 .company-cards-border{

@@ -36,9 +36,9 @@ const WhyUs = () => {
 
   return (
     <div className="container d-flex" style={{paddingTop: '10%', marginBottom: '10%'}}>
-       <div className="img-overlay-3 position-absolute right-0" >
+       {/* <div className="img-overlay-3 position-absolute right-0" >
       <img src={image} alt="" className="h-75 w-75 " />
-    </div>
+    </div> */}
         <div className="heading sticky-top  text-light col-md-6 col-12 z-3 " style={{color: 'var(--text-color)', fontSize: "1.25rem",  height: '60px', zIndex: "1000"}}>
             Why Us?
         </div>
