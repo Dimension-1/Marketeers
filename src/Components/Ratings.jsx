@@ -2,16 +2,19 @@ import React from "react";
 import "./Ratings.css";
 import Clippath from "../assets/Clippath.svg";
 import Clip from "../assets/Clip.svg";
-import record from "../assets/div.record-div.png";
+// import record from "../assets/div.record-div.png";
+import record from "../assets/trackrecord.svg";
 import section from "../assets/Section10k.png"
 
 const Ratings = () => {
   return (
-    <div >
-   <img src={record} alt="" className=""  style={{ width: '26%', height: '1.2%',           
+    <div className="position-relative">
+   <img src={record} alt="" className=""  style={{ width: '26%',           
           position: "absolute",
           zIndex: 999,
           left: '11%',
+          top: '0',
+      
  }}/>
       <div
         className="d-flex z-3 position-relative rating-container gap-4"

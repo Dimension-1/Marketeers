@@ -5,22 +5,22 @@
   }
 
   :root {
-    --main-text-color: #97d28b;   /* Define a text color variable */
-    --bg-color: #262d29;     /* Define a background color variable */
+    --main-text-color: #8aabc4;   /* Define a text color variable */
+    --bg-color: #26292b;     /* Define a background color variable */
     --main-font-size: 16px;    /* Define a font size variable */
     --box-color: border-radius: 24px;
-    --background-color: rgb(62, 102, 81);
-    --background-color-opacity: rgb(62, 102, 81, 0.2);
-    --text-color: #9da49c;
-    --secondary-bg: #DCEFD8;
-    --primary-text: #43554b;
-    --custom-btn: #313935;
-    --border: rgb(202, 220, 199);
-    --text-color-with-opacity: rgba(178, 211, 193, 0.33);
-    --input-fields: rgba(220, 239, 216, 0.05);
-    --transparent-bg: #36453d;
-    --secondary-text-color: #a3b3a2;
-
+    --background-color: rgb(62, 83, 102);
+    --background-color-opacity: rgba(75, 62, 102, 0.2);
+    --text-color: #9ca0a4;
+    --secondary-bg: #d8e0ef;
+    --primary-text: #435055;
+    --custom-btn: rgb(136, 166, 189, 0.09);
+    --border: rgb(199, 216, 220);
+    --text-color-with-opacity: rgba(178, 192, 211, 0.33);
+    --input-fields: rgba(57, 86, 153, 0.05);
+    --transparent-bg: #395699;
+    --secondary-text-color: #030506;
+    --primary-bg: rgba(27, 26, 31, 0.8);
   }
 
   
@@ -28,16 +28,16 @@
     /* background: url("./assets/Section.jpg.png"); */
     background-size: cover;
     /* z-index: -1; */
-    transform: rotate(220deg);
-    left: -1100px;
-    top: -150px;
+    transform: rotate(336deg);
+    left: -2047px;
+    top: -734px;
   }
 
   .img-overlay-2{
     /* z-index: -10; */
-    transform: rotate(-357deg);
-    top: -316px;
-    right: -600px;
+    transform: rotate(-245deg);
+    top: -1000px;
+    right: -1200px;
   }
 
   .img-overlay-3{
@@ -131,7 +131,7 @@ margin: 3% 3%;
   }
   .green-border {
     padding-top: 3% !important;
-    border-top: 0.8px solid #50684c; /* Adjust the color and size as needed */
+    border-top: 0.8px solid var(--main-text-color); /* Adjust the color and size as needed */
   }
 
   .custom-button-2 {
@@ -192,7 +192,7 @@ margin: 3% 3%;
   }
   
   .header-container {
-    background-color: rgba(27, 29, 27, 0.2);
+    background-color: rgba(27, 26, 31, 0.8);
     width: 100%;
     padding: 20px; /* Adjust the padding as needed */
     box-sizing: border-box;
@@ -256,7 +256,7 @@ border: 2px solid #C9DCC6;
 
 .subscribe{
   border-radius: 16px;
-background: rgba(151, 210, 139, 0.40);
+background: var(--custom-btn);
 }
 
 .custom-input::placeholder {

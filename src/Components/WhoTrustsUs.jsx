@@ -1,7 +1,8 @@
 import React from 'react';
 import Clip from "../assets/Clip.svg";
 import Clippath from "../assets/Clippath.svg";
-import load from "../assets/load.png";
+// import load from "../assets/load.png";
+import load from "../assets/loadmoreblue.svg"
 
 const WhoTrustsUs = () => {
   return (

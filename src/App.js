@@ -5,6 +5,8 @@ import LandingPage from './Pages/LandingPage';
 import ServicesPage from './Pages/ServicesPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./style.css";
+import ContactPage from './Pages/ContactPage';
+import AboutPage from "./Pages/AboutPage"
 
 function App() {
   return (
@@ -13,7 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/services" element={<ServicesPage />} />
-          {/* Add more routes as needed */}
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </Router>
     </div>

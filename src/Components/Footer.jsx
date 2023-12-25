@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import arrow from "../assets/arrow-review.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,45 +32,45 @@ const Footer = () => {
   };
 
   return (
-    <div style={{backgroundColor: "var(--transparent-bg)", borderRadius: "1.5rem"}}>
+    <div style={{backgroundColor: "var(--custom-btn)", borderRadius: "1.5rem"}}>
         <div className="row d-flex justify-content-between ">
           <div className='col-6 d-flex p-4 gap-4'>
-            <div className='footer-font'>
-              Services
+            <div className='footer-font text-light' style={{cursor: "pointer"}}>
+               <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>Services</Link>
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
-            <div className='footer-font'>
+            <div className='footer-font text-light' style={{cursor: "pointer"}}>
               Resources
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
-            <div className='footer-font'>
-              About
+            <div className='footer-font text-light' style={{cursor: "pointer"}}>
+              <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>About</Link>
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
-            <div className='footer-font'>
-            Get in touch
+            <div className='footer-font text-light' style={{cursor: "pointer"}}>
+             <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}> Get in touch</Link>
             </div>
           </div>
           <div className='col-6 d-flex justify-content-end p-4 gap-4'>
-            <div className='footer-font'>
+            <div className='footer-font text-light'>
               Twitter
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
-            <div className='footer-font'>
+            <div className='footer-font text-light'>
               Instagram
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
-            <div className='footer-font'>
+            <div className='footer-font text-light'>
               Facebook
             </div>
           </div>
         </div>
         <div className="green-border d-flex justify-content-center pt-0" style={{ left: '50%', marginRight: "1rem", marginLeft: "1rem"}}></div>
         <div className="row d-flex p-3 ">
-            <div className='col-6 d-flex footer-font' style={{opacity: "0.6"}}>
-              Build by Marketters
+            <div className='col-6 d-flex footer-font text-light' style={{opacity: "0.6"}}>
+              Build by Marketeers
             </div>
-            <div className='col-6 d-flex justify-content-end footer-font align-items-center gap-3' style={{opacity: "0.5"}}>
+            <div className='col-6 d-flex justify-content-end footer-font align-items-center gap-3 text-light' style={{opacity: "0.5"}}>
             ©2023 All Rights reserved
             <span id="scrollToTop" className="scroll-to-top" onClick={scrollToTop}
               style={{

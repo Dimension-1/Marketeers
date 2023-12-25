@@ -16,69 +16,62 @@ const Navbar = () => {
   return (
     <>
         <div class="nav justify-content-end " >
-      <div class="navigation">
+      <div class="navigation" style={{flexDirection: "row-reverse"}}>
+      <div className="svg-icon d-flex" style={{
+  padding: '0.9rem 1.3rem',
+  marginLeft: '1rem',
+  fontSize: "1.2rem",
+  fontWeight: "500",
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: 'var(--main-text-color)',
+  border: 'none',
+  borderRadius: '3rem',
+  cursor: 'pointer', // Fix the typo here
+  transition: 'background-color 0.3s ease',
+  boxSizing: 'border-box', // Fix the typo here
+  gap: "0.9rem"
+}}>
+  Get in touch
+  <span
+              style={{
+                borderRadius: "50%", // Make it a circle
+                background: "#262D29",
+                display: "flex",
+                width: "10px",
+                height: "10px",
+                padding: "10.82px 12.46px 10.81px 12.42px",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
        
-        <div class="nav__logo-cta-wrapper">
-          <div
-            data-scroll="stop"
-            data-w-id="e2c41eac-496c-f159-1a57-a056f0741e1b"
-            class="nav__open-wrapper backdrop-bulr-16"
-          >
-            <div class="nav__open-top-line"></div>
-            <div class="nav__open-bottom-line"></div>
-            <div
-              data-w-id="765f7be1-de90-4e8a-b33e-c03197d14316"
-              data-is-ix2-target="1"
-              class="scroll-lottie opacity-05"
-              data-animation-type="lottie"
-              data-src="https://assets-global.website-files.com/63793925c7db23ce040b0824/6501972589575cb2d75c754d_Scroll.json"
-              data-loop="0"
-              data-direction="1"
-              data-autoplay="0"
-              data-renderer="svg"
-              data-default-duration="1.03436765890371"
-              data-duration="0"
-            ></div>
-          </div>
-          <a
-            data-scroll="stop"
-            data-w-id="a218e2b4-1c27-f9fd-6b3f-8524dad809b7"
-            href="/contact-us"
-            class="get-in-touch__mobile w-inline-block"
-          >
-            <img
-              src="https://assets-global.website-files.com/63793925c7db23ce040b0824/6507f8a7020d0150e7f0b556_Pen.svg"
-              loading="lazy"
-              alt=""
-              class="mobile__pen"
-            />
-          </a>
-          <div
-            data-w-id="a4d4e9df-7f74-ec3b-40f4-c50318097d80"
-            class="button-outter"
-          >
-            <a href="/contact-us" class="new-buttonn w-inline-block">
-              <div class="black-background"></div>
-              <div class="items-wrapper">
-                <div class="text-rotaotr is-inside">
-                  <div class="nav-text text-4">Get in touch</div>
-                </div>
-                <div class="text-rotaotr is-outside">
-                  <div class="nav-text text-4">Don&#x27;t be shy</div>
-                </div>
-                <div class="circle-wrapper">
-                  <div class="circle"></div>
-                  <img
-                    src="https://assets-global.website-files.com/63793925c7db23ce040b0824/64e8667bfbbf04480e3205e2_Arrow-green.svg"
-                    loading="lazy"
-                    alt=""
-                    class="image-40"
-                  />
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
+            </span>
+</div>
+
+      <span id="scrollToTop" className="scroll-to-top" 
+              style={{
+                borderRadius: "50%", // Make it a circle
+                background: "var(--custom-btn)",
+                display: "flex",
+                width: "55px",
+                height: "55px",
+                padding: "17.82px 19.46px 17.81px 19.42px",
+                justifyContent: "center",
+                alignItems: "center",
+               rotate: "90deg",
+                cursor: "pointer"
+              }}
+            >
+              {/* <img
+    src={arrow} // Replace with the path to your image
+    alt="Circle Image"
+    style={{
+      width: "100%", // Ensure the image takes the full width of the circle
+      height: "100%", // Ensure the image takes the full height of the circle
+    }}
+  /> */}
+            </span>
       </div>
       {/* <div class="hidden-navigation">
         <div class="nav__wrapper">

@@ -7,7 +7,7 @@ import image from "../assets/Section.jpg.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const WhyMarketeer = () => {
+const WhyMarketeer = ({pageTitle, pageContent}) => {
   useEffect(() => {
     const scrollBar = Scrollbar.init(document.querySelector(".scroll-target"), {
       damping: 0.01,
@@ -51,13 +51,13 @@ const WhyMarketeer = () => {
 
   return (
     <div className=" container pt-5 position-relative ">
-      <div className="img-overlay position-absolute" style={{ top: "-10%", right: "70%", transform: 'rotate(220deg)' }}>
+      {/* <div className="img-overlay position-absolute" style={{ top: "-10%", right: "70%", transform: 'rotate(220deg)' }}>
           <img src={image} alt="" className="" />
-        </div>
+        </div> */}
       <div className="exist d-flex justify-content-between ">
         <div className="col-6">
           <div style={{ position: 'sticky', top: '0', zIndex: '1000' }}>
-          <h4 className=" font-1" style={{color: 'var(--text-color)'}}>Why we exist?</h4>
+          <h4 className=" font-1" style={{color: 'var(--text-color)'}}>{pageTitle}</h4>
           </div>
         </div>
         
@@ -70,7 +70,7 @@ const WhyMarketeer = () => {
           </h3> */}
         <div className="col-6 scroll-target z-3 fw-semibold">
           <p className="marketeer " style={{ fontSize: "3rem", color: "var(--text-color)" }}>
-          At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape.
+          {pageContent}
           </p>
         </div>
       </div>

@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Navbar from "../Components/Navbar";
 import "../style.css";
-import image from "../assets/Section.jpg.png";
+//import image from "../assets/Section.jpg.png";
+import image from "../assets/DesktopBlue.svg"
 import icon from "../assets/asterisk.svg";
 import Services from "../Components/Services";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -10,7 +11,8 @@ import Scrollbar from "smooth-scrollbar";
 import WhyMarketeer from "../Components/WhyMarketeer";
 import Ratings from "../Components/Ratings";
 import WhyUs from "../Components/WhyUs";
-import Sidecut from "../assets/Sidecut.svg.svg"
+// import Sidecut from "../assets/Sidecut.svg.svg"
+import Sidecut from "../assets/Section.svg"
 import WhoTrustsUs from "../Components/WhoTrustsUs";
 import Testimonials from "../Components/Testimonials";
 import Blogs from "../Components/Blogs";
@@ -94,13 +96,13 @@ const LandingPage = () => {
     <div className="main">
   <Navbar />
   <div className=" w-100 pb-3 img-container position-relative">
-    <div className="img-overlay position-absolute right-0">
-      <img src={image} alt="" className="" />
+    <div className="img-overlay position-absolute right-0 z-1">
+      <img src="../assets/DesktopBlue.svg" alt="" className="" />
     </div>
     <div className="img-overlay-2 position-absolute">
       <img src={image} alt="" className="" />
     </div>
-    <div className="content-wrapper ">
+    <div className="content-wrapper" style={{zIndex: "800"}}>
       <div className="header-container vh-90 d-flex justify-content-center align-items-center">
         <div className="header text-center d-flex justify-content-center align-items-center flex-column">
           <h4 className="mb-0" style={{ color: 'var(--text-color)', fontSize: '1.2rem' }}>Crafting Campaigns That Captivate & Convert</h4>
@@ -135,13 +137,16 @@ const LandingPage = () => {
     src={Sidecut}
     alt="Sidecut"
     className="sidecut-image position-absolute bottom-0 right-0"
-    style={{right: "0"}}
+    style={{right: "0", width: "8%"}}
   />
       </div>
     </div>
     <div className="spacer vh-50" style={{marginBottom: '40rem'}}></div>
     <div className="green-border d-flex justify-content-center pt-0 z-3 position-sticky" style={{ left: '50%', marginRight: "1rem", marginLeft: "1rem"}}></div>
-    <WhyMarketeer />
+    <WhyMarketeer
+        pageTitle="Why we exist?"
+        pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
+      />
     <Services />
     <Ratings/>
     <WhyUs/>
