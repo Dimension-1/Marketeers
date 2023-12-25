@@ -14,8 +14,8 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center z-3 position-relative " style={{padding: "10%"}}>
-      <div className="col-5 p-md-5 ">
+    <div className="d-flex testimonials-md justify-content-center align-items-center z-3 position-relative " style={{padding: "10%"}}>
+      <div className="col-lg-5 col-12 p-lg-3 testimonials-section-1">
         <h1 className="p-3 text-light" style={{ fontSize: "5rem" }}>
           Hear it from our clients
         </h1>
@@ -74,7 +74,7 @@ const Testimonials = () => {
       </div>
     </button>
       </div>
-      <div className="col-7 p-md-5 d-flex justify-content-center align-items-center gap-5">
+      <div className="col-lg-7 col-12 testimonials-section-1 p-lg-3 d-flex justify-content-center align-items-center gap-5">
       <div
               style={{
                 borderRadius: "50%", // Make it a circle
@@ -104,7 +104,7 @@ const Testimonials = () => {
             className="btn mt-md-4 "
             style={{
               backgroundColor: "transparent !important",
-              border: "2px solid var(--background-color-opacity)",
+              border: "2px solid var(--custom-btn)",
               marginLeft: "2rem",
             }}
           >

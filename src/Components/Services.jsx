@@ -24,12 +24,13 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="  vh-100 d-flex flex-column justify-content-center ">
+    <div className="d-flex flex-column justify-content-center ">
       <div className="custom-container z-3">
         <h1 className="font-10 text-light">Services</h1>
       </div>
-      <div className="services-container gallery d-flex gap-1">
+      <div className="services-container gallery d-flex gap-1 mb-lg-5">
         <div className="cards d-flex flex-nowrap w-100 ">
+          
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               

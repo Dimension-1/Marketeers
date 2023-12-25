@@ -16,8 +16,27 @@
   transform: scale(2); /* Increase the scale on hover */
 }
 
-/* ButtonWithImage.css */
+.nav {
+  transition: margin-left 0.3s ease; /* Add a transition for the margin-left property */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  height: 56rem;
+  right: 0;
+  width: 25%;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-top: 1rem;
+  background-color: #343a40; /* Bootstrap dark background color */
+  transition: left 0.3s ease; /* Add a transition for the left property */
+}
 
 
+.sidebar-item{
+  font-size: 2.5rem;
+  color: white;
+}
 
 

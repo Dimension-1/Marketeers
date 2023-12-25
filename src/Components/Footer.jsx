@@ -34,7 +34,7 @@ const Footer = () => {
   return (
     <div style={{backgroundColor: "var(--custom-btn)", borderRadius: "1.5rem"}}>
         <div className="row d-flex justify-content-between ">
-          <div className='col-6 d-flex p-4 gap-4'>
+          <div className='col-lg-6 col-md-8 col-8 d-flex p-4 gap-lg-4 gap-2 align-items-center'>
             <div className='footer-font text-light' style={{cursor: "pointer"}}>
                <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>Services</Link>
             </div>
@@ -51,7 +51,7 @@ const Footer = () => {
              <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}> Get in touch</Link>
             </div>
           </div>
-          <div className='col-6 d-flex justify-content-end p-4 gap-4'>
+          <div className='col-lg-6 col-md-4 col-4 d-flex justify-content-end p-4 gap-lg-4 gap-2 align-items-center'>
             <div className='footer-font text-light'>
               Twitter
             </div>

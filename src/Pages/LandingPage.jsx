@@ -117,7 +117,7 @@ const LandingPage = () => {
               <img
                 src="https://assets-global.website-files.com/63793925c7db23ce040b0824/64f5c38109cfeef5f12e09ae_Image.jpg"
                 alt="button"
-                className="button custom-button-2"
+                className="button svg-icon custom-button-2"
               />
               <span className="switch" >
               Businesses <span style={{color: 'var(--main-text-color)'}}>  for</span> 
@@ -128,7 +128,7 @@ const LandingPage = () => {
               src={greaterThan}
               alt="star"
               style={{width: "12%"}}
-              className="svg-icon custom-button"
+              className="svg-icon none custom-button"
             />
             </span>
           </h1>
