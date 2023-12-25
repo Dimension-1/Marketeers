@@ -21,7 +21,7 @@ const Ratings = () => {
         style={{ backgroundColor: "var(--secondary-bg)" }}
               >
         
-        <div className="col-4 h-100 padding d-flex flex-column gap-4 ">
+        <div className="col-6 col-lg-4 col-md-4 h-100 padding d-flex flex-column gap-4 ">
           <div className="card d-flex justify-content-between" style={{height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
@@ -47,7 +47,7 @@ const Ratings = () => {
             </div>
           </div>
         </div>
-        <div className="col-4 h-100  d-flex flex-column gap-4" style={{paddingBottom: '2%', paddingTop: '12%'}}>
+        <div className="col-6 col-lg-4 col-md-4 h-100  d-flex flex-column gap-4" style={{paddingBottom: '2%', paddingTop: '12%'}}>
         <div className="card  d-flex justify-content-between" style={{backgroundColor: "var(--bg-color)", height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
@@ -73,7 +73,7 @@ const Ratings = () => {
             </div>
           </div>
         </div>
-        <div className="col-4 h-100 padding d-flex flex-column gap-4" >
+        <div className="col-6 col-lg-4 col-md-4 h-100 padding d-flex flex-column gap-4" >
         <div className="card d-flex justify-content-between" style={{backgroundColor: "var(--main-text-color)", height: "25rem"}}>
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">

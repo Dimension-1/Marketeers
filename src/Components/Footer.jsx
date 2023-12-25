@@ -32,7 +32,7 @@ const Footer = () => {
   };
 
   return (
-    <div style={{backgroundColor: "var(--custom-btn)", borderRadius: "1.5rem"}}>
+    <div className='mt-sm-2' style={{backgroundColor: "var(--custom-btn)", borderRadius: "1.5rem"}}>
         <div className="row d-flex justify-content-between ">
           <div className='col-lg-6 col-md-8 col-8 d-flex p-4 gap-lg-4 gap-2 align-items-center'>
             <div className='footer-font text-light' style={{cursor: "pointer"}}>
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
             <div className='footer-font text-light' style={{cursor: "pointer"}}>
-              Resources
+              <Link to="/resources" style={{ textDecoration: 'none', color: 'inherit' }}>Resources</Link>
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
             <div className='footer-font text-light' style={{cursor: "pointer"}}>

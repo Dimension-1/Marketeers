@@ -315,6 +315,8 @@ background: var(--custom-btn);
 }
 .cards{
   flex-direction: column;
+  margin: 1rem;
+  gap: 1rem;
 }
 .service-box{
   width: 100% !important;
@@ -350,6 +352,9 @@ background: var(--custom-btn);
 @media (max-width: 992px){
   .none{
     display: none;
+  }
+  .card{
+    height: 18rem !important;
   }
 }
 

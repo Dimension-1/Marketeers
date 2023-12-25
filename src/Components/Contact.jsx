@@ -20,7 +20,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="row contact-sm p-md-4">
+    <div className="row contact-sm p-md-4 mt-sm-4">
       <div className="col-md-6 col-12 d-flex" style={{ gap: "2.2rem" }}>
         <div className="row gap-3 h-100 w-100 ">
           <div className="service-box d-flex flex-column justify-content-between p-4">

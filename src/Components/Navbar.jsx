@@ -97,11 +97,11 @@ const Navbar = () => {
                 style={{ left: "50%" }}
               ></div>
           <div className="sidebar-item">
-          <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>Services</Link></div>
-          <div className="sidebar-item"><Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>Resources</Link></div>
-          <div className="sidebar-item"><Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>Case Studies</Link></div>
+          <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>Services</Link></div>
+          <div className="sidebar-item"><Link to="/resources" style={{ textDecoration: 'none', color: 'inherit' }}>Resources</Link></div>
+          <div className="sidebar-item"><Link to="/resources" style={{ textDecoration: 'none', color: 'inherit' }}>Case Studies</Link></div>
           <div className="sidebar-item"><Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>About</Link></div>
-          <div className="sidebar-item"><Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>Contact</Link></div>
+          <div className="sidebar-item"><Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>Contact</Link></div>
         </div>
       )}
       
