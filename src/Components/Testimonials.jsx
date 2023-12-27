@@ -14,7 +14,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="d-flex testimonials-md justify-content-center align-items-center z-3 position-relative " style={{padding: "10%"}}>
+    <div className="d-flex testimonials-md justify-content-center align-items-center z-3 position-relative " style={{paddingTop: "10%", paddingBottom: "10%"}}>
       <div className="col-lg-5 col-12 p-lg-3 testimonials-section-1">
         <h1 className="p-3 text-light" style={{ fontSize: "5rem" }}>
           Hear it from our clients
@@ -113,11 +113,7 @@ const Testimonials = () => {
 
           <div>
             <p className="mt-5" style={{ color: "var(--background-color)", lineHeight: "1.5" }}>
-              Working with Addifico was a pleasure. Despite needing market
-              research and competitor analysis in a niche area, they delivered
-              beyond my expectations. All of the work was comprehensive, well-
-              structured and extremely detailed. The communication was perfect
-              and they operated with great professionalism.
+            "marketeers's team transformed our digital presence. Their SEO strategies skyrocketed our website traffic, and the leads we're getting now are just phenomenal. It's like they unlocked a whole new level of growth for us."
             </p>
           </div>
           </div>
@@ -127,8 +123,8 @@ const Testimonials = () => {
               <div className="d-flex gap-3">
                 <img src={photo} alt="" className="rounded" />
                 <div>
-                <h4 className="m-0">name</h4>
-                <p style={{color: "var(--text-color)"}}>developer</p>
+                <h4 className="m-0">Tech Startup Founder</h4>
+                <p style={{color: "var(--text-color)"}}> Bangalore, India</p>
                 </div>
               </div>
             </div>

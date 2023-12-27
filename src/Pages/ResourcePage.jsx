@@ -6,7 +6,7 @@ import Footer from '../Components/Footer';
 const ResourcePage = () => {
   return (
     <div style={{ background: 'var(--bg-color)' }}>
-    {/* <Navbar/> */}
+    <Navbar/>
     <Resources/>
     <Footer/>
     </div>

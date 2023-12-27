@@ -24,7 +24,9 @@ const Navbar = () => {
     
       <div class="d-flex position-fixed top-0 w-100 justify-content-between align-items-center mb-5" style={{zIndex: isSidebarOpen ? "0" : "999", paddingRight: "2rem"}} >
       <div className="logo h-0 w-0" style={{}}>
-    <img src={logo} alt="" />
+      <Link to="/">
+            <img src={logo} alt="" />
+          </Link>
     </div>
         <div class="d-flex" style={{ flexDirection: "row-reverse", paddingRight: "2rem"}}>
           <div
@@ -86,7 +88,7 @@ const Navbar = () => {
       </div>
 
       {isSidebarOpen && (
-        <div className="sidebar" style={{backgroundColor: "rgba(255, 255, 255, 0.15)", zIndex: "999"}}>
+        <div className="sidebar" style={{ zIndex: "999"}}>
           <span className="close-icon text-light" style={{cursor: "pointer"}} onClick={toggleSidebar}>
             {/* Add your close SVG icon here */}
             X Close

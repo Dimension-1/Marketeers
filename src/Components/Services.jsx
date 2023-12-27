@@ -64,7 +64,8 @@ const Services = () => {
             </span>
             <div className="content">
               <p className="p-color font-2 flex-end market-headline fw-medium" style={{color: 'var(--text-color)'}}>
-                Market Trends Analysis
+              Pay-Per-Click Advertising (PPC)
+
               </p>
               </div>
           </div>
@@ -101,7 +102,7 @@ const Services = () => {
             </span>
             <div className="content">
               <p className="p-color font-2 flex-end market-headline fw-medium" style={{color: 'var(--text-color)'}}>
-                Customer Research
+              Email and SMS Marketing
               </p>
               </div>
           </div>
@@ -138,7 +139,9 @@ const Services = () => {
             </span>
             <div className="content">
               <p className="p-color font-2 flex-end market-headline fw-medium" style={{color: 'var(--text-color)'}}>
-                Market Sizing and Forecasting
+              Influencer Marketing
+
+
               </p>
               </div>
           </div>
@@ -175,7 +178,8 @@ const Services = () => {
             </span>
             <div className="content">
               <p className="p-color font-2 flex-end market-headline fw-medium" style={{color: 'var(--text-color)'}}>
-                Market Trends Analysis
+              Conversion Rate Optimization (CRO)
+
               </p>
               </div>
           </div>
@@ -212,7 +216,8 @@ const Services = () => {
             </span>
             <div className="content">
               <p className="p-color font-2 flex-end market-headline fw-medium fw-medium" style={{color: 'var(--text-color)'}}>
-                Market Trends Analysis
+              Online Reputation Management
+
               </p>
               </div>
           </div>

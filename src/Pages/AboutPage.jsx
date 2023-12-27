@@ -19,14 +19,15 @@ const AboutPage = () => {
         <Navbar />
         <div className="header-container d-flex flex-column  justify-content-center align-items-center">
           <h1 className=" p-4 m-md-5 main-heading text-light font-7">
-            We aspire to help 1,000 businesses improve the lives of{" "}
+          Charting a Bold Course for 1,000 Businesses to Enrich{" "}
             <span style={{ color: "var(--main-text-color)" }}>
-              1 Billion people.
+              1 Billion Lives.
             </span>{" "}
           </h1>
           <WhyMarketeer
-            pageTitle="Why we exist?"
-            pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
+            pageTitle="Our Mission
+            "
+            pageContent="Building Bridges in the Digital World, At marketeers, we are driven by a vision to connect, empower, and transform. Inspired by the endless possibilities of the digital era, our mission is to guide entrepreneurs, businesses, and visionaries in navigating the digital landscape. We're not just about marketing; we're about creating a future where every digital interaction makes a difference, building a better, more connected world."
           />
         </div>
 
@@ -50,7 +51,7 @@ const AboutPage = () => {
                 style={{ left: "50%" }}
               ></div>
               <h4>Integrity</h4>
-              <p>we stand behind everything we say and do</p>
+              <p>"Commitment to Authenticity" - We believe in honesty and transparency, upholding the highest standards in all our endeavors.</p>
             </div>
             <div className="col-3 gap-3 d-flex flex-column">
               <img
@@ -62,8 +63,8 @@ const AboutPage = () => {
                 className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
                 style={{ left: "50%" }}
               ></div>
-              <h4>Integrity</h4>
-              <p>we stand behind everything we say and do</p>
+              <h4>Creativity</h4>
+              <p>"Imagination Unleashed" - We encourage out-of-the-box thinking, embracing innovative ideas to overcome challenges.</p>
             </div>
             <div className="col-3 gap-3 d-flex flex-column">
               <img
@@ -75,8 +76,9 @@ const AboutPage = () => {
                 className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
                 style={{ left: "50%" }}
               ></div>
-              <h4>Integrity</h4>
-              <p>we stand behind everything we say and do</p>
+              <h4>Innovation</h4>
+              <p>"Beyond the Horizon" - Continuously pushing boundaries, we strive to bring groundbreaking solutions to the forefront of digital marketing.
+</p>
             </div>
             <div className="col-3 gap-3 d-flex flex-column">
               <img
@@ -88,8 +90,8 @@ const AboutPage = () => {
                 className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
                 style={{ left: "50%" }}
               ></div>
-              <h4>Integrity</h4>
-              <p>we stand behind everything we say and do</p>
+              <h4>Passion</h4>
+              <p>"Heart of Our Craft" - Our team is fueled by a deep passion for digital marketing, driving us to excel in every project.</p>
             </div>
           </div>
         </div>

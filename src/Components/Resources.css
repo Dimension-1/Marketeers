@@ -7,7 +7,7 @@
 .css-o4b71y-MuiAccordionSummary-content{
     justify-content: right !important;
 }
-.css-178xtz6-MuiPaper-root-MuiAccordion-root{
+.css-178xtz6-MuiPaper-root-MuiAccordion-root,.css-14bscn5-MuiPaper-root-MuiAccordion-root{
     box-shadow: none !important;
 }
 .css-v4u5dn-MuiInputBase-root-MuiInput-root:after{

@@ -4,16 +4,17 @@ import Clippath from "../assets/Clippath.svg";
 import Clip from "../assets/Clip.svg";
 // import record from "../assets/div.record-div.png";
 import record from "../assets/trackrecord.svg";
-import section from "../assets/Section10k.png"
+import section from "../assets/Section10k.png";
+import arrowDown from "../assets/ArrowDown.svg"
 
 const Ratings = () => {
   return (
     <div className="position-relative">
-   <img src={record} alt="" className=""  style={{ width: '26%',           
+   <img src={record} alt="" className=""  style={{ 
           position: "absolute",
           zIndex: 999,
           left: '11%',
-          top: '0',
+          top: '-2px',
       
  }}/>
       <div
@@ -99,7 +100,14 @@ const Ratings = () => {
             </div>
           </div>
         </div>
+        
       </div>
+      <img
+    src={arrowDown}
+    alt="arrowDown"
+    className=" position-absolute bottom-50 z-3"
+    style={{right: "-1px"}}
+  />
     </div>
   );
 };

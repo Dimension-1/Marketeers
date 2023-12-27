@@ -73,25 +73,25 @@ export default function Resources() {
       }, [filter, searchQuery, selectedCategories, data]);
     
   return (
-    <div style={{ background: 'var(--bg-color)' }}>
-    <Box sx={{ backgroundColor: 'var(--bg-color)', minHeight: '100vh', padding:'10px'}}>
+    <div style={{ background: 'var(--bg-color)'}}>
+    <Box sx={{ backgroundColor: 'var(--bg-color)',padding:'94px 10px 10px'}}>
       <Box sx={{backgroundColor:'#262D29',borderRadius:'15px'}}>
         <Box>
             <Typography className='resources' sx={{color: 'rgba(228, 236, 227, 0.5)',marginLeft:'150px',backgroundColor:'#43554B',width:'130px',textAlign:'center',paddingTop:'20px',paddingBottom:'10px'}}>Resources</Typography>
         </Box>
         <Box sx={{display:'flex',flexDirection:'column',marginTop:'110px',marginLeft:'150px'}} className="resources-text">
-            <Typography sx={{color:'#dcefd8',fontWeight:'500',fontSize:'4.5em',lineHeight:'0'}}><span style={{color:'#97d28b'}}>Elevate Your Business</span> with</Typography>
-            <Typography sx={{color:'#dcefd8',fontWeight:'500',fontSize:'4.5em',lineHeight:'2.5'}}>Actionable Market Insights</Typography>
+            <Typography sx={{color:'#dcefd8',fontWeight:'500',fontSize:'4.5em',lineHeight:'0'}}><span style={{color:'var(--main-text-color)'}}>Transform Your Strategy  </span> with Proven</Typography>
+            <Typography sx={{color:'#dcefd8',fontWeight:'500',fontSize:'4.5em',lineHeight:'2.5'}}>Marketing Success Stories</Typography>
         </Box>
         <Box sx={{marginTop:'15px',marginLeft:'150px',}} className="resources-navbar">
            <Box style={{display:'flex',flexDirection:'row',border:'2px solid rgba(220,239,216,.07)',boxSizing:'border-box',borderRadius:'35px',width:'fit-content',cursor:'pointer',padding:'1px'}}className="resources-navbar-content">
-              <button style={{padding:'20px 30px',color: filter==='all' ? '#262d29':'rgba(220,239,216,.7)',backgroundColor: filter === 'all' ? '#97d28b' : 'transparent',borderRadius:'35px',outline:'none',border:'none', fontSize:'17px',cursor:'pointer'}} onClick={() => handleFilterChange('all')}>All</button>
-              <button style={{padding:' 20px 30px',color: filter==='Blog' ? '#262d29':'rgba(220,239,216,.7)',backgroundColor: filter === 'Blog' ? '#97d28b' : 'transparent',borderRadius:'35px',outline:'none',border:'none', fontSize:'17px',cursor:'pointer'}} onClick={() => handleFilterChange('Blog')}>Blog</button>
-              <button style={{padding:'20px 30px',color: filter==='Case Study' ? '#262d29':'rgba(220,239,216,.7)',backgroundColor: filter === 'Case Study' ? '#97d28b' : 'transparent',borderRadius:'35px',outline:'none',border:'none', fontSize:'17px',cursor:'pointer'}} onClick={() => handleFilterChange('Case Study')}>Case Study</button>
-              <button style={{padding:' 20px 30px',color: filter==='Download' ? '#262d29':'rgba(220,239,216,.7)',backgroundColor: filter === 'Download' ? '#97d28b' : 'transparent',borderRadius:'35px',outline:'none',border:'none', fontSize:'17px',cursor:'pointer'}} onClick={() => handleFilterChange('Download')}>Download</button>
+              <button style={{padding:'20px 30px',color: filter==='all' ? '#262d29':'rgba(220,239,216,.7)',backgroundColor: filter === 'all' ? 'var(--main-text-color)' : 'transparent',borderRadius:'35px',outline:'none',border:'none', fontSize:'17px',cursor:'pointer'}} onClick={() => handleFilterChange('all')}>All</button>
+              <button style={{padding:' 20px 30px',color: filter==='Blog' ? '#262d29':'rgba(220,239,216,.7)',backgroundColor: filter === 'Blog' ? 'var(--main-text-color)' : 'transparent',borderRadius:'35px',outline:'none',border:'none', fontSize:'17px',cursor:'pointer'}} onClick={() => handleFilterChange('Blog')}>Blog</button>
+              <button style={{padding:'20px 30px',color: filter==='Case Study' ? '#262d29':'rgba(220,239,216,.7)',backgroundColor: filter === 'Case Study' ? 'var(--main-text-color)' : 'transparent',borderRadius:'35px',outline:'none',border:'none', fontSize:'17px',cursor:'pointer'}} onClick={() => handleFilterChange('Case Study')}>Case Study</button>
+              <button style={{padding:' 20px 30px',color: filter==='Download' ? '#262d29':'rgba(220,239,216,.7)',backgroundColor: filter === 'Download' ? 'var(--main-text-color)' : 'transparent',borderRadius:'35px',outline:'none',border:'none', fontSize:'17px',cursor:'pointer'}} onClick={() => handleFilterChange('Download')}>Download</button>
            </Box>
         </Box>
-        <Box sx={{backgroundColor:'#fff',borderRadius:'15px'}}>
+        <Box sx={{borderRadius:'0px'}}>
         <Accordion sx={{backgroundColor:'#262D29',marginBottom:'0',borderRadius:'0'}}>
             <AccordionSummary
                 aria-controls="panel1a-content"
@@ -103,6 +103,8 @@ export default function Resources() {
                     padding:'12px 30px',
                     borderTopLeftRadius:'10px',
                     borderTopRightRadius:'10px',
+                    color:'rgba(67,85,75,.8)',
+                    marginRight:'20px'
                 }}>
                     {<IoFilter style={{marginRight:'10px'}}/>}Filter
                 </Typography>
@@ -213,24 +215,24 @@ export default function Resources() {
 
             <Box sx={{padding :'85px 150px 85px',display: 'grid',gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',backgroundColor:'#fff',borderRadius:'15px',gap:'15px',gridRowGap:'28px'}} className="cards-container">
             {filteredData.length === 0 ? (
-                <Box sx={{backgroundColor:'rgba(228,236,227,.7)',gridColumn: '1 / -1',borderRadius:'15px',padding:'40px 0',display:'flex',justifyContent:'center',flexDirection:'column',alignItems:'center'}}>
+                <Box sx={{backgroundColor:'rgba(228,236,227,.7)',gridColumn: '1 / -1',borderRadius:'15px',padding:'42px 5px',display:'flex',justifyContent:'center',flexDirection:'column',alignItems:'center'}}>
                     <Typography sx={{ color: '#43554b', fontSize: '1.5rem', fontWeight: 500,}}>
                         No results found.
                     </Typography>
-                    <Typography sx={{color:'rgba(67,85,75,.6)',marginTop:'10px'}}>
+                    <Typography sx={{color:'rgba(67,85,75,.6)',marginTop:'10px',textAlign:'center'}}>
                          Try different keywords or <button style={{background:'transparent',outline:'none',border:'none',borderBottom:'1px solid #43554b',color:'#43554b',cursor:'pointer'}} onClick={() => handlereset()}>reset all filters.</button>
                     </Typography>
                 </Box>
                 
             ) : (filteredData.map((content, index) => (
                     <React.Fragment key={index}>
-                        <Box sx={{ backgroundColor: '#fff',  width: '360px', overflow: 'hidden',cursor:'pointer'}} className="card">
+                        <Box sx={{ backgroundColor: '#fff',  width: '360px', overflow: 'hidden',cursor:'pointer'}} className="blogCard">
                         <img src={content.imgsrc} alt="Blog" style={{ borderRadius: '15px', width: '100%', height: 'auto' }} />
                         <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '12px' }}>
                             <Typography sx={{ color: '#43554b', opacity: '0.4' }}>{content.type}</Typography>
                             <Typography sx={{ color: '#43554b', opacity: '0.4' }}>{content.Publishedon}</Typography>
                         </Box>
-                        <Box sx={{ padding: '12px' }}>
+                        <Box sx={{ padding: '12px',display: 'flex', flexDirection: 'column', gap: '12px' }}>
                             <Typography sx={{ color: '#43554b', fontSize: '1.75rem', fontWeight: 500,lineHeight:'1' }}>
                             {content.name}
                             </Typography>
