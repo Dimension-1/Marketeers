@@ -276,8 +276,10 @@ const Contact = () => {
   }}
   onClick={handleCopyClick}
 >
-  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start', width: '100%' }}>
+  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start' }}>
     <img src={copied ? 'Copied!' : copyIcon} alt="" style={{ marginRight: '10px' }} />
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
     <span style={{ textAlign: 'center' }}>hristo@addifico.com</span>
   </div>
 </div>
