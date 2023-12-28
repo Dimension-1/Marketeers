@@ -16,7 +16,7 @@ const Testimonials = () => {
   return (
     <div className="d-flex testimonials-md justify-content-center align-items-center z-3 position-relative " style={{paddingTop: "10%", paddingBottom: "10%"}}>
       <div className="col-lg-5 col-12 p-lg-3 testimonials-section-1">
-        <h1 className="p-3 text-light" style={{ fontSize: "5rem" }}>
+        <h1 className="p-3 text-light-bg" style={{ fontSize: "5rem" }}>
           Hear it from our clients
         </h1>
         <button

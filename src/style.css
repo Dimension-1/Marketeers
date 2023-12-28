@@ -23,6 +23,9 @@
     --primary-bg: rgba(27, 26, 31, 0.8);
   }
 
+  .text-light-bg{
+    color: var(--secondary-bg);
+  }
   
   .img-overlay{
     /* background: url("./assets/Section.jpg.png"); */

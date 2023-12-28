@@ -48,7 +48,7 @@ const ServicesPage = () => {
       <div className="content-wrapper ">
         <Navbar/>
         <div className="header-container d-flex flex-column  justify-content-center align-items-center">
-          <h1 className=" p-4 main-heading text-light font-7">
+          <h1 className=" p-4 main-heading text-light-bg font-7">
             Your biggest business challenges.{" "}
             <span style={{ color: "var(--main-text-color)" }}>Solved.</span>{" "}
           </h1>
@@ -391,7 +391,7 @@ const ServicesPage = () => {
           className="service-box-container  d-flex justify-content-center d-flex flex-column align-items-center"
           style={{ paddingTop: "10rem", paddingBottom: "10rem" }}
         >
-          <h1 className="text-light mb-4">
+          <h1 className="text-light-bg mb-4">
             Not seeing what you are looking for?
           </h1>
           <div

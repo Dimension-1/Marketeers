@@ -33,7 +33,7 @@ const AboutPage = () => {
     className=" position-absolute bottom-30 z-3"
     style={{right: "-1px"}}
   />
-          <h1 className=" p-4 m-md-5 main-heading text-light font-7">
+          <h1 className=" p-4 m-md-5 main-heading text-light-bg font-7">
           Charting a Bold Course for 1,000 Businesses to Enrich{" "}
             <span style={{ color: "var(--main-text-color)" }}>
               1 Billion Lives.
@@ -47,7 +47,7 @@ const AboutPage = () => {
         </div>
 
         <div
-          className=" d-flex flex-column text-light gap-4"
+          className=" d-flex flex-column text-light-bg gap-4"
           style={{ padding: "5%" }}
         >
           <h1 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>

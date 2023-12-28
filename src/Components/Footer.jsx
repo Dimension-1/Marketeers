@@ -35,32 +35,32 @@ const Footer = () => {
     <div className='mt-sm-2' style={{backgroundColor: "var(--custom-btn)", borderRadius: "1.5rem"}}>
         <div className="row d-flex justify-content-between ">
           <div className='col-lg-6 col-md-8 col-8 d-flex p-4 gap-lg-4 gap-2 align-items-center'>
-            <div className='footer-font text-light' style={{cursor: "pointer"}}>
+            <div className='footer-font' style={{cursor: "pointer", color: "var(--secondary-bg)"}}>
                <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>Services</Link>
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
-            <div className='footer-font text-light' style={{cursor: "pointer"}}>
+            <div className='footer-font' style={{cursor: "pointer", color: "var(--secondary-bg)"}}>
               <Link to="/resources" style={{ textDecoration: 'none', color: 'inherit' }}>Resources</Link>
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
-            <div className='footer-font text-light' style={{cursor: "pointer"}}>
+            <div className='footer-font' style={{cursor: "pointer", color: "var(--secondary-bg)"}}>
               <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>About</Link>
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
-            <div className='footer-font text-light' style={{cursor: "pointer"}}>
+            <div className='footer-font' style={{cursor: "pointer", color: "var(--secondary-bg)"}}>
              <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}> Get in touch</Link>
             </div>
           </div>
           <div className='col-lg-6 col-md-4 col-4 d-flex justify-content-end p-4 gap-lg-4 gap-2 align-items-center'>
-            <div className='footer-font text-light'>
+            <div className='footer-font' style={{color: "var(--secondary-bg)"}}>
               Twitter
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
-            <div className='footer-font text-light'>
+            <div className='footer-font' style={{color: "var(--secondary-bg)"}}>
               Instagram
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
-            <div className='footer-font text-light'>
+            <div className='footer-font' style={{color: "var(--secondary-bg)"}}>
               LinkedIn
             </div>
           </div>

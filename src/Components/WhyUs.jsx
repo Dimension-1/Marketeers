@@ -39,7 +39,7 @@ const WhyUs = () => {
        {/* <div className="img-overlay-3 position-absolute right-0" >
       <img src={image} alt="" className="h-75 w-75 " />
     </div> */}
-        <div className="heading sticky-top  text-light col-md-6 col-12 z-3 " style={{color: 'var(--text-color)', fontSize: "1.25rem",  height: '60px', zIndex: "1000"}}>
+        <div className="heading sticky-top  text-light-bg col-md-6 col-12 z-3 " style={{color: 'var(--text-color)', fontSize: "1.25rem",  height: '60px', zIndex: "1000"}}>
             Why Us?
         </div>
     <div className="frequent-que col-md-6 col-12 z-3">
@@ -54,7 +54,7 @@ const WhyUs = () => {
               
                 
               
-              <span className="span" style={{ color: 'white',  zIndex: 1 }}>
+              <span className="span" style={{ color: 'var(--secondary-bg)',  zIndex: 1 }}>
                 {` ${qa.question}`}
               </span>
               <img src={openAnswers[index] ? minusIcon : plusIcon} alt=""  style={{ height: '100%', width: "6%" }}/>

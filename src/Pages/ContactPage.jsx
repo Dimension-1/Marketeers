@@ -42,7 +42,7 @@ const ContactPage = () => {
  }}/>
           <div className="p-md-4 header-container flex-column d-flex justify-content-center align-items-center">
             <div className="p-md-5">
-              <h1 className=" p-4 main-heading text-light font-7">
+              <h1 className=" p-4 main-heading font-7" style={{color: "var(--secondary-bg)"}}>
                 We thought you’d never ask!{" "}
                 <span style={{ color: "var(--main-text-color)" }}>
                   {" "}
@@ -61,7 +61,7 @@ const ContactPage = () => {
                 and get a free action plan
               </p>
 
-              <Contact />
+              <Contact title="Drop us a message:" fontSize="1.3rem"/>
             </div>
             <img
     src={arrowDown}

@@ -88,8 +88,8 @@ export default function Resources() {
       
      
         <Box sx={{display:'flex',flexDirection:'column',marginTop:'110px',marginLeft:'150px'}} className="resources-text">
-            <Typography sx={{color:'#dcefd8',fontWeight:'500',fontSize:'4.5em',lineHeight:'0'}}><span style={{color:'var(--main-text-color)'}}>Transform Your Strategy  </span> with Proven</Typography>
-            <Typography sx={{color:'#dcefd8',fontWeight:'500',fontSize:'4.5em',lineHeight:'2.5'}}>Marketing Success Stories</Typography>
+            <Typography sx={{color:'var(--secondary-bg)',fontWeight:'500',fontSize:'4.5em',lineHeight:'0'}}><span style={{color:'var(--main-text-color)'}}>Transform Your Strategy  </span> with Proven</Typography>
+            <Typography sx={{color:'var(--secondary-bg)', fontWeight:'500',fontSize:'4.5em',lineHeight:'2.5'}}>Marketing Success Stories</Typography>
         </Box>
         <Box sx={{marginTop:'15px',marginLeft:'150px',}} className="resources-navbar">
            <Box style={{display:'flex',flexDirection:'row',border:'2px solid rgba(220,239,216,.07)',boxSizing:'border-box',borderRadius:'35px',width:'fit-content',cursor:'pointer',padding:'1px'}}className="resources-navbar-content">

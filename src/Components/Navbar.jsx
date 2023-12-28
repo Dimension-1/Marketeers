@@ -29,6 +29,7 @@ const Navbar = () => {
           </Link>
     </div>
         <div class="d-flex" style={{ flexDirection: "row-reverse", paddingRight: "2rem"}}>
+          <Link to="/contact" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             className="svg-icon d-flex mt-0 "
             style={{
@@ -65,7 +66,7 @@ const Navbar = () => {
               }}
             ></span>
           </div>
-
+          </Link>
           <span
             id="scrollToTop"
             onClick={toggleSidebar}
@@ -91,7 +92,7 @@ const Navbar = () => {
 
       {isSidebarOpen && (
         <div className="sidebar" style={{ zIndex: "999"}}>
-          <span className="close-icon text-light" style={{cursor: "pointer"}} onClick={toggleSidebar}>
+          <span className="close-icon text-light-bg" style={{cursor: "pointer"}} onClick={toggleSidebar}>
             {/* Add your close SVG icon here */}
             X Close
           </span>

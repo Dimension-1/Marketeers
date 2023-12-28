@@ -18,7 +18,8 @@ import Testimonials from "../Components/Testimonials";
 import Blogs from "../Components/Blogs";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
-import greaterThan from "../assets/greater-than.svg"
+import greaterThan from "../assets/greater-than.svg";
+import asterisk from "../assets/asterisk.svg"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,10 +107,10 @@ const LandingPage = () => {
       <div className="header-container vh-90 d-flex justify-content-center align-items-center">
         <div className="header text-center d-flex justify-content-center align-items-center flex-column">
           <h4 className="mb-0" style={{ color: 'var(--text-color)', fontSize: '1.2rem' }}>Crafting Campaigns That Captivate & Convert</h4>
-          <h1 className="p-3 main-heading text-light font-7">
+          <h1 className="p-3 main-heading text-light-bg font-7">
           Empowering  
             <img
-              src="https://assets-global.website-files.com/63793925c7db23ce040b0824/64f5c2e6bc77c145a44f4842_Star.svg"
+              src={asterisk}
               alt="star"
               className="svg-icon custom-button"
             />
@@ -126,7 +127,7 @@ const LandingPage = () => {
             <span className="text-color switch d-flex justify-content-center align-items-center " style={{ color: 'var(--main-text-color)'}}>Market Leadership
             <img
               src={greaterThan}
-              alt="star"
+alt="star"
               style={{width: "12%"}}
               className="svg-icon none custom-button"
             />
@@ -154,7 +155,8 @@ const LandingPage = () => {
     <WhoTrustsUs/>
     <Testimonials/>
     <Blogs/>
-    <Contact/>
+    <Contact title="Interested but don’t know where to start?" fontSize="2.63rem" />
+
     <Footer/>
   </div>
 </div>

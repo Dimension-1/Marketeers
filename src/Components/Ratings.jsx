@@ -53,7 +53,7 @@ const Ratings = () => {
             <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
-                className="m-0 text-light rating-sm"
+                className="m-0 text-light-bg rating-sm"
                 style={{ fontSize: "5rem" }}
               >
                 <span style={{color: "var(--background-color))"}}>$</span>50M+

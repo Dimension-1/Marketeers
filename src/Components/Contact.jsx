@@ -5,7 +5,7 @@ import linkedin from "../assets/linkedin.svg";
 import meet from "../assets/meet.svg";
 import copyIcon from "../assets/copyIcon.svg"
 
-const Contact = () => {
+const Contact = ({title, fontSize}) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopyClick = () => {
@@ -27,7 +27,7 @@ const Contact = () => {
             <div
               style={{
                 borderRadius: "50%", // Make it a circle
-                background: "#262D29",
+                background: "var(--bg-color)",
                 display: "flex",
                 width: "64.75px",
                 height: "64.75px",
@@ -58,7 +58,7 @@ const Contact = () => {
             <div
               style={{
                 borderRadius: "50%", // Make it a circle
-                background: "#262D29",
+                background: "var(--bg-color)",
                 display: "flex",
                 width: "64.75px",
                 height: "64.75px",
@@ -92,7 +92,7 @@ const Contact = () => {
             <div
               style={{
                 borderRadius: "50%", // Make it a circle
-                background: "#262D29",
+                background: "var(--bg-color)",
                 display: "flex",
                 width: "64.75px",
                 height: "64.75px",
@@ -123,7 +123,7 @@ const Contact = () => {
             <div
               style={{
                 borderRadius: "50%", // Make it a circle
-                background: "#262D29",
+                background: "var(--bg-color)",
                 display: "flex",
                 width: "64.75px",
                 height: "64.75px",
@@ -156,8 +156,8 @@ const Contact = () => {
       <div className="col-md-6 col-12">
         <div className="service-box w-100 h-100 d-flex justify-content-between flex-column">
           <div>
-            <h1 className="text-light mb-4">
-              Interested but don’t know where to start?
+            <h1 className=" mb-4" style={{color: "var(--secondary-bg)", fontSize}}>
+              {title}
             </h1>
 
             <div className="row mb-3">
