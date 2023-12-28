@@ -11,7 +11,13 @@ import Contact from '../Components/Contact';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 import serviceIcon from '../assets/Services.svg';
-import arrowDown from "../assets/ArrowDown.svg"
+import arrowDown from "../assets/ArrowDown.svg";
+import influencer from "../assets/influencer.svg";
+import sms from "../assets/sms.svg";
+import onlineRep from "../assets/online.svg";
+import cro from "../assets/cro.svg";
+import analysis from "../assets/analysis.svg";
+import marketing from "../assets/marketing.svg"
 
 const ServicesPage = () => {
   const [openAnswers, setOpenAnswers] = useState([false, false, false]);
@@ -58,7 +64,7 @@ const ServicesPage = () => {
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={SVG} className="" alt="" />
+              <img src={forecast} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -96,7 +102,7 @@ const ServicesPage = () => {
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={forecast} className="" alt="" />
+              <img src={sms} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -133,7 +139,7 @@ const ServicesPage = () => {
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={SVG} className="" alt="" />
+              <img src={influencer} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -172,7 +178,7 @@ const ServicesPage = () => {
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={forecast} className="" alt="" />
+              <img src={cro} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -229,7 +235,7 @@ const ServicesPage = () => {
         <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={SVG} className="" alt="" />
+              <img src={onlineRep} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -306,7 +312,7 @@ const ServicesPage = () => {
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={forecast} className="" alt="" />
+              <img src={marketing} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -344,7 +350,7 @@ const ServicesPage = () => {
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={SVG} className="" alt="" />
+              <img src={analysis} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"

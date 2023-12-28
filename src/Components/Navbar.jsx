@@ -16,22 +16,37 @@ gsap.to(".nav-text", {
 
 const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const sidebarRef = useRef();
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setSidebarOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <div
         class="d-flex position-fixed top-0 w-100 justify-content-between align-items-center mb-5"
-        style={{ zIndex: isSidebarOpen ? "0" : "999", paddingRight: "2rem" }}
+        style={{ zIndex: isSidebarOpen ? "auto" : "999", paddingRight: "2rem" }}
       >
-        <div className="logo h-0 w-0" style={{}}>
-          <Link to="/">
-            <img src={logo} alt="" />
-          </Link>
-        </div>
+        <div className="logo" style={{ zIndex: isSidebarOpen ? "1000" : "auto" }}>
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
+      </div>
         <div
           class="d-flex"
           style={{ flexDirection: "row-reverse", paddingRight: "2rem" }}
@@ -100,7 +115,7 @@ const Navbar = () => {
       </div>
 
       {isSidebarOpen && (
-        <div className="sidebar" style={{ zIndex: "999" }}>
+        <div ref={sidebarRef} className="sidebar" style={{ zIndex: "999" }}>
           <span
             className="close-icon text-light-bg"
             style={{ cursor: "pointer" }}

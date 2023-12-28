@@ -4,6 +4,10 @@ import SVG from "../assets/SVG.svg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import forecast from "../assets/arrow-up.svg";
+import influencer from "../assets/influencer.svg";
+import sms from "../assets/sms.svg";
+import onlineRep from "../assets/online.svg";
+import cro from "../assets/cro.svg"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,7 +38,7 @@ const Services = () => {
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={SVG} className="" alt="" />
+              <img src={forecast} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -72,7 +76,7 @@ const Services = () => {
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={forecast} className="" alt="" />
+              <img src={sms} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -109,7 +113,7 @@ const Services = () => {
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={SVG} className="" alt="" />
+              <img src={influencer} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -148,7 +152,7 @@ const Services = () => {
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={forecast} className="" alt="" />
+              <img src={cro} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
@@ -186,7 +190,7 @@ const Services = () => {
           <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
               
-              <img src={SVG} className="" alt="" />
+              <img src={onlineRep} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17"
