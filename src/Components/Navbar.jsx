@@ -82,7 +82,7 @@ const Navbar = () => {
             className="scroll-to-top"
             style={{
               borderRadius: "50%", // Make it a circle
-              background: "var(--custom-btn)",
+              background: "rgb(136, 166, 189, 0.3)",
               display: "flex",
               width: "55px",
               height: "55px",
