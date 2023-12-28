@@ -6,6 +6,7 @@ import "./Navbar.css";
 import logo from "../assets/finalLogo.ico";
 import marketeer from "../assets/Marketeers.svg";
 import arrow from "../assets/arrow-review.svg";
+import hamburger from "../assets/hamburger.svg"
 
 gsap.to(".nav-text", {
   duration: 2,
@@ -92,7 +93,9 @@ const Navbar = () => {
               rotate: "90deg",
               cursor: "pointer",
             }}
-          ></span>
+          >
+            <img src={hamburger} alt="" style={{rotate: "90deg"}} />
+          </span>
         </div>
       </div>
 

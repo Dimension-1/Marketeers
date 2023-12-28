@@ -54,7 +54,7 @@ const Blogs = () => {
                 className="pt-2"
                 style={{ color: "var( --text-color)", fontSize: "1rem" }}
               >
-                Blogs
+                Blog
               </p>
               <p
                 className="pt-2"
@@ -80,13 +80,13 @@ const Blogs = () => {
                 className="pt-2"
                 style={{ color: "var( --text-color)", fontSize: "1rem" }}
               >
-                Blogs
+                Blog
               </p>
               <p
                 className="pt-2"
                 style={{ color: "var( --text-color)", fontSize: "1rem" }}
               >
-                October 23, 2023
+                October 2, 2023
               </p>
             </div>
             <h4 style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}>
@@ -105,13 +105,13 @@ const Blogs = () => {
                 className="pt-2"
                 style={{ color: "var( --text-color)", fontSize: "1rem" }}
               >
-                Blogs
+                Blog
               </p>
               <p
                 className="pt-2"
                 style={{ color: "var( --text-color)", fontSize: "1rem" }}
               >
-                October 23, 2023
+                September 27, 2023
               </p>
             </div>
             <h4 style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}>
