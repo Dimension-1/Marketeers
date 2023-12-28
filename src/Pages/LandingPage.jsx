@@ -98,7 +98,7 @@ const LandingPage = () => {
   <Navbar />
   <div className=" w-100 pb-3 img-container position-relative">
     <div className="img-overlay position-absolute right-0 z-1">
-      <img src="../assets/DesktopBlue.svg" alt="" className="" />
+      <img src={image} alt="" className="" />
     </div>
     <div className="img-overlay-2 position-absolute">
       <img src={image} alt="" className="" />

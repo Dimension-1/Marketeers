@@ -31,16 +31,16 @@
     /* background: url("./assets/Section.jpg.png"); */
     background-size: cover;
     /* z-index: -1; */
-    transform: rotate(336deg);
-    left: -2047px;
-    top: -734px;
+    transform: rotate(360deg);
+    left: -747px;
+    top: -150px;
   }
 
   .img-overlay-2{
     /* z-index: -10; */
-    transform: rotate(-245deg);
-    top: -1000px;
-    right: -1200px;
+    transform: rotate(-222deg);
+    top: -150px;
+    right: -600px;
   }
 
   .img-overlay-3{
