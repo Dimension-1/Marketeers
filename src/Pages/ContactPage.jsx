@@ -49,7 +49,7 @@ const ContactPage = () => {
                   Let’s talk!
                 </span>{" "}
               </h1>
-              <p className="p-4 pb-0">
+              <p className="p-4 pb-0" style={{color:'var(--secondary-bg)'}}>
                 <span
                   style={{
                     color: "var(--text-color)",
