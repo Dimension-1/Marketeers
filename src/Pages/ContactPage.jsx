@@ -22,6 +22,15 @@ import contactIcon from "../assets/ContactUs.svg";
 import arrowDown from "../assets/ArrowDown.svg"
 
 const ContactPage = () => {
+  const sidecutRef = useRef(null); // Create a ref for the sidecut image
+
+  const handleSidecutClick = () => {
+    // Scroll to the target section
+    if (sidecutRef.current) {
+      sidecutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="main">
       <Navbar />
@@ -40,7 +49,7 @@ const ContactPage = () => {
           top: '-2px',
       
  }}/>
-          <div className="p-md-4 header-container flex-column d-flex justify-content-center align-items-center">
+          <div className="pt-4 pb-4 header-container flex-column d-flex justify-content-center align-items-center" style={{padding: ""}}>
             <div className="p-md-5">
               <h1 className=" p-4 main-heading font-7" style={{color: "var(--secondary-bg)"}}>
                 We thought you’d never ask!{" "}
@@ -67,7 +76,9 @@ const ContactPage = () => {
     src={arrowDown}
     alt="arrowDown"
     className=" position-absolute bottom-50 z-3"
-    style={{right: "-1px"}}
+    style={{right: "-1px", cursor: "pointer"}}
+    onClick={handleSidecutClick}
+    ref={sidecutRef}
   />
           </div>
           <Footer />

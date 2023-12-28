@@ -1,26 +1,78 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import upwork from "../assets/upwork.svg";
 import Fiverr from "../assets/fiver.svg";
 import linkedin from "../assets/linkedin.svg";
 import meet from "../assets/meet.svg";
-import copyIcon from "../assets/copyIcon.svg"
+import copyIcon from "../assets/copyIcon.svg";
+// import * as XLSX from "xlsx";
+import * as FileSaver from "file-saver";
+import XLSX from "sheetjs-style";
+import image from "../assets/DesktopBlue.svg"
 
 const Contact = ({title, fontSize}) => {
   const [copied, setCopied] = useState(false);
+const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
+});
 
-  const handleCopyClick = () => {
-    const emailText = 'hristo@addifico.com';
-    navigator.clipboard.writeText(emailText);
-    setCopied(true);
+const [allData, setAllData] = useState(
+  JSON.parse(localStorage.getItem("contactData")) || []
+);
 
-    // Reset the copied state after a short delay (e.g., 2 seconds)
-    setTimeout(() => {
-      setCopied(false);
-    }, 2000);
-  };
+// Create download link only once
+const downloadLinkRef = useRef();
+
+const handleCopyClick = () => {
+  const emailText = "hristo@addifico.com";
+  navigator.clipboard.writeText(emailText);
+  setCopied(true);
+
+  setTimeout(() => {
+    setCopied(false);
+  }, 2000);
+};
+
+const handleInputChange = (e) => {
+  const { name, value } = e.target;
+  setFormData((prevData) => ({
+    ...prevData,
+    [name]: value,
+  }));
+};
+
+const handleExportToExcel = () => {
+  const newData = [...allData, formData];
+  const ws = XLSX.utils.json_to_sheet(newData);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "ContactData");
+
+  // Save the updated Excel file
+  XLSX.writeFile(wb, "all_contact_data.xlsx");
+
+  // Update local storage with the new data
+  saveDataToLocalStorage(newData);
+  setAllData(newData);
+};
+
+
+
+
+const saveDataToLocalStorage = (data) => {
+  localStorage.setItem("contactData", JSON.stringify(data));
+};
+
 
   return (
-    <div className="row contact-sm p-md-4 mt-sm-4">
+    <div className="position-relative ">
+     {/* <div className="img-overlay-8 position-absolute z-0">
+    <img src={image} alt="" className="" />
+  </div> */}
+    <div className="row contact-sm p-md-4 mt-sm-4 z-3 position-relative " style={{zIndex: "998"}}>
+      
       <div className="col-md-6 col-12 d-flex" style={{ gap: "2.2rem" }}>
         <div className="row gap-3 h-100 w-100 ">
           <div className="contact-box d-flex flex-column justify-content-between p-4">
@@ -174,14 +226,18 @@ const Contact = ({title, fontSize}) => {
                     border: "none", // Set border to none
                     color: "var(--text-color)",
                   }}
+                  value={formData.name}
+            onChange={handleInputChange}
                   placeholder="Name*"
                 />
               </div>
               <div className="col-6">
                 <input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
                   className="form-control custom-input"
                   style={{
                     borderRadius: "14px",
@@ -198,8 +254,10 @@ const Contact = ({title, fontSize}) => {
               <div className="col-6">
                 <input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="Phone"
+                  name="Phone"
+                  value={formData.phone}
+            onChange={handleInputChange}
                   className="form-control custom-input"
                   style={{
                     borderRadius: "14px",
@@ -214,8 +272,10 @@ const Contact = ({title, fontSize}) => {
               <div className="col-6">
                 <input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="Subject"
+                  name="Subject"
+                  value={formData.subject}
+            onChange={handleInputChange}
                   className="form-control custom-input"
                   style={{
                     borderRadius: "14px",
@@ -231,9 +291,11 @@ const Contact = ({title, fontSize}) => {
             <div className="row m-1">
               <input
                 type="text"
-                id="name"
-                name="name"
+                id="message"
+                name="message"
                 className="form-control custom-input"
+                value={formData.message}
+            onChange={handleInputChange}
                 style={{
                   borderRadius: "14px",
                   background: "rgba(220, 239, 216, 0.05)",
@@ -254,7 +316,9 @@ const Contact = ({title, fontSize}) => {
                 color: "var(--bg-color)",
                 fontSize: "1.25rem"
               }}
-           
+              onClick={() => {
+                handleExportToExcel();
+              }}
             >
               Send Message
             </button>
@@ -287,6 +351,7 @@ const Contact = ({title, fontSize}) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

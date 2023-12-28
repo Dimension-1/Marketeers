@@ -3,7 +3,8 @@ import gsap from "gsap";
 import "../style.css";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Scrollbar from "smooth-scrollbar";
-import image from "../assets/Section.jpg.png";
+// import image from "../assets/Section.jpg.png";
+import image from "../assets/DesktopBlue.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,11 +52,11 @@ const WhyMarketeer = ({pageTitle, pageContent}) => {
 
   return (
     <div className=" container pt-5 position-relative ">
-      {/* <div className="img-overlay position-absolute" style={{ top: "-10%", right: "70%", transform: 'rotate(220deg)' }}>
+      <div className="img-overlay position-absolute" style={{ top: "-10%", right: "86%", transform: 'rotate(15deg)' }}>
           <img src={image} alt="" className="" />
-        </div> */}
+        </div>
       <div className="exist d-flex justify-content-between ">
-        <div className="col-12 col-lg-6 col-md-6">
+        <div className="col-12 col-lg-6 col-md-5">
           <div style={{ position: 'sticky', top: '0', zIndex: '1000' }}>
           <h4 className=" font-1" style={{color: 'var(--text-color)'}}>{pageTitle}</h4>
           </div>
@@ -68,7 +69,7 @@ const WhyMarketeer = ({pageTitle, pageContent}) => {
             and optimize their chances for success.
             
           </h3> */}
-        <div className="col-12 col-lg-6 col-md-12 scroll-target z-3 fw-semibold">
+        <div className="col-12 col-lg-6 col-md-7 scroll-target z-3 fw-semibold">
           <p className="marketeer " style={{ fontSize: "3rem", color: "var(--text-color)" }}>
           {pageContent}
           </p>

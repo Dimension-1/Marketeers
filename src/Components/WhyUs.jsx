@@ -35,11 +35,11 @@ const WhyUs = () => {
   ];
 
   return (
-    <div className="container whyus-sm d-flex" style={{paddingTop: '10%', marginBottom: '10%'}}>
+    <div className="container whyus-sm d-flex" style={{paddingTop: '10%', marginBottom: '10%', zIndex: "998"}}>
        {/* <div className="img-overlay-3 position-absolute right-0" >
       <img src={image} alt="" className="h-75 w-75 " />
     </div> */}
-        <div className="heading sticky-top  text-light-bg col-md-6 col-12 z-3 " style={{color: 'var(--text-color)', fontSize: "1.25rem",  height: '60px', zIndex: "1000"}}>
+        <div className="heading sticky-top  text-light-bg col-md-6 col-12 z-3 " style={{color: 'var(--text-color)', fontSize: "1.25rem",  height: '60px'}}>
             Why Us?
         </div>
     <div className="frequent-que col-md-6 col-12 z-3">

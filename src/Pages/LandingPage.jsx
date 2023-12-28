@@ -92,6 +92,14 @@ const LandingPage = () => {
 //   }, []);
 
   
+const sidecutRef = useRef(null); // Create a ref for the sidecut image
+
+const handleSidecutClick = () => {
+  // Scroll to the target section
+  if (sidecutRef.current) {
+    sidecutRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
   return (
     <div className="main">
@@ -138,7 +146,9 @@ alt="star"
     src={Sidecut}
     alt="Sidecut"
     className="sidecut-image position-absolute bottom-0 right-0"
-    style={{right: "0", width: "8%"}}
+    style={{right: "0", width: "8%", cursor: "pointer"}}
+    onClick={handleSidecutClick} // Add the click event
+          ref={sidecutRef}
   />
       </div>
     </div>

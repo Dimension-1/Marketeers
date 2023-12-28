@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import photo from "../assets/author-photo.png";
 import arrow from "../assets/arrow-review.svg";
+import image from "../assets/DesktopBlue.svg"
 
 
 const Testimonials = () => {
@@ -14,6 +15,7 @@ const Testimonials = () => {
   };
 
   return (
+    <div className="position-relative ">
     <div className="d-flex testimonials-md justify-content-center align-items-center z-3 position-relative " style={{paddingTop: "10%", paddingBottom: "10%"}}>
       <div className="col-lg-5 col-12 p-lg-3 testimonials-section-1">
         <h1 className="p-3 text-light-bg" style={{ fontSize: "5rem" }}>
@@ -74,8 +76,8 @@ const Testimonials = () => {
       </div>
     </button>
       </div>
-      <div className="col-lg-7 col-12 testimonials-section-1 p-lg-3 d-flex justify-content-center align-items-center gap-5">
-      <div
+      <div className="col-lg-7 col-12 testimonials-section-1 p-lg-3 d-flex justify-content-center align-items-center gap-md-5 gap-lg-5 gap-1">
+      <div className="circle-review"
               style={{
                 borderRadius: "50%", // Make it a circle
                 background: "var(--custom-btn)",
@@ -130,7 +132,7 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-        <div
+        <div className="circle-review"
               style={{
                 borderRadius: "50%", // Make it a circle
                 background: "var(--custom-btn)",
@@ -154,6 +156,10 @@ const Testimonials = () => {
             </div>
       </div>
     </div>
+    <div className="img-overlay-5 position-absolute z-0">
+    <img src={image} alt="" className="" />
+  </div>
+  </div>
   );
 };
 

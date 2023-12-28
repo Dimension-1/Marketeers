@@ -2,7 +2,8 @@ import React from "react";
 import blog from "../assets/blog.png";
 import arrow from "../assets/arrow-review.svg";
 import blog2 from "../assets/blog-image2.png"
-import blog3 from "../assets/blog3.png"
+import blog3 from "../assets/blog3.png";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   return (
@@ -46,31 +47,36 @@ const Blogs = () => {
         </div>
       </div>
       <div className="cols blog-sm d-flex gap-4 justify-content-center align-items-center ">
-        <div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
-          <div className="">
-            <img src={blog} alt="img blog-img-sm" className=" blog w-100" />
-            <div className="d-flex justify-content-between">
-              <p
-                className="pt-2"
-                style={{ color: "var( --text-color)", fontSize: "1rem" }}
-              >
-                Blog
-              </p>
-              <p
-                className="pt-2"
-                style={{ color: "var( --text-color)", fontSize: "1rem" }}
-              >
-                October 23, 2023
-              </p>
-            </div>
-            <h4 style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}>
-              Startup Market Sizing: Founder's Guide to TAM SAM SOM
-            </h4>
-            <div className="btn mt-md-4" style={{ color: "var(--text-color)", cursor: "initial" }}>
+      <div className="col-12 col-md-4 col-lg-3 d-flex flex-column">
+      <Link to="/blogs" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <div className="">
+          <img src={blog} alt="img blog-img-sm" className=" blog w-100" />
+          <div className="d-flex justify-content-between">
+            <p
+              className="pt-2"
+              style={{ color: "var(--text-color)", fontSize: "1rem" }}
+            >
+              Blog
+            </p>
+            <p
+              className="pt-2"
+              style={{ color: "var(--text-color)", fontSize: "1rem" }}
+            >
+              October 23, 2023
+            </p>
+          </div>
+          <h4 style={{ color: "var(--primary-text)", fontSize: "1.75rem" }}>
+            Startup Market Sizing: Founder's Guide to TAM SAM SOM
+          </h4>
+          <div
+            className="btn mt-md-4"
+            style={{ color: "var(--text-color)", cursor: "pointer" }}
+          >
             Pay-Per-Click Advertising (PPC)
-            </div>
           </div>
         </div>
+      </Link>
+    </div>
 
         <div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
           <div className="">

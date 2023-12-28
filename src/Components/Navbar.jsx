@@ -48,7 +48,7 @@ const Navbar = () => {
         </Link>
       </div>
         <div
-          class="d-flex"
+          class="d-flex sm-icon"
           style={{ flexDirection: "row-reverse", paddingRight: "2rem" }}
         >
           <Link
@@ -56,7 +56,7 @@ const Navbar = () => {
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <div
-              className="svg-icon d-flex mt-0 "
+              className="svg-icon getInTouch mt-0 "
               style={{
                 padding: "0.9rem 1.3rem",
                 marginLeft: "1rem",
@@ -91,7 +91,31 @@ const Navbar = () => {
                 }}
               ></span>
             </div>
+
+            <span
+            id="scrollToTop"
+            onClick={toggleSidebar}
+            className="scroll-to-top sm-none"
+            style={{
+              borderRadius: "50%", // Make it a circle
+              background: "rgb(136, 166, 189, 0.3)",
+              display: "flex",
+              width: "55px",
+              height: "55px",
+              padding: "17.82px 19.46px 17.81px 19.42px",
+              justifyContent: "center",
+              alignItems: "center",
+              rotate: "90deg",
+              cursor: "pointer",
+              display: "none"
+            }}
+          >
+            {/* <img src={hamburger} alt="" style={{rotate: "90deg"}} /> */}
+          </span>
           </Link>
+
+          
+
           <span
             id="scrollToTop"
             onClick={toggleSidebar}

@@ -1,22 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Services from "../Components/Services";
 import SVG from "../assets/SVG.svg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import forecast from "../assets/arrow-up.svg";
 import plusIcon from "../assets/div.whyus__expand.svg";
-import image from "../assets/Section.jpg.png";
+import image from "../assets/DesktopBlue.svg";
 import minusIcon from "../assets/minusIcon.svg";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import WhyMarketeer from "../Components/WhyMarketeer";
 import arrowDown from "../assets/ArrowDown.svg"
-import aboutIcon from "../assets/About Us.svg"
+import aboutIcon from "../assets/About Us.svg";
+import apostophy from "../assets/apostrophy.svg";
+import akshita from "../assets/akshita.svg"
 
 const AboutPage = () => {
+  const sidecutRef = useRef(null); // Create a ref for the sidecut image
+
+  const handleSidecutClick = () => {
+    // Scroll to the target section
+    if (sidecutRef.current) {
+      sidecutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+
   return (
     <div className="w-100 img-container position-relative p-">
+         <div className="img-overlay-7 position-absolute z-0">
+      <img src={image} alt="" className="" />
+    </div>
+    {/* <div className="img-overlay position-absolute" style={{ top: "5%", right: "45%", transform: 'rotate(260deg)' }}>
+          <img src={image} alt="" className="" />
+        </div> */}
       <div className="content-wrapper ">
         <Navbar />
         <div className="header-container d-flex flex-column  justify-content-center align-items-center">
@@ -31,7 +49,9 @@ const AboutPage = () => {
     src={arrowDown}
     alt="arrowDown"
     className=" position-absolute bottom-30 z-3"
-    style={{right: "-1px"}}
+    style={{right: "-1px", cursor: "pointer"}}
+    onClick={handleSidecutClick}
+    ref={sidecutRef}
   />
           <h1 className=" p-4 m-md-5 main-heading text-light-bg font-7">
           Charting a Bold Course for 1,000 Businesses to Enrich{" "}
@@ -124,6 +144,18 @@ const AboutPage = () => {
             investigate systematically and truly all that comes under thy
             observation in life.
           </h1>
+          <img
+    src={apostophy}
+    alt="apostophy"
+    className="arrowDown position-absolute z-3 "
+    style={{cursor: "pointer", bottom: "35.6%", left: "0"}}
+  />
+    <img
+    src={akshita}
+    alt="apostophy"
+    className="arrowDown position-absolute z-3 "
+    style={{cursor: "pointer", bottom: "21.9%", right: "2%"}}
+  />
         </div>
         <Contact />
         <Footer />

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import arrow from "../assets/arrow-review.svg";
 import { Link } from "react-router-dom";
+import image from "../assets/DesktopBlue.svg"
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +33,10 @@ const Footer = () => {
   };
 
   return (
-    <div className='mt-sm-2' style={{backgroundColor: "var(--custom-btn)", borderRadius: "1.5rem"}}>
+    
+    <div className='mt-sm-2 position-relative ' style={{backgroundColor: "var(--custom-btn)", borderRadius: "1.5rem", zIndex: "99"}}>
+      
+    
         <div className="row d-flex justify-content-between ">
           <div className='col-lg-6 col-md-8 col-8 d-flex p-4 gap-lg-4 gap-2 align-items-center'>
             <div className='footer-font' style={{cursor: "pointer", color: "var(--secondary-bg)"}}>
