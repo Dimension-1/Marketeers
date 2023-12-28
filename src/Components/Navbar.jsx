@@ -113,7 +113,7 @@ const Navbar = () => {
             className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
             style={{ left: "50%" }}
           ></div>
-          <div className="d-flex justify-content-between flex-column w-100">
+          <div className="d-flex justify-content-between flex-column w-100 h-100">
           <div className="pages">
           <div className="sidebar-item">
             <Link

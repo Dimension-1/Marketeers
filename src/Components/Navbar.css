@@ -29,13 +29,14 @@
   padding: 2rem;
   border-radius: 16px;
   margin-top: 1rem;
-  background-color: #343a40; /* Bootstrap dark background color */
+  background-color: rgb(52, 58, 64, 1); /* Bootstrap dark background color */
   transition: left 0.3s ease; /* Add a transition for the left property */
 }
 
 
 .sidebar-item{
-  font-size: 2.5rem;
+  font-size: 2.6rem;
+  font-weight: 500;
   color: var(--secondary-bg);
 }
 

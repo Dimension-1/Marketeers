@@ -19,7 +19,7 @@ const Blogs = () => {
             marginLeft: "10rem",
           }}
         >
-          Our Latest Blogs
+          Our Latest resources
         </h1>
         <div
           style={{
