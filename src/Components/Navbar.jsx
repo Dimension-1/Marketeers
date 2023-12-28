@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../assets/finalLogo.ico";
 import marketeer from "../assets/Marketeers.svg";
+import arrow from "../assets/arrow-review.svg";
 
 gsap.to(".nav-text", {
   duration: 2,
@@ -21,51 +22,59 @@ const Navbar = () => {
 
   return (
     <>
-    
-      <div class="d-flex position-fixed top-0 w-100 justify-content-between align-items-center mb-5" style={{zIndex: isSidebarOpen ? "0" : "999", paddingRight: "2rem"}} >
-      <div className="logo h-0 w-0" style={{}}>
-      <Link to="/">
+      <div
+        class="d-flex position-fixed top-0 w-100 justify-content-between align-items-center mb-5"
+        style={{ zIndex: isSidebarOpen ? "0" : "999", paddingRight: "2rem" }}
+      >
+        <div className="logo h-0 w-0" style={{}}>
+          <Link to="/">
             <img src={logo} alt="" />
           </Link>
-    </div>
-        <div class="d-flex" style={{ flexDirection: "row-reverse", paddingRight: "2rem"}}>
-          <Link to="/contact" style={{ textDecoration: "none", color: "inherit" }}>
-          <div
-            className="svg-icon d-flex mt-0 "
-            style={{
-              padding: "0.9rem 1.3rem",
-              marginLeft: "1rem",
-              marginBottom: "1rem",
-              fontSize: "1.2rem",
-              fontWeight: "500",
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor: "var(--main-text-color)",
-              border: "none",
-              borderRadius: "3rem",
-              cursor: "pointer", // Fix the typo here
-              transition: "background-color 0.3s ease",
-              boxSizing: "border-box", // Fix the typo here
-              gap: "0.9rem",
-              zIndex: isSidebarOpen ? "0" : "1",
-              
-            }}
+        </div>
+        <div
+          class="d-flex"
+          style={{ flexDirection: "row-reverse", paddingRight: "2rem" }}
+        >
+          <Link
+            to="/contact"
+            style={{ textDecoration: "none", color: "inherit" }}
           >
-            Get in touch
-            <span className=""
+            <div
+              className="svg-icon d-flex mt-0 "
               style={{
-                borderRadius: "50%", // Make it a circle
-                background: "#262D29",
-                display: "flex",
-                width: "10px",
-                height: "10px",
-                padding: "10.82px 12.46px 10.81px 12.42px",
-                justifyContent: "center",
+                padding: "0.9rem 1.3rem",
+                marginLeft: "1rem",
+                marginBottom: "1rem",
+                fontSize: "1.2rem",
+                fontWeight: "500",
                 alignItems: "center",
-                transition: "width 0.3s ease, height 0.3s ease",
+                justifyContent: "center",
+                backgroundColor: "var(--main-text-color)",
+                border: "none",
+                borderRadius: "3rem",
+                cursor: "pointer", // Fix the typo here
+                transition: "background-color 0.3s ease",
+                boxSizing: "border-box", // Fix the typo here
+                gap: "0.9rem",
+                zIndex: isSidebarOpen ? "0" : "1",
               }}
-            ></span>
-          </div>
+            >
+              Get in touch
+              <span
+                className=""
+                style={{
+                  borderRadius: "50%", // Make it a circle
+                  background: "#262D29",
+                  display: "flex",
+                  width: "10px",
+                  height: "10px",
+                  padding: "10.82px 12.46px 10.81px 12.42px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  transition: "width 0.3s ease, height 0.3s ease",
+                }}
+              ></span>
+            </div>
           </Link>
           <span
             id="scrollToTop"
@@ -83,33 +92,116 @@ const Navbar = () => {
               rotate: "90deg",
               cursor: "pointer",
             }}
-          >
-         
-          </span>
+          ></span>
         </div>
-       
       </div>
 
       {isSidebarOpen && (
-        <div className="sidebar" style={{ zIndex: "999"}}>
-          <span className="close-icon text-light-bg" style={{cursor: "pointer"}} onClick={toggleSidebar}>
-            {/* Add your close SVG icon here */}
-            X Close
+        <div className="sidebar" style={{ zIndex: "999" }}>
+          <span
+            className="close-icon text-light-bg"
+            style={{ cursor: "pointer" }}
+            onClick={toggleSidebar}
+          >
+            {/* Add your close SVG icon here */}X Close
           </span>
           <div className="p-2"></div>
           <div
-                className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
-                style={{ left: "50%" }}
-              ></div>
+            className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
+            style={{ left: "50%" }}
+          ></div>
+          <div className="d-flex justify-content-between flex-column w-100">
+          <div className="pages">
           <div className="sidebar-item">
-          <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>Services</Link></div>
-          <div className="sidebar-item"><Link to="/resources" style={{ textDecoration: 'none', color: 'inherit' }}>Resources</Link></div>
-          <div className="sidebar-item"><Link to="/resources" style={{ textDecoration: 'none', color: 'inherit' }}>Case Studies</Link></div>
-          <div className="sidebar-item"><Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>About</Link></div>
-          <div className="sidebar-item"><Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>Contact</Link></div>
+            <Link
+              to="/services"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Services
+              <img
+                src={arrow} // Replace with the path to your image
+                alt="Circle Image"
+                style={{
+                  rotate: "140deg",
+                  marginLeft: "0.5rem",
+                }}
+              />
+            </Link>
+          </div>
+          <div className="sidebar-item">
+            <Link
+              to="/resources"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Resources
+              <img
+                src={arrow} // Replace with the path to your image
+                alt="Circle Image"
+                style={{
+                  rotate: "140deg",
+                  marginLeft: "0.5rem",
+                }}
+              />
+            </Link>
+          </div>
+          <div className="sidebar-item">
+            <Link
+              to="/resources"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Case Studies
+              <img
+                src={arrow} // Replace with the path to your image
+                alt="Circle Image"
+                style={{
+                  rotate: "140deg",
+                  marginLeft: "0.5rem",
+                }}
+              />
+            </Link>
+          </div>
+          <div className="sidebar-item">
+            <Link
+              to="/about"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              About
+              <img
+                src={arrow} // Replace with the path to your image
+                alt="Circle Image"
+                style={{
+                  rotate: "140deg",
+                  marginLeft: "0.5rem",
+                }}
+              />
+            </Link>
+          </div>
+          <div className="sidebar-item">
+            <Link
+              to="/contact"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Contact
+              <img
+                src={arrow} // Replace with the path to your image
+                alt="Circle Image"
+                style={{
+                  rotate: "140deg",
+                  marginLeft: "0.5rem",
+                }}
+              />
+            </Link>
+          </div>
+          </div>
+
+          <div className="platforms mb-5 gap-2 d-flex flex-column ">
+<div className="" style={{color: "var(--secondary-bg)", fontSize: "1.5rem", opacity: "0.7" }}>Upwork</div>
+<div className="" style={{color: "var(--secondary-bg)", fontSize: "1.5rem", opacity: "0.7" }}>Fiverr</div>
+<div className="" style={{color: "var(--secondary-bg)", fontSize: "1.5rem", opacity: "0.7" }}>LinkedIn</div>
+          </div>
+          </div>
         </div>
       )}
-      
     </>
   );
 };
