@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
             <div className='footer-font text-light'>
-              Facebook
+              LinkedIn
             </div>
           </div>
         </div>
