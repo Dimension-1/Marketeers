@@ -23,7 +23,7 @@ const Contact = () => {
     <div className="row contact-sm p-md-4 mt-sm-4">
       <div className="col-md-6 col-12 d-flex" style={{ gap: "2.2rem" }}>
         <div className="row gap-3 h-100 w-100 ">
-          <div className="service-box d-flex flex-column justify-content-between p-4">
+          <div className="contact-box d-flex flex-column justify-content-between p-4">
             <div
               style={{
                 borderRadius: "50%", // Make it a circle
@@ -54,7 +54,7 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div className="service-box d-flex flex-column justify-content-between p-4">
+          <div className="contact-box d-flex flex-column justify-content-between p-4">
             <div
               style={{
                 borderRadius: "50%", // Make it a circle
@@ -88,7 +88,7 @@ const Contact = () => {
         </div>
 
         <div className="row gap-3 w-100 ">
-          <div className="service-box d-flex flex-column justify-content-between p-4">
+          <div className="contact-box d-flex flex-column justify-content-between p-4">
             <div
               style={{
                 borderRadius: "50%", // Make it a circle
@@ -119,7 +119,7 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div className="service-box d-flex flex-column justify-content-between p-4">
+          <div className="contact-box d-flex flex-column justify-content-between p-4">
             <div
               style={{
                 borderRadius: "50%", // Make it a circle
@@ -276,7 +276,7 @@ const Contact = () => {
   }}
   onClick={handleCopyClick}
 >
-  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start' }}>
+  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start', width: '100%' }}>
     <img src={copied ? 'Copied!' : copyIcon} alt="" style={{ marginRight: '10px' }} />
   </div>
   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}>

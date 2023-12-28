@@ -80,6 +80,11 @@ margin: 3% 3%;
   position: relative;
 }
 
+.marginTop-0{
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
 .primary-button {
   position: relative;
   overflow: hidden;

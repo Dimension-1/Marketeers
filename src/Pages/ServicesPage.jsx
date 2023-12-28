@@ -10,6 +10,8 @@ import minusIcon from "../assets/minusIcon.svg";
 import Contact from '../Components/Contact';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
+import serviceIcon from '../assets/Services.svg';
+import arrowDown from "../assets/ArrowDown.svg"
 
 const ServicesPage = () => {
   const [openAnswers, setOpenAnswers] = useState([false, false, false]);
@@ -42,7 +44,7 @@ const ServicesPage = () => {
   ];
 
   return (
-    <div className="w-100 img-container position-relative p-">
+    <div className="w-100 img-container position-relative ">
       <div className="content-wrapper ">
         <Navbar/>
         <div className="header-container d-flex flex-column  justify-content-center align-items-center">
@@ -50,7 +52,7 @@ const ServicesPage = () => {
             Your biggest business challenges.{" "}
             <span style={{ color: "var(--main-text-color)" }}>Solved.</span>{" "}
           </h1>
-          <div className="services-container gallery d-flex gap-1 mb-lg-5">
+          <div className="services-container gallery d-flex gap-1 mb-lg-5 marginTop-0">
         <div className="cards d-flex flex-nowrap w-100 ">
           
           <div className="service-box d-flex justify-content-between flex-column">
@@ -207,8 +209,22 @@ const ServicesPage = () => {
           </div>
          
         </div>
+        <img src={serviceIcon} alt="serviceIcon" className=""  style={{ 
+          position: "absolute",
+          zIndex: 999,
+          left: '11%',
+          top: '-2px',
+      
+ }}/>
+  <img
+    src={arrowDown}
+    alt="arrowDown"
+    className=" position-absolute bottom-30 z-3"
+    style={{right: "-1px"}}
+  />
       </div>
-      <div className="services-container gallery d-flex gap-1 mb-lg-5">
+      
+      <div className="services-container gallery d-flex gap-1 mb-lg-5 marginTop-0">
         <div className="cards d-flex flex-nowrap w-100 ">
         <div className="service-box d-flex justify-content-between flex-column">
             <span className="d-flex justify-content-between">
@@ -369,6 +385,7 @@ const ServicesPage = () => {
         
         </div>
       </div>
+     
         </div>
         <div
           className="service-box-container  d-flex justify-content-center d-flex flex-column align-items-center"

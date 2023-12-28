@@ -11,3 +11,13 @@
     box-sizing: border-box;
 }
 
+.contact-box{
+    padding: 1rem 1rem; /* Example padding values with rem units */
+    margin-left: 1rem;
+    /* background-color: rgba(27, 26, 31, 9); Button background color */
+    background-color: var(--custom-btn);
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}

@@ -10,7 +10,8 @@ import { CiSearch } from "react-icons/ci";
 import InputAdornment from '@mui/material/InputAdornment';
 import Chip from '@mui/material/Chip';
 import { MdCancel } from "react-icons/md";
-import './Resources.css'
+import './Resources.css';
+import resourceIcon from "../assets/Resources.svg"
 
 export default function Resources() {
     const data=[{imgsrc:'https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg',type:'Blog',Publishedon:'October 23, 2023',name:`Startup Market Sizing: Founder's Guide to TAM`,filter:'Market Sizing and Forecasting'},
@@ -73,12 +74,19 @@ export default function Resources() {
       }, [filter, searchQuery, selectedCategories, data]);
     
   return (
-    <div style={{ background: 'var(--bg-color)'}}>
+    <div style={{ background: 'var(--bg-color)'}} >
+        
     <Box sx={{ backgroundColor: 'var(--bg-color)',padding:'94px 10px 10px'}}>
+    {/* <img src={resourceIcon} alt="resourceIcon" className=""  style={{ 
+          position: "absolute",
+          zIndex: 999,
+          left: '11%',
+          top: '-2px',
+      
+ }}/> */}
       <Box sx={{backgroundColor:'#262D29',borderRadius:'15px'}}>
-        <Box>
-            <Typography className='resources' sx={{color: 'rgba(228, 236, 227, 0.5)',marginLeft:'150px',backgroundColor:'#43554B',width:'130px',textAlign:'center',paddingTop:'20px',paddingBottom:'10px'}}>Resources</Typography>
-        </Box>
+      
+     
         <Box sx={{display:'flex',flexDirection:'column',marginTop:'110px',marginLeft:'150px'}} className="resources-text">
             <Typography sx={{color:'#dcefd8',fontWeight:'500',fontSize:'4.5em',lineHeight:'0'}}><span style={{color:'var(--main-text-color)'}}>Transform Your Strategy  </span> with Proven</Typography>
             <Typography sx={{color:'#dcefd8',fontWeight:'500',fontSize:'4.5em',lineHeight:'2.5'}}>Marketing Success Stories</Typography>
@@ -248,6 +256,7 @@ export default function Resources() {
         </Box>
     </Box>
     </Box>
+
     </div>
   );
 }

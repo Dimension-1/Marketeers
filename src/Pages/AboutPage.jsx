@@ -11,6 +11,8 @@ import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import WhyMarketeer from "../Components/WhyMarketeer";
+import arrowDown from "../assets/ArrowDown.svg"
+import aboutIcon from "../assets/About Us.svg"
 
 const AboutPage = () => {
   return (
@@ -18,6 +20,19 @@ const AboutPage = () => {
       <div className="content-wrapper ">
         <Navbar />
         <div className="header-container d-flex flex-column  justify-content-center align-items-center">
+        <img src={aboutIcon} alt="aboutIcon" className=""  style={{ 
+          position: "absolute",
+          zIndex: 999,
+          left: '11%',
+          top: '-2px',
+      
+ }}/>
+  <img
+    src={arrowDown}
+    alt="arrowDown"
+    className=" position-absolute bottom-30 z-3"
+    style={{right: "-1px"}}
+  />
           <h1 className=" p-4 m-md-5 main-heading text-light font-7">
           Charting a Bold Course for 1,000 Businesses to Enrich{" "}
             <span style={{ color: "var(--main-text-color)" }}>

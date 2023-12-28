@@ -30,7 +30,7 @@ const Navbar = () => {
     </div>
         <div class="d-flex" style={{ flexDirection: "row-reverse", paddingRight: "2rem"}}>
           <div
-            className="svg-icon d-flex mt-0"
+            className="svg-icon d-flex mt-0 "
             style={{
               padding: "0.9rem 1.3rem",
               marginLeft: "1rem",
@@ -47,10 +47,11 @@ const Navbar = () => {
               boxSizing: "border-box", // Fix the typo here
               gap: "0.9rem",
               zIndex: isSidebarOpen ? "0" : "1",
+              
             }}
           >
             Get in touch
-            <span
+            <span className=""
               style={{
                 borderRadius: "50%", // Make it a circle
                 background: "#262D29",
@@ -60,6 +61,7 @@ const Navbar = () => {
                 padding: "10.82px 12.46px 10.81px 12.42px",
                 justifyContent: "center",
                 alignItems: "center",
+                transition: "width 0.3s ease, height 0.3s ease",
               }}
             ></span>
           </div>
