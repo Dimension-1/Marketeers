@@ -94,7 +94,7 @@ const WhoTrustsUs = () => {
     src={load}
     alt="loading"
     className="position-absolute"
-    style={{right: "-1px", bottom: "-1px"}}
+    style={{right: "-1px", bottom: "0px"}}
   />
       </div>
     

@@ -66,8 +66,8 @@ const Blogs = () => {
             <h4 style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}>
               Startup Market Sizing: Founder's Guide to TAM SAM SOM
             </h4>
-            <div className="btn mt-md-4" style={{ color: "var(--text-color)" }}>
-              Market Sizing and Forecasting
+            <div className="btn mt-md-4" style={{ color: "var(--text-color)", cursor: "initial" }}>
+            Pay-Per-Click Advertising (PPC)
             </div>
           </div>
         </div>
@@ -92,8 +92,8 @@ const Blogs = () => {
             <h4 style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}>
               7 Simple Steps to Ace Your Startup Market Research
             </h4>
-            <div className="btn mt-md-4" style={{ color: "var(--text-color)" }}>
-              Business Plan & Pitch Deck
+            <div className="btn mt-md-4" style={{ color: "var(--text-color)", cursor: "initial" }}>
+            Email and SMS Marketing
             </div>
           </div>
         </div>
@@ -117,8 +117,8 @@ const Blogs = () => {
             <h4 style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}>
               Research and Planning for a New Business in 4 Steps
             </h4>
-            <div className="btn mt-md-4" style={{ color: "var(--text-color)" }}>
-              Business Plan & Pitch Deck
+            <div className="btn mt-md-4" style={{ color: "var(--text-color)", cursor: "initial" }}>
+            Influencer Marketing
             </div>
           </div>
         </div>
@@ -180,6 +180,7 @@ const Blogs = () => {
                 fontSize: "1.5rem",
               }}
             >
+              
               Subscribe
             </p>
             <div
