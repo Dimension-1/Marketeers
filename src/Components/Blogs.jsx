@@ -172,6 +172,7 @@ const Blogs = () => {
             competition!
           </p>
           <div>
+            <div className="d-flex justify-content-between w-75"> 
             <p
               className="fw-medium"
               style={{
@@ -183,10 +184,22 @@ const Blogs = () => {
               
               Subscribe
             </p>
+            <span>
+            <img
+                src={arrow} // Replace with the path to your image
+                alt="Circle Image"
+                style={{
+                  rotate: "180deg",
+                  marginLeft: "0.5rem",
+                }}
+              />
+            </span>
+            </div>
             <div
               className="green-border d-flex justify-content-center pt-4 w-75"
               style={{ borderColor: "var(--text-color)" }}
             ></div>
+            
           </div>
         </div>
       </div>
