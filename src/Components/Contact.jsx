@@ -335,7 +335,7 @@ const Contact = ({title, fontSize}) => {
     <img src={copied ? 'Copied!' : copyIcon} alt="" style={{ marginRight: '10px' }} />
   </div>
   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
-    <span style={{ textAlign: 'center' }}>hristo@addifico.com</span>
+    <span style={{ textAlign: 'center' }}>contact@marketeers.ai</span>
   </div>
 </div>
 
