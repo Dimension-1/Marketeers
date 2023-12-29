@@ -17,7 +17,7 @@ gsap.to(".nav-text", {
 const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef();
-
+  
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
@@ -39,9 +39,9 @@ const Navbar = () => {
   return (
     <>
       <div
-        class="d-flex position-fixed top-0 w-100 justify-content-between align-items-center mb-5"
+     class="d-flex position-fixed top-0 w-100 justify-content-between align-items-center mb-5"
         style={{ zIndex: "997", paddingRight: "2rem" }}
-      >
+              >
         <div className="logo z-3" style={{ zIndex: "1000" }}>
         <Link to="/">
           <img src={logo} alt="" />

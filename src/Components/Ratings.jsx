@@ -7,16 +7,18 @@ import record from "../assets/trackrecord.svg";
 import section from "../assets/Section10k.png";
 import arrowDown from "../assets/ArrowDown.svg"
 
-const Ratings = () => {
+const Ratings = ({targetRef}) => {
 
-  const sidecutRef = useRef(null); // Create a ref for the sidecut image
+  const sidecutRef = useRef(null);
 
-const handleSidecutClick = () => {
-  // Scroll to the target section
-  if (sidecutRef.current) {
-    sidecutRef.current.scrollIntoView({ behavior: "smooth" });
-  }
-};
+  const handleSidecutClick = () => {
+    if (targetRef.current) {
+      const yOffset = -60;
+      const y = targetRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
 
   return (
     <div className="position-relative">
@@ -118,7 +120,6 @@ const handleSidecutClick = () => {
     className="arrowDown position-absolute bottom-50 z-3"
     style={{right: "-1px", cursor: "pointer"}}
     onClick={handleSidecutClick}
-    ref={sidecutRef}
   />
     </div>
   );

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './WhyUs.css';
 import plusIcon from "../assets/div.whyus__expand.svg";
 import image from "../assets/Section.jpg.png";
 import minusIcon from "../assets/minusIcon.svg";
 
-const WhyUs = () => {
+const WhyUs = ({ targetRef }) => {
   const [openAnswers, setOpenAnswers] = useState([false, false, false]);
 
   const toggleAnswer = (index) => {
@@ -14,6 +14,15 @@ const WhyUs = () => {
       return updatedAnswers;
     });
   };
+
+  useEffect(() => {
+    // Scroll to the WhyUs section when the component mounts
+    if (targetRef.current) {
+      const yOffset = -60;
+      const y = targetRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }, [targetRef]);
 
   const questionAnswers = [
     {
@@ -35,7 +44,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <div className="container whyus-sm d-flex" style={{paddingTop: '10%', marginBottom: '10%', zIndex: "998"}}>
+    <div ref={targetRef} className="container whyus-sm d-flex" style={{paddingTop: '10%', marginBottom: '10%', zIndex: "998"}}>
        {/* <div className="img-overlay-3 position-absolute right-0" >
       <img src={image} alt="" className="h-75 w-75 " />
     </div> */}

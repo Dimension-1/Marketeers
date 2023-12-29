@@ -24,6 +24,7 @@ import asterisk from "../assets/asterisk.svg"
 gsap.registerPlugin(ScrollTrigger);
 
 const LandingPage = () => {
+  const targetRef = useRef(null);
 
   // useEffect(() => {
   //   gsap.to('.switch', {
@@ -95,14 +96,18 @@ const LandingPage = () => {
 const sidecutRef = useRef(null); // Create a ref for the sidecut image
 
 const handleSidecutClick = () => {
-  // Scroll to the target section
   if (sidecutRef.current) {
-    sidecutRef.current.scrollIntoView({ behavior: "smooth" });
+    const yOffset = -60; // Adjust this value based on your layout
+    const y = sidecutRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
   }
 };
 
+
+
+
   return (
-    <div className="main">
+    <div className="main main-content">
   <Navbar />
   <div className=" w-100 pb-3 img-container position-relative">
     <div className="img-overlay position-absolute right-0 z-1">
@@ -148,19 +153,21 @@ alt="star"
     className="sidecut-image position-absolute bottom-0 right-0"
     style={{right: "0", width: "8%", cursor: "pointer"}}
     onClick={handleSidecutClick} // Add the click event
-          ref={sidecutRef}
+          
   />
       </div>
     </div>
     <div className="spacer vh-50" style={{marginBottom: '40rem'}}></div>
     <div className="green-border d-flex justify-content-center pt-0 z-3 position-sticky" style={{ left: '50%', marginRight: "1rem", marginLeft: "1rem"}}></div>
-    <WhyMarketeer
-        pageTitle="Why we exist?"
-        pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
-      />
+    <div ref={sidecutRef}>
+        <WhyMarketeer
+          pageTitle="Why we exist?"
+          pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
+        />
+      </div>
     <Services />
-    <Ratings/>
-    <WhyUs/>
+    <Ratings targetRef={targetRef}/>
+    <WhyUs targetRef={targetRef}/>
    
     <WhoTrustsUs/>
     <Testimonials/>

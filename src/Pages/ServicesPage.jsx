@@ -23,12 +23,13 @@ const ServicesPage = () => {
   const [openAnswers, setOpenAnswers] = useState([false, false, false]);
   const sidecutRef = useRef(null); // Create a ref for the sidecut image
 
-  const handleSidecutClick = () => {
-    // Scroll to the target section
-    if (sidecutRef.current) {
-      sidecutRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+const handleSidecutClick = () => {
+  if (sidecutRef.current) {
+    const yOffset = -60; // Adjust this value based on your layout
+    const y = sidecutRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+};
 
 
   const toggleAnswer = (index) => {
@@ -243,7 +244,7 @@ const ServicesPage = () => {
     className=" position-absolute bottom-30 z-3"
     style={{right: "-1px", cursor: "pointer"}}
     onClick={handleSidecutClick}
-    ref={sidecutRef}
+    
   />
       </div>
       
@@ -411,6 +412,7 @@ const ServicesPage = () => {
      
         </div>
         <div
+        ref={sidecutRef}
           className="service-box-container  d-flex justify-content-center d-flex flex-column align-items-center"
           style={{ paddingTop: "10rem", paddingBottom: "10rem" }}
         >
