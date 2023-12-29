@@ -144,8 +144,8 @@ const Blogs = () => {
       </div>
 
       <div
-        className="subscribe d-flex pt-3 mt-md-5"
-        style={{ height: "15rem", paddingLeft: "5rem", paddingRight: "5rem" }}
+        className="subscribe d-lg-flex d-md-flex pt-3 mt-md-5 subscriptions"
+        style={{ paddingLeft: "5rem", paddingRight: "5rem" }}
       >
         <div className="col-md-6 col-7 d-flex flex-column justify-content-between ">
           <h2
@@ -222,6 +222,90 @@ const Blogs = () => {
           </div>
         </div>
       </div>
+
+
+
+
+      <div
+        className="subscribe pt-3 mt-md-5 subscription-sm"
+        style={{ paddingLeft: "5rem", paddingRight: "5rem" }}
+      >
+        <div className="col-12 d-flex flex-column justify-content-between ">
+          <h2
+            className="subscription"
+            style={{
+              fontSize: "2.5rem",
+              color: "var( --primary-text)",
+              fontWeight: "500",
+            }}
+          >
+            Don't want to miss anything?
+          </h2>
+          <p
+            className=""
+            style={{
+              color: "var(--primary-text)",
+              fontSize: "1.3rem",
+              fontWeight: "500",
+              opacity: "0.8",
+            }}
+          >
+            Sign up for our newsletter to discover winning trends before your
+            competition!
+          </p>
+          <div>
+            <input
+              style={{
+                border: "none",
+                borderBottom: "0.1px solid var(--line-color)", // You can set the color of the line here
+                outline: "none", // Remove the default input focus outline
+                backgroundColor: "transparent",
+                color: "var(--text-color)",
+                fontSize: "1.5rem",
+                fontWeight: "500",
+              }}
+              placeholder="Email"
+            />
+            <div
+              className="green-border d-flex justify-content-center pt-4 w-75 mt-2"
+              style={{ borderColor: "var(--text-color)" }}
+            ></div>
+          </div>
+          <div>
+            <div className="d-flex justify-content-between w-75"> 
+            <p
+              className="fw-medium"
+              style={{
+                backgroundColor: "transparent",
+                color: "var(--primary-text)",
+                fontSize: "1.5rem",
+              }}
+            >
+              
+              Subscribe
+            </p>
+            <span>
+            <img
+                src={arrow} // Replace with the path to your image
+                alt="Circle Image"
+                style={{
+                  rotate: "180deg",
+                  marginLeft: "0.5rem",
+                }}
+              />
+            </span>
+            </div>
+            <div
+              className="green-border d-flex justify-content-center pt-4 w-75"
+              style={{ borderColor: "var(--text-color)" }}
+            ></div>
+            
+          </div>
+        </div>
+  
+      </div>
+
+
     </div>
   );
 };

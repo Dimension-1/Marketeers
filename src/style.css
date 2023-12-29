@@ -357,7 +357,25 @@ background: var(--custom-btn);
   display: none;
 }
 
+.subscription-sm{
+  display: none !important;
+}
+
+@media (max-width: 400px) {
+  
+ .font-2{
+  font-size: 1.2rem;
+ }
+ .rating-sm{
+  font-size: 2rem;
+ }
+  
+}
+
 @media (max-width: 770px) {
+  .subscription-sm{
+    display: flex !important;
+  }
   .svg-icon{
     display: none;
   }
@@ -444,6 +462,9 @@ background: var(--custom-btn);
   gap: 0.6rem;
 }
 .circle-review{
+  display: none !important;
+}
+.subscriptions{
   display: none !important;
 }
 }
