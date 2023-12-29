@@ -7,50 +7,56 @@ import copyIcon from "../assets/copyIcon.svg";
 
 const Contact = ({title, fontSize}) => {
   const [copied, setCopied] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
 
+  const handleCopyClick = () => {
+    const emailText = "contact@marketeers.ai";
+    navigator.clipboard.writeText(emailText);
+    setCopied(true);
 
-const handleCopyClick = () => {
-  const emailText = "hristo@addifico.com";
-  navigator.clipboard.writeText(emailText);
-  setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
+  };
 
-  setTimeout(() => {
-    setCopied(false);
-  }, 2000);
-};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    console.log("Form Values:", formData);
 
-
-
-function Submit(e) {
-  e.preventDefault();
-  const formEle = document.querySelector("form");
-console.log("Form Values:", {
-  name: formEle.querySelector("[name='name']").value,
-  email: formEle.querySelector("[name='email']").value,
-  phone: formEle.querySelector("[name='phone']").value,
-  message: formEle.querySelector("[name='message']").value,
-  subject: formEle.querySelector("[name='subject']").value,
-});
-const formDatab = new FormData(formEle);
-console.log("FormData Object:", formDatab);
-
-
-  fetch(
-    "https://sheet.best/api/sheets/dad9f654-6401-4499-aff6-779c7c9d9c59",
-    {
-      method: "POST",
-      body: formDatab
+    const formDatab = new FormData();
+    for (const key in formData) {
+      formDatab.append(key, formData[key]);
     }
-  )
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
 
+    console.log("FormData Object:", formDatab);
+
+    fetch("https://sheet.best/api/sheets/dad9f654-6401-4499-aff6-779c7c9d9c59", {
+      method: "POST",
+      body: formDatab,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
 
   return (
@@ -197,7 +203,7 @@ console.log("FormData Object:", formDatab);
               {title}
             </h1>
 
-            <form className="form" onSubmit={(e) => Submit(e)}>
+            <form className="form" onSubmit={handleSubmit}>
             <div className="row mb-3">
               
               <div className="col-6">
@@ -205,6 +211,8 @@ console.log("FormData Object:", formDatab);
                   type="text"
                   id="name"
                   name="name"
+                  value={formData.name}
+                onChange={handleChange}
                   className="form-control custom-input"
                   style={{
                     borderRadius: "14px",
@@ -221,6 +229,8 @@ console.log("FormData Object:", formDatab);
                   type="text"
                   id="email"
             name="email"
+            value={formData.email}
+                onChange={handleChange}
                   className="form-control custom-input"
                   style={{
                     borderRadius: "14px",
@@ -239,6 +249,8 @@ console.log("FormData Object:", formDatab);
                   type="text"
                   id="phone"
                   name="phone"
+                  value={formData.phone}
+                onChange={handleChange}
                   className="form-control custom-input"
                   style={{
                     borderRadius: "14px",
@@ -255,6 +267,8 @@ console.log("FormData Object:", formDatab);
                   type="text"
                   id="subject"
                   name="subject"
+                  value={formData.subject}
+                onChange={handleChange}
                   className="form-control custom-input"
                   style={{
                     borderRadius: "14px",
@@ -272,6 +286,8 @@ console.log("FormData Object:", formDatab);
                 type="text"
                 id="message"
                 name="message"
+                value={formData.message}
+                onChange={handleChange}
                 className="form-control custom-input"
                 style={{
                   borderRadius: "14px",

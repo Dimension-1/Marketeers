@@ -7,31 +7,31 @@ import { Link } from "react-router-dom";
 
 const Blogs = () => {
 
-  function Submit(e) {
-    e.preventDefault();
-    const formEle = document.querySelector("form");
-  console.log("Form Values:", {
-    subscribe: formEle.querySelector("[name='subscribe']").value,
-  });
-  const formDatab = new FormData(formEle);
-  console.log("FormData Object:", formDatab);
+  // function Submit(e) {
+  //   e.preventDefault();
+  //   const formEle = document.querySelector("form");
+  // console.log("Form Values:", {
+  //   subscribe: formEle.querySelector("[name='subscribe']").value,
+  // });
+  // const formDatab = new FormData(formEle);
+  // console.log("FormData Object:", formDatab);
   
   
-    fetch(
-      "https://sheet.best/api/sheets/dad9f654-6401-4499-aff6-779c7c9d9c59",
-      {
-        method: "POST",
-        body: formDatab
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+  //   fetch(
+  //     "https://sheet.best/api/sheets/dad9f654-6401-4499-aff6-779c7c9d9c59",
+  //     {
+  //       method: "POST",
+  //       body: formDatab
+  //     }
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }
 
   const blogData = [
     {
@@ -169,7 +169,7 @@ const Blogs = () => {
         </div>
       </div>
 
-      <form className="form" onSubmit={(e) => Submit(e)}>
+      <form className="form" >
       <div
         className="subscribe d-lg-flex d-md-flex pt-3 mt-md-5 subscriptions"
         style={{ paddingLeft: "5rem", paddingRight: "5rem" }}
