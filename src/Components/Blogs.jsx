@@ -6,6 +6,19 @@ import blog3 from "../assets/blog3.png";
 import { Link } from "react-router-dom";
 
 const Blogs = () => {
+
+  const blogData = [
+    {
+      id: 1,
+    },
+    {
+      id: 2,
+    },
+    {
+      id: 3,
+    },
+  ];
+
   return (
     <div
       className=" z-3 position-relative bg-white rating-container gap-4 p-md-5  "

@@ -9,6 +9,7 @@ import ContactPage from './Pages/ContactPage';
 import AboutPage from "./Pages/AboutPage"
 import ResourcesPage from "./Pages/ResourcePage"
 import BlogPage from './Pages/BlogPage';
+import BlogContent from './Components/BlogContent';
 
 function App() {
   return (

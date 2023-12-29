@@ -40,9 +40,9 @@ const Navbar = () => {
     <>
       <div
         class="d-flex position-fixed top-0 w-100 justify-content-between align-items-center mb-5"
-        style={{ zIndex: isSidebarOpen ? "auto" : "999", paddingRight: "2rem" }}
+        style={{ zIndex: "997", paddingRight: "2rem" }}
       >
-        <div className="logo" style={{ zIndex: isSidebarOpen ? "1000" : "auto" }}>
+        <div className="logo z-3" style={{ zIndex: "1000" }}>
         <Link to="/">
           <img src={logo} alt="" />
         </Link>

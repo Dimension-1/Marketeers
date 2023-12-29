@@ -4,6 +4,9 @@ import arrow from "../assets/arrow-review.svg";
 import blog2 from "../assets/blog-image2.png";
 import blog3 from "../assets/blog3.png";
 import Navbar from "../Components/Navbar";
+import BlogContent from "../Components/BlogContent";
+import Footer from "../Components/Footer";
+import Contact from "../Components/Contact";
 
 const BlogPage = () => {
 
@@ -51,88 +54,12 @@ const BlogPage = () => {
   
 
   return (
-    <div style={{backgroundColor: "inherit"}}>
-    {/* <Navbar/> */}
-    <div
-      className=" z-3 position-relative bg-white rating-container gap-4  "
-      style={{padding: "10%"}}
-    >
+    <div className="d-flex justify-content-center flex-column" style={{ background: 'var(--bg-color)' }} >
+    <Navbar/>
+    <BlogContent id={1} />
 
-      <div className="blog-heading d-flex justify-content-between align-items-baseline ">
-        <div
-          className="btn mt-md-4"
-          style={{ color: "var(--text-color)", cursor: "initial" }}
-        >
-          Pay-Per-Click Advertising (PPC)
-        </div>
-
-        <div>
-          <div>Published on October 23, 2023</div>
-          <div>Read time 4 min</div>
-        </div>
-      </div>
-
-<div>
-<h1
-          className=" blog-headline "
-          style={{
-            fontSize: "5rem",
-            color: "var( --primary-text)",
-          }}
-        >
-          Startup Market Sizing:
-Founder's Guide to TAM
-SAM SOM Analysis
-        </h1>
-</div>
-
-<div className="blog-img">
-    <img src={blog} alt="" style={{width: "100%", borderRadius: "20px"}} />
-</div>
-
-<div className="row pt-5">
-      <div className="col-4" >
-        <ul className="blog-text" style={{listStyleType: 'none'}}>
-          {Object.keys(marketData).map((section) => (
-            <li
-            style={{cursor: "pointer"}}
-              key={section}
-              onClick={() => scrollToSection(section)}
-              className={activeSection === section ? 'active' : ''}
-            >
-              {section}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="col-8">
-        <h4 className="blog-heading-1" style={{ color: "var(--primary-text)", fontSize: "1.75rem" }}>
-          Startup Market Sizing: Founder's Guide to TAM SAM SOM
-        </h4>
-        <section ref={sectionRefs.introduction}>
-          <h2 className="blog-intro">Introduction</h2>
-          <p className="blog-text">{marketData.introduction}</p>
-        </section>
-        <section ref={sectionRefs.tam}>
-          <h2 className="blog-intro">TAM: Total Addressable Market</h2>
-          <p className="blog-text">{marketData.tam}</p>
-        </section>
-        <section ref={sectionRefs.sam}>
-          <h2 className="blog-intro">SAM: Serviceable Addressable Market</h2>
-          <p className="blog-text">{marketData.sam}</p>
-        </section>
-        <section ref={sectionRefs.som}>
-          <h2 className="blog-intro">SOM: Serviceable Obtainable Market</h2>
-          <p className="blog-text">{marketData.som}</p>
-        </section>
-        <section ref={sectionRefs.conclusion}>
-          <h2 className="blog-intro">Conclusion</h2>
-          <p className="blog-text">{marketData.conclusion}</p>
-        </section>
-      </div>
-    </div>
-
-    </div>
+    <Contact/>
+    <Footer/>
     </div>
   );
 };
