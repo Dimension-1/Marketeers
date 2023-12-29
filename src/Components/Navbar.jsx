@@ -138,6 +138,8 @@ const Navbar = () => {
         </div>
       </div>
 
+      {isSidebarOpen && <div className="backdrop" onClick={toggleSidebar}></div>}
+
       {isSidebarOpen && (
         <div ref={sidebarRef} className="sidebar" style={{ zIndex: "999" }}>
           <span

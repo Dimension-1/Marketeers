@@ -14,7 +14,7 @@ import WhyMarketeer from "../Components/WhyMarketeer";
 import arrowDown from "../assets/ArrowDown.svg"
 import aboutIcon from "../assets/About Us.svg";
 import apostophy from "../assets/apostrophy.svg";
-import akshita from "../assets/akshita.svg"
+import akshita from "../assets/akshita.svg";
 
 const AboutPage = () => {
   const sidecutRef = useRef(null); // Create a ref for the sidecut image
@@ -137,6 +137,7 @@ const AboutPage = () => {
             paddingTop: "5%",
             paddingBottom: "5%",
             backgroundColor: "var(--secondary-bg)",
+            position: "relative",
           }}
         >
           <h1 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>
@@ -148,13 +149,13 @@ const AboutPage = () => {
     src={apostophy}
     alt="apostophy"
     className="arrowDown position-absolute z-3 "
-    style={{cursor: "pointer", bottom: "35.6%", left: "0"}}
+    style={{cursor: "pointer", top: "-2px", left: "-2px"}}
   />
     <img
     src={akshita}
     alt="apostophy"
     className="arrowDown position-absolute z-3 "
-    style={{cursor: "pointer", bottom: "21.9%", right: "2%"}}
+    style={{cursor: "pointer", bottom: "-2px", right: "2%"}}
   />
         </div>
         <Contact />
