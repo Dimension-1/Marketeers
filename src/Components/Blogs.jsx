@@ -7,6 +7,32 @@ import { Link } from "react-router-dom";
 
 const Blogs = () => {
 
+  function Submit(e) {
+    e.preventDefault();
+    const formEle = document.querySelector("form");
+  console.log("Form Values:", {
+    subscribe: formEle.querySelector("[name='subscribe']").value,
+  });
+  const formDatab = new FormData(formEle);
+  console.log("FormData Object:", formDatab);
+  
+  
+    fetch(
+      "https://sheet.best/api/sheets/dad9f654-6401-4499-aff6-779c7c9d9c59",
+      {
+        method: "POST",
+        body: formDatab
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   const blogData = [
     {
       id: 1,
@@ -143,10 +169,12 @@ const Blogs = () => {
         </div>
       </div>
 
+      <form className="form" onSubmit={(e) => Submit(e)}>
       <div
         className="subscribe d-lg-flex d-md-flex pt-3 mt-md-5 subscriptions"
         style={{ paddingLeft: "5rem", paddingRight: "5rem" }}
       >
+       
         <div className="col-md-6 col-7 d-flex flex-column justify-content-between ">
           <h2
             className="w-75 subscription"
@@ -169,6 +197,9 @@ const Blogs = () => {
                 fontSize: "1.5rem",
                 fontWeight: "500",
               }}
+              type="text"
+                  id="subscribe"
+            name="subscribe"
               placeholder="Email"
             />
             <div
@@ -192,7 +223,8 @@ const Blogs = () => {
           </p>
           <div>
             <div className="d-flex justify-content-between w-75"> 
-            <p
+            <button
+            type="submit"
               className="fw-medium"
               style={{
                 backgroundColor: "transparent",
@@ -202,7 +234,7 @@ const Blogs = () => {
             >
               
               Subscribe
-            </p>
+            </button>
             <span>
             <img
                 src={arrow} // Replace with the path to your image
@@ -221,8 +253,9 @@ const Blogs = () => {
             
           </div>
         </div>
+       
       </div>
-
+      </form>
 
 
 

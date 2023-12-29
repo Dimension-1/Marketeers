@@ -27,14 +27,16 @@ function Submit(e) {
 console.log("Form Values:", {
   name: formEle.querySelector("[name='name']").value,
   email: formEle.querySelector("[name='email']").value,
-  // ... repeat for other fields
+  phone: formEle.querySelector("[name='phone']").value,
+  message: formEle.querySelector("[name='message']").value,
+  subject: formEle.querySelector("[name='subject']").value,
 });
 const formDatab = new FormData(formEle);
 console.log("FormData Object:", formDatab);
 
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbwn3Au0_WYTdxrcbEaa9iCns_SL6bTVFvhUv8s4Ogv7g2n1OKGaH7aVSJgW3sREcaZAfQ/exec",
+    "https://sheet.best/api/sheets/dad9f654-6401-4499-aff6-779c7c9d9c59",
     {
       method: "POST",
       body: formDatab
@@ -235,8 +237,8 @@ console.log("FormData Object:", formDatab);
               <div className="col-6">
                 <input
                   type="text"
-                  id="Phone"
-                  name="Phone"
+                  id="phone"
+                  name="phone"
                   className="form-control custom-input"
                   style={{
                     borderRadius: "14px",
@@ -251,8 +253,8 @@ console.log("FormData Object:", formDatab);
               <div className="col-6">
                 <input
                   type="text"
-                  id="Subject"
-                  name="Subject"
+                  id="subject"
+                  name="subject"
                   className="form-control custom-input"
                   style={{
                     borderRadius: "14px",
