@@ -272,7 +272,9 @@ export default function Resources() {
                 
             ) : (filteredData.map((content, index) => (
                     <React.Fragment key={index}>
-                        <Box sx={{ backgroundColor: '#fff',  width: '360px', overflow: 'hidden',cursor:'pointer'}} className="blogCard">
+                      
+                        <Box sx={{ backgroundColor: '#fff',  width: '360px', overflow: 'hidden',cursor:'pointer'}} className="blogCard d-flex justify-content-between flex-column ">
+<Box>
                         <img src={content.imgsrc} alt="Blog" style={{ borderRadius: '15px', width: '100%', height: 'auto' }} />
                         <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '12px' }}>
                             <Typography sx={{ color: '#43554b', opacity: '0.4' }}>{content.type}</Typography>
@@ -282,10 +284,11 @@ export default function Resources() {
                             <Typography sx={{ color: '#43554b', fontSize: '1.75rem', fontWeight: 500,lineHeight:'1' }}>
                             {content.name}
                             </Typography>
-                            <ul style={{ listStyleType: 'none', paddingInlineStart: '0',}}>
-                            <li style={{ color: '#43554b',listStyleType: 'none',backgroundColor:'rgba(228,236,227,.45)',borderRadius:'1000px',width:'fit-content',padding:'6px 10px'}}>{content.filter}</li>
-                            </ul>
                         </Box>
+                        </Box>
+                        <Box><ul style={{ listStyleType: 'none', paddingInlineStart: '0',}}>
+                            <li style={{ color: '#43554b',listStyleType: 'none',backgroundColor:'rgba(228,236,227,.45)',borderRadius:'1000px',width:'fit-content',padding:'6px 10px'}}>{content.filter}</li>
+                            </ul></Box>
                     </Box>
                     </React.Fragment>
                 )))}

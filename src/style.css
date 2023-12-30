@@ -75,6 +75,13 @@
     bottom: -450px;
     left: -1000px;
   }
+
+  .overflow-x-hidden {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  
 .custom-container{
 margin: 3% 3%;
 }

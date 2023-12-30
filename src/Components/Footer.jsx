@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
             <div className='footer-font' style={{cursor: "pointer", color: "var(--secondary-bg)"}}>
-              <Link to="/resources" style={{ textDecoration: 'none', color: 'inherit' }}>Resources</Link>
+              <Link to="/resources/all" style={{ textDecoration: 'none', color: 'inherit' }}>Resources</Link>
             </div>
             <span style={{color: "var(--main-text-color)", fontSize: "1.5rem", opacity: "0.3" }}>/</span>
             <div className='footer-font' style={{cursor: "pointer", color: "var(--secondary-bg)"}}>

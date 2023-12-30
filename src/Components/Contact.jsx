@@ -4,6 +4,7 @@ import Fiverr from "../assets/fiver.svg";
 import linkedin from "../assets/linkedin.svg";
 import meet from "../assets/meet.svg";
 import copyIcon from "../assets/copyIcon.svg";
+import bg from "../assets/mainbg.png"
 
 const Contact = ({title, fontSize}) => {
   const [isSuccess, setIsSuccess] = useState(false);
@@ -90,7 +91,7 @@ const Contact = ({title, fontSize}) => {
 
 
   return (
-    <div className="position-relative ">
+    <div className="position-relative overflow-x-hidden">
   
     <div className="row contact-sm p-md-4 mt-sm-4 z-3 position-relative " style={{zIndex: "998"}}>
       
@@ -390,9 +391,9 @@ const Contact = ({title, fontSize}) => {
         </div>
       </div>
     </div>
-    {/* <div className="img-overlay position-absolute right-0">
-      <img src={image} alt="" className="" />
-    </div> */}
+    <div className="img-overlay position-absolute right-0 ">
+      <img src={bg} alt="" className="" />
+    </div>
     </div>
   );
 };

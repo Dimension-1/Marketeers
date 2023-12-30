@@ -17,18 +17,21 @@ import apostophy from "../assets/apostrophy.svg";
 import akshita from "../assets/akshita.svg";
 
 const AboutPage = () => {
-  const sidecutRef = useRef(null); // Create a ref for the sidecut image
+   
+const sidecutRef = useRef(null); // Create a ref for the sidecut image
 
-  const handleSidecutClick = () => {
-    // Scroll to the target section
-    if (sidecutRef.current) {
-      sidecutRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+const handleSidecutClick = () => {
+  if (sidecutRef.current) {
+    const yOffset = -60; // Adjust this value based on your layout
+    const y = sidecutRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+};
+
 
 
   return (
-    <div className="w-100 img-container position-relative p-">
+    <div className="w-100 img-container position-relative overflow-x-hidden">
          <div className="img-overlay-7 position-absolute z-0">
       <img src={image} alt="" className="" />
     </div>
@@ -51,7 +54,7 @@ const AboutPage = () => {
     className=" position-absolute bottom-30 z-3"
     style={{right: "-1px", cursor: "pointer"}}
     onClick={handleSidecutClick}
-    ref={sidecutRef}
+    
   />
           <h1 className=" p-4 m-md-5 main-heading text-light-bg font-7">
           Charting a Bold Course for 1,000 Businesses to Enrich{" "}
@@ -67,6 +70,7 @@ const AboutPage = () => {
         </div>
 
         <div
+        ref={sidecutRef}
           className=" d-flex flex-column text-light-bg gap-4"
           style={{ padding: "5%" }}
         >
