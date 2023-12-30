@@ -140,7 +140,7 @@ const handleSidecutClick = () => {
         </div>
 
         <div
-          className=" d-flex  rating-container"
+          className=" d-flex  rating-container z-3"
           style={{
             paddingTop: "5%",
             paddingBottom: "7%",

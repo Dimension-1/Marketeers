@@ -6,7 +6,7 @@ import Contact from "../Components/Contact"
 
 const ResourcePage = () => {
   return (
-    <div style={{ background: 'var(--bg-color)' }}>
+    <div className='overflow-hidden' style={{ background: 'var(--bg-color)' }}>
     <Navbar/>
     <Resources/>
     <Contact/>

@@ -453,7 +453,7 @@ const handleSidecutClick = () => {
           </div>
         </div>
 
-        <div className=" d-flex  rating-container" style={{paddingTop: '10%', paddingBottom: '10%', backgroundColor: "var(--secondary-bg)" }} >
+        <div className=" d-flex  rating-container z-3 position-relative " style={{paddingTop: '10%', paddingBottom: '10%', backgroundColor: "var(--secondary-bg)" }} >
        {/* <div className="img-overlay-3 position-absolute right-0" >
       <img src={image} alt="" className="h-75 w-75 " />
     </div> */}

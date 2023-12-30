@@ -4,9 +4,10 @@ import Fiverr from "../assets/fiver.svg";
 import linkedin from "../assets/linkedin.svg";
 import meet from "../assets/meet.svg";
 import copyIcon from "../assets/copyIcon.svg";
-import bg from "../assets/mainbg.png"
+import bg from "../assets/mainbg.png";
+import image from "../assets/DesktopBlue.svg";
 
-const Contact = ({title, fontSize}) => {
+const Contact = ({title, fontSize, showOverlayImage = true}) => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [copied, setCopied] = useState(false);
   const [formData, setFormData] = useState({
@@ -91,10 +92,23 @@ const Contact = ({title, fontSize}) => {
 
 
   return (
-    <div className="position-relative overflow-x-hidden">
-  
-    <div className="row contact-sm p-md-4 mt-sm-4 z-3 position-relative " style={{zIndex: "998"}}>
+    <div className="position-relative">
+
+       {showOverlayImage && (
+         <div className="img-overlay position-absolute z-1" style={{transform: 'rotate(330deg)',
+         left: '-726px',
+         top: '-338px',
+         opacity: "0.5"
+         }}>
+             <img src={bg} alt="" className="" />
+           </div>
+       )}
+     
+
+
+    <div className="row contact-sm p-md-4 mt-sm-4 z-3 position-relative ">
       
+
       <div className="col-md-6 col-12 d-flex z-3 " style={{ gap: "2.2rem" }}>
         <div className="row gap-3 h-100 w-100 ">
           <div className="contact-box d-flex flex-column justify-content-between p-4">
@@ -227,7 +241,7 @@ const Contact = ({title, fontSize}) => {
         </div>
       </div>
 
-      <div className="col-md-6 col-12">
+      <div className="col-md-6 col-12 z-3">
         <div className="service-box w-100 h-100 d-flex justify-content-between flex-column">
           <div>
             <h1 className=" mb-4" style={{color: "var(--secondary-bg)", fontSize}}>
@@ -390,10 +404,12 @@ const Contact = ({title, fontSize}) => {
           </div>
         </div>
       </div>
+   
+   
+   
     </div>
-    {/* <div className="img-overlay position-absolute right-0 ">
-      <img src={bg} alt="" className="" />
-    </div> */}
+
+    
     </div>
   );
 };

@@ -70,7 +70,8 @@ const ContactPage = () => {
                 and get a free action plan
               </p>
 
-              <Contact title="Drop us a message:" fontSize="1.3rem"/>
+<Contact title="Drop us a message:" fontSize="1.3rem" showOverlayImage={false} />
+
             </div>
             <img
     src={arrowDown}

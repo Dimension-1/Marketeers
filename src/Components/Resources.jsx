@@ -113,13 +113,13 @@ export default function Resources() {
     
     
   return (
-    <div className='overflow-x-hidden' style={{ background: 'var(--bg-color)'}} >
+    <div className='overflow-x-hidden ' style={{ background: 'var(--bg-color)'}} >
          <div className="img-overlay-7 position-absolute z-0">
       <img src={image} alt="" className="" />
     </div>
     <Box sx={{ backgroundColor: 'var(--bg-color)',padding:'94px 10px 10px'}}>
    
-      <Box sx={{backgroundColor:'rgba(27, 26, 31, 0.8)',borderRadius:'15px',paddingTop: "2rem", position: 'relative'}}>
+      <Box sx={{backgroundColor:'rgba(27, 26, 31, 0.8)',borderRadius:'15px',paddingTop: "2rem", position: 'relative', overflowY: "hidden"}}>
       <img src={resourceIcon} alt="resourceIcon" className=""  style={{ 
           position: "absolute",
           zIndex: 999,
@@ -264,7 +264,7 @@ export default function Resources() {
                     </AccordionDetails>
             </Accordion>
 
-            <Box sx={{padding :'85px 150px 85px',display: 'grid',gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',backgroundColor:'#fff',borderRadius:'15px',gap:'15px',gridRowGap:'28px'}} className="cards-container">
+            <Box sx={{padding :'85px 150px 85px',zIndex: "3", position: "relative", display: 'grid',gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',backgroundColor:'#fff',borderRadius:'15px',gap:'15px',gridRowGap:'28px'}} className="cards-container">
             {filteredData.length === 0 ? (
                 <Box sx={{backgroundColor:'rgba(228,236,227,.7)',gridColumn: '1 / -1',borderRadius:'15px',padding:'42px 5px',display:'flex',justifyContent:'center',flexDirection:'column',alignItems:'center'}}>
                     <Typography sx={{ color: '#43554b', fontSize: '1.5rem', fontWeight: 500,}}>
