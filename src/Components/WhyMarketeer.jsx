@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Scrollbar from "smooth-scrollbar";
 // import image from "../assets/Section.jpg.png";
 import image from "../assets/DesktopBlue.svg";
+import bg from "../assets/mainbg.png"
 
 gsap.registerPlugin(ScrollTrigger);
 

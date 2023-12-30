@@ -138,7 +138,7 @@ export default function Resources() {
            </Box>
         </Box>
         <Box sx={{borderRadius:'0px'}}>
-        <Accordion sx={{backgroundColor:'rgba(27, 26, 31, 0.8)',marginBottom:'0',borderRadius:'0'}}>
+        <Accordion sx={{backgroundColor:'rgba(27, 26, 31, 0.8)',marginBottom:'0',borderRadius:'0', justifyContent: "flex-end" }}>
             <AccordionSummary
                 aria-controls="panel1a-content"
                 id="panel1a-header"
