@@ -6,6 +6,7 @@ import meet from "../assets/meet.svg";
 import copyIcon from "../assets/copyIcon.svg";
 
 const Contact = ({title, fontSize}) => {
+  const [isSuccess, setIsSuccess] = useState(false);
   const [copied, setCopied] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -14,6 +15,8 @@ const Contact = ({title, fontSize}) => {
     subject: "",
     message: "",
   });
+
+  const formRef = useRef();
 
   const handleCopyClick = () => {
     const emailText = "contact@marketeers.ai";
@@ -28,6 +31,29 @@ const Contact = ({title, fontSize}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
+  // Validate mandatory fields
+  const mandatoryFields = ["name", "email", "subject", "message"];
+  let isValid = true;
+
+  mandatoryFields.forEach((field) => {
+    if (!formData[field]) {
+      isValid = false;
+      const input = formRef.current.querySelector(`[name=${field}]`);
+      input.setCustomValidity("This field is required");
+    }
+  });
+
+  if (!isValid) {
+    formRef.current.reportValidity();
+    return;
+  }
+
+  // Reset custom validation messages
+  mandatoryFields.forEach((field) => {
+    const input = formRef.current.querySelector(`[name=${field}]`);
+    input.setCustomValidity("");
+  });
+
     console.log("Form Values:", formData);
 
     const formDatab = new FormData();
@@ -43,6 +69,7 @@ const Contact = ({title, fontSize}) => {
     })
       .then((res) => res.json())
       .then((data) => {
+        setIsSuccess(true);
         console.log(data);
       })
       .catch((error) => {
@@ -56,6 +83,9 @@ const Contact = ({title, fontSize}) => {
       ...prevData,
       [name]: value,
     }));
+
+      // Reset custom validation message
+  e.target.setCustomValidity("");
   };
 
 
@@ -203,10 +233,26 @@ const Contact = ({title, fontSize}) => {
               {title}
             </h1>
 
-            <form className="form" onSubmit={handleSubmit}>
-            <div className="row mb-3">
+            {isSuccess ? (
+    <div className="d-flex justify-content-center align-items-center">
+    <div className="success" style={{
+            color: "var(--text-color)",
+            fontSize: "1.3rem",
+            fontWeight: "500",
+            opacity: "0.8",
+            borderRadius: "14px",
+                    background: "rgba(220, 239, 216, 0.05)",
+                    padding: "15px",
+                    border: "none", // Set border to none
+          }}>Thank you! Your submission has been received!</div>
+    </div>
+  ) : (
+
+            <form className="form" onSubmit={handleSubmit}  noValidate
+          ref={formRef}>
+            <div className="row ">
               
-              <div className="col-6">
+              <div className="col-12 col-md-6 col-lg-6 mb-3">
                 <input
                   type="text"
                   id="name"
@@ -224,7 +270,7 @@ const Contact = ({title, fontSize}) => {
                   placeholder="Name*"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-12 col-md-6 col-lg-6 mb-3">
                 <input
                   type="text"
                   id="email"
@@ -243,8 +289,8 @@ const Contact = ({title, fontSize}) => {
                 />
               </div>
             </div>
-            <div className="row mb-3">
-              <div className="col-6">
+            <div className="row">
+              <div className="col-12 col-md-6 col-lg-6 mb-3">
                 <input
                   type="text"
                   id="phone"
@@ -262,7 +308,7 @@ const Contact = ({title, fontSize}) => {
                   placeholder="Phone"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-12 col-md-6 col-lg-6 mb-3">
                 <input
                   type="text"
                   id="subject"
@@ -313,6 +359,7 @@ const Contact = ({title, fontSize}) => {
               Send Message
             </button>
             </form>
+         )}
           </div>
 
           <div>

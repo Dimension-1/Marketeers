@@ -74,8 +74,8 @@ const AboutPage = () => {
             Our Values
           </h1>
 
-          <div className="row d-flex ">
-            <div className="col-3 gap-3 d-flex flex-column">
+          <div className="row d-flex justify-content-center align-items-baseline ">
+            <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
               <img
                 src={forecast}
                 alt=""
@@ -88,7 +88,7 @@ const AboutPage = () => {
               <h4>Integrity</h4>
               <p>"Commitment to Authenticity" - We believe in honesty and transparency, upholding the highest standards in all our endeavors.</p>
             </div>
-            <div className="col-3 gap-3 d-flex flex-column">
+            <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
               <img
                 src={forecast}
                 alt=""
@@ -101,7 +101,7 @@ const AboutPage = () => {
               <h4>Creativity</h4>
               <p>"Imagination Unleashed" - We encourage out-of-the-box thinking, embracing innovative ideas to overcome challenges.</p>
             </div>
-            <div className="col-3 gap-3 d-flex flex-column">
+            <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
               <img
                 src={forecast}
                 alt=""
@@ -115,7 +115,7 @@ const AboutPage = () => {
               <p>"Beyond the Horizon" - Continuously pushing boundaries, we strive to bring groundbreaking solutions to the forefront of digital marketing.
 </p>
             </div>
-            <div className="col-3 gap-3 d-flex flex-column">
+            <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
               <img
                 src={forecast}
                 alt=""
@@ -135,7 +135,9 @@ const AboutPage = () => {
           className=" d-flex  rating-container"
           style={{
             paddingTop: "5%",
-            paddingBottom: "5%",
+            paddingBottom: "7%",
+            paddingLeft: "10%",
+            paddingRight: "7%",
             backgroundColor: "var(--secondary-bg)",
             position: "relative",
           }}
