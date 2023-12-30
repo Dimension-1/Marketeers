@@ -7,7 +7,7 @@ import "./BlogContent.css";
 import { useParams } from "react-router-dom";
 import upwork from "../assets/upwork.svg";
 import Fiverr from "../assets/fiver.svg";
-import linkedin from "../assets/linkedin.svg";
+import linkedin from "../assets/iconlinkedin.svg";
 import meet from "../assets/meet.svg";
 import goback from "../assets/goBack.svg";
 import clippathblog from "../assets/clippathblog.svg";
@@ -67,18 +67,18 @@ const BlogContent = () => {
     },
     {
       id: 3,
-      title: " 7 Simple Steps to Ace Your Startup Market Research",
-      category: "Email and SMS Marketing",
-      date: "",
+      title: "Research and Planning for a New Business in 4 Steps",
+      category: "Influencer Marketing",
+      date: "September 27, 2023",
       readTime: "4 min",
       image: blog3,
       sections: {
         Introduction:
           "When it comes to launching a business, one of the most important things you need to understand is your market size. Without a clear understanding of the size of your market, it’s impossible to know whether your business idea is viable, how big you can realistically expect to grow, and what kind of competitors you might face. This is where TAM SAM SOM analysis comes in.TAM, SAM, and SOM are three different measures of market size used to help companies understand their potential customer base. In this post, we’ll dive into what these terms mean, how to calculate them, and why they matter for your business.",
-        TAM: "TAM is the total number of potential customers in your target market. This is the largest possible market size you could reach if your business captured every single customer in your target audience. It’s important to note that TAM is not a realistic measure of how big your business could get, but rather an estimate of the entire market opportunity.To calculate your TAM, start by identifying your target market. This might be a region, industry, or demographic group. Then, look for data sources that can help you estimate the total number of customers in that market. This might include government statistics, trade associations, or market research reports",
-        Sam: "SAM is the section of your TAM that your business can realistically serve...",
-        Som: "SOM is the portion of your SAM that you can realistically capture over a given period of time...",
-        Conclusion:
+          "Knowledge is Power – The Importance of Research and Planning": "Dive right in? Hold on, eager beaver. We’ve heard the echo: 90% of startups tumble like a house of cards. Lack of research and planning? Guilty as charged. It's like heading into a maze blindfolded. The fix? Light the way with solid research and a concrete plan, your personal GPS in the business labyrinth.",
+        "Step 1: Size Your Market and Identify Trends": "Pondering about pouring your hard-earned cash into that sparkly new venture? Hold the phone. Know the size of your playground first. It’s crucial to understand how big the pie is and your potential slice. Observe the market trends; they’re your business weather forecast. It’s not just about the now; it's about staying a step ahead. If you're seeing clouds form, you’ll want that umbrella handy.",
+        "Step 2: Analyze and Segment Your Customers": "Here’s where we roll out the red carpet for the king – the customer. Understanding their whims and wishes is like having the key to the kingdom. Segment your customers. Tailor your products and services to their likes. And guess what? Understanding your customers’ desires has never been easier or more affordable. Customer surveys aren’t just for the corporate giants anymore. They’re your secret weapon, shining a light on what the king really wants. It’s not about selling a product; it’s about solving their problems, like a knight in shining armor.",
+        "Step 3: Competitor Analysis and Pricing Strategy":
           "Understanding your market size is crucial for launching and growing a successful business. TAM, SAM, and SOM analysis can help you get a better idea of your potential customer base and how big you can realistically expect to grow. By carefully calculating each of these numbers and analyzing your competition, you can make more informed decisions about your business strategy and set more accurate goals for growth. So, take the time to crunch the numbers, and use this information to guide your business decisions.",
       },
     },
@@ -169,13 +169,13 @@ const BlogContent = () => {
       <div className="subheading" style={{paddingBottom: "1rem" }}>Share:</div>
       <div className="icon-share d-flex gap-2">
 <div className="icon">
-    <img src={linkedin} alt="" />
+    <img src={linkedin} alt="" style={{width: "75%", height: "75%"}}  />
 </div>
 <div className="icon">
-<img src={linkedin} alt="" />
+<img src={fb} alt="" style={{width: "75%", height: "75%"}}/>
 </div>
 <div className="icon">
-<img src={clippathblog} alt="" />
+<img src={clippathblog} alt="" style={{width: "75%", height: "75%"}}/>
 </div>
 </div>
 </div>
@@ -191,7 +191,7 @@ const BlogContent = () => {
       </div>
 
       <div className="row" style={{paddingTop: "7%"}}>
-        <div className="col-4 toc-column">
+        <div className="col-4 toc-column ">
             <button className="goBack-btn p-3 d-flex justify-content-between gap-2">
                 <img src={goback} alt="" />
                 Go Back
@@ -216,19 +216,19 @@ const BlogContent = () => {
           <div className="subheading" style={{paddingBottom: "1rem" }}>Share this article:</div>
 
           <div className="icon-share d-flex gap-2">
-<div className="icon">
-    <img src={linkedin} alt="" />
+<div className="icon" style={{width: "15%", height: "15%"}}  >
+    <img src={linkedin} alt="" style={{width: "75%", height: "75%"}}  />
 </div>
-<div className="icon">
-<img src={linkedin} alt="" />
+<div className="icon" style={{width: "15%", height: "15%"}}  >
+<img src={fb} alt="" style={{width: "75%", height: "75%"}}/>
 </div>
-<div className="icon">
-<img src={clippathblog} alt="" />
+<div className="icon" style={{width: "15%", height: "15%"}}  >
+<img src={clippathblog} alt="" style={{width: "75%", height: "75%"}}/>
 </div>
-          </div>
+</div>
           </div>
         </div>
-        <div className="col-8">
+        <div className="col-12 col-md-8 col-lg-8">
           <h4
             className="blog-heading-1 pb-5"
             style={{ color: "var(--primary-text)", fontSize: "43px" }}
@@ -236,36 +236,36 @@ const BlogContent = () => {
             When launching a business, understanding your potential market size
             is key. This is where the TAM SAM SOM analysis comes in.
           </h4>
-          <section ref={sectionRefs.Introduction}>
+          <section ref={sectionRefs[Object.keys(currentBlog.sections)[0]]}>
             <h2 className="blog-intro">
               {Object.keys(currentBlog.sections)[0]}
             </h2>
             <p className="blog-text">{currentBlog.sections.Introduction}</p>
           </section>
-          <section ref={sectionRefs["TAM: Total Addressable Market"]}>
+          <section ref={sectionRefs[Object.keys(currentBlog.sections)[1]]}>
             <h2 className="blog-intro">
               {Object.keys(currentBlog.sections)[1]}
             </h2>
-            <p className="blog-text">{currentBlog.sections["TAM: Total Addressable Market"]}</p>
+            <p className="blog-text">{currentBlog.sections[Object.keys(currentBlog.sections)[1]]}</p>
           </section>
-          <section ref={sectionRefs["SAM: Serviceable Addressable Market"]}>
+          <section ref={sectionRefs[Object.keys(currentBlog.sections)[2]]}>
             <h2 className="blog-intro">
               {Object.keys(currentBlog.sections)[2]}
             </h2>
-            <p className="blog-text">{currentBlog.sections["SAM: Serviceable Addressable Market"]}</p>
+            <p className="blog-text">{currentBlog.sections[Object.keys(currentBlog.sections)[2]]}</p>
           </section>
-          <section ref={sectionRefs[Object.keys(currentBlog.sections)[4]]}>
+          <section ref={sectionRefs[Object.keys(currentBlog.sections)[3]]}>
   <h2 className="blog-intro">
     {Object.keys(currentBlog.sections)[3]}
   </h2>
-  <p className="blog-text">{currentBlog.sections["SOM: Serviceable Obtainable Market"]}</p>
+  <p className="blog-text">{currentBlog.sections[Object.keys(currentBlog.sections)[3]]}</p>
 </section>
 
-          <section ref={sectionRefs.Conclusion}>
+          <section ref={sectionRefs[Object.keys(currentBlog.sections)[4]]}>
             <h2 className="blog-intro">
               {Object.keys(currentBlog.sections)[4]}
             </h2>
-            <p className="blog-text">{currentBlog.sections.Conclusion}</p>
+            <p className="blog-text">{currentBlog.sections[Object.keys(currentBlog.sections)[4]]}</p>
           </section>
 
 
@@ -346,7 +346,9 @@ const BlogContent = () => {
         </div>
       <div className="cols blog-sm d-flex gap-4 align-items-center justify-content-center">
       <div className="col-12 col-md-4 col-lg-3 d-flex flex-column">
-      <Link to="/blogs" style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Link   to={{
+                  pathname: "/blogs/1",
+                }}style={{ textDecoration: 'none', color: 'inherit' }}>
         <div className="">
           <img src={blog} alt="img blog-img-sm" className=" blog w-100" />
           <div className="d-flex justify-content-between">
@@ -376,56 +378,65 @@ const BlogContent = () => {
       </Link>
     </div>
 
-        <div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
-          <div className="">
-            <img src={blog2} alt="img blog-img-sm" className=" blog w-100" />
-            <div className="d-flex justify-content-between">
-              <p
-                className="pt-2"
-                style={{ color: "var( --text-color)", fontSize: "1rem" }}
-              >
-                Blog
-              </p>
-              <p
-                className="pt-2"
-                style={{ color: "var( --text-color)", fontSize: "1rem" }}
-              >
-                October 2, 2023
-              </p>
-            </div>
-            <h4 style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}>
-              7 Simple Steps to Ace Your Startup Market Research
-            </h4>
-            <div className="btn mt-md-4" style={{ color: "var(--text-color)", cursor: "initial" }}>
-            Email and SMS Marketing
-            </div>
-          </div>
-        </div>
-        <div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
-          <div className="">
-            <img src={blog3} alt="img blog-img-sm" className=" blog w-100" />
-            <div className="d-flex justify-content-between">
-              <p
-                className="pt-2"
-                style={{ color: "var( --text-color)", fontSize: "1rem" }}
-              >
-                Blog
-              </p>
-              <p
-                className="pt-2"
-                style={{ color: "var( --text-color)", fontSize: "1rem" }}
-              >
-                September 27, 2023
-              </p>
-            </div>
-            <h4 style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}>
-              Research and Planning for a New Business in 4 Steps
-            </h4>
-            <div className="btn mt-md-4" style={{ color: "var(--text-color)", cursor: "initial" }}>
-            Influencer Marketing
-            </div>
-          </div>
-        </div>
+    <div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
+  <Link to={{ pathname: "/blogs/2" }} style={{ textDecoration: 'none', color: 'inherit' }}>
+    <div>
+      <img src={blog2} alt="img blog-img-sm" className=" blog w-100" />
+      <div className="d-flex justify-content-between">
+        <p
+          className="pt-2"
+          style={{ color: "var(--text-color)", fontSize: "1rem" }}
+        >
+          Blog
+        </p>
+        <p
+          className="pt-2"
+          style={{ color: "var(--text-color)", fontSize: "1rem" }}
+        >
+          October 2, 2023
+        </p>
+      </div>
+      <h4 style={{ color: "var(--primary-text)", fontSize: "1.75rem" }}>
+        7 Simple Steps to Ace Your Startup Market Research
+      </h4>
+      <div className="btn mt-md-4" style={{ color: "var(--text-color)", cursor: "initial" }}>
+        Email and SMS Marketing
+      </div>
+    </div>
+  </Link>
+</div>
+
+
+<div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
+  <Link to={{ pathname: "/blogs/3" }} style={{ textDecoration: 'none', color: 'inherit' }}>
+    <div className="">
+      <img src={blog3} alt="img blog-img-sm" className=" blog w-100" />
+      <div className="d-flex justify-content-between">
+        <p
+          className="pt-2"
+          style={{ color: "var( --text-color)", fontSize: "1rem" }}
+        >
+          Blog
+        </p>
+        <p
+          className="pt-2"
+          style={{ color: "var( --text-color)", fontSize: "1rem" }}
+        >
+          September 27, 2023
+        </p>
+      </div>
+      <h4 style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}>
+        Research and Planning for a New Business in 4 Steps
+      </h4>
+      <div
+        className="btn mt-md-4"
+        style={{ color: "var(--text-color)", cursor: "initial" }}
+      >
+        Influencer Marketing
+      </div>
+    </div>
+  </Link>
+</div>
       </div>
       </div>
       </div>

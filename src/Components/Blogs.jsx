@@ -52,18 +52,17 @@ const Blogs = () => {
       className=" z-3 position-relative bg-white rating-container gap-4 p-md-5  "
       style={{}}
     >
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-flex justify-content-around align-items-center">
         <h1
           className="p-3 blog-headline "
           style={{
             fontSize: "5rem",
             color: "var( --primary-text)",
-            marginLeft: "10rem",
           }}
         >
           Our Latest resources
         </h1>
-        <div
+        <div className="arrow-sm"
           style={{
             borderRadius: "50%", // Make it a circle
             background: "var(--custom-btn)",
@@ -198,7 +197,7 @@ const Blogs = () => {
     </div>
   ) : (
     
-    <div className="subscribe d-lg-flex d-md-flex pt-3 mt-md-5 subscriptions" style={{ paddingLeft: "5rem", paddingRight: "5rem" }}>
+    <div className="subscribe pt-lg-5 pb-lg-5  d-lg-flex d-md-flex pt-3 mt-md-5 subscriptions" style={{ paddingLeft: "5rem", paddingRight: "5rem" }}>
       <div className="col-md-6 col-7 d-flex flex-column justify-content-between">
         <h2 className="w-75 subscription" style={{ fontSize: "2.5rem", color: "var(--primary-text)", fontWeight: "500" }}>
           Don't want to miss anything?

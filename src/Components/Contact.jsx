@@ -242,7 +242,7 @@ const Contact = ({title, fontSize, showOverlayImage = true}) => {
       </div>
 
       <div className="col-md-6 col-12 z-3">
-        <div className="service-box w-100 h-100 d-flex justify-content-between flex-column">
+        <div className="contact-container w-100 h-100 d-flex justify-content-between flex-column">
           <div>
             <h1 className=" mb-4" style={{color: "var(--secondary-bg)", fontSize}}>
               {title}

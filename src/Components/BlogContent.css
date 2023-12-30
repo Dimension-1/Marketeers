@@ -39,6 +39,9 @@ line-height: 17.99px; /* 105.726% */
     border-radius: 1000px;
 background: rgba(228, 236, 227, 0.45);
 padding: 0.8rem;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .toc-column {
