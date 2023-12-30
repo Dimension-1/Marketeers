@@ -15,6 +15,10 @@ import arrowDown from "../assets/ArrowDown.svg"
 import aboutIcon from "../assets/About Us.svg";
 import apostophy from "../assets/apostrophy.svg";
 import akshita from "../assets/akshita.svg";
+import value1 from "../assets/value1.svg";
+import value2 from "../assets/value2.svg";
+import value3 from "../assets/value3.svg";
+import value4 from "../assets/value4.svg";
 
 const AboutPage = () => {
    
@@ -81,9 +85,9 @@ const handleSidecutClick = () => {
           <div className="row d-flex justify-content-center align-items-baseline ">
             <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
               <img
-                src={forecast}
+                src={value1}
                 alt=""
-                style={{ width: "30%", height: "40%" }}
+                style={{ width: "22%" }}
               />
               <div
                 className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
@@ -94,9 +98,9 @@ const handleSidecutClick = () => {
             </div>
             <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
               <img
-                src={forecast}
+                src={value2}
                 alt=""
-                style={{ width: "30%", height: "40%" }}
+                style={{ width: "30%"}}
               />
               <div
                 className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
@@ -107,9 +111,9 @@ const handleSidecutClick = () => {
             </div>
             <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
               <img
-                src={forecast}
+                src={value3}
                 alt=""
-                style={{ width: "30%", height: "40%" }}
+                style={{ width: "30%"}}
               />
               <div
                 className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
@@ -121,9 +125,9 @@ const handleSidecutClick = () => {
             </div>
             <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
               <img
-                src={forecast}
+                src={value4}
                 alt=""
-                style={{ width: "30%", height: "40%" }}
+                style={{ width: "30%"}}
               />
               <div
                 className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"

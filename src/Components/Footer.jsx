@@ -34,7 +34,7 @@ const Footer = () => {
 
   return (
     
-    <div className='mt-sm-2 position-relative ' style={{backgroundColor: "var(--custom-btn)", borderRadius: "1.5rem", zIndex: "99"}}>
+    <div className='mt-sm-2 position-relative overflow-hidden' style={{backgroundColor: "var(--custom-btn)", borderRadius: "1.5rem", zIndex: "99"}}>
       
     
         <div className="row d-flex justify-content-between ">

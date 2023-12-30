@@ -112,7 +112,7 @@ export default function Resources() {
     
     
   return (
-    <div style={{ background: 'var(--bg-color)'}} >
+    <div className='overflow-x-hidden' style={{ background: 'var(--bg-color)'}} >
         
     <Box sx={{ backgroundColor: 'var(--bg-color)',padding:'94px 10px 10px'}}>
    
@@ -150,7 +150,8 @@ export default function Resources() {
                     borderTopLeftRadius:'10px',
                     borderTopRightRadius:'10px',
                     color:'rgba(67,85,75,.8)',
-                    marginRight:'20px'
+                    marginRight:'20px',
+                    justifyContent: "flex-end",
                 }}>
                     {<IoFilter style={{marginRight:'10px'}}/>}Filter
                 </Typography>
