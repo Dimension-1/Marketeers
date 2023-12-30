@@ -4,6 +4,10 @@
     box-sizing: border-box;
   }
 
+body {
+  overflow-x: hidden;
+}
+
   :root {
     --main-text-color: #8aabc4;   /* Define a text color variable */
     --bg-color: rgb(38, 41, 43);     /* Define a background color variable */
