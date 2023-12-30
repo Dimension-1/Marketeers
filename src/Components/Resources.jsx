@@ -142,7 +142,9 @@ export default function Resources() {
             <AccordionSummary
                 aria-controls="panel1a-content"
                 id="panel1a-header"
-                style={{margin:'0'}}
+                style={{margin:'0', justifyContent: "flex-end"}}
+                
+                
                 >
                 <Typography sx={{
                     backgroundColor: '#fff',
@@ -151,7 +153,6 @@ export default function Resources() {
                     borderTopRightRadius:'10px',
                     color:'rgba(67,85,75,.8)',
                     marginRight:'20px',
-                    justifyContent: "flex-end",
                 }}>
                     {<IoFilter style={{marginRight:'10px'}}/>}Filter
                 </Typography>
