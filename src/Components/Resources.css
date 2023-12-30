@@ -66,6 +66,7 @@
     }
     .resources-filter{
         padding: 30px 60px 0 !important;
+        justify-content: end;
     }
     .card{
         width: 100% !important;
@@ -104,6 +105,7 @@
     }
     .resources-filter{
         padding: 30px 12px 0 !important;
+        justify-content: end;
 
     }
     .filters-category{
