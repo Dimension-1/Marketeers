@@ -35,16 +35,16 @@ const handleSidecutClick = () => {
 
 
   return (
-    <div className="w-100 img-container position-relative overflow-x-hidden">
+    <div className="w-100 img-container position-relative overflow-x-hidden z-3">
          <div className="img-overlay-7 position-absolute z-0">
       <img src={image} alt="" className="" />
     </div>
-    {/* <div className="img-overlay position-absolute" style={{ top: "5%", right: "45%", transform: 'rotate(260deg)' }}>
+    <div className="img-overlay position-absolute" style={{ top: "8%", right: "40%", transform: 'rotate(225deg)' }}>
           <img src={image} alt="" className="" />
-        </div> */}
-      <div className="content-wrapper ">
+        </div>
+      <div className="content-wrapper z-3">
         <Navbar />
-        <div className="header-container d-flex flex-column  justify-content-center align-items-center">
+        <div className="header-container d-flex flex-column  justify-content-center align-items-center z-3">
         <img src={aboutIcon} alt="aboutIcon" className=""  style={{ 
           position: "absolute",
           zIndex: 999,

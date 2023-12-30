@@ -391,9 +391,9 @@ const Contact = ({title, fontSize}) => {
         </div>
       </div>
     </div>
-    <div className="img-overlay position-absolute right-0 ">
+    {/* <div className="img-overlay position-absolute right-0 ">
       <img src={bg} alt="" className="" />
-    </div>
+    </div> */}
     </div>
   );
 };

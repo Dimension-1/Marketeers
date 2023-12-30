@@ -60,7 +60,7 @@ const handleSidecutClick = () => {
   ];
 
   return (
-    <div className="w-100 img-container position-relative ">
+    <div className="w-100 img-container position-relative overflow-x-hidden">
       <div className="img-overlay-7 position-absolute z-0">
       <img src={image} alt="" className="" />
     </div>

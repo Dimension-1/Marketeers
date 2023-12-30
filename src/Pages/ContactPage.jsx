@@ -3,7 +3,7 @@ import gsap from "gsap";
 import Navbar from "../Components/Navbar";
 import "../style.css";
 //import image from "../assets/Section.jpg.png";
-import image from "../assets/Desktop .png";
+import image from "../assets/DesktopBlue.svg";
 import icon from "../assets/asterisk.svg";
 import Services from "../Components/Services";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -35,12 +35,12 @@ const ContactPage = () => {
     <div className="main">
       <Navbar />
       <div className=" w-100 pb-3 img-container position-relative">
-        {/* <div className="img-overlay position-absolute right-0 z-1">
+        <div className="img-overlay position-absolute right-0 z-1">
         <img src={image} alt="" className="" />
       </div>
       <div className="img-overlay-2 position-absolute">
         <img src={image} alt="" className="" />
-      </div>  */}
+      </div> 
         <div className="content-wrapper" style={{ zIndex: "800" }}>
         <img src={contactIcon} alt="contactIcon" className=""  style={{ 
           position: "absolute",

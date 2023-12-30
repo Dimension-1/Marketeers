@@ -7,7 +7,8 @@ import forecast from "../assets/arrow-up.svg";
 import influencer from "../assets/influencer.svg";
 import sms from "../assets/sms.svg";
 import onlineRep from "../assets/online.svg";
-import cro from "../assets/cro.svg"
+import cro from "../assets/cro.svg";
+import image from "../assets/DesktopBlue.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,7 +29,10 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="d-flex flex-column justify-content-center mb-md-5  ">
+    <div className="d-flex flex-column justify-content-center mb-md-5  position-relative">
+      <div className="img-overlay position-absolute" style={{ top: "-125%", right: "60%", transform: 'rotate(15deg)' }}>
+          <img src={image} alt="" className="" />
+        </div>
       <div className="custom-container z-3">
         <h1 className="font-10 text-light-bg">Services</h1>
       </div>

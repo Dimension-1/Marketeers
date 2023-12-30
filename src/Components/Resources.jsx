@@ -15,6 +15,7 @@ import resourceIcon from "../assets/Resources.svg";
 import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import blog2 from "../assets/blog-image2.png"
 import blog3 from "../assets/blog3.png";
+import image from "../assets/DesktopBlue.svg";
 // ... other imports
 
 
@@ -113,7 +114,9 @@ export default function Resources() {
     
   return (
     <div className='overflow-x-hidden' style={{ background: 'var(--bg-color)'}} >
-        
+         <div className="img-overlay-7 position-absolute z-0">
+      <img src={image} alt="" className="" />
+    </div>
     <Box sx={{ backgroundColor: 'var(--bg-color)',padding:'94px 10px 10px'}}>
    
       <Box sx={{backgroundColor:'rgba(27, 26, 31, 0.8)',borderRadius:'15px',paddingTop: "2rem", position: 'relative'}}>

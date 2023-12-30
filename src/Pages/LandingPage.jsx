@@ -159,6 +159,7 @@ alt="star"
     </div>
     <div className="spacer vh-50" style={{marginBottom: '40rem'}}></div>
     <div className="green-border d-flex justify-content-center pt-0 z-3 position-sticky" style={{ left: '50%', marginRight: "1rem", marginLeft: "1rem"}}></div>
+    
     <div ref={sidecutRef}>
         <WhyMarketeer
           pageTitle="Why we exist?"

@@ -53,9 +53,7 @@ const WhyMarketeer = ({pageTitle, pageContent}) => {
 
   return (
     <div className=" container pt-5 position-relative ">
-      <div className="img-overlay position-absolute" style={{ top: "-10%", right: "86%", transform: 'rotate(15deg)' }}>
-          <img src={image} alt="" className="" />
-        </div>
+      
       <div className="exist d-flex justify-content-between ">
         <div className="col-12 col-lg-6 col-md-5">
           <div style={{ position: 'sticky', top: '0', zIndex: '1000' }}>
