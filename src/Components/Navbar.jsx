@@ -174,7 +174,9 @@ const Navbar = () => {
           </div>
           <div className="sidebar-item">
             <Link
-              to="/resources"
+                 to={{
+                  pathname: "/resources/all",
+                }}
               style={{ textDecoration: "none", color: "inherit" }}
             >
               Resources
@@ -190,7 +192,9 @@ const Navbar = () => {
           </div>
           <div className="sidebar-item">
             <Link
-              to="/resources"
+                 to={{
+                  pathname: "/resources/CaseStudy",
+                }}
               style={{ textDecoration: "none", color: "inherit" }}
             >
               Case Studies

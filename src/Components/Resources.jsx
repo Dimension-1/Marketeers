@@ -11,27 +11,45 @@ import InputAdornment from '@mui/material/InputAdornment';
 import Chip from '@mui/material/Chip';
 import { MdCancel } from "react-icons/md";
 import './Resources.css';
-import resourceIcon from "../assets/Resources.svg"
+import resourceIcon from "../assets/Resources.svg";
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
+import blog2 from "../assets/blog-image2.png"
+import blog3 from "../assets/blog3.png";
+// ... other imports
+
 
 export default function Resources() {
-    const data=[{imgsrc:'https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg',type:'Blog',Publishedon:'October 23, 2023',name:`Startup Market Sizing: Founder's Guide to TAM`,filter:'Market Sizing and Forecasting'},
-    {imgsrc:'https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg',type:'Blog',Publishedon:'October 23, 2023',name:`Startup Market Sizing: Founder's Guide to TAM`,filter:'Business Development Strategy'},
-    {imgsrc:'https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg',type:'Blog',Publishedon:'October 23, 2023',name:`Startup Market Sizing: Founder's Guide to TAM`,filter:'Business Plan & Pitch Deck'},
-    {imgsrc:'https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg',type:'Case Study',Publishedon:'October 23, 2023',name:`Startup Market Sizing: Founder's Guide to TAM`,filter:'Go-to-Market Strategy'},
-    {imgsrc:'https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg',type:'Case Study',Publishedon:'October 23, 2023',name:`Startup Market Sizing: Founder's Guide to TAM`,filter:'Market Trends Analysis'},
-    {imgsrc:'https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg',type:'Case Study',Publishedon:'October 23, 2023',name:`Startup Market Sizing: Founder's Guide to TAM`,filter:'Customer Research'},
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { filter: initialFilter } = useParams();
+  const [selectedFilter, setSelectedFilter] = useState(initialFilter);
+
+    const data=[{imgsrc:'https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg',type:'Blog',Publishedon:'October 23, 2023',name:`Startup Market Sizing: Founder's Guide to TAM`,filter:'Online Reputation Management'},
+    {imgsrc: blog2 ,type:'Blog',Publishedon:'September 7, 2023',name:`7 Simple Steps to Ace Your Startup Market Research`,filter:'Pay-Per-Click Advertising (PPC)'},
+    {imgsrc:blog3,type:'Blog',Publishedon:'November 18, 2023',name:`Research and Planning for a New Business in 4 Steps`,filter:'Email and SMS Marketing'},
+    {imgsrc:'https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg',type:'Case Study',Publishedon:'October 2, 2023',name:`Startup Market Sizing: Founder's Guide to TAM`,filter:'Analytics and Data Analysis'},
+    {imgsrc: blog2,type:'Case Study',Publishedon:'November 30, 2023',name:`7 Simple Steps to Ace Your Startup Market Research`,filter:'Email and SMS Marketing'},
+    {imgsrc:blog3,type:'Case Study',Publishedon:'September 20, 2023',name:`Research and Planning for a New Business in 4 Steps`,filter:'Conversion Rate Optimization (CRO)'},
 ]
-    const categories=['Business Development Strategy', 'Business Plan & Pitch Deck','Competitive Analysis','Customer Research','Financial Modeling and Forecasting',
-    'Go-to-Market Strategy','Market Sizing and Forecasting','Market Trends Analysis']
+    const categories=['Pay-Per-Click Advertising (PPC)', 'Email and SMS Marketing','Influencer Marketing','Conversion Rate Optimization (CRO)','Online Reputation Management',
+    'Customer Experience (CX) Strategy','Marketing Consultation and Strategy','Analytics and Data Analysis']
     const [filter, setFilter] = useState('all');
     const [filteredData, setFilteredData] = useState(data);
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategories, setSelectedCategories] = useState([]);
+
     const handleFilterChange = (newFilter) => {
-      setFilter(newFilter);
-      if (newFilter==='all'){
-        setSearchQuery('');
-        setSelectedCategories([]);
+      // If the new filter is different from the current filter, update the state
+      if (newFilter !== filter) {
+        setFilter(newFilter);
+    
+        if (newFilter === 'all') {
+          setSearchQuery('');
+          setSelectedCategories([]);
+        }
+    
+        // Update the URL with the new filter
+        navigate(`/resources/${newFilter}`);
       }
     };
     const handleSearchChange = (event) => {
@@ -42,6 +60,9 @@ export default function Resources() {
             setSelectedCategories(prev => ([...prev, category]))
         }     
       }
+
+     
+      
     
     const removeCategory = (category) => {
         if(selectedCategories.includes(category)){
@@ -54,38 +75,55 @@ export default function Resources() {
         setSearchQuery('');
         setSelectedCategories([]);
     }
-      useEffect(() => {
-        let filteredBySearchAndCategory = data.filter((item) => {
-          const searchRegex = new RegExp(searchQuery, 'i');
-          const matchesSearch =
-            searchRegex.test(item.type) || searchRegex.test(item.name) || searchRegex.test(item.filter);
-      
-          const matchesCategory =
-            selectedCategories.length === 0 || selectedCategories.includes(item.filter);
-      
-          return matchesSearch && matchesCategory;
-        });
-      
-        if (filter !== 'all') {
-          filteredBySearchAndCategory = filteredBySearchAndCategory.filter((item) => item.type === filter);
-        }
-      
-        setFilteredData(filteredBySearchAndCategory);
-      }, [filter, searchQuery, selectedCategories, data]);
+  
+    useEffect(() => {
+      console.log('location.state:', location.state);
+      const isFromCaseStudyButton = initialFilter === 'CaseStudy';
+      const filterToUse = isFromCaseStudyButton ? 'Case Study' : initialFilter || 'all';
+      console.log('isFromCaseStudyButton:', isFromCaseStudyButton);
+      console.log('initialFilter:', initialFilter);
+    
+      // Set the filter state based on the initialFilter value
+      setFilter(filterToUse);
+    
+      const filteredBySearchAndCategory = data.filter((item) => {
+        const searchRegex = new RegExp(searchQuery, 'i');
+        const matchesSearch =
+          searchRegex.test(item.type) ||
+          searchRegex.test(item.name) ||
+          searchRegex.test(item.filter);
+    
+        const matchesCategory =
+          selectedCategories.length === 0 || selectedCategories.includes(item.filter);
+    
+        return matchesSearch && matchesCategory;
+      });
+    
+      let filteredDataToShow = filteredBySearchAndCategory;
+    
+      if (filterToUse !== 'all') {
+        filteredDataToShow = filteredBySearchAndCategory.filter(
+          (item) => item.type === filterToUse
+        );
+      }
+    
+      setFilteredData(filteredDataToShow);
+    }, [location.state, searchQuery, selectedCategories, data, initialFilter]);
+    
     
   return (
     <div style={{ background: 'var(--bg-color)'}} >
         
     <Box sx={{ backgroundColor: 'var(--bg-color)',padding:'94px 10px 10px'}}>
-    {/* <img src={resourceIcon} alt="resourceIcon" className=""  style={{ 
+   
+      <Box sx={{backgroundColor:'rgba(27, 26, 31, 0.8)',borderRadius:'15px',paddingTop: "2rem", position: 'relative'}}>
+      <img src={resourceIcon} alt="resourceIcon" className=""  style={{ 
           position: "absolute",
           zIndex: 999,
           left: '11%',
-          top: '-2px',
+          top: '0px',
       
- }}/> */}
-      <Box sx={{backgroundColor:'#262D29',borderRadius:'15px'}}>
-      
+ }}/>
      
         <Box sx={{display:'flex',flexDirection:'column',marginTop:'110px',marginLeft:'150px'}} className="resources-text">
             <Typography sx={{color:'var(--secondary-bg)',fontWeight:'500',fontSize:'4.5em',lineHeight:'0'}}><span style={{color:'var(--main-text-color)'}}>Transform Your Strategy  </span> with Proven</Typography>
@@ -100,7 +138,7 @@ export default function Resources() {
            </Box>
         </Box>
         <Box sx={{borderRadius:'0px'}}>
-        <Accordion sx={{backgroundColor:'#262D29',marginBottom:'0',borderRadius:'0'}}>
+        <Accordion sx={{backgroundColor:'rgba(27, 26, 31, 0.8)',marginBottom:'0',borderRadius:'0'}}>
             <AccordionSummary
                 aria-controls="panel1a-content"
                 id="panel1a-header"
