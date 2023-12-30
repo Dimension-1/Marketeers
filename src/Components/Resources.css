@@ -33,6 +33,7 @@
     }
     .resources-filter{
         padding: 30px 100px 0 !important;
+        justify-content: end;
     }
     .card{
         width:'380px' !important;
