@@ -150,31 +150,37 @@ const Blogs = () => {
 </div>
 
 
-        <div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
-          <div className="">
-            <img src={blog3} alt="img blog-img-sm" className=" blog w-100" />
-            <div className="d-flex justify-content-between">
-              <p
-                className="pt-2"
-                style={{ color: "var( --text-color)", fontSize: "1rem" }}
-              >
-                Blog
-              </p>
-              <p
-                className="pt-2"
-                style={{ color: "var( --text-color)", fontSize: "1rem" }}
-              >
-                September 27, 2023
-              </p>
-            </div>
-            <h4 style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}>
-              Research and Planning for a New Business in 4 Steps
-            </h4>
-            <div className="btn mt-md-4" style={{ color: "var(--text-color)", cursor: "initial" }}>
-            Influencer Marketing
-            </div>
-          </div>
-        </div>
+<div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
+  <Link to={{ pathname: "/blogs/3" }} style={{ textDecoration: 'none', color: 'inherit' }}>
+    <div className="">
+      <img src={blog3} alt="img blog-img-sm" className=" blog w-100" />
+      <div className="d-flex justify-content-between">
+        <p
+          className="pt-2"
+          style={{ color: "var( --text-color)", fontSize: "1rem" }}
+        >
+          Blog
+        </p>
+        <p
+          className="pt-2"
+          style={{ color: "var( --text-color)", fontSize: "1rem" }}
+        >
+          September 27, 2023
+        </p>
+      </div>
+      <h4 style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}>
+        Research and Planning for a New Business in 4 Steps
+      </h4>
+      <div
+        className="btn mt-md-4"
+        style={{ color: "var(--text-color)", cursor: "initial" }}
+      >
+        Influencer Marketing
+      </div>
+    </div>
+  </Link>
+</div>
+
       </div>
 
       <form className="form" onSubmit={(e) => Submit(e)}>

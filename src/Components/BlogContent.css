@@ -41,3 +41,9 @@ background: rgba(228, 236, 227, 0.45);
 padding: 0.8rem;
 }
 
+.toc-column {
+    position: sticky;
+    top: 0; /* Adjust as needed */
+    overflow-y: auto; /* Enable scrolling if the content is taller than the viewport */
+  }
+  
