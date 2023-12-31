@@ -89,7 +89,7 @@ const Blogs = () => {
       <div className="cols blog-sm d-flex gap-4 justify-content-center align-items-center ">
       <div className="col-12 col-md-4 col-lg-3 d-flex flex-column">
       <Link   to={{
-                  pathname: "/blogs/1",
+                  pathname: "/blogs/1"
                 }}style={{ textDecoration: 'none', color: 'inherit' }}>
         <div className="">
           <img src={blog} alt="img blog-img-sm" className=" blog w-100" />

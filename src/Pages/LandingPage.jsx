@@ -21,8 +21,6 @@ import Footer from "../Components/Footer";
 import greaterThan from "../assets/greater-than.svg";
 import asterisk from "../assets/asterisk.svg"
 
-gsap.registerPlugin(ScrollTrigger);
-
 const LandingPage = () => {
   const targetRef = useRef(null);
 
@@ -99,8 +97,8 @@ const handleSidecutClick = () => {
   if (sidecutRef.current) {
     const yOffset = -60; // Adjust this value based on your layout
     const y = sidecutRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  }
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        }
 };
 
 

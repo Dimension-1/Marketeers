@@ -56,7 +56,7 @@ const BlogPage = () => {
   return (
     <div className="d-flex justify-content-center flex-column overflow-hidden " style={{ background: 'var(--bg-color)' }} >
     <Navbar/>
-    <BlogContent id={1} />
+    <BlogContent />
 
     <Contact/>
     <Footer/>
