@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import "./Services.css";
 import SVG from "../assets/SVG.svg";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import forecast from "../assets/arrow-up.svg";
 import influencer from "../assets/influencer.svg";
 import sms from "../assets/sms.svg";
@@ -10,8 +8,6 @@ import onlineRep from "../assets/online.svg";
 import cro from "../assets/cro.svg";
 import { Link } from "react-router-dom";
 import image from "../assets/DesktopBlue.svg";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const serviceName = "Pay-Per-Click-Advertising";
 const serviceName1 = "Email and SMS Marketing";
@@ -24,20 +20,6 @@ const Services = ({ title, displayCard }) => {
   
 
   console.log(displayCard, "cardStyle")
-  useEffect(() => {
-    const serviceBoxes = document.querySelectorAll(".service-box");
-
-    gsap.to(serviceBoxes, {
-      xPercent: -100,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: ".services-container",
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-      },
-    });
-  }, []);
 
   return (
     <div className="d-flex flex-column justify-content-center mb-md-5  position-relative">

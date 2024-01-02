@@ -1,18 +1,11 @@
 // Navbar.jsx
 import React, { useRef, useEffect, useState } from "react";
-import gsap from "gsap";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../assets/finalLogo.ico";
 import marketeer from "../assets/Marketeers.svg";
 import arrow from "../assets/arrow-review.svg";
 import hamburger from "../assets/hamburger.svg"
-
-gsap.to(".nav-text", {
-  duration: 2,
-  y: 200,
-  rotation: 160,
-});
 
 const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);

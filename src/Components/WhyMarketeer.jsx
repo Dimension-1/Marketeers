@@ -1,55 +1,52 @@
 import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
 import "../style.css";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Scrollbar from "smooth-scrollbar";
 // import image from "../assets/Section.jpg.png";
 import image from "../assets/DesktopBlue.svg";
 import bg from "../assets/mainbg.png"
 
-gsap.registerPlugin(ScrollTrigger);
 
 const WhyMarketeer = ({pageTitle, pageContent}) => {
-  useEffect(() => {
-    const scrollBar = Scrollbar.init(document.querySelector(".scroll-target"), {
-      damping: 0.01,
-      delegateTo: document,
-      alwaysShowTracks: true,
-      speed: 0.2,
-    });
+  // useEffect(() => {
+  //   const scrollBar = Scrollbar.init(document.querySelector(".scroll-target"), {
+  //     damping: 0.01,
+  //     delegateTo: document,
+  //     alwaysShowTracks: true,
+  //     speed: 0.2,
+  //   });
 
-    ScrollTrigger.defaults({
-      scroller: ".scroll-target",
-    });
-    ScrollTrigger.scrollerProxy(".scroll-target", {
-      scrollTop(value) {
-        if (arguments.length) {
-          scrollBar.scrollTop = value;
-        }
-        return scrollBar.scrollTop;
-      },
-    });
+  //   ScrollTrigger.defaults({
+  //     scroller: ".scroll-target",
+  //   });
+  //   ScrollTrigger.scrollerProxy(".scroll-target", {
+  //     scrollTop(value) {
+  //       if (arguments.length) {
+  //         scrollBar.scrollTop = value;
+  //       }
+  //       return scrollBar.scrollTop;
+  //     },
+  //   });
 
-    scrollBar.addListener(ScrollTrigger.update);
+  //   scrollBar.addListener(ScrollTrigger.update);
 
-    const matches = document.querySelectorAll("p");
+  //   const matches = document.querySelectorAll("p");
 
-    matches.forEach((target) => {
-      gsap.to(target, {
-        backgroundPositionX: "0%",
-        stagger: 1,
-        scrollTrigger: {
-          markers: false,
-          trigger: target,
-          scrub: true,
-          start: "top 25%",
-          end: "bottom 5%",
-        },
-      });
-    });
+  //   matches.forEach((target) => {
+  //     gsap.to(target, {
+  //       backgroundPositionX: "0%",
+  //       stagger: 1,
+  //       scrollTrigger: {
+  //         markers: false,
+  //         trigger: target,
+  //         scrub: true,
+  //         start: "top 25%",
+  //         end: "bottom 5%",
+  //       },
+  //     });
+  //   });
 
-    return () => {};
-  }, []);
+  //   return () => {};
+  // }, []);
 
   return (
     <div className=" container pt-5 position-relative ">

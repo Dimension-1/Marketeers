@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
 import Navbar from "../Components/Navbar";
 import "../style.css";
 //import image from "../assets/Section.jpg.png";
 import image from "../assets/DesktopBlue.svg"
 import icon from "../assets/asterisk.svg";
 import Services from "../Components/Services";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Scrollbar from "smooth-scrollbar";
 import WhyMarketeer from "../Components/WhyMarketeer";
 import Ratings from "../Components/Ratings";

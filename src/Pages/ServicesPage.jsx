@@ -1,9 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Services from "../Components/Services";
 import SVG from "../assets/SVG.svg";
-import gsap from "gsap";
 import { useParams, Link} from 'react-router-dom';
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import forecast from "../assets/arrow-up.svg";
 import plusIcon from "../assets/div.whyus__expand.svg";
 import image from "../assets/DesktopBlue.svg"
