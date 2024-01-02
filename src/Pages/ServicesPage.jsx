@@ -233,7 +233,7 @@ const handleSidecutClick = () => {
         </div>
         <img src={serviceIcon} alt="serviceIcon" className=""  style={{ 
           position: "absolute",
-          zIndex: 999,
+          zIndex: 998,
           left: '11%',
           top: '-2px',
       
@@ -457,7 +457,7 @@ const handleSidecutClick = () => {
        {/* <div className="img-overlay-3 position-absolute right-0" >
       <img src={image} alt="" className="h-75 w-75 " />
     </div> */}
-        <div className="heading sticky-top text-dark col-md-6 col-12 z-3 fw-medium" style={{color: 'var(--text-color)', fontSize: "3rem",  height: '60px', zIndex: "1000"}}>
+        <div className="heading faq-heading sticky-top text-dark col-md-6 col-12 z-3 fw-medium mb-sm-4" style={{color: 'var(--text-color)', fontSize: "3rem",  zIndex: "1000"}}>
             Frequently Asked Questions
         </div>
     <div className="frequent-que col-md-6 col-12 z-3">

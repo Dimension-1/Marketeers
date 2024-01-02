@@ -37,7 +37,7 @@ line-height: 17.99px; /* 105.726% */
 
 .icon{
     border-radius: 1000px;
-background: var(--secondary-bg);
+background: var(--opacity-bg);
 padding: 0.8rem;
 display: flex;
 justify-content: center;
@@ -50,3 +50,6 @@ align-items: center;
     overflow-y: auto; /* Enable scrolling if the content is taller than the viewport */
   }
   
+.btn{ 
+    background-color: var(--opacity-bg) !important;
+}

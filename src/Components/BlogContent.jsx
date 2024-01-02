@@ -175,10 +175,10 @@ const BlogContent = () => {
       style={{ padding: "10%" }}
     >
         <div className="d-flex justify-content-between mb-lg-5 mb-md-3 ">
-      <div className="blog-heading d-flex flex-column col-9 justify-content-between align-items-baseline gap-3">
+      <div className="blog-heading d-flex flex-column justify-content-between align-items-baseline gap-3">
         <div
           className="btn mt-md-4"
-          style={{ color: "var(--text-color)", cursor: "initial" }}
+          style={{ color: "var(--main-text-color)", cursor: "initial" }}
         >
           <span style={{color: "var(--secondary-text-color)", fontWeight: "500"}}>Resources / </span>
           {currentBlog.category}
@@ -195,7 +195,7 @@ const BlogContent = () => {
         </h1>
       </div>
 
-      <div className="d-flex flex-column  col-3 justify-content-between ">
+      <div className="d-flex flex-column  justify-content-between ">
       <div>
           <div style={{ color: "var(--text-color)", fontWeight: "500"}}>Published on <span style={{color: "var(--secondary-text-color)"}}> {currentBlog.date}</span></div>
           <div className="" style={{ color: "var(--text-color)", fontWeight: "500"}}>Read time <span style={{color: "var(--secondary-text-color)"}}>4 min</span> </div>
@@ -203,13 +203,13 @@ const BlogContent = () => {
         <div className="d-flex align-items-center gap-2">
       <div className="subheading" style={{paddingBottom: "1rem" }}>Share:</div>
       <div className="icon-share d-flex gap-2">
-<div className="icon" style={{width: "20%", height: "15%"}}  onClick={shareOnLinkedIn}>
+<div className="icon" style={{width: "30%"}}  onClick={shareOnLinkedIn}>
     <img src={linkedin} alt="linkedin"   />
 </div>
-<div className="icon" style={{width: "20%", height: "15%"}}  onClick={shareOnFacebook}>
+<div className="icon" style={{width: "30%", height: "15%"}}  onClick={shareOnFacebook}>
 <img src={fb} alt="facebook" />
 </div>
-<div className="icon" style={{width: "20%", height: "15%"}} onClick={shareOnTwitter} >
+<div className="icon" style={{width: "30%", height: "15%"}} onClick={shareOnTwitter} >
 <img src={clippathblog} alt="" />
 </div>
 </div>
@@ -286,8 +286,8 @@ const BlogContent = () => {
   ))}
 
 
-          <div className="subscribe d-lg-flex d-md-flex pt-3 mt-md-5 subscriptions" style={{ paddingLeft: "5rem", paddingRight: "5rem" }}>
-      <div className="col-md-6 col-7 d-flex flex-column justify-content-between">
+          <div className="subscribe d-lg-flex d-md-flex pt-3 mt-md-5 subscriptions" style={{ paddingLeft: "5rem", paddingRight: "5rem", backgroundColor: "rgb(138, 171, 196, 0.4)" }}>
+      <div className="col-md-7 col-7 d-flex flex-column justify-content-between">
         <h2 className="w-75 subscription" style={{ fontSize: "2.5rem", color: "var(--primary-text)", fontWeight: "500" }}>
           Don't want to miss anything?
         </h2>
@@ -313,7 +313,7 @@ const BlogContent = () => {
           ></div>
         </div>
       </div>
-      <div className="col-md-6 col-5 d-flex flex-column justify-content-end">
+      <div className="col-md-5 col-5 d-flex flex-column justify-content-end">
         <div>
           <div className="d-flex justify-content-between w-75">
             <button

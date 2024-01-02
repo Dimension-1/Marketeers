@@ -47,7 +47,7 @@ const handleSidecutClick = () => {
         <div className="header-container d-flex flex-column  justify-content-center align-items-center z-3">
         <img src={aboutIcon} alt="aboutIcon" className=""  style={{ 
           position: "absolute",
-          zIndex: 999,
+          zIndex: 998,
           left: '11%',
           top: '-2px',
       
