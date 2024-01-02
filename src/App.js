@@ -10,11 +10,12 @@ import AboutPage from "./Pages/AboutPage"
 import ResourcesPage from "./Pages/ResourcePage"
 import BlogPage from './Pages/BlogPage';
 import BlogContent from './Components/BlogContent';
+import ServiceContentPage from "./Pages/ServiceContentPage";
 
 function App() {
   return (
     <div style={{ background: 'var(--bg-color)' }}>
-      <Router>
+       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/services" element={<ServicesPage />} />
@@ -23,6 +24,9 @@ function App() {
           
           <Route path="/resources/:filter" element={<ResourcesPage />} />
           <Route path="/blogs/:id" element={<BlogPage />} />
+
+          {/* Correct the parameter name to match the one used in ServiceContentPage */}
+          <Route path="/service/:serviceName" element={<ServiceContentPage />} />
         </Routes>
       </Router>
     </div>

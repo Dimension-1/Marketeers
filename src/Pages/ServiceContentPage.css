@@ -1,0 +1,178 @@
+.flex-vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+}
+.single-process-wrap {
+    width: 100%;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+}
+.single-service {
+    width: 100%;
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 14em;
+}
+.hide-on-mobile {
+    display: block;
+}
+.spacing-container-04 {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+.hide-on-desktop {
+    display: none;
+}
+.single_process-sticky-heading {
+    grid-row-gap: 0.6em;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 3em;
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40vh;
+}
+/* @media screen and (max-width: 991px) */
+.line-height-1.h3.is-process {
+    font-size: 36px;
+}
+
+/* @media screen and (max-width: 991px) */
+.line-height-1.h3.is-process {
+    font-size: 4em;
+}
+.h2, .h3 {
+    font-size: 36px;
+}
+.line-height-1 {
+    line-height: 1;
+}
+
+/* media screen and (max-width: 991px) */
+.p-body.lighter.opacity-05 {
+    line-height: 1.3;
+}
+.p-body.lighter {
+    font-weight: 400;
+}
+.p-body {
+    font-size: 18px;
+}
+.opacity-05 {
+    opacity: .4;
+}
+.hide-on-mobile {
+    display: block;
+}
+.w-dyn-hide, .w-dyn-bind-empty, .w-condition-invisible {
+    display: none!important;
+}
+.single__process-item-wrapper.bg--3 {
+    perspective-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+.single__process-item-wrapper {
+    width: 100%;
+    min-height: 13em;
+    grid-column-gap: 1em;
+    grid-row-gap: 3em;
+    border-radius: 1em;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.8em;
+    display: flex;
+    position: relative;
+}
+.text-accent {
+    color: var(--accent-blue);
+}
+.single__proces-content-holder {
+    grid-row-gap: 0.6em;
+    flex-direction: column;
+    display: flex;
+}
+.p-leading.is-bigger {
+    font-size: 1.7em;
+}
+.text-balance {
+  text-wrap: balance;
+}
+/* @media screen and (max-width: 991px) */
+.h6, .p-leading {
+    font-size: 18px;
+}
+
+.p-leading {
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+/* @media screen and (max-width: 991px) */
+.p-body-normal, .p-body-normal.opacity-03.letter-spacing-0-5.is-bigger {
+    font-size: 18px;
+}
+.line-height-1-2 {
+    line-height: 1.2;
+}
+.opacity-04, .opacity-05 {
+    opacity: .4;
+}
+.card-hider {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: var(--custom-btn);
+    border-radius: 1em;
+    display: block;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+.single__process-number-wrap {
+    display: flex;
+}
+.w-dyn-hide, .w-dyn-bind-empty, .w-condition-invisible {
+    display: none!important;
+}
+
+.column-50.flex-vertical.is-single-process {
+    padding-right: 20%;
+}
+.bg--3 {
+    background-color: var(--darkest-text);
+}
+.single__process-number-wrap,
+    .single__process-number-wrap .h3 {
+      color: #8AABC3; /* Change color to 8AABC3 for 01, 02, etc. */
+    }
+
+    .single__proces-content-holder h3 {
+      color: white; /* Change color to white for h3 tags */
+    }
+
+    .ticked-item {
+        list-style: none;
+        position: relative;
+        padding-left: 30px; /* Adjust as needed */
+    }
+
+    .ticked-item::before {
+        content: url(${tick});
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px; /* Adjust the width as needed */
+        height: 20px; /* Adjust the height as needed */
+        margin-right: 10px; /* Adjust as needed to separate the image from text */
+    }

@@ -164,7 +164,7 @@ alt="star"
           pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
         />
       </div>
-    <Services />
+      <Services title="Services" displayCard={true} />
     <Ratings targetRef={targetRef}/>
     <WhyUs targetRef={targetRef}/>
    

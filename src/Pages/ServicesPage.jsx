@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import Services from "../Components/Services";
 import SVG from "../assets/SVG.svg";
 import gsap from "gsap";
+import { useParams, Link} from 'react-router-dom';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import forecast from "../assets/arrow-up.svg";
 import plusIcon from "../assets/div.whyus__expand.svg";
@@ -17,11 +18,21 @@ import sms from "../assets/sms.svg";
 import onlineRep from "../assets/online.svg";
 import cro from "../assets/cro.svg";
 import analysis from "../assets/analysis.svg";
-import marketing from "../assets/marketing.svg"
+import marketing from "../assets/marketing.svg";
+
+  
 
 const ServicesPage = () => {
   const [openAnswers, setOpenAnswers] = useState([false, false, false]);
   const sidecutRef = useRef(null); // Create a ref for the sidecut image
+  const serviceName = "Pay-Per-Click-Advertising";
+const serviceName1 = "Email and SMS Marketing";
+const serviceName2 = "Influencer Marketing";
+const serviceName3 = "Conversion Rate Optimization";
+const serviceName4 = "Online Reputation Management";
+const serviceName5 = "Customer Experience Strategy";
+const serviceName6 = "Marketing Consultation and Strategy";
+const serviceName7 = "Analytics and Data Analysis";
 
 const handleSidecutClick = () => {
   if (sidecutRef.current) {
@@ -77,7 +88,7 @@ const handleSidecutClick = () => {
           <div className="services-container gallery d-flex gap-1 mb-lg-5 marginTop-0">
         <div className="cards d-flex flex-nowrap w-100 ">
           
-          <div className="service-box d-flex justify-content-between flex-column">
+        <Link to={`/service/${encodeURIComponent(serviceName)}`} className="service-box d-flex justify-content-between flex-column" style={{ textDecoration: 'none'}}>
             <span className="d-flex justify-content-between">
               
               <img src={forecast} className="" alt="" />
@@ -114,8 +125,9 @@ const handleSidecutClick = () => {
 
               </p>
               </div>
-          </div>
-          <div className="service-box d-flex justify-content-between flex-column">
+        </Link>
+
+        <Link to={`/service/${encodeURIComponent(serviceName1)}`} className="service-box  d-flex justify-content-between flex-column" style={{ textDecoration: 'none'}}>
             <span className="d-flex justify-content-between">
               
               <img src={sms} className="" alt="" />
@@ -151,8 +163,9 @@ const handleSidecutClick = () => {
               Email and SMS Marketing
               </p>
               </div>
-          </div>
-          <div className="service-box d-flex justify-content-between flex-column">
+          </Link>
+
+          <Link to={`/service/${encodeURIComponent(serviceName2)}`} className="service-box  d-flex justify-content-between flex-column" style={{ textDecoration: 'none'}}>
             <span className="d-flex justify-content-between">
               
               <img src={influencer} className="" alt="" />
@@ -190,8 +203,9 @@ const handleSidecutClick = () => {
 
               </p>
               </div>
-          </div>
-          <div className="service-box d-flex justify-content-between flex-column">
+          </Link>
+
+          <Link to={`/service/${encodeURIComponent(serviceName3)}`} className="service-box  d-flex justify-content-between flex-column" style={{ textDecoration: 'none'}}>
             <span className="d-flex justify-content-between">
               
               <img src={cro} className="" alt="" />
@@ -228,8 +242,8 @@ const handleSidecutClick = () => {
 
               </p>
               </div>
-          </div>
-         
+              </Link>   
+
         </div>
         <img src={serviceIcon} alt="serviceIcon" className=""  style={{ 
           position: "absolute",
@@ -250,7 +264,7 @@ const handleSidecutClick = () => {
       
       <div className="services-container gallery d-flex gap-1 mb-lg-5 marginTop-0">
         <div className="cards d-flex flex-nowrap w-100 ">
-        <div className="service-box d-flex justify-content-between flex-column">
+        <Link to={`/service/${encodeURIComponent(serviceName4)}`} className="service-box  d-flex justify-content-between flex-column" style={{ textDecoration: 'none'}}>
             <span className="d-flex justify-content-between">
               
               <img src={onlineRep} className="" alt="" />
@@ -287,8 +301,9 @@ const handleSidecutClick = () => {
 
               </p>
               </div>
-          </div>
-          <div className="service-box d-flex justify-content-between flex-column">
+          </Link>
+
+          <Link to={`/service/${encodeURIComponent(serviceName5)}`} className="service-box  d-flex justify-content-between flex-column" style={{ textDecoration: 'none'}}>
             <span className="d-flex justify-content-between">
               
               <img src={SVG} className="" alt="" />
@@ -326,8 +341,9 @@ const handleSidecutClick = () => {
 
               </p>
               </div>
-          </div>
-          <div className="service-box d-flex justify-content-between flex-column">
+              </Link>
+
+              <Link to={`/service/${encodeURIComponent(serviceName6)}`} className="service-box  d-flex justify-content-between flex-column" style={{ textDecoration: 'none'}}>
             <span className="d-flex justify-content-between">
               
               <img src={marketing} className="" alt="" />
@@ -364,8 +380,9 @@ const handleSidecutClick = () => {
 
               </p>
               </div>
-          </div>
-          <div className="service-box d-flex justify-content-between flex-column">
+              </Link>
+
+              <Link to={`/service/${encodeURIComponent(serviceName7)}`} className="service-box  d-flex justify-content-between flex-column" style={{ textDecoration: 'none'}}>
             <span className="d-flex justify-content-between">
               
               <img src={analysis} className="" alt="" />
@@ -404,7 +421,7 @@ const handleSidecutClick = () => {
 
               </p>
               </div>
-          </div>
+              </Link>
          
         
         </div>
