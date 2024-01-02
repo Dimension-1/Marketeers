@@ -243,7 +243,7 @@
         "headline": "Influencer Marketing",
         "heading": "Influencers as Your Brand Ambassadors.",
         "intro": "Bridge the gap between your brand and audiences with authentic influencer collaborations.",
-        "description": "We connect your brand with influencers who don't just have followers; they have an audience that listens, trusts, and engages. Our strategy is about creating genuine connections that resonate with your audience.",
+        "subheading": "We connect your brand with influencers who don't just have followers; they have an audience that listens, trusts, and engages. Our strategy is about creating genuine connections that resonate with your audience.",
         "whyYouNeedTheService": [
           "Tap into new, engaged audiences",
           "Build trust through authentic storytelling",
@@ -324,7 +324,7 @@
         "headline": "Conversion Rate Optimization",
         "heading": "Turning Browsers into Buyers.",
         "intro": "Maximize your website's potential with our expert CRO strategies.",
-        "description": "Our CRO services are designed to not just attract visitors but to convert them into loyal customers. We optimize every touchpoint for maximum engagement and conversion.",
+        "subheading": "Our CRO services are designed to not just attract visitors but to convert them into loyal customers. We optimize every touchpoint for maximum engagement and conversion.",
         "whyYouNeedTheService": [
           "Enhance user experience for higher engagement",
           "Increase conversion rates for better ROI",
@@ -405,7 +405,7 @@
         "headline": "Online Reputation Management",
         "heading": "Crafting a Stellar Online Reputation.",
         "intro": "Shape and safeguard your brand's online presence with our comprehensive reputation management.",
-        "description": "Our approach to online reputation management goes beyond monitoring; it's about creating a positive, lasting brand image that resonates with your audience and withstands the test of time.",
+        "subheading": "Our approach to online reputation management goes beyond monitoring; it's about creating a positive, lasting brand image that resonates with your audience and withstands the test of time.",
         "whyYouNeedTheService": [
           "Build and maintain a positive brand image",
           "Manage and mitigate negative feedback",
@@ -485,7 +485,7 @@
       {
         "headline": "Customer Experience Strategy",
         "heading": "Designing Unforgettable Customer Experiences.",
-        "description": "Our CX strategy is all about creating seamless, engaging, and memorable experiences that not only satisfy but delight your customers at every touchpoint.",
+        "subheading": "Our CX strategy is all about creating seamless, engaging, and memorable experiences that not only satisfy but delight your customers at every touchpoint.",
         "whyYouNeedTheService": [
           "Create a seamless customer journey",
           "Enhance customer satisfaction and loyalty",
@@ -565,7 +565,7 @@
       {
         "headline": "Marketing Consultation and Strategy",
         "heading": "Strategic Insights for Unparalleled Market Impact.",
-        "description": "Our marketing consultation and strategy services are designed to provide you with the insights, tools, and plans you need to navigate the complex marketing landscape and emerge as a leader in your industry.",
+        "subheading": "Our marketing consultation and strategy services are designed to provide you with the insights, tools, and plans you need to navigate the complex marketing landscape and emerge as a leader in your industry.",
         "whyYouNeedTheService": [
           "Gain a competitive edge with strategic insights",
           "Develop a comprehensive, tailored marketing plan",
