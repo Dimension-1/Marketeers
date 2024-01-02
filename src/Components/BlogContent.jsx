@@ -29,19 +29,34 @@ const BlogContent = () => {
   console.log(id, "ID");
   const [activeSection, setActiveSection] = useState(null);
 
+  const copyToClipboard = (text) => {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  };
+  
+  const copyBlogLinkToClipboard = () => {
+    const currentBlogUrl = `${window.location.origin}/${currentBlog.blogUrl}`;
+    copyToClipboard(currentBlogUrl);
+  };
+  
   const shareOnLinkedIn = () => {
-    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentBlog.blogUrl)}`;
-    window.open(linkedInShareUrl, '_blank');
+    window.location.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}`;
   };
-
+  
   const shareOnFacebook = () => {
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentBlog.blogUrl)}`;
-    window.open(facebookShareUrl, '_blank');
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}`;
+    copyToClipboard(facebookShareUrl);
   };
-
+  
   const shareOnTwitter = () => {
-    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentBlog.blogUrl)}&text=${encodeURIComponent(currentBlog.title)}&via=yourTwitterHandle`;
-    window.open(twitterShareUrl, '_blank');
+    
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}&text=${encodeURIComponent(currentBlog.title)}&via=yourTwitterHandle`;
+    copyToClipboard(twitterShareUrl);
+    console.log(twitterShareUrl, "twitterShareUrl")
   };
   
 
