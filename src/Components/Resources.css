@@ -4,8 +4,20 @@
 .css-178xtz6-MuiPaper-root-MuiAccordion-root.Mui-expanded{
     margin: 0 !important;
 }
-.css-o4b71y-MuiAccordionSummary-content{
+.css-o4b71y-MuiAccordionSummary-content,.css-17o5nyn{
     justify-content: right !important;
+}
+.css-17o5nyn{
+    margin: 0 !important;
+}
+.css-17o5nyn.Mui-expanded {
+    margin:0px 0px !important;
+}
+.css-f2z1m3.Mui-expanded {
+    margin:0px 0px !important;
+}
+.css-1iji0d4.Mui-expanded {
+    min-height: 0px !important;
 }
 .css-178xtz6-MuiPaper-root-MuiAccordion-root,.css-14bscn5-MuiPaper-root-MuiAccordion-root{
     box-shadow: none !important;
@@ -33,7 +45,6 @@
     }
     .resources-filter{
         padding: 30px 100px 0 !important;
-        justify-content: end;
     }
     .card{
         width:'380px' !important;
@@ -66,7 +77,6 @@
     }
     .resources-filter{
         padding: 30px 60px 0 !important;
-        justify-content: end;
     }
     .card{
         width: 100% !important;
@@ -105,7 +115,6 @@
     }
     .resources-filter{
         padding: 30px 12px 0 !important;
-        justify-content: end;
 
     }
     .filters-category{
