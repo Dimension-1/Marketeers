@@ -62,7 +62,7 @@ const WhyMarketeer = ({pageTitle, pageContent}) => {
         </div>
         
         {/* <h3 className="col-6 font-3 your-text" >
-            At Addifico Consulting, we use human creativity and the latest
+            At Marketeer's Consulting, we use human creativity and the latest
             <span className="your-text">technologies to help business leaders, investors, and entrepreneurs</span>
             enhance their market positioning, discover the next winning trend,
             and optimize their chances for success.
