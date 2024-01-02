@@ -48,7 +48,7 @@ const ServiceContentPage = () => {
           className="btn mt-md-4"
           style={{ color: "var(--main-text-color)", cursor: "initial" }}
         >
-          <span style={{color: "var(--secondary-text-color)", fontWeight: "500"}}>Resources / </span>
+          <span style={{color: "var(--secondary-text-color)", fontWeight: "500"}}>Services / </span>
           {selectedService.headline}
         </div>
 
@@ -58,7 +58,7 @@ const ServiceContentPage = () => {
 
             <div className="service-needs d-flex  rating-container z-3 position-relative justify-content-between" style={{paddingTop: '10%', paddingBottom: '10%', backgroundColor: "var(--secondary-bg)" }}>
             <div className="heading faq-heading sticky-top text-dark col-md-6 col-12 z-3 fw-medium mb-sm-4" style={{color: 'var(--text-color)', fontSize: "3rem",  zIndex: "1000"}}>
-            Frequently Asked Questions
+            Why you need the service
         </div>
         <ul className="text text-dark align-items-center" style={{ zIndex: 1, fontSize: "1.6rem", padding: 0, listStyleType: "none" }}>
         {selectedService.whyYouNeedTheService && selectedService.whyYouNeedTheService.map((reason, index) => (
