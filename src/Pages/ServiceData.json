@@ -35,7 +35,7 @@
           {
             "title": "PPC Pioneers",
             "description": "We don't follow PPC trends; we set them.",
-            "image": "../assets/value1.svg"
+            "image": "../assets/div.whyus__expand.svg"
           },
           {
             "title": "Custom-Crafted Campaigns",
@@ -50,7 +50,7 @@
           {
             "title": "Transparent, Tangible Results",
             "description": "We believe in results you can see and success you can measure.",
-            "image": "../assets/value4.svg"
+            "image": "../assets/tick.svg"
           }
         ],
         "successStory": {
@@ -60,23 +60,24 @@
         },
         "contact": "Stay ahead of the curve and proactively respond \n to market changes with Addifico’s market trends analysis services!",
         "questionAnswers": [
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          }
-        ]
+            {
+              "question": "What is Pay-Per-Click Advertising?",
+              "answer": "PPC is a digital marketing strategy where you pay a fee each time one of your ads is clicked. It's a way of buying visits to your site, rather than attempting to earn those visits organically."
+            },
+            {
+              "question": "How can PPC benefit my business?",
+              "answer": "PPC can drive immediate traffic to your website, target specific audience segments, and provide measurable ROI, making it a highly effective tool for quick and controlled visibility."
+            },
+            {
+              "question": "What platforms do you use for PPC campaigns?",
+              "answer": "We primarily use Google Ads, Bing Ads, and social media platforms like Facebook and LinkedIn, depending on your target audience and campaign goals."
+            },
+            {
+              "question": "How do you measure the success of a PPC campaign?",
+              "answer": "Success is measured through metrics like click-through rate (CTR), conversion rate, cost per click (CPC), and overall ROI. We provide regular reports detailing these metrics."
+            }
+          ]
+          
       },
       {
         "headline": "Email and SMS Marketing",
@@ -140,22 +141,22 @@
         },
         "contact": "Stay ahead of the curve and proactively respond \n to market changes with Addifico’s market trends analysis services!",
         "questionAnswers": [
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          }
+            {
+                "question": "What is Email and SMS Marketing?",
+                "answer": "This service involves sending targeted and personalized marketing messages via email and SMS to engage with your audience, build relationships, and drive conversions."
+              },
+              {
+                "question": "How does Email and SMS Marketing benefit my business?",
+                "answer": "These channels allow for direct and personalized communication with your audience, leading to increased engagement, customer loyalty, and conversions."
+              },
+              {
+                "question": "Can I segment my audience for targeted campaigns?",
+                "answer": "Yes, we can segment your audience based on various criteria like demographics, behavior, and purchase history to ensure more relevant and effective messaging."
+              },
+              {
+                "question": "How do you ensure compliance with privacy laws?",
+                "answer": "We adhere strictly to privacy laws like GDPR and CCPA, ensuring all campaigns are compliant with data protection regulations."
+              }
         ]
       },
       {
@@ -220,23 +221,23 @@
         },
         "contact": "Stay ahead of the curve and proactively respond \n to market changes with Addifico’s market trends analysis services!",
         "questionAnswers": [
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          }
-        ]
+            {
+              "question": "What does Analytics and Data Analysis entail?",
+              "answer": "This service involves collecting, processing, and interpreting data to gain insights into your business performance, customer behavior, and market trends."
+            },
+            {
+              "question": "How can Analytics and Data Analysis benefit my business?",
+              "answer": "By understanding your data, you can make informed decisions, optimize your marketing strategies, and improve your overall business performance."
+            },
+            {
+              "question": "What tools do you use for Analytics and Data Analysis?",
+              "answer": "We use a variety of tools including Google Analytics, Adobe Analytics, and custom data analysis software tailored to your specific needs."
+            },
+            {
+              "question": "Can you provide real-time data analysis?",
+              "answer": "Yes, we offer real-time analytics solutions that allow you to monitor your business performance and make timely decisions."
+            }
+          ]
         
       },
       {
@@ -302,23 +303,23 @@
         },
         "contact": "Stay ahead of the curve and proactively respond \n to market changes with Addifico’s market trends analysis services!",
         "questionAnswers": [
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          }
-        ]
+            {
+              "question": "What is Influencer Marketing?",
+              "answer": "Influencer marketing involves partnering with influential people in your industry to promote your brand to a larger audience."
+            },
+            {
+              "question": "How does Influencer Marketing benefit my business?",
+              "answer": "It can increase brand awareness, build credibility, and drive sales by leveraging the trust that influencers have built with their followers."
+            },
+            {
+              "question": "How do you choose the right influencers for my brand?",
+              "answer": "We carefully select influencers based on their audience demographics, brand alignment, engagement rates, and content quality to ensure the best fit for your brand."
+            },
+            {
+              "question": "Can you track the ROI of Influencer Marketing campaigns?",
+              "answer": "Yes, we track key metrics such as engagement rates, traffic, and conversions to measure the effectiveness of the campaigns."
+            }
+          ]
       },
       {
         "headline": "Conversion Rate Optimization",
@@ -383,23 +384,23 @@
         },
         "contact": "Stay ahead of the curve and proactively respond \n to market changes with Addifico’s market trends analysis services!",
         "questionAnswers": [
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          }
-        ]
+            {
+              "question": "What is Conversion Rate Optimization?",
+              "answer": "CRO is the process of enhancing your website and its content to boost conversions - turning visitors into customers."
+            },
+            {
+              "question": "How can CRO benefit my business?",
+              "answer": "By improving the user experience and streamlining the path to conversion, CRO can significantly increase the percentage of visitors who complete a desired action on your site."
+            },
+            {
+              "question": "What methods are used in CRO?",
+              "answer": "We use A/B testing, user feedback, heatmaps, and analytics to understand user behavior and optimize accordingly."
+            },
+            {
+              "question": "How long does it take to see results from CRO efforts?",
+              "answer": "Results can vary, but typically you'll start seeing improvements within a few weeks of implementing changes. Continuous testing and optimization are key for sustained success."
+            }
+          ]
       },
       {
         "headline": "Online Reputation Management",
@@ -464,23 +465,23 @@
         },
         "contact": "Stay ahead of the curve and proactively respond \n to market changes with Addifico’s market trends analysis services!",
         "questionAnswers": [
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          }
-        ]
+            {
+              "question": "What is Online Reputation Management?",
+              "answer": "It involves monitoring and influencing your brand's reputation on the internet. It includes managing online reviews, social media mentions, and search engine results."
+            },
+            {
+              "question": "How does Online Reputation Management benefit my business?",
+              "answer": "A positive online reputation can increase trust in your brand, attract new customers, and positively impact your bottom line."
+            },
+            {
+              "question": "How do you handle negative reviews or feedback?",
+              "answer": "We respond to negative feedback professionally and proactively, addressing concerns and working to resolve any issues."
+            },
+            {
+              "question": "Can you remove negative content from the internet?",
+              "answer": "While we cannot always remove content, we focus on creating positive content and leveraging SEO to minimize the visibility of negative content."
+            }
+          ]
       },
       {
         "headline": "Customer Experience Strategy",
@@ -544,23 +545,23 @@
         },
         "contact": "Stay ahead of the curve and proactively respond \n to market changes with Addifico’s market trends analysis services!",
         "questionAnswers": [
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          }
-        ]
+            {
+              "question": "What is a Customer Experience Strategy?",
+              "answer": "A CX strategy is a plan to enhance the overall experience of your customers at every touchpoint with your brand, from initial contact to post-purchase."
+            },
+            {
+              "question": "How does a CX Strategy benefit my business?",
+              "answer": "A strong CX strategy can lead to higher customer satisfaction, increased loyalty, and positive word-of-mouth, ultimately driving business growth."
+            },
+            {
+              "question": "What elements are involved in developing a CX Strategy?",
+              "answer": "We consider customer journey mapping, feedback analysis, personalization tactics, and continuous improvement based on customer insights."
+            },
+            {
+              "question": "How do you measure the success of a CX Strategy?",
+              "answer": "Success is measured through customer satisfaction scores, retention rates, and direct customer feedback."
+            }
+          ]
       },
       {
         "headline": "Marketing Consultation and Strategy",
@@ -620,23 +621,23 @@
         },
         "contact": "Stay ahead of the curve and proactively respond \n to market changes with Addifico’s market trends analysis services!",
         "questionAnswers": [
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          },
-          {
-            "question": "Strategic Marketing Visionaries",
-            "answer": "Crafting campaigns that merge innovative strategies with real-world results."
-          }
-        ]
+            {
+              "question": "What does Marketing Consultation and Strategy involve?",
+              "answer": "This service provides expert advice and strategic planning to help businesses navigate the marketing landscape and achieve their goals."
+            },
+            {
+              "question": "How can Marketing Consultation and Strategy benefit my business?",
+              "answer": "With professional guidance, you can develop effective marketing strategies, avoid common pitfalls, and make informed decisions to drive growth."
+            },
+            {
+              "question": "What areas do you cover in your consultation?",
+              "answer": "We cover a wide range of areas including market analysis, branding, digital marketing strategies, and campaign planning."
+            },
+            {
+              "question": "How do you tailor your strategies to each business?",
+              "answer": "We conduct a thorough analysis of your business, industry, and competitors to develop customized strategies that align with your specific goals and challenges."
+            }
+          ]
       }
       
       

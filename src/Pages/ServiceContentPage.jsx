@@ -32,7 +32,7 @@ const ServiceContentPage = () => {
 
     // Find the selected service data from the JSON
     const selectedService = serviceData.services.find(service => service.headline === serviceName);
-    console.log(selectedService.whyUs);
+    console.log(selectedService.whyUs.image, "image");
     console.log(selectedService.whyYouNeedTheService)
     if (!selectedService) {
       return <div>Service not found</div>;
