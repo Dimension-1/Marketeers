@@ -43,19 +43,26 @@ const BlogContent = () => {
     copyToClipboard(currentBlogUrl);
   };
   
-  const shareOnLinkedIn = () => {
-    window.location.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}`;
+  const shareOnInstagram = () => {
+    const instagramMessage = `Check out this blog: ${currentBlog.title}\n${window.location.origin}/${currentBlog.blogUrl}`;
+    
+    // Correct the construction of the Instagram web URL
+    const instagramWebUrl = `https://www.instagram.com/?url=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}`;
+    
+    // Open the Instagram web URL directly, as Instagram doesn't have a public API for direct sharing
+    window.open(instagramWebUrl, '_blank');
   };
   
-  const shareOnFacebook = () => {
-    window.location.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}`;
+  const shareOnLinkedIn = () => {
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}`, '_blank');
   };
   
   const shareOnTwitter = () => {
-    
-    window.location.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}&text=${encodeURIComponent(currentBlog.title)}&via=yourTwitterHandle`;
-
+    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}&text=${encodeURIComponent(currentBlog.title)}&via=yourTwitterHandle`, '_blank');
   };
+  
+  
+  
   
 
   const blogData = [
@@ -219,10 +226,10 @@ const BlogContent = () => {
 <div className="icon" style={{width: "30%"}}  onClick={shareOnLinkedIn}>
     <img src={linkedin} alt="linkedin"   />
 </div>
-<div className="icon" style={{width: "30%", height: "15%"}}  onClick={shareOnFacebook}>
+<div className="icon" style={{width: "30%", height: "15%"}}  onClick={shareOnTwitter}>
 <img src={fb} alt="facebook" />
 </div>
-<div className="icon" style={{width: "30%", height: "15%"}} onClick={shareOnTwitter} >
+<div className="icon" style={{width: "30%", height: "15%"}} onClick={shareOnInstagram} >
 <img src={clippathblog} alt="" />
 </div>
 </div>
@@ -267,10 +274,10 @@ const BlogContent = () => {
 <div className="icon" style={{width: "15%", height: "15%"}}  onClick={shareOnLinkedIn}>
     <img src={linkedin} alt="" style={{width: "75%", height: "75%"}}  />
 </div>
-<div className="icon" style={{width: "15%", height: "15%"}}  onClick={shareOnFacebook}>
+<div className="icon" style={{width: "15%", height: "15%"}}  onClick={shareOnTwitter}>
 <img src={fb} alt="" style={{width: "75%", height: "75%"}}/>
 </div>
-<div className="icon" style={{width: "15%", height: "15%"}} onClick={shareOnTwitter} >
+<div className="icon" style={{width: "15%", height: "15%"}} onClick={shareOnInstagram} >
 <img src={clippathblog} alt="" style={{width: "75%", height: "75%"}}/>
 </div>
 </div>
