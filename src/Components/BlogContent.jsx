@@ -48,15 +48,13 @@ const BlogContent = () => {
   };
   
   const shareOnFacebook = () => {
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}`;
-    copyToClipboard(facebookShareUrl);
+    window.location.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}`;
   };
   
   const shareOnTwitter = () => {
     
-    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}&text=${encodeURIComponent(currentBlog.title)}&via=yourTwitterHandle`;
-    copyToClipboard(twitterShareUrl);
-    console.log(twitterShareUrl, "twitterShareUrl")
+    window.location.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(`${window.location.origin}/${currentBlog.blogUrl}`)}&text=${encodeURIComponent(currentBlog.title)}&via=yourTwitterHandle`;
+
   };
   
 
