@@ -68,7 +68,7 @@ const BlogContent = () => {
       date: "October 23, 2023",
       readTime: "Read time 4 min",
       image: blog,
-      blogUrl: "blog/1",
+      blogUrl: "blogs/1",
       heading: "When launching a business, understanding your potential market size is key. This is where the TAM SAM SOM analysis comes in.",
       sections: {
         Introduction:
@@ -88,7 +88,7 @@ const BlogContent = () => {
       date: "October 2, 2023",
       readTime: "4 min",
       image: blog2,
-      blogUrl: "blog/2",
+      blogUrl: "blogs/2",
       heading: "You've heard it before: 90% of startups vanish, often victims of inadequate research. With these 7 steps and a handful of free tools, you'll 10x your chances of success.",
       sections: {
         "Step 1: Define the Problem": [
@@ -112,7 +112,7 @@ const BlogContent = () => {
       date: "September 27, 2023",
       readTime: "4 min",
       image: blog3,
-      blogUrl: "blog/3",
+      blogUrl: "blogs/3",
       heading: "Finally thinking of launching that business idea you've had for years? Congrats! Before you do that, here are the 4 simple steps you need to take to ensure you're thoroughly prepared.",
       sections: {
         "Knowledge is Power – The Importance of Research and Planning        ":
