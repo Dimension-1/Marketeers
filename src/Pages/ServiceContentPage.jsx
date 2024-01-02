@@ -200,6 +200,10 @@ const ServiceContentPage = () => {
 )}
 
           </h1>
+          <Link
+            to="/contact"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
           <div
             className="svg-icon d-flex"
             style={{
@@ -232,6 +236,7 @@ const ServiceContentPage = () => {
               }}
             ></span>
           </div>
+          </Link>
         </div>
 
 
