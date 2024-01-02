@@ -29,7 +29,7 @@ const Services = ({ title, displayCard }) => {
       <div className="custom-container z-3">
         <h1 className="font-10 text-light-bg">{title}</h1>
       </div>
-      <div className="services-container gallery d-flex gap-1 mb-lg-5">
+      <div className="services-container gallery d-flex gap-1 mb-lg-5 z-3">
         <div className="cards d-flex flex-nowrap w-100 ">
           
         <Link to={`/service/${encodeURIComponent(serviceName)}`} className="service-box justify-content-between flex-column" style={{ textDecoration: 'none', display: displayCard ? 'flex' : 'none'}}>
