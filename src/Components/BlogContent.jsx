@@ -221,15 +221,15 @@ const BlogContent = () => {
           <div className="" style={{ color: "var(--text-color)", fontWeight: "500"}}>Read time <span style={{color: "var(--secondary-text-color)"}}>4 min</span> </div>
         </div>
         <div className="d-flex align-items-center gap-2">
-      <div className="subheading" style={{paddingBottom: "1rem" }}>Share:</div>
+      <div className="subheading" >Share:</div>
       <div className="icon-share d-flex gap-2">
-<div className="icon" style={{width: "30%"}}  onClick={shareOnLinkedIn}>
+<div className="icon" style={{width: "30%", cursor: "pointer"}}  onClick={shareOnLinkedIn}>
     <img src={linkedin} alt="linkedin"   />
 </div>
-<div className="icon" style={{width: "30%", height: "15%"}}  onClick={shareOnTwitter}>
+<div className="icon" style={{width: "30%", height: "15%", cursor: "pointer"}}  onClick={shareOnTwitter}>
 <img src={fb} alt="facebook" />
 </div>
-<div className="icon" style={{width: "30%", height: "15%"}} onClick={shareOnInstagram} >
+<div className="icon" style={{width: "30%", height: "15%", cursor: "pointer"}} onClick={shareOnInstagram} >
 <img src={clippathblog} alt="" />
 </div>
 </div>
@@ -271,13 +271,13 @@ const BlogContent = () => {
           <div className="subheading" style={{paddingBottom: "1rem" }}>Share this article:</div>
 
           <div className="icon-share d-flex gap-2">
-<div className="icon" style={{width: "15%", height: "15%"}}  onClick={shareOnLinkedIn}>
+<div className="icon" style={{width: "15%", height: "15%", cursor: "pointer"}}  onClick={shareOnLinkedIn}>
     <img src={linkedin} alt="" style={{width: "75%", height: "75%"}}  />
 </div>
-<div className="icon" style={{width: "15%", height: "15%"}}  onClick={shareOnTwitter}>
+<div className="icon" style={{width: "15%", height: "15%", cursor: "pointer"}}  onClick={shareOnTwitter}>
 <img src={fb} alt="" style={{width: "75%", height: "75%"}}/>
 </div>
-<div className="icon" style={{width: "15%", height: "15%"}} onClick={shareOnInstagram} >
+<div className="icon" style={{width: "15%", height: "15%", cursor: "pointer"}} onClick={shareOnInstagram} >
 <img src={clippathblog} alt="" style={{width: "75%", height: "75%"}}/>
 </div>
 </div>
