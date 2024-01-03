@@ -13,13 +13,24 @@ import Contact from "../Components/Contact";
 import plusIcon from "../assets/div.whyus__expand.svg";
 import image from "../assets/Section.jpg.png";
 import minusIcon from "../assets/minusIcon.svg";
-import tick from "../assets/tick.svg"
+import tick from "../assets/tick.svg";
+import value1 from "../assets/carbon_data-1.svg";
+import value2 from "../assets/carbon_result-old.svg";
+import value3 from "../assets/carbon_text-link-analysis.svg";
+import value4 from "../assets/fluent_person-feedback-20-regular.svg";
+import value5 from "../assets/fluent_person-feedback-20-regular.svg";
+import value6 from "../assets/iconamoon_profile-circle-thin.svg";
+import value7 from "../assets/la_tools.svg";
+import value8 from "../assets/material-symbols-light_business-center-outline.svg";
+import value9 from "../assets/material-symbols-light_manage-search-rounded.svg";
+import value10 from "../assets/ph_record-thin.svg";
+import value11 from "../assets/tabler_wave-triangle.svg";
+import value12 from "../assets/Vector (2).svg";
 
 const ServiceContentPage = () => {
      const { serviceName } = useParams();
      const [openAnswers, setOpenAnswers] = useState([false, false, false]);
-
-     
+     const [imageIndex, setImageIndex] = useState(0);
 
      const toggleAnswer = (index) => {
        setOpenAnswers((prevOpenAnswers) => {
@@ -37,6 +48,22 @@ const ServiceContentPage = () => {
     if (!selectedService) {
       return <div>Service not found</div>;
     }
+
+    const imageArray = {
+        value1,
+        value2,
+        value3,
+        value4,
+        value5,
+        value6,
+        value7,
+        value8,
+        value9,
+        value10,
+        value11,
+        value12
+      };
+
 
   return (
     <div className="w-100 img-container position-relative overflow-x-hidden">
@@ -121,13 +148,13 @@ const ServiceContentPage = () => {
       <div className="row d-flex justify-content-center align-items-baseline ">
       {selectedService.whyUs && selectedService.whyUs.map((value, index) => (
   <div key={index} className="col-6 col-lg-3 gap-3 d-flex flex-column">
-    {value.image && (
+
       <img
-        src={value.image}
+        src={imageArray[imageIndex]}
         alt=""
         style={{ width: "30%" }}
       />
-    )}
+    
     <div
       className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
       style={{ left: "50%" }}
@@ -139,12 +166,6 @@ const ServiceContentPage = () => {
 
       </div>
     </div>
-
-
-
-
-
-
 
     <div className=" service-needs d-flex  rating-container z-3 position-relative justify-content-between " style={{ marginTop: '10%', marginBottom: '10%', width: '100%', backgroundColor: '#D7E0EE', position: 'absolute', zIndex: '2', borderRadius: '24px' }}>
             <div className="img-overlay position-absolute" style={{ top: "-10%", right: "86%", transform: 'rotate(15deg)' }}>
@@ -166,7 +187,7 @@ const ServiceContentPage = () => {
                         </div>
                         <div class="column-50 flex-vertical is-single-success">
                             <div class="spacing-container-04 hide-on-mobile"></div>
-                            <div data-w-id="edc211ce-cde1-7a4e-bf78-b9ac7eaaac3b" class="success-block is--3" style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: '1'}}>
+                            <div data-w-id="edc211ce-cde1-7a4e-bf78-b9ac7eaaac3b p-3" class="success-block is--3" style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: '1'}}>
                                 <h3 class="h4 line-height-1-1">The<br></br>Solution</h3>
                                 <div class="p-body-normal opacity-06">
                                 {selectedService.successStory.solution}

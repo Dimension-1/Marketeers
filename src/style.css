@@ -394,6 +394,12 @@ background: var(--custom-btn);
   box-sizing: border-box;
 }
 
+@media (max-width: 320px) {
+  .sidebar{
+    width: 18rem !important;
+   }
+}
+
 @media (max-width: 400px) {
   
  .font-2{
@@ -402,7 +408,14 @@ background: var(--custom-btn);
  .rating-sm{
   font-size: 2rem;
  }
+
   
+}
+
+@media (max-width: 450px) {
+  .sidebar{
+    width: 21rem ;
+   }
 }
 
 @media (max-width: 770px) {
@@ -525,6 +538,15 @@ flex-direction: column;
 }
 .arrow-sm{
   display: none !important;
+}
+.toc-column{
+  display: none;
+}
+.icon-sm{
+  display: none !important;
+}
+.sm-col{
+  flex-direction: column;
 }
 }
 

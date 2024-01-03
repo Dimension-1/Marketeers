@@ -194,7 +194,7 @@ const BlogContent = () => {
       className=" z-3 bg-white blog-content-container position-relative gap-4" id="blog-section-1"
       style={{ padding: "10%" }}
     >
-        <div className="d-flex justify-content-between mb-lg-5 mb-md-3 ">
+        <div className="d-flex justify-content-between mb-lg-5 mb-md-3 sm-col">
       <div className="blog-heading d-flex flex-column justify-content-between align-items-baseline gap-3">
         <div
           className="btn mt-md-4"
@@ -220,7 +220,7 @@ const BlogContent = () => {
           <div style={{ color: "var(--text-color)", fontWeight: "500"}}>Published on <span style={{color: "var(--secondary-text-color)"}}> {currentBlog.date}</span></div>
           <div className="" style={{ color: "var(--text-color)", fontWeight: "500"}}>Read time <span style={{color: "var(--secondary-text-color)"}}>4 min</span> </div>
         </div>
-        <div className="d-flex align-items-center gap-2">
+        <div className="icon-sm align-items-center gap-2" style={{display: "flex"}}>
       <div className="subheading" >Share:</div>
       <div className="icon-share d-flex gap-2">
 <div className="icon" style={{width: "30%", cursor: "pointer"}}  onClick={shareOnLinkedIn}>
