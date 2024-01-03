@@ -88,6 +88,15 @@ const LandingPage = () => {
 //     return () => {};
 //   }, []);
 
+useEffect(() => {
+  console.log("Page loaded, scrolling to top");
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+}, []);
+
   
 const sidecutRef = useRef(null); // Create a ref for the sidecut image
 

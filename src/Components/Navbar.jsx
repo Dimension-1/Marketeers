@@ -5,7 +5,8 @@ import "./Navbar.css";
 import logo from "../assets/finalLogo.ico";
 import marketeer from "../assets/Marketeers.svg";
 import arrow from "../assets/arrow-review.svg";
-import hamburger from "../assets/hamburger.svg"
+import hamburger from "../assets/hamburger.svg";
+import pencil from "../assets/pencil.svg"
 
 const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -103,7 +104,7 @@ const Navbar = () => {
               display: "none"
             }}
           >
-            {/* <img src={hamburger} alt="" style={{rotate: "90deg"}} /> */}
+           <img src={pencil} alt="" style={{rotate: "90deg"}} /> 
           </span>
           </Link>
 
