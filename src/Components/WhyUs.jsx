@@ -56,7 +56,7 @@ const WhyUs = ({ targetRef }) => {
         {questionAnswers.map((qa, index) => (
           <div key={index} className="mb-4 faq-padding green-border">
             <div
-              className={`question faq-question mb-0 text d-flex justify-content-between align-items-center ${openAnswers[index] ? 'open' : ''}`}
+              className={`question faq-question faq-question-hover mb-0 text d-flex justify-content-between align-items-center ${openAnswers[index] ? 'open' : ''}`}
               id={`question${index + 1}`}
               onClick={() => toggleAnswer(index)}
             >

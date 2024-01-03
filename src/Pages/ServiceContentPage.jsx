@@ -401,7 +401,7 @@ const ServiceContentPage = () => {
           id={`question${index + 1}`}
           onClick={() => toggleAnswer(index)}
         >
-          <span className="span" style={{ zIndex: 1, fontSize: "1.6rem"}}>
+          <span className="" style={{ zIndex: 1, fontSize: "1.6rem"}}>
             {` ${qa.question}`}
           </span>
           <img src={openAnswers[index] ? minusIcon : plusIcon} alt="" style={{ height: '100%', width: "6%" }}/>
