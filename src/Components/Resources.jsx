@@ -122,7 +122,7 @@ export default function Resources() {
       <Box sx={{backgroundColor:'rgba(27, 26, 31, 0.8)',borderRadius:'15px',paddingTop: "2rem", position: 'relative', overflowY: "hidden"}}>
       <img src={resourceIcon} alt="resourceIcon" className=""  style={{ 
           position: "absolute",
-          zIndex: 999,
+          zIndex: 998,
           left: '11%',
           top: '0px',
       

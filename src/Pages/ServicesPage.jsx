@@ -79,7 +79,7 @@ const handleSidecutClick = () => {
       <div className="content-wrapper ">
         <Navbar/>
         <div className="header-container d-flex flex-column  justify-content-center align-items-center">
-          <h1 className=" p-4 main-heading text-light-bg font-7">
+          <h1 className=" p-4 main-heading text-light-bg font-7 mt-4 ">
             Your biggest business challenges.{" "}
             <span style={{ color: "var(--main-text-color)" }}>Solved.</span>{" "}
           </h1>

@@ -58,7 +58,7 @@ const handleSidecutClick = () => {
     onClick={handleSidecutClick}
     
   />
-          <h1 className=" p-4 m-md-5 main-heading text-light-bg font-7">
+          <h1 className="mt-4 p-4 m-md-5 main-heading text-light-bg font-7">
           Charting a Bold Course for 1,000 Businesses to Enrich{" "}
             <span style={{ color: "var(--main-text-color)" }}>
               1 Billion Lives.

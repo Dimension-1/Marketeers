@@ -102,15 +102,15 @@ const ServiceContentPage = () => {
             <div class="container-small">
   <div class="single__wrapper">
     <div class="column-50 flex-vertical is-single-process">
-    <div class="spacing-container-04"></div>
-      <div class="single_process-sticky-heading hide-on-mobile">
+    <div class="spacing-container-04 hide-on-mobile"></div>
+      <div class="single_process-sticky-heading ">
         <h2 style={{color:'white'}}class="line-height-1 h3 is-process">The Process</h2>
         <div class="p-body lighter opacity-05 w-dyn-bind-empty"></div>
       </div>
     </div>
     <div class="column-50 flex-vertical">
       <div class="spacing-container-04 hide-on-mobile"></div>
-      <div class="spacing-container-04"></div>
+      <div class="spacing-container-04 hide-on-mobile"></div>
       <div className="single-process-wrap" >
       {selectedService.theProcess && selectedService.theProcess.map((process, index) => (
   <div key={index} className="single-service">

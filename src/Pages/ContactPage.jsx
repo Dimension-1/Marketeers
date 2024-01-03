@@ -48,7 +48,7 @@ const ContactPage = () => {
       
  }}/>
           <div className="pt-4 pb-4 header-container flex-column d-flex justify-content-center align-items-center" style={{padding: ""}}>
-            <div className="p-md-5">
+            <div className="p-md-5 mt-4">
               <h1 className=" p-4 main-heading font-7" style={{color: "var(--secondary-bg)"}}>
                 We thought you’d never ask!{" "}
                 <span style={{ color: "var(--main-text-color)" }}>
