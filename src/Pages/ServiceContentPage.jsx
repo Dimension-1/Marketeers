@@ -39,6 +39,16 @@ const ServiceContentPage = () => {
          return updatedAnswers;
        });
      };
+
+     
+  useEffect(() => {
+    console.log("Page loaded, scrolling to top");
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
    
 
     // Find the selected service data from the JSON
@@ -64,6 +74,8 @@ const ServiceContentPage = () => {
         value12
       };
 
+      
+
 
   return (
     <div className="w-100 img-container position-relative overflow-x-hidden">
@@ -80,14 +92,14 @@ const ServiceContentPage = () => {
         </div>
 
         <h1 className=" main-heading text-light-bg font-7">{selectedService.heading}</h1>
-        <p className="p-color font-1 flex-end market-headline fw-medium" style={{color: 'var(--text-color)'}}>{selectedService.subheading}</p>
+        <p className="p-color font-1 flex-end market-headline" style={{color: 'var(--text-color)'}}>{selectedService.subheading}</p>
             </div>
 
             <div className="service-needs d-flex  rating-container z-3 position-relative justify-content-between" style={{paddingTop: '10%', paddingBottom: '10%', backgroundColor: "var(--secondary-bg)" }}>
-            <div className="heading faq-heading sticky-top text-dark col-md-6 col-12 z-3 fw-medium mb-sm-4" style={{color: 'var(--text-color)', fontSize: "3rem",  zIndex: "1000"}}>
+            <div className="heading faq-heading sticky-top text-dark col-md-6 col-12 z-3 fw-medium mb-sm-4" style={{color: 'var(--text-color)', fontSize: "4.5rem",  zIndex: "1000", lineHeight: "1"}}>
             Why you need the service
         </div>
-        <ul className="text text-dark align-items-center" style={{ zIndex: 1, fontSize: "1.6rem", padding: 0, listStyleType: "none" }}>
+        <ul className="text text-dark align-items-center" style={{ zIndex: 1, fontSize: "1.25rem", padding: 0, listStyleType: "none" }}>
         {selectedService.whyYouNeedTheService && selectedService.whyYouNeedTheService.map((reason, index) => (
   <li className="mb-4" key={index} style={{ listStyle: 'none', position: 'relative', paddingLeft: '30px' }}>
     <img src={tick} alt="" style={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', width: '20px', height: '20px', marginRight: '10px' }} />
@@ -104,7 +116,7 @@ const ServiceContentPage = () => {
     <div class="column-50 flex-vertical is-single-process">
     <div class="spacing-container-04 hide-on-mobile"></div>
       <div class="single_process-sticky-heading ">
-        <h2 style={{color:'white'}}class="line-height-1 h3 is-process">The Process</h2>
+        <h2 style={{color:'white', fontSize: "4rem"}}class="line-height-1 h3 is-process">The Process</h2>
         <div class="p-body lighter opacity-05 w-dyn-bind-empty"></div>
       </div>
     </div>
@@ -116,11 +128,11 @@ const ServiceContentPage = () => {
   <div key={index} className="single-service">
     <div className="single__process-item-wrapper" style={{ backgroundColor: "var(--custom-btn)" }}>
       <div className="single__process-number-wrap text-accent">
-        <div className="h3" style={{ color: "var(--main-text-color)" }}>{index + 1}</div>
+        <div className="h3" style={{ color: "var(--main-text-color)", fontSize: "2.63rem" }}>{index + 1}</div>
       </div>
       <div className="single__proces-content-holder">
-        <h3 className="p-leading is-bigger text-balance text-light">{process.step}</h3>
-        <div className="p-body-normal line-height-1-2 lighter opacity-05 text-balance">
+        <h3 className="p-leading is-bigger text-balance text-light" style={{fontSize: "1.7rem"}}>{process.step}</h3>
+        <div className="p-body-normal line-height-1-2 lighter opacity-05 text-balance" style={{fontSize: "1.13rem"}}>
           {process.description && process.description.split('\n').map((line, i) => (
             <p key={i}>{line}</p>
           ))}
@@ -159,8 +171,8 @@ const ServiceContentPage = () => {
       className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
       style={{ left: "50%" }}
     ></div>
-    <h4>{value.title}</h4>
-    <p>{value.description}</p>
+    <h4 style={{fontSize: "1.75rem"}}>{value.title}</h4>
+    <p style={{color: 'var(--text-color)'}}>{value.description}</p>
   </div>
 ))}
 
@@ -172,14 +184,14 @@ const ServiceContentPage = () => {
             </div>
 
             <div style={{backgroundColor:'#D7E0EE'}}class="page-spacing__large bg--2 radius-36 logo-changer z-index-5 is-success">
-                <div style={{backgroundColor:'#D7E0EE'}}class="container-small">
+                <div style={{backgroundColor:'#D7E0EE'}}class="">
                     <div class="single__wrapper">
                         <div class="column-50 flex-vertical is-single-success">
                             <div data-w-id="4d016f08-20f0-2fb1-9562-59519628945c" class="success-block is--1" style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: '1'}}>
                                 <h2 class="h2 is-smaller is-success-story" style={{color: "var(--bg-color)"}}>Success <br></br>Story</h2>
                             </div>
                             <div data-w-id="09d4f82f-29a1-3d9b-2777-b9f51644597c" class="success-block is--2" style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: '1', backgroundColor: "var(--bg-color)"}}>
-                                <h3 class="h4 line-height-1-1">The<br></br>Challenge</h3>
+                                <h3 class="h4 line-height-1-1" style={{fontSize: "2rem"}}>The<br></br>Challenge</h3>
                                 <div class="p-body-normal opacity-06">
                                     {selectedService.successStory.challenge}
                                 </div>
@@ -188,13 +200,13 @@ const ServiceContentPage = () => {
                         <div class="column-50 flex-vertical is-single-success">
                             <div class="spacing-container-04 hide-on-mobile"></div>
                             <div data-w-id="edc211ce-cde1-7a4e-bf78-b9ac7eaaac3b p-3" class="success-block is--3" style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: '1'}}>
-                                <h3 class="h4 line-height-1-1">The<br></br>Solution</h3>
+                                <h3 class="h4 line-height-1-1" style={{fontSize: "2rem"}}>The<br></br>Solution</h3>
                                 <div class="p-body-normal opacity-06">
                                 {selectedService.successStory.solution}
                                 </div>
                             </div>
                             <div data-w-id="96b38126-1429-00fa-0d22-0c2e96550388" class="success-block is--4" style={{backgroundColor:'#8AABC3',transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d', opacity: '1'}}>
-                                <h3 style={{color:'#27292B'}}class="h4 line-height-1-1">
+                                <h3 style={{color:'#27292B', fontSize: "2rem"}}class="h4 line-height-1-1" >
                                     The<br></br>
                                     Result</h3>
                                 <div class="p-body-normal opacity-06 text-balance">
@@ -269,23 +281,42 @@ const ServiceContentPage = () => {
         <Services title="More Services" displayCard={false} />
 
 
-        <div
-      className=" z-3 position-relative bg-white rating-container gap-4 p-md-5  "
-      style={{}}
-    >
-      <div className="d-flex justify-content-center align-items-center">
+        <div className="z-3 position-relative bg-white rating-container gap-4 " style={{paddingLeft: "7%", paddingRight: "7%", paddingTop: "7%", paddingBottom: "2%"}}>
+      <div className="d-flex justify-content-between align-items-center">
         <h1
-          className="p-3 blog-headline "
+          className="pt-3 pb-3 blog-headline "
           style={{
             fontSize: "5rem",
             color: "var( --primary-text)",
           }}
         >
-          Related resources
+          Related Resources
         </h1>
+        <div className="arrow-sm"
+          style={{
+            borderRadius: "50%", // Make it a circle
+            background: "var(--custom-btn)",
+            display: "flex",
+            width: "64.75px",
+            height: "64.75px",
+            padding: "17.82px 19.46px 17.81px 19.42px",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src={arrow} // Replace with the path to your image
+            alt="Circle Image"
+            style={{
+              width: "65%", // Ensure the image takes the full width of the circle
+              height: "100%", // Ensure the image takes the full height of the circle
+              rotate: "180deg",
+            }}
+          />
+        </div>
       </div>
-      <div className="cols blog-sm d-flex gap-4 justify-content-center align-items-center ">
-      <div className="col-12 col-md-4 col-lg-3 d-flex flex-column">
+      <div className="cols blog-sm d-flex gap-4 justify-content-center align-items-start ">
+      <div className="col-12 col-md-4 col-lg-4 d-flex flex-column">
       <Link   to={{
                   pathname: "/blogs/1"
                 }}style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -318,7 +349,7 @@ const ServiceContentPage = () => {
       </Link>
     </div>
 
-    <div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
+    <div className="col-12 col-md-4 col-lg-4 d-flex flex-column ">
   <Link to={{ pathname: "/blogs/2" }} style={{ textDecoration: 'none', color: 'inherit' }}>
     <div>
       <img src={blog2} alt="img blog-img-sm" className=" blog w-100" />
@@ -347,7 +378,7 @@ const ServiceContentPage = () => {
 </div>
 
 
-<div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
+<div className="col-12 col-md-4 col-lg-4 d-flex flex-column ">
   <Link to={{ pathname: "/blogs/3" }} style={{ textDecoration: 'none', color: 'inherit' }}>
     <div className="">
       <img src={blog3} alt="img blog-img-sm" className=" blog w-100" />
@@ -379,8 +410,7 @@ const ServiceContentPage = () => {
 </div>
 
       </div>
-
-    </div>
+      </div>
 
 
     

@@ -49,12 +49,12 @@ const Blogs = () => {
 
   return (
     <div
-      className=" z-3 position-relative bg-white rating-container gap-4 p-md-5  "
-      style={{}}
+      className=" z-3 position-relative bg-white rating-container gap-4 p-md-5"
     >
-      <div className="d-flex justify-content-around align-items-center">
+      <div style={{paddingLeft: "7%", paddingRight: "7%"}}>
+      <div className="d-flex justify-content-between align-items-center">
         <h1
-          className="p-3 blog-headline "
+          className="pt-3 pb-3 blog-headline "
           style={{
             fontSize: "5rem",
             color: "var( --primary-text)",
@@ -72,7 +72,6 @@ const Blogs = () => {
             padding: "17.82px 19.46px 17.81px 19.42px",
             justifyContent: "center",
             alignItems: "center",
-            marginRight: "10rem",
           }}
         >
           <img
@@ -86,8 +85,8 @@ const Blogs = () => {
           />
         </div>
       </div>
-      <div className="cols blog-sm d-flex gap-4 justify-content-center align-items-center ">
-      <div className="col-12 col-md-4 col-lg-3 d-flex flex-column">
+      <div className="cols blog-sm d-flex gap-4 justify-content-center align-items-start ">
+      <div className="col-12 col-md-4 col-lg-4 d-flex flex-column">
       <Link   to={{
                   pathname: "/blogs/1"
                 }}style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -120,7 +119,7 @@ const Blogs = () => {
       </Link>
     </div>
 
-    <div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
+    <div className="col-12 col-md-4 col-lg-4 d-flex flex-column ">
   <Link to={{ pathname: "/blogs/2" }} style={{ textDecoration: 'none', color: 'inherit' }}>
     <div>
       <img src={blog2} alt="img blog-img-sm" className=" blog w-100" />
@@ -149,7 +148,7 @@ const Blogs = () => {
 </div>
 
 
-<div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
+<div className="col-12 col-md-4 col-lg-4 d-flex flex-column ">
   <Link to={{ pathname: "/blogs/3" }} style={{ textDecoration: 'none', color: 'inherit' }}>
     <div className="">
       <img src={blog3} alt="img blog-img-sm" className=" blog w-100" />
@@ -180,6 +179,7 @@ const Blogs = () => {
   </Link>
 </div>
 
+      </div>
       </div>
 
       <form className="form" onSubmit={(e) => Submit(e)}>

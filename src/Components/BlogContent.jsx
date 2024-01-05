@@ -12,7 +12,7 @@ import meet from "../assets/meet.svg";
 import goback from "../assets/goBack.svg";
 import clippathblog from "../assets/clippathblog.svg";
 import fb from "../assets/fb.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 // Corrected function to create section refs
@@ -26,8 +26,41 @@ const createSectionRefs = (sections) => {
 
 const BlogContent = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   console.log(id, "ID");
   const [activeSection, setActiveSection] = useState(null);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  function Submit(e) {
+    e.preventDefault();
+    const formEle = document.querySelector("form");
+  console.log("Form Values:", {
+    subscribe: formEle.querySelector("[name='subscribe']").value,
+  });
+  const formDatab = new FormData(formEle);
+  console.log("FormData Object:", formDatab);
+  
+  
+    fetch(
+      "https://sheet.best/api/sheets/dad9f654-6401-4499-aff6-779c7c9d9c59",
+      {
+        method: "POST",
+        body: formDatab
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setIsSuccess(true);
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  const goBack = () => {
+    navigate(-1); // This is equivalent to history.goBack()
+  };
 
   const copyToClipboard = (text) => {
     const textArea = document.createElement('textarea');
@@ -247,7 +280,7 @@ const BlogContent = () => {
 
       <div className="row" style={{paddingTop: "7%"}}>
         <div className="col-4 toc-column ">
-            <button className="goBack-btn p-3 d-flex justify-content-between gap-2">
+            <button className="goBack-btn p-3 d-flex justify-content-between gap-2" onClick={goBack}>
                 <img src={goback} alt="" />
                 Go Back
             </button>
@@ -306,6 +339,17 @@ const BlogContent = () => {
   ))}
 
 
+<form className="form" onSubmit={(e) => Submit(e)}> 
+{isSuccess ? (
+    <div className="subscribe d-lg-flex d-md-flex justify-content-center align-items-center mt-md-5 subscriptions" style={{ padding: "2rem" }}>
+    <div className="success" style={{
+            color: "var(--primary-text)",
+            fontSize: "1.3rem",
+            fontWeight: "500",
+            opacity: "0.8",
+          }}>Thank you! You have joined our newsletter!</div>
+    </div>
+  ) : (
           <div className="subscribe d-lg-flex d-md-flex pt-3 mt-md-5 subscriptions" style={{ paddingLeft: "5rem", paddingRight: "5rem", backgroundColor: "rgb(138, 171, 196, 0.4)" }}>
       <div className="col-md-7 col-7 d-flex flex-column justify-content-between">
         <h2 className="w-75 subscription" style={{ fontSize: "2.5rem", color: "var(--primary-text)", fontWeight: "500" }}>
@@ -365,14 +409,17 @@ const BlogContent = () => {
         </div>
       </div>
     </div>
+  )}
+   </form>
+
         </div>
 
 
 
-        <div className="d-flex flex-column  justify-content-center align-items-center" style={{paddingTop: "12%"}}>
-          <div className="d-flex justify-content-start ">
+        <div style={{paddingLeft: "7%", paddingRight: "7%", paddingTop: "7%"}}>
+      <div className="d-flex justify-content-between align-items-center">
         <h1
-          className="p-3 blog-headline "
+          className="pt-3 pb-3 blog-headline "
           style={{
             fontSize: "5rem",
             color: "var( --primary-text)",
@@ -380,11 +427,33 @@ const BlogContent = () => {
         >
           Related Resources
         </h1>
+        <div className="arrow-sm"
+          style={{
+            borderRadius: "50%", // Make it a circle
+            background: "var(--custom-btn)",
+            display: "flex",
+            width: "64.75px",
+            height: "64.75px",
+            padding: "17.82px 19.46px 17.81px 19.42px",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src={arrow} // Replace with the path to your image
+            alt="Circle Image"
+            style={{
+              width: "65%", // Ensure the image takes the full width of the circle
+              height: "100%", // Ensure the image takes the full height of the circle
+              rotate: "180deg",
+            }}
+          />
         </div>
-      <div className="cols blog-sm d-flex gap-4 align-items-center justify-content-center">
-      <div className="col-12 col-md-4 col-lg-3 d-flex flex-column">
+      </div>
+      <div className="cols blog-sm d-flex gap-4 justify-content-center align-items-start ">
+      <div className="col-12 col-md-4 col-lg-4 d-flex flex-column">
       <Link   to={{
-                  pathname: "/blogs/1",
+                  pathname: "/blogs/1"
                 }}style={{ textDecoration: 'none', color: 'inherit' }}>
         <div className="">
           <img src={blog} alt="img blog-img-sm" className=" blog w-100" />
@@ -415,7 +484,7 @@ const BlogContent = () => {
       </Link>
     </div>
 
-    <div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
+    <div className="col-12 col-md-4 col-lg-4 d-flex flex-column ">
   <Link to={{ pathname: "/blogs/2" }} style={{ textDecoration: 'none', color: 'inherit' }}>
     <div>
       <img src={blog2} alt="img blog-img-sm" className=" blog w-100" />
@@ -444,7 +513,7 @@ const BlogContent = () => {
 </div>
 
 
-<div className="col-12 col-md-4 col-lg-3 d-flex flex-column ">
+<div className="col-12 col-md-4 col-lg-4 d-flex flex-column ">
   <Link to={{ pathname: "/blogs/3" }} style={{ textDecoration: 'none', color: 'inherit' }}>
     <div className="">
       <img src={blog3} alt="img blog-img-sm" className=" blog w-100" />
@@ -474,6 +543,7 @@ const BlogContent = () => {
     </div>
   </Link>
 </div>
+
       </div>
       </div>
       </div>
