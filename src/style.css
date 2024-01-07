@@ -645,3 +645,25 @@ padding-right: 0;
 
 }
 
+/* blur on hover over asterisk */
+
+.blur {
+  background-color: black;
+  opacity: 15%;
+  transition: all 0.8s ease;
+}
+
+
+.hover-text {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  transform: translateY(100%); /* Initially position it below the viewport */
+  transition: transform 0.8s ease; /* Use transform property for smooth sliding */
+}
+
+.hover-text.active {
+  transform: translateY(0); /* Move it to its final position */
+}
+
