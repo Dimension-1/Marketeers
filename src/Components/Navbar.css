@@ -59,7 +59,7 @@
   z-index: 999;
 }
 
-/* text hover animations */
+/* text hover underline animations */
 .h-effect {
   transition: all 0.3s ease;
   position: relative;

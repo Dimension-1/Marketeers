@@ -177,7 +177,7 @@ const Navbar = () => {
       {isSidebarOpen && (
         <div ref={sidebarRef} className="sidebar" style={{ zIndex: "999" }}>
           <span
-            className="close-icon text-light-bg"
+            className="close-icon text-light-bg h-effect"
             style={{ cursor: "pointer" }}
             onClick={toggleSidebar}
           >
@@ -190,7 +190,7 @@ const Navbar = () => {
           ></div>
           <div className="d-flex justify-content-between flex-column w-100 h-100">
             <div className="pages">
-              <div className="sidebar-item">
+              <div className="sidebar-item h-effect">
                 <Link
                   to="/services"
                   style={{ textDecoration: "none", color: "inherit" }}
@@ -206,7 +206,7 @@ const Navbar = () => {
                   />
                 </Link>
               </div>
-              <div className="sidebar-item">
+              <div className="sidebar-item h-effect">
                 <Link
                   to={{
                     pathname: "/resources/all",
@@ -224,7 +224,7 @@ const Navbar = () => {
                   />
                 </Link>
               </div>
-              <div className="sidebar-item">
+              <div className="sidebar-item h-effect">
                 <Link
                   to={{
                     pathname: "/resources/CaseStudy",
@@ -242,7 +242,7 @@ const Navbar = () => {
                   />
                 </Link>
               </div>
-              <div className="sidebar-item">
+              <div className="sidebar-item h-effect">
                 <Link
                   to="/about"
                   style={{ textDecoration: "none", color: "inherit" }}
@@ -258,7 +258,7 @@ const Navbar = () => {
                   />
                 </Link>
               </div>
-              <div className="sidebar-item">
+              <div className="sidebar-item h-effect">
                 <Link
                   to="/contact"
                   style={{ textDecoration: "none", color: "inherit" }}
@@ -278,7 +278,7 @@ const Navbar = () => {
 
             <div className="platforms mb-5 gap-2 d-flex flex-column ">
               <div
-                className=""
+                className="h-effect"
                 style={{
                   color: "var(--secondary-bg)",
                   fontSize: "1.5rem",
@@ -288,7 +288,7 @@ const Navbar = () => {
                 Upwork
               </div>
               <div
-                className=""
+                className="h-effect"
                 style={{
                   color: "var(--secondary-bg)",
                   fontSize: "1.5rem",
@@ -298,7 +298,7 @@ const Navbar = () => {
                 Fiverr
               </div>
               <div
-                className=""
+                className="h-effect"
                 style={{
                   color: "var(--secondary-bg)",
                   fontSize: "1.5rem",
