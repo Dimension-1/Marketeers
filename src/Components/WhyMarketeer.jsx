@@ -3,10 +3,9 @@ import "../style.css";
 import Scrollbar from "smooth-scrollbar";
 // import image from "../assets/Section.jpg.png";
 import image from "../assets/DesktopBlue.svg";
-import bg from "../assets/mainbg.png"
+import bg from "../assets/mainbg.png";
 
-
-const WhyMarketeer = ({pageTitle, pageContent}) => {
+const WhyMarketeer = ({ pageTitle, pageContent }) => {
   // useEffect(() => {
   //   const scrollBar = Scrollbar.init(document.querySelector(".scroll-target"), {
   //     damping: 0.01,
@@ -50,14 +49,15 @@ const WhyMarketeer = ({pageTitle, pageContent}) => {
 
   return (
     <div className=" container pt-5 position-relative ">
-      
       <div className="exist d-flex justify-content-between ">
         <div className="col-12 col-lg-6 col-md-5">
-          <div style={{ position: 'sticky', top: '0', zIndex: '1000' }}>
-          <h4 className=" font-1" style={{color: 'var(--text-color)'}}>{pageTitle}</h4>
+          <div style={{ position: "sticky", top: "0", zIndex: "1000" }}>
+            <h4 className=" font-1" style={{ color: "var(--text-color)" }}>
+              {pageTitle}
+            </h4>
           </div>
         </div>
-        
+
         {/* <h3 className="col-6 font-3 your-text" >
             At Marketeer's Consulting, we use human creativity and the latest
             <span className="your-text">technologies to help business leaders, investors, and entrepreneurs</span>
@@ -66,13 +66,16 @@ const WhyMarketeer = ({pageTitle, pageContent}) => {
             
           </h3> */}
         <div className="col-12 col-lg-6 col-md-7 scroll-target z-3 fw-semibold">
-          <p className="marketeer " style={{ fontSize: "3rem", color: "var(--text-color)" }}>
-          {pageContent}
+          <p
+            className="marketeer "
+            style={{ fontSize: "3rem", color: "var(--text-color)" }}
+          >
+            {pageContent}
           </p>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default WhyMarketeer;

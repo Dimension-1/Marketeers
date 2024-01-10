@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import photo from "../assets/author-photo.png";
 import arrow from "../assets/arrow-review.svg";
-import image from "../assets/DesktopBlue.svg"
-
+import image from "../assets/DesktopBlue.svg";
 
 const Testimonials = () => {
-  const [activeButton, setActiveButton] = useState('Fiver');
+  const [activeButton, setActiveButton] = useState("Fiver");
   const activeText = "UpWork";
-  const inactiveText="Fiverr"
+  const inactiveText = "Fiverr";
   const [isActive, setIsActive] = useState(true);
 
   const toggleButton = () => {
@@ -16,150 +15,170 @@ const Testimonials = () => {
 
   return (
     <div className="position-relative ">
-    <div className="d-flex testimonials-md justify-content-center align-items-center z-3 position-relative " style={{paddingTop: "10%", paddingBottom: "10%"}}>
-      <div className="col-lg-5 col-12 p-lg-3 testimonials-section-1">
-        <h1 className="p-3 text-light-bg" style={{ fontSize: "5rem" }}>
-          Hear it from our clients
-        </h1>
-        <button
-      className="d-flex position-relative align-items-center justify-content-between "
-      style={{
-        width: '18rem',
-        backgroundColor: 'var(--background-color)',
-        borderRadius: '20rem',
-        background: 'transparent',
-        padding: '1rem',
-        border: '3px solid var(--input-fields)',
-        color: 'var(--secondary-bg)',
-        fontSize: '1.25rem',
-        position: 'relative',
-        overflow: 'hidden', // Ensure that the inner button doesn't overflow
-      }}
-      onClick={toggleButton} // Handle the click event on the entire button
-    >
-      <button
-        className={`position-absolute focus-outline-none transition-transform ${
-          isActive ? 'translate-x-0' : 'translate-x-full'
-        }`}
-        style={{
-          width: '9rem',
-          backgroundColor: 'var(--main-text-color)',
-          color: 'var(--bg-color)',
-          borderRadius: '20rem',
-          padding: '1rem',
-          right: isActive ? '0' : 'auto', // Move to the right when active
-          left: isActive ? 'auto' : '0', // Move to the left when inactive
-        }}
-      >
-        {isActive ? activeText : inactiveText}
-      </button>
-
       <div
-        className="absolute inset-0 d-flex "
-        style={{
-          right: isActive ? '0' : 'auto', // Move to the right when active
-          left: isActive ? 'auto' : '0',
-         marginLeft: "1rem"
-        }}
+        className="d-flex testimonials-md justify-content-center align-items-center z-3 position-relative "
+        style={{ paddingTop: "10%", paddingBottom: "10%" }}
       >
-        <span>{isActive ? inactiveText : activeText}</span>
-      </div>
-      <div
-        className="absolute inset-0 d-flex "
-        style={{
-          right: isActive ? '0' : 'auto', // Move to the right when active
-          left: isActive ? 'auto' : '0',
-          marginRight: "1rem"
-        }}
-      >
-        <span>Upwork</span>
-      </div>
-    </button>
-      </div>
-      <div className="col-lg-7 col-12 testimonials-section-1 p-lg-3 d-flex justify-content-center align-items-center gap-md-5 gap-lg-5 gap-1">
-      <div className="circle-review"
+        <div className="col-lg-5 col-12 p-lg-3 testimonials-section-1">
+          <h1 className="p-3 text-light-bg" style={{ fontSize: "5rem" }}>
+            Hear it from our clients
+          </h1>
+          <button
+            className="d-flex position-relative align-items-center justify-content-between "
+            style={{
+              width: "18rem",
+              backgroundColor: "var(--background-color)",
+              borderRadius: "20rem",
+              background: "transparent",
+              padding: "1rem",
+              border: "3px solid var(--input-fields)",
+              color: "var(--secondary-bg)",
+              fontSize: "1.25rem",
+              position: "relative",
+              overflow: "hidden", // Ensure that the inner button doesn't overflow
+            }}
+            onClick={toggleButton} // Handle the click event on the entire button
+          >
+            <button
+              className={`position-absolute focus-outline-none transition-transform ${
+                isActive ? "translate-x-0" : "translate-x-full"
+              }`}
               style={{
-                borderRadius: "50%", // Make it a circle
-                background: "var(--custom-btn)",
-                display: "flex",
-                width: "64.75px",
-                height: "64.75px",
-                padding: "17.82px 19.46px 17.81px 19.42px",
-                justifyContent: "center",
-                alignItems: "center",
+                width: "9rem",
+                backgroundColor: "var(--main-text-color)",
+                color: "var(--bg-color)",
+                borderRadius: "20rem",
+                padding: "1rem",
+                right: isActive ? "0" : "auto", // Move to the right when active
+                left: isActive ? "auto" : "0", // Move to the left when inactive
               }}
             >
-              <img
-    src={arrow} // Replace with the path to your image
-    alt="Circle Image"
-    style={{
-      width: "65%", // Ensure the image takes the full width of the circle
-      height: "100%", // Ensure the image takes the full height of the circle
-    }}
-  />
+              {isActive ? activeText : inactiveText}
+            </button>
+
+            <div
+              className="absolute inset-0 d-flex "
+              style={{
+                right: isActive ? "0" : "auto", // Move to the right when active
+                left: isActive ? "auto" : "0",
+                marginLeft: "1rem",
+              }}
+            >
+              <span>{isActive ? inactiveText : activeText}</span>
             </div>
-        <div className="review-card p-4 d-flex flex-column justify-content-between ">
-          <div>
-          <div className="btn mt-md-4 bg-opacity">241 of 324</div>
-          
+            <div
+              className="absolute inset-0 d-flex "
+              style={{
+                right: isActive ? "0" : "auto", // Move to the right when active
+                left: isActive ? "auto" : "0",
+                marginRight: "1rem",
+              }}
+            >
+              <span>Upwork</span>
+            </div>
+          </button>
+        </div>
+        <div className="col-lg-7 col-12 testimonials-section-1 p-lg-3 d-flex justify-content-center align-items-center gap-md-5 gap-lg-5 gap-1">
           <div
-            className="btn mt-md-4 "
+            className="circle-review"
             style={{
-              backgroundColor: "transparent !important",
-              border: "2px solid var(--custom-btn)",
-              marginLeft: "2rem",
+              borderRadius: "50%", // Make it a circle
+              background: "var(--custom-btn)",
+              display: "flex",
+              width: "64.75px",
+              height: "64.75px",
+              padding: "17.82px 19.46px 17.81px 19.42px",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-           Read More
+            <img
+              src={arrow} // Replace with the path to your image
+              alt="Circle Image"
+              style={{
+                width: "65%", // Ensure the image takes the full width of the circle
+                height: "100%", // Ensure the image takes the full height of the circle
+              }}
+            />
           </div>
+          <div className="review-card p-4 d-flex flex-column justify-content-between ">
+            <div>
+              <div className="btn mt-md-4 bg-opacity">241 of 324</div>
 
-          <div>
-            <p className="mt-5" style={{ color: "var(--background-color)", lineHeight: "1.5" }}>
-            "marketeers's team transformed our digital presence. Their SEO strategies skyrocketed our website traffic, and the leads we're getting now are just phenomenal. It's like they unlocked a whole new level of growth for us."
-            </p>
-          </div>
-          </div>
-          <div className="">
-            <div className="green-border d-flex justify-content-center pt-4 " style={{borderTop: '0.1px solid var(--text-color)',}}></div>
-            <div className="d-flex">
-              <div className="d-flex gap-3">
-                <img src={photo} alt="" className="rounded" />
-                <div>
-                <h4 className="m-0">Tech Startup Founder</h4>
-                <p style={{color: "var(--text-color)"}}> Bangalore, India</p>
+              <div
+                className="btn mt-md-4 "
+                style={{
+                  backgroundColor: "transparent !important",
+                  border: "2px solid var(--custom-btn)",
+                  marginLeft: "2rem",
+                }}
+              >
+                Read More
+              </div>
+
+              <div>
+                <p
+                  className="mt-5"
+                  style={{
+                    color: "var(--background-color)",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  "marketeers's team transformed our digital presence. Their SEO
+                  strategies skyrocketed our website traffic, and the leads
+                  we're getting now are just phenomenal. It's like they unlocked
+                  a whole new level of growth for us."
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <div
+                className="green-border d-flex justify-content-center pt-4 "
+                style={{ borderTop: "0.1px solid var(--text-color)" }}
+              ></div>
+              <div className="d-flex">
+                <div className="d-flex gap-3">
+                  <img src={photo} alt="" className="rounded" />
+                  <div>
+                    <h4 className="m-0">Tech Startup Founder</h4>
+                    <p style={{ color: "var(--text-color)" }}>
+                      {" "}
+                      Bangalore, India
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="circle-review"
+          <div
+            className="circle-review"
+            style={{
+              borderRadius: "50%", // Make it a circle
+              background: "var(--custom-btn)",
+              display: "flex",
+              width: "64.75px",
+              height: "64.75px",
+              padding: "17.82px 19.46px 17.81px 19.42px",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={arrow} // Replace with the path to your image
+              alt="Circle Image"
               style={{
-                borderRadius: "50%", // Make it a circle
-                background: "var(--custom-btn)",
-                display: "flex",
-                width: "64.75px",
-                height: "64.75px",
-                padding: "17.82px 19.46px 17.81px 19.42px",
-                justifyContent: "center",
-                alignItems: "center",
+                width: "65%", // Ensure the image takes the full width of the circle
+                height: "100%", // Ensure the image takes the full height of the circle
+                rotate: "180deg",
               }}
-            >
-              <img
-    src={arrow} // Replace with the path to your image
-    alt="Circle Image"
-    style={{
-      width: "65%", // Ensure the image takes the full width of the circle
-      height: "100%", // Ensure the image takes the full height of the circle
-      rotate: "180deg"
-    }}
-  />
-            </div>
+            />
+          </div>
+        </div>
+      </div>
+      <div className="img-overlay-5 position-absolute z-0">
+        <img src={image} alt="" className="" />
       </div>
     </div>
-    <div className="img-overlay-5 position-absolute z-0">
-    <img src={image} alt="" className="" />
-  </div>
-  </div>
   );
 };
 

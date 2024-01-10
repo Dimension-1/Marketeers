@@ -1,140 +1,159 @@
-.css-o4b71y-MuiAccordionSummary-content{
-    margin-bottom: 0 !important;
+.css-o4b71y-MuiAccordionSummary-content {
+  margin-bottom: 0 !important;
 }
-.css-178xtz6-MuiPaper-root-MuiAccordion-root.Mui-expanded{
-    margin: 0 !important;
+.css-178xtz6-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+  margin: 0 !important;
 }
-.css-o4b71y-MuiAccordionSummary-content,.css-17o5nyn{
-    justify-content: right !important;
+.css-o4b71y-MuiAccordionSummary-content,
+.css-17o5nyn {
+  justify-content: right !important;
 }
-.css-17o5nyn{
-    margin: 0 !important;
+.css-17o5nyn {
+  margin: 0 !important;
 }
 .css-17o5nyn.Mui-expanded {
-    margin:0px 0px !important;
+  margin: 0px 0px !important;
 }
 .css-f2z1m3.Mui-expanded {
-    margin:0px 0px !important;
+  margin: 0px 0px !important;
 }
 .css-1iji0d4.Mui-expanded {
-    min-height: 0px !important;
+  min-height: 0px !important;
 }
-.css-178xtz6-MuiPaper-root-MuiAccordion-root,.css-14bscn5-MuiPaper-root-MuiAccordion-root{
-    box-shadow: none !important;
+.css-178xtz6-MuiPaper-root-MuiAccordion-root,
+.css-14bscn5-MuiPaper-root-MuiAccordion-root {
+  box-shadow: none !important;
 }
-.css-v4u5dn-MuiInputBase-root-MuiInput-root:after{
-   border-bottom: none !important;
+.css-v4u5dn-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: none !important;
 }
-@media only screen and (max-width:1175px){
-    .resources{
-        margin-left: 11vw !important;
-    }
-    .resources-text{
-        margin-left: 11vw !important;
-        /*  */
-    }
-    .resources-text p{
-        font-size: 3.75rem;
-    }
-    .resources-navbar{
-        margin-left: 11vw !important;
-    }
-    .cards-container{
-        padding: 70px 50px !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-    .resources-filter{
-        padding: 30px 100px 0 !important;
-    }
-    .card{
-        width:'380px' !important;
-        margin: auto !important;
-    }
+@media only screen and (max-width: 1175px) {
+  .resources {
+    margin-left: 11vw !important;
+  }
+  .resources-text {
+    margin-left: 11vw !important;
+    /*  */
+  }
+  .resources-text p {
+    font-size: 3.75rem;
+  }
+  .resources-navbar {
+    margin-left: 11vw !important;
+  }
+  .cards-container {
+    padding: 70px 50px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .resources-filter {
+    padding: 30px 100px 0 !important;
+  }
+  .card {
+    width: "380px" !important;
+    margin: auto !important;
+  }
 }
-@media only screen and (max-width:1000px){
-    .resources-text p{
-        font-size: 3rem;
-    }
-    .resources{
-        margin-left: 8vw !important;
-    }
-    .resources-text{
-        margin-left: 8vw !important;
-        /*  */
-    }
-    .resources-navbar{
-        margin-left: 8vw !important;
-    }
-    .resources-navbar-content{
-        margin-top: 13px;
-    }
-    .resources-navbar-content button{
-       padding: 12px 21px !important;
-    }
-    .cards-container{
-        padding: 70px 50px !important;
-        grid-template-columns: repeat(1, 1fr) !important;
-    }
-    .resources-filter{
-        padding: 30px 60px 0 !important;
-    }
-    .card{
-        width: 100% !important;
-    }
-    .card img{
-        height: 300px !important;
-    }
+@media only screen and (max-width: 1000px) {
+  .resources-text p {
+    font-size: 3rem;
+  }
+  .resources {
+    margin-left: 8vw !important;
+  }
+  .resources-text {
+    margin-left: 8vw !important;
+    /*  */
+  }
+  .resources-navbar {
+    margin-left: 8vw !important;
+  }
+  .resources-navbar-content {
+    margin-top: 13px;
+  }
+  .resources-navbar-content button {
+    padding: 12px 21px !important;
+  }
+  .cards-container {
+    padding: 70px 50px !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .resources-filter {
+    padding: 30px 60px 0 !important;
+  }
+  .card {
+    width: 100% !important;
+  }
+  .card img {
+    height: 300px !important;
+  }
 }
-@media only screen and (max-width:782px){
-    .resources-text p{
-        font-size: 2.5rem;
-    }
-    .resources{
-        margin-left: 4vw !important;
-    }
-    .resources-text{
-        margin-left: 2vw !important;
-        margin-top: 90px !important;
-    }
-    .resources-navbar{
-        margin-left: 2vw !important;
-    }
-    .resources-navbar-content{
-        margin-top: 11px;
-    }
-    .card img{
-        height: 200px !important;
-    }
+@media only screen and (max-width: 782px) {
+  .resources-text p {
+    font-size: 2.5rem;
+  }
+  .resources {
+    margin-left: 4vw !important;
+  }
+  .resources-text {
+    margin-left: 2vw !important;
+    margin-top: 90px !important;
+  }
+  .resources-navbar {
+    margin-left: 2vw !important;
+  }
+  .resources-navbar-content {
+    margin-top: 11px;
+  }
+  .card img {
+    height: 200px !important;
+  }
 }
-@media only screen and (max-width:586px){
-    .resources-text{
-        margin-top: 60px !important;
-    }
-    .cards-container{
-        padding: 50px 18px !important;
-    }
-    .resources-filter{
-        padding: 30px 12px 0 !important;
+@media only screen and (max-width: 586px) {
+  .resources-text {
+    margin-top: 60px !important;
+  }
+  .cards-container {
+    padding: 50px 18px !important;
+  }
+  .resources-filter {
+    padding: 30px 12px 0 !important;
+  }
+  .filters-category {
+    padding: 20px 5px !important;
+  }
+  .resources-navbar-content button {
+    padding: 8px 12px !important;
+  }
+  .resources-navbar-content {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .resources-text p {
+    line-height: normal !important;
+  }
+  .cards-container {
+    gap: 5px !important;
+    padding-bottom: 20px !important;
+  }
+  .resources {
+    padding-top: 10px !important;
+  }
+}
 
-    }
-    .filters-category{
-        padding: 20px 5px !important;
-    }
-    .resources-navbar-content button{
-        padding: 8px 12px !important;
-     }
-     .resources-navbar-content{
-        margin-top: 10px !important;
-      margin-bottom: 10px !important;
-     }
-     .resources-text p{
-        line-height: normal !important;
-    }
-    .cards-container{
-        gap: 5px !important;
-        padding-bottom:20px !important;
-    }
-    .resources{
-        padding-top: 10px !important;
-    }
+/* slide up effect on page loads */
+
+/* Add this CSS to your existing stylesheet or create a new one */
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 1s ease-out;
 }
