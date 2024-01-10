@@ -15,26 +15,36 @@ const serviceName2 = "Influencer Marketing";
 const serviceName3 = "Conversion Rate Optimization";
 const serviceName4 = "Online Reputation Management";
 
-
 const Services = ({ title, displayCard }) => {
-  
-
-  console.log(displayCard, "cardStyle")
+  console.log(displayCard, "cardStyle");
 
   return (
     <div className="d-flex flex-column justify-content-center mb-md-5  position-relative">
-      <div className="img-overlay position-absolute" style={{ top: "-125%", right: "60%", transform: 'rotate(15deg)', display: displayCard ? 'flex' : 'none' }}>
-          <img src={image} alt="" className="" />
-        </div>
+      <div
+        className="img-overlay position-absolute"
+        style={{
+          top: "-125%",
+          right: "60%",
+          transform: "rotate(15deg)",
+          display: displayCard ? "flex" : "none",
+        }}
+      >
+        <img src={image} alt="" className="" />
+      </div>
       <div className="custom-container z-3">
         <h1 className="font-10 text-light-bg">{title}</h1>
       </div>
       <div className="services-container gallery d-flex gap-1 mb-lg-5 z-3">
         <div className="cards d-flex flex-nowrap w-100 ">
-          
-        <Link to={`/service/${encodeURIComponent(serviceName)}`} className="service-box justify-content-between flex-column" style={{ textDecoration: 'none', display: displayCard ? 'flex' : 'none'}}>
+          <Link
+            to={`/service/${encodeURIComponent(serviceName)}`}
+            className="service-box justify-content-between flex-column"
+            style={{
+              textDecoration: "none",
+              display: displayCard ? "flex" : "none",
+            }}
+          >
             <span className="d-flex justify-content-between">
-              
               <img src={forecast} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,17 +74,24 @@ const Services = ({ title, displayCard }) => {
               </svg>
             </span>
             <div className="content">
-              <p className="p-color font-2 flex-end market-headline fw-medium" style={{color: 'var(--text-color)'}}>
-              Pay-Per-Click Advertising (PPC)
-
+              <p
+                className="p-color font-2 flex-end market-headline fw-medium"
+                style={{ color: "var(--text-color)" }}
+              >
+                Pay-Per-Click Advertising (PPC)
               </p>
-              </div>
-        </Link>
+            </div>
+          </Link>
 
-
-        <Link to={`/service/${encodeURIComponent(serviceName1)}`} className="service-box  d-flex justify-content-between flex-column" style={{ textDecoration: 'none', display: displayCard ? 'flex' : 'none'}}>
+          <Link
+            to={`/service/${encodeURIComponent(serviceName1)}`}
+            className="service-box  d-flex justify-content-between flex-column"
+            style={{
+              textDecoration: "none",
+              display: displayCard ? "flex" : "none",
+            }}
+          >
             <span className="d-flex justify-content-between">
-              
               <img src={sms} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,15 +121,24 @@ const Services = ({ title, displayCard }) => {
               </svg>
             </span>
             <div className="content">
-              <p className="p-color font-2 flex-end market-headline fw-medium" style={{color: 'var(--text-color)'}}>
-              Email and SMS Marketing
+              <p
+                className="p-color font-2 flex-end market-headline fw-medium"
+                style={{ color: "var(--text-color)" }}
+              >
+                Email and SMS Marketing
               </p>
-              </div>
+            </div>
           </Link>
 
-          <Link to={`/service/${encodeURIComponent(serviceName2)}`} className="service-box  d-flex justify-content-between flex-column" style={{ textDecoration: 'none', display: displayCard ? 'flex' : 'none'}}>
+          <Link
+            to={`/service/${encodeURIComponent(serviceName2)}`}
+            className="service-box  d-flex justify-content-between flex-column"
+            style={{
+              textDecoration: "none",
+              display: displayCard ? "flex" : "none",
+            }}
+          >
             <span className="d-flex justify-content-between">
-              
               <img src={influencer} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -142,17 +168,24 @@ const Services = ({ title, displayCard }) => {
               </svg>
             </span>
             <div className="content">
-              <p className="p-color font-2 flex-end market-headline fw-medium" style={{color: 'var(--text-color)'}}>
-              Influencer Marketing
-
-
+              <p
+                className="p-color font-2 flex-end market-headline fw-medium"
+                style={{ color: "var(--text-color)" }}
+              >
+                Influencer Marketing
               </p>
-              </div>
+            </div>
           </Link>
 
-          <Link to={`/service/${encodeURIComponent(serviceName3)}`} className="service-box  d-flex justify-content-between flex-column" style={{ textDecoration: 'none', display: displayCard ? 'flex' : 'none'}}>
+          <Link
+            to={`/service/${encodeURIComponent(serviceName3)}`}
+            className="service-box  d-flex justify-content-between flex-column"
+            style={{
+              textDecoration: "none",
+              display: displayCard ? "flex" : "none",
+            }}
+          >
             <span className="d-flex justify-content-between">
-              
               <img src={cro} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -182,16 +215,24 @@ const Services = ({ title, displayCard }) => {
               </svg>
             </span>
             <div className="content">
-              <p className="p-color font-2 flex-end market-headline fw-medium" style={{color: 'var(--text-color)'}}>
-              Conversion Rate Optimization (CRO)
-
+              <p
+                className="p-color font-2 flex-end market-headline fw-medium"
+                style={{ color: "var(--text-color)" }}
+              >
+                Conversion Rate Optimization (CRO)
               </p>
-              </div>
+            </div>
           </Link>
-          
-          <Link to={`/service/${encodeURIComponent(serviceName4)}`} className="service-box  d-flex justify-content-between flex-column" style={{ textDecoration: 'none', display: displayCard ? 'flex' : 'none'}}>
+
+          <Link
+            to={`/service/${encodeURIComponent(serviceName4)}`}
+            className="service-box  d-flex justify-content-between flex-column"
+            style={{
+              textDecoration: "none",
+              display: displayCard ? "flex" : "none",
+            }}
+          >
             <span className="d-flex justify-content-between">
-              
               <img src={onlineRep} className="" alt="" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -221,11 +262,13 @@ const Services = ({ title, displayCard }) => {
               </svg>
             </span>
             <div className="content">
-              <p className="p-color font-2 flex-end market-headline fw-medium fw-medium" style={{color: 'var(--text-color)'}}>
-              Online Reputation Management
-
+              <p
+                className="p-color font-2 flex-end market-headline fw-medium fw-medium"
+                style={{ color: "var(--text-color)" }}
+              >
+                Online Reputation Management
               </p>
-              </div>
+            </div>
           </Link>
         </div>
       </div>

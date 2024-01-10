@@ -1,4 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import GridLoader from "react-spinners/GridLoader";
 import Navbar from "../Components/Navbar";
 import "../style.css";
 //import image from "../assets/Section.jpg.png";
@@ -18,75 +25,20 @@ import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import greaterThan from "../assets/greater-than.svg";
 import asterisk from "../assets/asterisk.svg";
+import { useSpring, animated } from "react-spring";
+import logo from "../assets/finalLogo.ico";
 
 const LandingPage = () => {
   const targetRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   gsap.to('.switch', {
-  //     x: -100, // Change this value to move it horizontally
-  //   y: 100, // Add this property to move it vertically
-  //   scrollTrigger: {
-  //     trigger: '.switch',
-  //     start: 'center center',
-  //     end: 'bottom center',
-  //     scrub: true
-  //   }
-  //   });
-
-  //   gsap.to('.class', {
-  //     x: 0, // Change this value to move it horizontally
-  //   y: -100, // Add this property to move it vertically
-  //     scrollTrigger: {
-  //       trigger: '.class',
-  //       start: 'center center',
-  //       end: 'bottom center',
-  //       scrub: true
-  //     }
-  //   });
-  // }, []);
-
-  // useEffect(() => {
-  //     const scrollBar = Scrollbar.init(document.querySelector(".scroll-target"), {
-  //       damping: 0.01,
-  //       delegateTo: document,
-  //       alwaysShowTracks: true,
-  //       speed: 0.2,
-  //     });
-
-  //     ScrollTrigger.defaults({
-  //       scroller: ".scroll-target",
-  //     });
-  //     ScrollTrigger.scrollerProxy(".scroll-target", {
-  //       scrollTop(value) {
-  //         if (arguments.length) {
-  //           scrollBar.scrollTop = value;
-  //         }
-  //         return scrollBar.scrollTop;
-  //       },
-  //     });
-
-  //     scrollBar.addListener(ScrollTrigger.update);
-
-  //     const matches = document.querySelectorAll("p");
-
-  //     matches.forEach((target) => {
-  //       gsap.to(target, {
-  //         backgroundPositionX: "0%",
-  //         stagger: 1,
-  //         scrollTrigger: {
-  //           markers: true,
-  //           trigger: target,
-  //           scrub: true,
-  //           start: "top 20%",
-  //           end: "bottom 10%",
-  //         },
-  //       });
-  //     });
-
-  //     return () => {};
-  //   }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   useEffect(() => {
     console.log("Page loaded, scrolling to top");
@@ -110,110 +62,171 @@ const LandingPage = () => {
     }
   };
 
+  const [{ translateY }, set] = useSpring(() => ({
+    translateY: 0,
+  }));
+
+  const handleScroll = () => {
+    const yPos = window.scrollY;
+
+    // Adjust the values based on your layout
+    const minHeight = 0;
+    const maxHeight = 700;
+
+    const boundedY = Math.max(minHeight, Math.min(maxHeight, yPos));
+
+    set({
+      translateY: boundedY,
+      translateX: boundedY * 0.5,
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [set]);
+
   return (
     <>
-      <div className="main main-content">
-        <Navbar />
-        <div
-          className={` w-100 pb-3 img-container position-relative ${
-            isHovered ? "blur" : ""
-          }`}
-        >
-          <div className="img-overlay position-absolute right-0 z-1">
-            <img src={image} alt="" className="" />
+      {loading ? (
+        <div className="loading-overlay">
+          <Navbar />
+          {/* <GridLoader color={"#8aabc4"} loading={loading} size={20} /> */}
+          <div className="logo-container">
+            <img src={logo} alt="" className="loading-logo" />
           </div>
-          <div className="img-overlay-2 position-absolute">
-            <img src={image} alt="" className="" />
-          </div>
-          <div className="content-wrapper" style={{ zIndex: "800" }}>
-            <div className="header-container vh-90 d-flex justify-content-center align-items-center">
-              <div className="header text-center d-flex justify-content-center align-items-center flex-column">
-                <h4
-                  className="mb-0"
-                  style={{ color: "var(--text-color)", fontSize: "1.2rem" }}
-                >
-                  Crafting Campaigns That Captivate & Convert
-                </h4>
-                <h1 className="p-3 main-heading text-light-bg font-7">
-                  Empowering
-                  <img
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                    src={asterisk}
-                    alt="star"
-                    className="svg-icon custom-button"
-                  />
-                  <span className="d-flex m-0 align-items-center justify-content-end text-color ">
-                    <img
-                      src="https://assets-global.website-files.com/63793925c7db23ce040b0824/64f5c38109cfeef5f12e09ae_Image.jpg"
-                      alt="button"
-                      className="button svg-icon custom-button-2"
-                    />
-                    <span className="switch">
-                      Businesses{" "}
-                      <span style={{ color: "var(--main-text-color)" }}>
-                        {" "}
-                        for
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="text-color switch d-flex justify-content-center align-items-center "
-                    style={{ color: "var(--main-text-color)" }}
-                  >
-                    Market Leadership
-                    <img
-                      src={greaterThan}
-                      alt="star"
-                      style={{ width: "12%" }}
-                      className="svg-icon none custom-button"
-                    />
-                  </span>
-                </h1>
+        </div>
+      ) : (
+        <>
+          <div className="main main-content">
+            <Navbar />
+            <div
+              className={` w-100 pb-3 img-container position-relative ${
+                isHovered ? "blur" : ""
+              }`}
+            >
+              <div className="img-overlay position-absolute right-0 z-1">
+                <img src={image} alt="" className="" />
               </div>
-              <img
-                src={Sidecut}
-                alt="Sidecut"
-                className="sidecut-image position-absolute bottom-0 right-0"
-                style={{ right: "0", width: "8%", cursor: "pointer" }}
-                onClick={handleSidecutClick} // Add the click event
+              <div className="img-overlay-2 position-absolute">
+                <img src={image} alt="" className="" />
+              </div>
+              <div className="content-wrapper" style={{ zIndex: "800" }}>
+                <div className="header-container vh-90 d-flex justify-content-center align-items-center">
+                  <div className="header text-center d-flex justify-content-center align-items-center flex-column">
+                    <h4
+                      className="mb-0"
+                      style={{ color: "var(--text-color)", fontSize: "1.2rem" }}
+                    >
+                      Crafting Campaigns That Captivate & Convert
+                    </h4>
+                    <h1 className="p-3 main-heading text-light-bg font-7">
+                      Empowering
+                      <img
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                        src={asterisk}
+                        alt="star"
+                        className="svg-icon custom-button"
+                      />
+                      <span className="d-flex m-0 align-items-center justify-content-end text-color ">
+                        <img
+                          src="https://assets-global.website-files.com/63793925c7db23ce040b0824/64f5c38109cfeef5f12e09ae_Image.jpg"
+                          alt="button"
+                          className="button svg-icon custom-button-2"
+                        />
+                        <animated.span
+                          className="switch"
+                          style={{
+                            color: "var(--main-text-color)",
+                            transform: translateY.interpolate(
+                              (value) =>
+                                `translateY(${value}px) translateX(${
+                                  value * -0.925
+                                }px)`
+                            ),
+                          }}
+                        >
+                          Businesses{" "}
+                          <span style={{ color: "var(--main-text-color)" }}>
+                            {" "}
+                            for
+                          </span>
+                        </animated.span>
+                      </span>
+                      <animated.span
+                        className="text-color switch d-flex justify-content-center align-items-center"
+                        style={{
+                          color: "var(--main-text-color)",
+                          transform: translateY.interpolate(
+                            (value) =>
+                              `translateY(${value}px) translateX(${
+                                value * -0.2
+                              }px)`
+                          ),
+                        }}
+                      >
+                        Market Leadership
+                        <img
+                          src={greaterThan}
+                          alt="star"
+                          style={{ width: "12%" }}
+                          className="svg-icon none custom-button"
+                        />
+                      </animated.span>
+                    </h1>
+                  </div>
+
+                  <img
+                    src={Sidecut}
+                    alt="Sidecut"
+                    className="sidecut-image position-absolute bottom-0 right-0"
+                    style={{ right: "0", width: "8%", cursor: "pointer" }}
+                    onClick={handleSidecutClick} // Add the click event
+                  />
+                </div>
+              </div>
+              <div
+                className="spacer vh-50"
+                style={{ marginBottom: "40rem" }}
+              ></div>
+              <div
+                className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
+                style={{ left: "50%", marginRight: "1rem", marginLeft: "1rem" }}
+              ></div>
+
+              <div ref={sidecutRef}>
+                <WhyMarketeer
+                  pageTitle="Why we exist?"
+                  pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
+                />
+              </div>
+              <Services title="Services" displayCard={true} />
+              <Ratings targetRef={targetRef} />
+              <WhyUs targetRef={targetRef} />
+
+              <WhoTrustsUs />
+              <Testimonials />
+              <Blogs />
+              <Contact
+                title="Interested but don’t know where to start?"
+                fontSize="2.63rem"
               />
+
+              <Footer />
             </div>
           </div>
-          <div className="spacer vh-50" style={{ marginBottom: "40rem" }}></div>
-          <div
-            className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
-            style={{ left: "50%", marginRight: "1rem", marginLeft: "1rem" }}
-          ></div>
-
-          <div ref={sidecutRef}>
-            <WhyMarketeer
-              pageTitle="Why we exist?"
-              pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
-            />
-          </div>
-          <Services title="Services" displayCard={true} />
-          <Ratings targetRef={targetRef} />
-          <WhyUs targetRef={targetRef} />
-
-          <WhoTrustsUs />
-          <Testimonials />
-          <Blogs />
-          <Contact
-            title="Interested but don’t know where to start?"
-            fontSize="2.63rem"
-          />
-
-          <Footer />
-        </div>
-      </div>
-      {isHovered && (
-        <div className={`hover-text ${isHovered ? "active" : ""}`}>
-          <p>
-            <span style={{ fontWeight: "bold" }}>Marketeers</span>: Your Vision,
-            Our Expertise – We Are Your Marketing Architects.
-          </p>
-        </div>
+          {isHovered && (
+            <div className={`hover-text ${isHovered ? "active" : ""}`}>
+              <p>
+                <span style={{ fontWeight: "bold" }}>Marketeers</span>: Your
+                Vision, Our Expertise – We Are Your Marketing Architects.
+              </p>
+            </div>
+          )}
+        </>
       )}
     </>
   );
