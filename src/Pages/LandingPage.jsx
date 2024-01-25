@@ -42,12 +42,12 @@ const LandingPage = () => {
 
   useEffect(() => {
     console.log("Page loaded, scrolling to top");
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
   }, []);
+  
+  
 
   const sidecutRef = useRef(null); // Create a ref for the sidecut image
 

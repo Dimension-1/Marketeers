@@ -9,8 +9,8 @@ body {
 }
 
   :root {
-    --main-text-color: rgb(138, 171, 196);   /* Define a text color variable */
-    --bg-color: rgb(38, 41, 43);     /* Define a background color variable */
+    --main-text-color: #8aabc4;   /* Define a text color variable */
+    --bg-color: #26292b;     /* Define a background color variable */
     --main-font-size: 16px;    /* Define a font size variable */
     --box-color: border-radius: 24px;
     --background-color: rgb(62, 83, 102);
