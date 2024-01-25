@@ -228,7 +228,7 @@ const ServiceContentPage = () => {
           <h1 className="text-light-bg mb-4 text-align-end d-flex align-items-end flex-column">
           {selectedService && selectedService.contact && (
   selectedService.contact.split('\n').map((text, index) => (
-    <p key={index} style={{ margin: 0, padding: 0 }}>{text}</p>
+    <p className="text-light-bg" key={index} style={{ margin: 0, padding: 0 }}>{text}</p>
   ))
 )}
 
