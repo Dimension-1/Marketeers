@@ -49,8 +49,8 @@ const Ratings = ({targetRef}) => {
               >
         
         <div className="sm-ratings pt-sm pt-md-5  col-lg-4 col-md-4 h-100 padding d-flex gap-4 ">
-          <div className="card d-flex position-relative" style={{height: "25rem"}}>
-            <img src={stats} alt="img" className="center-absolute position-absolute " />
+          <div className="card d-flex justify-content-between" style={{height: "25rem"}}>
+            <img src={stats} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
                 className="m-0 rating-sm"
@@ -61,8 +61,8 @@ const Ratings = ({targetRef}) => {
               <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem'}}>Business Analyzed</h4>
             </div>
           </div>
-          <div className="card d-flex position-relative" style={{backgroundColor: "var(--main-text-color)", height: "25rem"}}>
-            <img src={loader} alt="img" className="center-absolute position-absolute" />
+          <div className="card d-flex justify-content-between" style={{backgroundColor: "var(--main-text-color)", height: "25rem"}}>
+            <img src={loader} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
                 className="m-0 rating-sm"
@@ -75,8 +75,8 @@ const Ratings = ({targetRef}) => {
           </div>
         </div>
         <div className="sm-ratings col-lg-4 col-md-4 h-100  d-flex gap-4" style={{paddingBottom: '2%', paddingTop: '17%'}}>
-        <div className="card  d-flex position-relative " style={{backgroundColor: "var(--bg-color)", height: "25rem"}}>
-            <img src={tree} alt="img" className="center-absolute position-absolute" />
+        <div className="card  d-flex justify-content-between" style={{backgroundColor: "var(--bg-color)", height: "25rem"}}>
+            <img src={tree} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
                 className="m-0 text-light-bg rating-sm"
@@ -113,8 +113,8 @@ const Ratings = ({targetRef}) => {
               <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Business Analyzed</h4>
             </div>
           </div>
-          <div className="card d-flex position-relative" style={{backgroundColor: "var(--bg-color)", height: "25rem"}}>
-            <img src={Clippath} alt="img" className="center-absolute position-absolute" />
+          <div className="card d-flex justify-content-between" style={{backgroundColor: "var(--bg-color)", height: "25rem"}}>
+            <img src={Clippath} alt="img" className="align-self-end" />
             <div className="text-effect">
               <h2
                 className="m-0 rating-sm"
