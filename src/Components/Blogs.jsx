@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import blog from "../assets/blog.png";
 import arrow from "../assets/arrow-review.svg";
 import blog2 from "../assets/blog-image2.png"
@@ -46,6 +46,15 @@ const Blogs = () => {
       id: 3,
     },
   ];
+
+  useEffect(() => {
+    console.log("Page loaded, scrolling to top");
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <div

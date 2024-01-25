@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef, useEffect} from "react";
 import "./Ratings.css";
 import Clippath from "../assets/Clippath.svg";
 import Clip from "../assets/Clip.svg";
@@ -23,6 +23,15 @@ const Ratings = ({targetRef}) => {
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    console.log("Page loaded, scrolling to top");
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
 
   return (

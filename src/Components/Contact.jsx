@@ -90,6 +90,15 @@ const Contact = ({title, fontSize, showOverlayImage = true}) => {
   e.target.setCustomValidity("");
   };
 
+  useEffect(() => {
+    console.log("Page loaded, scrolling to top");
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
 
   return (
     <div className="position-relative">

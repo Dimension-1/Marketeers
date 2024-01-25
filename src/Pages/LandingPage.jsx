@@ -208,7 +208,13 @@ const LandingPage = () => {
               <WhyUs targetRef={targetRef} />
 
               <WhoTrustsUs />
-              <Testimonials />
+              <Testimonials
+
+  
+  
+/>
+
+
               <Blogs />
               <Contact
                 title="Interested but don’t know where to start?"

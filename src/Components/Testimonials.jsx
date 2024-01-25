@@ -13,6 +13,15 @@ const Testimonials = () => {
     setIsActive(!isActive);
   };
 
+  const testimonials = [
+    {
+      content: "marketeers's team transformed our digital presence. Their SEO strategies skyrocketed our website traffic, and the leads we're getting now are just phenomenal. It's like they unlocked a whole new level of growth for us.",
+      place: "Bangalore, India",
+      person: "Tech Startup Founder",
+    },
+  
+  ];
+
   return (
     <div className="position-relative ">
       <div
@@ -35,9 +44,9 @@ const Testimonials = () => {
               color: "var(--secondary-bg)",
               fontSize: "1.25rem",
               position: "relative",
-              overflow: "hidden", // Ensure that the inner button doesn't overflow
+              overflow: "hidden",
             }}
-            onClick={toggleButton} // Handle the click event on the entire button
+            onClick={toggleButton}
           >
             <button
               className={`position-absolute focus-outline-none transition-transform ${
@@ -49,8 +58,8 @@ const Testimonials = () => {
                 color: "var(--bg-color)",
                 borderRadius: "20rem",
                 padding: "1rem",
-                right: isActive ? "0" : "auto", // Move to the right when active
-                left: isActive ? "auto" : "0", // Move to the left when inactive
+                right: isActive ? "0" : "auto",
+                left: isActive ? "auto" : "0",
               }}
             >
               {isActive ? activeText : inactiveText}
@@ -59,7 +68,7 @@ const Testimonials = () => {
             <div
               className="absolute inset-0 d-flex "
               style={{
-                right: isActive ? "0" : "auto", // Move to the right when active
+                right: isActive ? "0" : "auto",
                 left: isActive ? "auto" : "0",
                 marginLeft: "1rem",
               }}
@@ -69,7 +78,7 @@ const Testimonials = () => {
             <div
               className="absolute inset-0 d-flex "
               style={{
-                right: isActive ? "0" : "auto", // Move to the right when active
+                right: isActive ? "0" : "auto",
                 left: isActive ? "auto" : "0",
                 marginRight: "1rem",
               }}
@@ -79,100 +88,101 @@ const Testimonials = () => {
           </button>
         </div>
         <div className="col-lg-7 col-12 testimonials-section-1 p-lg-3 d-flex justify-content-center align-items-center gap-md-5 gap-lg-5 gap-1">
-          <div
-            className="circle-review"
-            style={{
-              borderRadius: "50%", // Make it a circle
-              background: "var(--custom-btn)",
-              display: "flex",
-              width: "64.75px",
-              height: "64.75px",
-              padding: "17.82px 19.46px 17.81px 19.42px",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img
-              src={arrow} // Replace with the path to your image
-              alt="Circle Image"
-              style={{
-                width: "65%", // Ensure the image takes the full width of the circle
-                height: "100%", // Ensure the image takes the full height of the circle
-              }}
-            />
-          </div>
-          <div className="review-card p-4 d-flex flex-column justify-content-between ">
-            <div>
-              <div className="btn mt-md-4 bg-opacity">241 of 324</div>
-
-              <div
-                className="btn mt-md-4 "
+        <div
+                className="circle-review"
                 style={{
-                  backgroundColor: "transparent !important",
-                  border: "2px solid var(--custom-btn)",
-                  marginLeft: "2rem",
+                  borderRadius: "50%",
+                  background: "var(--custom-btn)",
+                  display: "flex",
+                  width: "64.75px",
+                  height: "64.75px",
+                  padding: "17.82px 19.46px 17.81px 19.42px",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                Read More
-              </div>
-
-              <div>
-                <p
-                  className="mt-5"
+                <img
+                  src={arrow}
+                  alt="Circle Image"
                   style={{
-                    color: "var(--background-color)",
-                    lineHeight: "1.5",
+                    width: "65%",
+                    height: "100%",
                   }}
-                >
-                  "marketeers's team transformed our digital presence. Their SEO
-                  strategies skyrocketed our website traffic, and the leads
-                  we're getting now are just phenomenal. It's like they unlocked
-                  a whole new level of growth for us."
-                </p>
+                />
               </div>
-            </div>
-            <div className="">
-              <div
-                className="green-border d-flex justify-content-center pt-4 "
-                style={{ borderTop: "0.1px solid var(--text-color)" }}
-              ></div>
-              <div className="d-flex">
-                <div className="d-flex gap-3">
-                  <img src={photo} alt="" className="rounded" />
+          {testimonials.map((testimonial, index) => (
+
+            <div key={index} className="testimonial-container">
+              
+              <div className="review-card p-4 d-flex flex-column justify-content-between">
+                <div>
+                  <div className="btn mt-md-4 bg-opacity">241 of 324</div>
+                  <div
+                    className="btn mt-md-4 "
+                    style={{
+                      backgroundColor: "transparent !important",
+                      border: "2px solid var(--custom-btn)",
+                      marginLeft: "2rem",
+                    }}
+                  >
+                    Read More
+                  </div>
                   <div>
-                    <h4 className="m-0">Tech Startup Founder</h4>
-                    <p style={{ color: "var(--text-color)" }}>
-                      {" "}
-                      Bangalore, India
+                    <p
+                      className="mt-5"
+                      style={{
+                        color: "var(--background-color)",
+                        lineHeight: "1.5",
+                      }}
+                    >
+                      {testimonial.content}
                     </p>
                   </div>
                 </div>
+                <div className="">
+                  <div
+                    className="green-border d-flex justify-content-center pt-4"
+                    style={{ borderTop: "0.1px solid var(--text-color)" }}
+                  ></div>
+                  <div className="d-flex">
+                    <div className="d-flex gap-3">
+                      <img src={photo} alt="" className="rounded" />
+                      <div>
+                        <h4 className="m-0">{testimonial.person}</h4>
+                        <p style={{ color: "var(--text-color)" }}>
+                          {testimonial.place}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+             
             </div>
-          </div>
-          <div
-            className="circle-review"
-            style={{
-              borderRadius: "50%", // Make it a circle
-              background: "var(--custom-btn)",
-              display: "flex",
-              width: "64.75px",
-              height: "64.75px",
-              padding: "17.82px 19.46px 17.81px 19.42px",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img
-              src={arrow} // Replace with the path to your image
-              alt="Circle Image"
-              style={{
-                width: "65%", // Ensure the image takes the full width of the circle
-                height: "100%", // Ensure the image takes the full height of the circle
-                rotate: "180deg",
-              }}
-            />
-          </div>
+          ))}
+           <div
+                className="circle-review"
+                style={{
+                  borderRadius: "50%",
+                  background: "var(--custom-btn)",
+                  display: "flex",
+                  width: "64.75px",
+                  height: "64.75px",
+                  padding: "17.82px 19.46px 17.81px 19.42px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  src={arrow}
+                  alt="Circle Image"
+                  style={{
+                    width: "65%",
+                    height: "100%",
+                    rotate: "180deg",
+                  }}
+                />
+              </div>
         </div>
       </div>
       <div className="img-overlay-5 position-absolute z-0">
