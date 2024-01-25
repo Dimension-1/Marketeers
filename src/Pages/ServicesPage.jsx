@@ -551,7 +551,7 @@ const ServicesPage = () => {
                 className="heading faq-heading sticky-top text-dark col-md-6 col-12 z-3 fw-medium mb-sm-4"
                 style={{
                   color: "var(--text-color)",
-                  fontSize: "3rem",
+                  fontSize: "4.5rem",
                   zIndex: "1000",
                 }}
               >
