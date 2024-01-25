@@ -96,10 +96,10 @@ const ServiceContentPage = () => {
             </div>
 
             <div className="service-needs d-flex  rating-container z-3 position-relative justify-content-between" style={{paddingTop: '10%', paddingBottom: '10%', backgroundColor: "var(--secondary-bg)" }}>
-            <div className="heading faq-heading sticky-top text-dark col-md-6 col-12 z-3 fw-medium mb-sm-4" style={{color: 'var(--text-color)', fontSize: "4.5rem",  zIndex: "1000", lineHeight: "1"}}>
+            <div className="heading faq-heading sticky-top col-md-6 col-12 z-3 fw-medium mb-sm-4" style={{color: 'var(--background-color)', fontSize: "4.5rem",  zIndex: "1000", lineHeight: "1"}}>
             Why you need the service
         </div>
-        <ul className="text text-dark align-items-center" style={{ zIndex: 1, fontSize: "1.25rem", padding: 0, listStyleType: "none" }}>
+        <ul className="text align-items-center" style={{ zIndex: 1, fontSize: "1.25rem", padding: 0, listStyleType: "none", color: 'var(--text-color)' }}>
         {selectedService.whyYouNeedTheService && selectedService.whyYouNeedTheService.map((reason, index) => (
   <li className="mb-4" key={index} style={{ listStyle: 'none', position: 'relative', paddingLeft: '30px' }}>
     <img src={tick} alt="" style={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', width: '20px', height: '20px', marginRight: '10px' }} />
@@ -418,7 +418,7 @@ const ServiceContentPage = () => {
        {/* <div className="img-overlay-3 position-absolute right-0" >
       <img src={image} alt="" className="h-75 w-75 " />
     </div> */}
-        <div className="heading faq-heading sticky-top text-dark col-md-6 col-12 z-3 fw-medium mb-sm-4" style={{color: 'var(--text-color)', fontSize: "3rem",  zIndex: "1000"}}>
+        <div className="heading faq-heading sticky-top  col-md-6 col-12 z-3 fw-medium mb-sm-4" style={{color: 'var(--background-color)', fontSize: "4rem",  zIndex: "1000", lineHeight: '1.2'}}>
             Frequently Asked Questions
         </div>
     <div className="frequent-que col-md-6 col-12 z-3">
@@ -427,7 +427,8 @@ const ServiceContentPage = () => {
     selectedService.questionAnswers.map((qa, index) => (
       <div key={index} className="mb-4 faq-padding green-border">
         <div
-          className={`question faq-question mb-0 text d-flex justify-content-between text-dark align-items-center ${openAnswers[index] ? 'open' : ''}`}
+          className={`question faq-question mb-0 text d-flex justify-content-between align-items-center ${openAnswers[index] ? 'open' : ''}`}
+          style={{color: 'var(--text-color)', cursor: 'pointer'}}
           id={`question${index + 1}`}
           onClick={() => toggleAnswer(index)}
         >

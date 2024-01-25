@@ -548,11 +548,12 @@ const ServicesPage = () => {
       <img src={image} alt="" className="h-75 w-75 " />
     </div> */}
               <div
-                className="heading faq-heading sticky-top text-dark col-md-6 col-12 z-3 fw-medium mb-sm-4"
+                className="heading faq-heading sticky-top col-md-6 col-12 z-3 fw-medium mb-sm-4"
                 style={{
-                  color: "var(--text-color)",
+                  color: 'var(--background-color)',
                   fontSize: "4.5rem",
                   zIndex: "1000",
+                  lineHeight: '1.2'
                 }}
               >
                 Frequently Asked Questions
@@ -562,9 +563,10 @@ const ServicesPage = () => {
                   {questionAnswers.map((qa, index) => (
                     <div key={index} className="mb-4 faq-padding green-border">
                       <div
-                        className={`question faq-question mb-0 text d-flex justify-content-between text-dark align-items-center ${
+                        className={`question faq-question mb-0 text d-flex justify-content-between align-items-center ${
                           openAnswers[index] ? "open" : ""
                         }`}
+                        style={{color: 'var(--text-color)', cursor: 'pointer'}}
                         id={`question${index + 1}`}
                         onClick={() => toggleAnswer(index)}
                       >
