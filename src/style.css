@@ -31,6 +31,10 @@ body {
   .text-light-bg{
     color: var(--secondary-bg);
   }
+
+  .primary-color{
+    color: var(--main-text-color) !important;
+  }
   
   .img-overlay{
     /* background: url("./assets/Section.jpg.png"); */

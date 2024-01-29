@@ -56,9 +56,9 @@ const Ratings = ({targetRef}) => {
                 className="m-0 rating-sm"
                 style={{ color: "var(--bg-color)", fontSize: "5rem" }}
               >
-                10k
+                10K
               </h2>
-              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem'}}>Business Analyzed</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem'}}>Businesses analyzed</h4>
             </div>
           </div>
           <div className="card d-flex justify-content-between" style={{backgroundColor: "var(--main-text-color)", height: "25rem"}}>
@@ -68,9 +68,9 @@ const Ratings = ({targetRef}) => {
                 className="m-0 rating-sm"
                 style={{ color: "var(--bg-color)", fontSize: "5rem" }}
               >
-                10k
+                100+
               </h2>
-              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Business Analyzed</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Markets studied</h4>
             </div>
           </div>
         </div>
@@ -82,9 +82,9 @@ const Ratings = ({targetRef}) => {
                 className="m-0 text-light-bg rating-sm"
                 style={{ fontSize: "5rem" }}
               >
-                <span style={{color: "var(--background-color))"}}>$</span>50M+
+                <span className="primary-color">$</span>50M+
               </h2>
-              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Business Analyzed</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Raised</h4>
             </div>
           </div>
           <div className="card  d-flex justify-content-between" style={{height: "25rem"}}>
@@ -94,9 +94,9 @@ const Ratings = ({targetRef}) => {
                 className="m-0 rating-sm"
                 style={{ color: "var(--bg-color)", fontSize: "5rem" }}
               >
-                700
+                700+
               </h2>
-              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Completed Projects</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Completed projects</h4>
             </div>
           </div>
         </div>
@@ -108,9 +108,9 @@ const Ratings = ({targetRef}) => {
                 className="m-0 rating-sm"
                 style={{ color: "var(--bg-color)", fontSize: "5rem" }}
               >
-                10k
+                500+
               </h2>
-              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Business Analyzed</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Clients</h4>
             </div>
           </div>
           <div className="card d-flex justify-content-between" style={{backgroundColor: "var(--bg-color)", height: "25rem"}}>
@@ -122,7 +122,7 @@ const Ratings = ({targetRef}) => {
               >
                 4.9/5
               </h2>
-              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Business Analyzed</h4>
+              <h4 className="fw-medium " style={{ color: "var(--primary-text)", fontSize: '1.3rem' }}>Average customer rating</h4>
             </div>
           </div>
         </div>
