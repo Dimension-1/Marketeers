@@ -226,6 +226,7 @@ const Blogs = () => {
             id="subscribe"
             name="subscribe"
             placeholder="Email"
+            required
           />
           <div
             className="green-border d-flex justify-content-center pt-4 w-75 mt-2"
@@ -322,6 +323,7 @@ const Blogs = () => {
                 fontWeight: "500",
               }}
               placeholder="Email"
+              required
             />
             <div
               className="green-border d-flex justify-content-center pt-4 w-75 mt-2"
