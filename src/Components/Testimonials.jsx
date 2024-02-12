@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import photo from "../assets/author-photo.png";
 import arrow from "../assets/arrow-review.svg";
 import image from "../assets/DesktopBlue.svg";
+import FeedbackSliderPC from "./FeedbackSliderPC";
 
 const Testimonials = () => {
   const [activeButton, setActiveButton] = useState("Fiver");
@@ -88,7 +89,7 @@ const Testimonials = () => {
           </button>
         </div>
         <div className="col-lg-7 col-12 testimonials-section-1 p-lg-3 d-flex justify-content-center align-items-center gap-md-5 gap-lg-5 gap-1">
-        <div
+        {/* <div
                 className="circle-review"
                 style={{
                   borderRadius: "50%",
@@ -109,8 +110,9 @@ const Testimonials = () => {
                     height: "100%",
                   }}
                 />
-              </div>
-          {testimonials.map((testimonial, index) => (
+              </div> */}
+              <FeedbackSliderPC/>
+          {/* {testimonials.map((testimonial, index) => (
 
             <div key={index} className="testimonial-container">
               
@@ -159,8 +161,8 @@ const Testimonials = () => {
               </div>
              
             </div>
-          ))}
-           <div
+          ))} */}
+           {/* <div
                 className="circle-review"
                 style={{
                   borderRadius: "50%",
@@ -182,7 +184,7 @@ const Testimonials = () => {
                     rotate: "180deg",
                   }}
                 />
-              </div>
+              </div> */}
         </div>
       </div>
       <div className="img-overlay-5 position-absolute z-0">

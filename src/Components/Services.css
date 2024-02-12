@@ -1,23 +1,49 @@
-.service-box{
-    height: 35vh;
-    width: 30%;
-    padding: 1rem 1rem; /* Example padding values with rem units */
+.service-cards {
+    overflow-x: hidden;  display: flex;
+    position: relative;
+    z-index: 9999;
+}
+    
+
+.service-box {
+    height: 300px;
+    width: 300px;
+    padding: 1rem;
     margin-left: 1rem;
-    /* background-color: rgba(27, 26, 31, 9); Button background color */
     background-color: var(--custom-btn);
     border-radius: 1.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-sizing: border-box;
+    flex: 0 0 auto; /* Fix the size, don't allow shrinking */
+}
+.servicePage-box {
+    height: 100%;
+    width: 24%;
+    padding: 1rem;
+    margin-left: 1%;
+    background-color: var(--custom-btn);
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    flex: 0 0 auto; /* Fix the size, don't allow shrinking */
+    aspect-ratio: 3/2;
+}
+.service-box img {
+    width: 4rem;
+    height: 4rem;
 }
 
-.contact-box{
-    padding: 1rem 1rem; /* Example padding values with rem units */
-    margin-left: 1rem;
-    /* background-color: rgba(27, 26, 31, 9); Button background color */
-    background-color: var(--custom-btn);
-    border-radius: 1.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-sizing: border-box;
+.service-box p {
+    font-size: 1.2rem;
+}
+.servicePage-box img {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 3rem;
+}
+
+.servicePage-box p {
+    font-size: 1.2rem;
 }

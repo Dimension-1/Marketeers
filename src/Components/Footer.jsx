@@ -40,10 +40,11 @@ const Footer = () => {
         backgroundColor: "var(--custom-btn)",
         borderRadius: "1.5rem",
         zIndex: "99",
+        margin:'1%'
       }}
     >
       <div className="row  d-flex justify-content-between ">
-        <div className="col-lg-6 col-md-8 col-6 d-flex footer-sm-1 p-4 gap-lg-4 gap-2">
+        <div className="col-lg-6 col-md-8 col-6 d-flex footer-sm-1 p-4 gap-lg-4 gap-2" style={{paddingInline:'2rem'}}>
           <div
             className="footer-font hover-effect"
             style={{ cursor: "pointer", color: "var(--secondary-bg)" }}
@@ -120,7 +121,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="col-lg-6 col-md-4 col-6 d-flex  footer-sm-2 justify-content-end p-4 gap-lg-4 gap-2">
+        <div className="col-lg-6 col-md-4 col-6 d-flex  footer-sm-2 justify-content-end p-4 gap-lg-4 gap-2" style={{paddingInline:'2rem'}}>
           <div
             className="footer-font hover-effect"
             style={{ color: "var(--secondary-bg)" }}
@@ -165,9 +166,9 @@ const Footer = () => {
         className="green-border d-flex justify-content-center pt-0"
         style={{ left: "50%", marginRight: "1rem", marginLeft: "1rem" }}
       ></div>
-      <div className="row d-flex p-3 ">
+      <div className="row d-flex p-3" style={{paddingInline:'2rem'}}>
         <div
-          className="col-6 d-flex footer-font text-light"
+          className="col-6 d-flex footer-font text-light footer-sm-2"
           style={{ opacity: "0.6" }}
         >
           Build by Marketeers
@@ -185,9 +186,9 @@ const Footer = () => {
               borderRadius: "50%", // Make it a circle
               background: "var(--custom-btn)",
               display: "flex",
-              width: "50px",
-              height: "50px",
-              padding: "17.82px 19.46px 17.81px 19.42px",
+              width: "30px",
+              height: "30px",
+              padding: "0",
               justifyContent: "center",
               alignItems: "center",
               rotate: "90deg",
@@ -198,8 +199,8 @@ const Footer = () => {
               src={arrow} // Replace with the path to your image
               alt="Circle Image"
               style={{
-                width: "100%", // Ensure the image takes the full width of the circle
-                height: "100%", // Ensure the image takes the full height of the circle
+                width: "20px", // Ensure the image takes the full width of the circle
+                height: "20px", // Ensure the image takes the full height of the circle
               }}
             />
           </span>

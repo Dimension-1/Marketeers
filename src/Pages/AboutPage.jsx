@@ -26,7 +26,7 @@ import value2 from "../assets/value2.svg";
 import value3 from "../assets/value3.svg";
 import value4 from "../assets/value4.svg";
 import logo from "../assets/finalLogo.ico";
-
+import { motion } from "framer-motion";
 const AboutPage = () => {
   const sidecutRef = useRef(null); // Create a ref for the sidecut image
   const [loading, setLoading] = useState(true);
@@ -116,12 +116,31 @@ const AboutPage = () => {
 
               <div className="row d-flex justify-content-center align-items-baseline ">
                 <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
-                  <img src={value1} alt="" style={{ width: "22%" }} />
+                  <motion.img
+                    src={value1}
+                    alt=""
+                    style={{
+                      width: "22%",
+                      transitionDuration: "100ms",
+                      transitionBehavior: "normal",
+                    }}
+                    initial={{ y: "100%", opacity: 0 }}
+                    whileInView={{ y: "0%", opacity: 1 }}
+                  />
                   <div
                     className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
                     style={{ left: "50%" }}
                   ></div>
-                  <h4>Integrity</h4>
+                  <motion.h4
+                    style={{
+                      transitionDuration: "100ms",
+                      transitionBehavior: "normal",
+                    }}
+                    initial={{ y: "100%", opacity: 0 }}
+                    whileInView={{ y: "0%", opacity: 1 }}
+                  >
+                    Integrity
+                  </motion.h4>
                   <p>
                     "Commitment to Authenticity" - We believe in honesty and
                     transparency, upholding the highest standards in all our
@@ -129,24 +148,62 @@ const AboutPage = () => {
                   </p>
                 </div>
                 <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
-                  <img src={value2} alt="" style={{ width: "30%" }} />
+                  <motion.img
+                    src={value2}
+                    alt=""
+                    style={{
+                      width: "22%",
+                      transitionDuration: "100ms",
+                      transitionBehavior: "normal",
+                    }}
+                    initial={{ y: "100%", opacity: 0 }}
+                    whileInView={{ y: "0%", opacity: 1 }}
+                  />
                   <div
                     className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
                     style={{ left: "50%" }}
                   ></div>
-                  <h4>Creativity</h4>
+                  <motion.h4
+                    style={{
+                      transitionDuration: "100ms",
+                      transitionBehavior: "normal",
+                    }}
+                    initial={{ y: "100%", opacity: 0 }}
+                    whileInView={{ y: "0%", opacity: 1 }}
+                  >
+                    Creativity
+                  </motion.h4>
                   <p>
                     "Imagination Unleashed" - We encourage out-of-the-box
                     thinking, embracing innovative ideas to overcome challenges.
                   </p>
                 </div>
                 <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
-                  <img src={value3} alt="" style={{ width: "30%" }} />
+                  <motion.img
+                    src={value3}
+                    alt=""
+                    style={{
+                      width: "22%",
+                      transitionDuration: "100ms",
+                      transitionBehavior: "normal",
+                    }}
+                    initial={{ y: "100%", opacity: 0 }}
+                    whileInView={{ y: "0%", opacity: 1 }}
+                  />
                   <div
                     className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
                     style={{ left: "50%" }}
                   ></div>
-                  <h4>Innovation</h4>
+                  <motion.h4
+                    style={{
+                      transitionDuration: "100ms",
+                      transitionBehavior: "normal",
+                    }}
+                    initial={{ y: "100%", opacity: 0 }}
+                    whileInView={{ y: "0%", opacity: 1 }}
+                  >
+                    Innovation
+                  </motion.h4>
                   <p>
                     "Beyond the Horizon" - Continuously pushing boundaries, we
                     strive to bring groundbreaking solutions to the forefront of
@@ -154,12 +211,31 @@ const AboutPage = () => {
                   </p>
                 </div>
                 <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
-                  <img src={value4} alt="" style={{ width: "30%" }} />
+                  <motion.img
+                    src={value4}
+                    alt=""
+                    style={{
+                      width: "22%",
+                      transitionDuration: "100ms",
+                      transitionBehavior: "normal",
+                    }}
+                    initial={{ y: "100%", opacity: 0 }}
+                    whileInView={{ y: "0%", opacity: 1 }}
+                  />
                   <div
                     className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
                     style={{ left: "50%" }}
                   ></div>
-                  <h4>Passion</h4>
+                  <motion.h4
+                    style={{
+                      transitionDuration: "100ms",
+                      transitionBehavior: "normal",
+                    }}
+                    initial={{ y: "100%", opacity: 0 }}
+                    whileInView={{ y: "0%", opacity: 1 }}
+                  >
+                    Passion
+                  </motion.h4>
                   <p>
                     "Heart of Our Craft" - Our team is fueled by a deep passion
                     for digital marketing, driving us to excel in every project.
@@ -171,19 +247,22 @@ const AboutPage = () => {
             <div
               className=" d-flex  rating-container z-3"
               style={{
-                paddingTop: "5%",
-                paddingBottom: "7%",
-                paddingLeft: "10%",
-                paddingRight: "7%",
+                padding:'5% 10%',
+                height:'90vh',
                 backgroundColor: "var(--secondary-bg)",
                 position: "relative",
               }}
             >
-              <h1 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>
+              <h1 className="m-md-1 main-heading">
+                <WhyMarketeer pageContent={`Nothing has such power to broaden the mind as the ability to
+                investigate systematically and truly all that comes under thy
+                observation in life.`} contentFontSize={'3.5rem'} contentColor={'white'}/>
+              </h1>
+              {/* <h1 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>
                 Nothing has such power to broaden the mind as the ability to
                 investigate systematically and truly all that comes under thy
                 observation in life.
-              </h1>
+              </h1> */}
               <img
                 src={apostophy}
                 alt="apostophy"
@@ -194,7 +273,7 @@ const AboutPage = () => {
                 src={akshita}
                 alt="apostophy"
                 className="arrowDown position-absolute z-3 "
-                style={{ cursor: "pointer", bottom: "-2px", right: "2%" }}
+                style={{ cursor: "pointer", bottom: "-2px", right: "5%" }}
               />
             </div>
             <Contact />

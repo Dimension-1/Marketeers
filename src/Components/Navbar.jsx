@@ -7,7 +7,6 @@ import marketeer from "../assets/Marketeers.svg";
 import arrow from "../assets/arrow-review.svg";
 import hamburger from "../assets/hamburger.svg";
 import pencil from "../assets/pencil.svg";
-
 const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -68,7 +67,7 @@ const Navbar = () => {
             <div
               className="svg-icon getInTouch mt-0 "
               style={{
-                padding: "0.9rem 1.3rem",
+                padding: "0.6rem 1rem",
                 marginLeft: "1rem",
                 marginBottom: "1rem",
                 fontSize: "1.2rem",
@@ -78,28 +77,32 @@ const Navbar = () => {
                 backgroundColor: "var(--main-text-color)",
                 border: "none",
                 borderRadius: "3rem",
-                cursor: "pointer", // Fix the typo here
-                transition: "background-color 0.3s ease",
+                cursor: "pointer", // Fix the typo here 
                 boxSizing: "border-box", // Fix the typo here
                 gap: "0.9rem",
                 zIndex: isSidebarOpen ? "0" : "1",
               }}
             >
-              Get in touch
+              <div className="get-div">
+                <p className="get-div-p1" style={{margin:0,padding:0}}> Get in touch</p>
+                <p className="get-div-p2" style={{margin:0,padding:0}}> Don't be shy</p>
+              </div>
+             
               <span
-                className=""
+                className="get-div-span"
                 style={{
                   borderRadius: "50%", // Make it a circle
                   background: "#262D29",
                   display: "flex",
-                  width: "10px",
-                  height: "10px",
-                  padding: "10.82px 12.46px 10.81px 12.42px",
+                  width: " 20px",
+                  height: "20px",
+                  padding: "",
                   justifyContent: "center",
                   alignItems: "center",
-                  transition: "width 0.3s ease, height 0.3s ease",
+                  transition: "all 0.3s ease",
+                  color:'white'
                 }}
-              ></span>
+              ><img src={arrow} className="get-div-img" alt="img" /></span>
             </div>
 
             <span
@@ -110,8 +113,8 @@ const Navbar = () => {
                 borderRadius: "50%", // Make it a circle
                 background: "rgb(136, 166, 189, 0.3)",
                 display: "flex",
-                width: "55px",
-                height: "55px",
+                width: "50px",
+                height: "50px",
                 padding: "17.82px 19.46px 17.81px 19.42px",
                 justifyContent: "center",
                 alignItems: "center",
@@ -132,8 +135,8 @@ const Navbar = () => {
               borderRadius: "50%", // Make it a circle
               background: "rgb(136, 166, 189, 0.3)",
               display: "flex",
-              width: "55px",
-              height: "55px",
+              width: "50px",
+              height: "50px",
               padding: "17.82px 19.46px 17.81px 19.42px",
               justifyContent: "center",
               alignItems: "center",
@@ -156,7 +159,7 @@ const Navbar = () => {
                 cy="50"
                 r="40"
                 stroke="#8aabc4" // Color of the progress circle
-                strokeWidth="10" // Width of the progress circle
+                strokeWidth="5" // Width of the progress circle
                 fill="none"
                 strokeDasharray="251.32741228718345" // Circumference of a circle with radius 40
                 strokeDashoffset={
@@ -174,8 +177,8 @@ const Navbar = () => {
         <div className="backdrop" onClick={toggleSidebar}></div>
       )}
 
-      {isSidebarOpen && (
-        <div ref={sidebarRef} className="sidebar" style={{ zIndex: "999" }}>
+      {/* {isSidebarOpen && ( */}
+        <div ref={sidebarRef} className={`sidebar `} style={{ zIndex: "999" ,right:isSidebarOpen? '0' : '-100%'}}>
           <span
             className="close-icon text-light-bg h-effect"
             style={{ cursor: "pointer" }}
@@ -310,7 +313,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      )}
+       {/* )} */}
     </>
   );
 };

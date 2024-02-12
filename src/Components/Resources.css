@@ -30,7 +30,11 @@
 @media only screen and (max-width: 1175px) {
   .resources {
     margin-left: 11vw !important;
-  }
+    
+  }.resources .card {
+      width: "380px" !important;
+      margin: auto !important;
+    }
   .resources-text {
     margin-left: 11vw !important;
     /*  */
@@ -48,10 +52,7 @@
   .resources-filter {
     padding: 30px 100px 0 !important;
   }
-  .card {
-    width: "380px" !important;
-    margin: auto !important;
-  }
+  
 }
 @media only screen and (max-width: 1000px) {
   .resources-text p {

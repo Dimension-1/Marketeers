@@ -1,44 +1,71 @@
-.rating-container{
-    border-radius: 2rem;
-    padding-right: 15%;
-    padding-left: 10%;
-    
-    
+.rating-container {
+  border-radius: 2rem;
+  margin: 2%;
 }
-
-.padding{
-    margin-top: 8%;
-    padding-bottom: 10%;
+.hoverToSpin:hover .rotating-icon{
+  animation-name: spinIcon;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.hoverToScaleUp:hover .scaleUp-icon{
+  scale: 1.3;
+  transition: all 200ms ease-in-out;
+}
+@keyframes spinIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hoverToMoveUp:hover .moveUp-icon{
+  animation-name: moveUpIcon;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes moveUpIcon {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-30%);
+  }
+}
+.padding {
+  margin-top: 8%;
+  padding-bottom: 10%;
 }
 .center-absolute {
-    top: 50%;
-    right: 0;
-    transform: translate(-50%, -50%);
-  }
-
-  .top{
-top: 10%;
-  }
-  
-.card{
-     height: 30%;
-    /* width: 30%; */ 
-    grid-row-gap: 0.2em;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 1.6em;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    border-radius: 2rem !important;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
 }
 
-.text-effect{
-    display: inline-block;
-    translate: none;
-    rotate: none;
-    scale: none;
-    transform: translate(0px, 0px);
+.top {
+  top: 10%;
+}
+.rating-container .card {
+  grid-row-gap: 0.2em;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1.6em;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem !important;
+  width: 100%;
 }
 
+.text-effect {
+  display: inline-block;
+  translate: none;
+  rotate: none;
+  scale: none;
+  transform: translate(0px, 0px);
+}

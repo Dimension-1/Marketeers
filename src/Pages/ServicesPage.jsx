@@ -1,15 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
-import GridLoader from "react-spinners/GridLoader";
 import "../App.css";
-import Services from "../Components/Services";
 import SVG from "../assets/SVG.svg";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import forecast from "../assets/arrow-up.svg";
 import plusIcon from "../assets/div.whyus__expand.svg";
 import image from "../assets/DesktopBlue.svg";
@@ -26,6 +18,8 @@ import cro from "../assets/cro.svg";
 import analysis from "../assets/analysis.svg";
 import marketing from "../assets/marketing.svg";
 import logo from "../assets/finalLogo.ico";
+
+// ------------------------------------------------------------------
 
 const ServicesPage = () => {
   const [openAnswers, setOpenAnswers] = useState([false, false, false]);
@@ -66,34 +60,11 @@ const ServicesPage = () => {
     });
   };
 
-  const questionAnswers = [
-    {
-      question: "Strategic Marketing Visionaries",
-      answer:
-        "Crafting campaigns that merge innovative strategies with real-world results.",
-    },
-    {
-      question: "Maximized ROI, Minimized Spend",
-      answer: "Achieve significant marketing results at a fraction of the cost",
-    },
-    {
-      question: "Data-Driven, Creatively Inspired",
-      answer:
-        "Harnessing the power of analytics infused with creative brilliance.",
-    },
-    {
-      question: "Versatile Expertise, Diverse Impact",
-      answer:
-        "Proven success across various industries with tailored marketing strategies.",
-    },
-  ];
-
   return (
     <>
       {loading ? (
         <div className="loading-overlay">
           <Navbar />
-          {/* <GridLoader color={"#8aabc4"} loading={loading} size={20} /> */}
           <div className="logo-container">
             <img src={logo} alt="" className="loading-logo" />
           </div>
@@ -112,17 +83,21 @@ const ServicesPage = () => {
           <div className="content-wrapper ">
             <Navbar />
             <div className="header-container d-flex flex-column  justify-content-center align-items-center">
-              <h1 className=" p-4 main-heading text-light-bg font-7 mt-4 slide-up ">
+              <h1 className=" p-4 main-heading text-light-bg font-5 mt-4 slide-up ">
                 Your biggest business challenges.{" "}
                 <span style={{ color: "var(--main-text-color)" }}>Solved.</span>{" "}
               </h1>
               <div className="services-container gallery d-flex gap-1 mb-lg-5 marginTop-0">
-                <div className="cards d-flex flex-nowrap w-100 ">
+                <div
+                  className="cards d-flex flex-nowrap w-100 "
+                  style={{ overflow: "hidden" }}
+                >
                   <Link
                     to={`/service/${encodeURIComponent(serviceName)}`}
-                    className="service-box d-flex justify-content-between flex-column"
+                    className="servicePage-box d-flex justify-content-between flex-column servicePage-card"
                     style={{ textDecoration: "none" }}
                   >
+                    <div className="servicePage-card-gradient"></div>
                     <span className="d-flex justify-content-between">
                       <img src={forecast} className="" alt="" />
                       <svg
@@ -164,9 +139,11 @@ const ServicesPage = () => {
 
                   <Link
                     to={`/service/${encodeURIComponent(serviceName1)}`}
-                    className="service-box  d-flex justify-content-between flex-column"
+                    className="servicePage-box  d-flex justify-content-between flex-column servicePage-card"
                     style={{ textDecoration: "none" }}
                   >
+                    {" "}
+                    <div className="servicePage-card-gradient"></div>
                     <span className="d-flex justify-content-between">
                       <img src={sms} className="" alt="" />
                       <svg
@@ -208,9 +185,11 @@ const ServicesPage = () => {
 
                   <Link
                     to={`/service/${encodeURIComponent(serviceName2)}`}
-                    className="service-box  d-flex justify-content-between flex-column"
+                    className="servicePage-box  d-flex justify-content-between flex-column servicePage-card"
                     style={{ textDecoration: "none" }}
                   >
+                    {" "}
+                    <div className="servicePage-card-gradient"></div>
                     <span className="d-flex justify-content-between">
                       <img src={influencer} className="" alt="" />
                       <svg
@@ -252,9 +231,11 @@ const ServicesPage = () => {
 
                   <Link
                     to={`/service/${encodeURIComponent(serviceName3)}`}
-                    className="service-box  d-flex justify-content-between flex-column"
+                    className="servicePage-box  d-flex justify-content-between flex-column servicePage-card"
                     style={{ textDecoration: "none" }}
                   >
+                    {" "}
+                    <div className="servicePage-card-gradient"></div>
                     <span className="d-flex justify-content-between">
                       <img src={cro} className="" alt="" />
                       <svg
@@ -309,18 +290,23 @@ const ServicesPage = () => {
                   src={arrowDown}
                   alt="arrowDown"
                   className=" position-absolute bottom-30 z-3"
-                  style={{ right: "-1px", cursor: "pointer" }}
+                  style={{ right: "2%", cursor: "pointer" }}
                   onClick={handleSidecutClick}
                 />
               </div>
 
-              <div className="services-container gallery d-flex gap-1 mb-lg-5 marginTop-0">
+              <div
+                className="services-container gallery d-flex gap-1 mb-lg-5 marginTop-0"
+                style={{ overflow: "hidden" }}
+              >
                 <div className="cards d-flex flex-nowrap w-100 ">
                   <Link
                     to={`/service/${encodeURIComponent(serviceName4)}`}
-                    className="service-box  d-flex justify-content-between flex-column"
+                    className="servicePage-box  d-flex justify-content-between flex-column servicePage-card"
                     style={{ textDecoration: "none" }}
                   >
+                    {" "}
+                    <div className="servicePage-card-gradient"></div>
                     <span className="d-flex justify-content-between">
                       <img src={onlineRep} className="" alt="" />
                       <svg
@@ -362,9 +348,11 @@ const ServicesPage = () => {
 
                   <Link
                     to={`/service/${encodeURIComponent(serviceName5)}`}
-                    className="service-box  d-flex justify-content-between flex-column"
+                    className="servicePage-box  d-flex justify-content-between flex-column servicePage-card"
                     style={{ textDecoration: "none" }}
                   >
+                    {" "}
+                    <div className="servicePage-card-gradient"></div>
                     <span className="d-flex justify-content-between">
                       <img src={SVG} className="" alt="" />
                       <svg
@@ -406,9 +394,11 @@ const ServicesPage = () => {
 
                   <Link
                     to={`/service/${encodeURIComponent(serviceName6)}`}
-                    className="service-box  d-flex justify-content-between flex-column"
+                    className="servicePage-box  d-flex justify-content-between flex-column servicePage-card"
                     style={{ textDecoration: "none" }}
                   >
+                    {" "}
+                    <div className="servicePage-card-gradient"></div>
                     <span className="d-flex justify-content-between">
                       <img src={marketing} className="" alt="" />
                       <svg
@@ -450,9 +440,11 @@ const ServicesPage = () => {
 
                   <Link
                     to={`/service/${encodeURIComponent(serviceName7)}`}
-                    className="service-box  d-flex justify-content-between flex-column"
+                    className="servicePage-box  d-flex justify-content-between flex-column servicePage-card"
                     style={{ textDecoration: "none" }}
                   >
+                    {" "}
+                    <div className="servicePage-card-gradient"></div>
                     <span className="d-flex justify-content-between">
                       <img src={analysis} className="" alt="" />
                       <svg
@@ -494,6 +486,7 @@ const ServicesPage = () => {
                 </div>
               </div>
             </div>
+
             <div
               ref={sidecutRef}
               className="service-box-container  d-flex justify-content-center d-flex flex-column align-items-center"
@@ -503,7 +496,7 @@ const ServicesPage = () => {
                 Not seeing what you are looking for?
               </h1>
               <div
-                className="svg-icon d-flex"
+                className="svg-icon d-flex servicePageButton"
                 style={{
                   padding: "0.9rem 1.3rem",
                   marginLeft: "1rem",
@@ -541,7 +534,9 @@ const ServicesPage = () => {
               style={{
                 paddingTop: "10%",
                 paddingBottom: "10%",
+                paddingInline: "2%",
                 backgroundColor: "var(--secondary-bg)",
+                margin: "2%",
               }}
             >
               {/* <div className="img-overlay-3 position-absolute right-0" >
@@ -550,23 +545,26 @@ const ServicesPage = () => {
               <div
                 className="heading faq-heading sticky-top col-md-6 col-12 z-3 fw-medium mb-sm-4"
                 style={{
-                  color: 'var(--background-color)',
+                  color: "var(--background-color)",
                   fontSize: "4.5rem",
                   zIndex: "1000",
-                  lineHeight: '1.2'
+                  lineHeight: "1.2",
                 }}
               >
                 Frequently Asked Questions
               </div>
               <div className="frequent-que col-md-6 col-12 z-3">
                 <div className="faq-containers">
-                  {questionAnswers.map((qa, index) => (
+                  {/* {questionAnswers.map((qa, index) => (
                     <div key={index} className="mb-4 faq-padding green-border">
                       <div
                         className={`question faq-question mb-0 text d-flex justify-content-between align-items-center ${
                           openAnswers[index] ? "open" : ""
                         }`}
-                        style={{color: 'var(--text-color)', cursor: 'pointer'}}
+                        style={{
+                          color: "var(--text-color)",
+                          cursor: "pointer",
+                        }}
                         id={`question${index + 1}`}
                         onClick={() => toggleAnswer(index)}
                       >
@@ -594,6 +592,12 @@ const ServicesPage = () => {
                         {qa.answer}
                       </div>
                     </div>
+                  ))} */}
+                  {questionAnswers.map((qa, index) => (
+                    <>
+                      <div className="green-border d-flex justify-content-center "></div>
+                      <Accordion title={qa.question} children={qa.answer} />
+                    </>
                   ))}
                   <div className="green-border d-flex justify-content-center pt-4"></div>
                 </div>
@@ -609,3 +613,42 @@ const ServicesPage = () => {
 };
 
 export default ServicesPage;
+const Accordion = ({ title, children }) => {
+  const [isOpen, setOpen] = React.useState(false);
+  return (
+    <div className="accordion-wrapper">
+      <div
+        className={`accordion-title ${isOpen ? "open" : ""}`}
+        onClick={() => setOpen(!isOpen)}
+        style={{color:'white'}}
+      >
+        {title}
+      </div>
+      <div className={`accordion-item ${!isOpen ? "collapsed" : ""}`}>
+        <div className="accordion-content">{children}</div>
+      </div>
+    </div>
+  );
+};
+
+const questionAnswers = [
+  {
+    question: "Strategic Marketing Visionaries",
+    answer:
+      "Crafting campaigns that merge innovative strategies with real-world results.",
+  },
+  {
+    question: "Maximized ROI, Minimized Spend",
+    answer: "Achieve significant marketing results at a fraction of the cost",
+  },
+  {
+    question: "Data-Driven, Creatively Inspired",
+    answer:
+      "Harnessing the power of analytics infused with creative brilliance.",
+  },
+  {
+    question: "Versatile Expertise, Diverse Impact",
+    answer:
+      "Proven success across various industries with tailored marketing strategies.",
+  },
+];

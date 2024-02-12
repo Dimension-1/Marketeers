@@ -1,81 +1,58 @@
 import React, { useEffect, useRef } from "react";
 import "../style.css";
-import Scrollbar from "smooth-scrollbar";
-// import image from "../assets/Section.jpg.png";
-import image from "../assets/DesktopBlue.svg";
-import bg from "../assets/mainbg.png";
+import { motion, useScroll, useTransform } from "framer-motion";
 
-const WhyMarketeer = ({ pageTitle, pageContent }) => {
-  // useEffect(() => {
-  //   const scrollBar = Scrollbar.init(document.querySelector(".scroll-target"), {
-  //     damping: 0.01,
-  //     delegateTo: document,
-  //     alwaysShowTracks: true,
-  //     speed: 0.2,
-  //   });
-
-  //   ScrollTrigger.defaults({
-  //     scroller: ".scroll-target",
-  //   });
-  //   ScrollTrigger.scrollerProxy(".scroll-target", {
-  //     scrollTop(value) {
-  //       if (arguments.length) {
-  //         scrollBar.scrollTop = value;
-  //       }
-  //       return scrollBar.scrollTop;
-  //     },
-  //   });
-
-  //   scrollBar.addListener(ScrollTrigger.update);
-
-  //   const matches = document.querySelectorAll("p");
-
-  //   matches.forEach((target) => {
-  //     gsap.to(target, {
-  //       backgroundPositionX: "0%",
-  //       stagger: 1,
-  //       scrollTrigger: {
-  //         markers: false,
-  //         trigger: target,
-  //         scrub: true,
-  //         start: "top 25%",
-  //         end: "bottom 5%",
-  //       },
-  //     });
-  //   });
-
-  //   return () => {};
-  // }, []);
-
+const WhyMarketeer = ({ pageTitle, pageContent ,contentFontSize,contentColor}) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 0.6", "0.4 0"],
+  });
+  const finalText = pageContent.split("");
   return (
-    <div className=" container pt-5 position-relative ">
-      <div className="exist d-flex justify-content-between ">
-        <div className="col-12 col-lg-6 col-md-5">
+    <motion.div ref={ref} className=" container pt-5 position-relative ">
+       <div className="exist d-flex justify-content-between ">
+       {pageTitle && <div className="col-12 col-lg-6 col-md-5">
           <div style={{ position: "sticky", top: "0", zIndex: "1000" }}>
             <h4 className=" font-1" style={{ color: "var(--text-color)" }}>
               {pageTitle}
             </h4>
           </div>
-        </div>
+        </div>}
 
-        {/* <h3 className="col-6 font-3 your-text" >
-            At Marketeer's Consulting, we use human creativity and the latest
-            <span className="your-text">technologies to help business leaders, investors, and entrepreneurs</span>
-            enhance their market positioning, discover the next winning trend,
-            and optimize their chances for success.
-            
-          </h3> */}
-        <div className="col-12 col-lg-6 col-md-7 scroll-target z-3 fw-semibold">
-          <p
-            className="marketeer "
-            style={{ fontSize: "3rem", color: "var(--text-color)" }}
+        <motion.div
+          className={` ${
+            pageTitle ? "col-lg-6 col-12 col-md-7 scroll-target z-3 fw-semibold" : ""
+          }  `}
+        >
+          <motion.div
+            style={{ fontSize: contentFontSize? contentFontSize:"2.5rem", color: contentColor? contentColor:"var(--text-color)" }}
+            className="whyMarketeer-content"
           >
-            {pageContent}
-          </p>
-        </div>
+            {finalText.map((char, index) => {
+              const start = index / finalText.length;
+              const end = start + 1 / finalText.length;
+              console.log([start, end]);
+              return (
+                <MotionSpan
+                  key={index}
+                  range={[start, end]}
+                  scrollYProgress={scrollYProgress}
+                >
+                  {char}
+                </MotionSpan>
+              );
+            })}
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
+};
+
+const MotionSpan = ({ range, children, scrollYProgress }) => {
+  const opacity = useTransform(scrollYProgress, range, [0.1, 1]);
+  return <motion.span style={{ opacity }}>{children}</motion.span>;
 };
 
 export default WhyMarketeer;

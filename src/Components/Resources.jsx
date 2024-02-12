@@ -12,7 +12,7 @@ import Chip from "@mui/material/Chip";
 import { MdCancel } from "react-icons/md";
 import "./Resources.css";
 import resourceIcon from "../assets/Resources.svg";
-import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { useNavigate, useLocation, useParams, Link } from "react-router-dom";
 import blog2 from "../assets/blog-image2.png";
 import blog3 from "../assets/blog3.png";
 import image from "../assets/DesktopBlue.svg";
@@ -26,6 +26,7 @@ export default function Resources() {
 
   const data = [
     {
+      id: 1,
       imgsrc:
         "https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg",
       type: "Blog",
@@ -34,6 +35,7 @@ export default function Resources() {
       filter: "Online Reputation Management",
     },
     {
+      id: 2,
       imgsrc: blog2,
       type: "Blog",
       Publishedon: "September 7, 2023",
@@ -41,6 +43,7 @@ export default function Resources() {
       filter: "Pay-Per-Click Advertising (PPC)",
     },
     {
+      id: 3,
       imgsrc: blog3,
       type: "Blog",
       Publishedon: "November 18, 2023",
@@ -48,26 +51,29 @@ export default function Resources() {
       filter: "Email and SMS Marketing",
     },
     {
+      id: 1,
       imgsrc:
         "https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg",
-      type: "Case Study",
-      Publishedon: "October 2, 2023",
+      type: "Blog",
+      Publishedon: "October 23, 2023",
       name: `Startup Market Sizing: Founder's Guide to TAM`,
-      filter: "Analytics and Data Analysis",
+      filter: "Online Reputation Management",
     },
     {
+      id: 2,
       imgsrc: blog2,
-      type: "Case Study",
-      Publishedon: "November 30, 2023",
+      type: "Blog",
+      Publishedon: "September 7, 2023",
       name: `7 Simple Steps to Ace Your Startup Market Research`,
-      filter: "Email and SMS Marketing",
+      filter: "Pay-Per-Click Advertising (PPC)",
     },
     {
+      id: 3,
       imgsrc: blog3,
-      type: "Case Study",
-      Publishedon: "September 20, 2023",
+      type: "Blog",
+      Publishedon: "November 18, 2023",
       name: `Research and Planning for a New Business in 4 Steps`,
-      filter: "Conversion Rate Optimization (CRO)",
+      filter: "Email and SMS Marketing",
     },
   ];
   const categories = [
@@ -196,11 +202,12 @@ export default function Resources() {
               display: "flex",
               flexDirection: "column",
               marginTop: "110px",
-              marginLeft: "150px",
+              marginInline: "auto",
+              marginLeft:'115px'
             }}
             className="resources-text slide-up "
           >
-            <Typography
+           <Typography
               sx={{
                 color: "var(--secondary-bg)",
                 fontWeight: "500",
@@ -243,7 +250,7 @@ export default function Resources() {
             >
               <button
                 style={{
-                  padding: "20px 30px",
+                  padding: "10px 30px",
                   color: filter === "all" ? "#262d29" : "rgba(220,239,216,.7)",
                   backgroundColor:
                     filter === "all" ? "var(--main-text-color)" : "transparent",
@@ -259,7 +266,7 @@ export default function Resources() {
               </button>
               <button
                 style={{
-                  padding: " 20px 30px",
+                  padding: " 10px 30px",
                   color: filter === "Blog" ? "#262d29" : "rgba(220,239,216,.7)",
                   backgroundColor:
                     filter === "Blog"
@@ -277,7 +284,7 @@ export default function Resources() {
               </button>
               <button
                 style={{
-                  padding: "20px 30px",
+                  padding: "10px 30px",
                   color:
                     filter === "Case Study"
                       ? "#262d29"
@@ -298,7 +305,7 @@ export default function Resources() {
               </button>
               <button
                 style={{
-                  padding: " 20px 30px",
+                  padding: " 10px 30px",
                   color:
                     filter === "Download" ? "#262d29" : "rgba(220,239,216,.7)",
                   backgroundColor:
@@ -334,7 +341,7 @@ export default function Resources() {
                 <Typography
                   sx={{
                     backgroundColor: "#fff",
-                    padding: "12px 30px",
+                    padding: "12px 30px 0px 30px",
                     borderTopLeftRadius: "10px",
                     borderTopRightRadius: "10px",
                     color: "rgba(67,85,75,.8)",
@@ -542,7 +549,11 @@ export default function Resources() {
                 </Box>
               ) : (
                 filteredData.map((content, index) => (
-                  <React.Fragment key={index}>
+                  <Link
+                    to={`/blogs/${content.id}`}
+                    key={index}
+                    style={{ textDecoration: "none" }}
+                  >
                     <Box
                       sx={{
                         backgroundColor: "#fff",
@@ -550,18 +561,21 @@ export default function Resources() {
                         overflow: "hidden",
                         cursor: "pointer",
                       }}
-                      className="blogCard d-flex justify-content-between flex-column "
+                      className="blogCard d-flex justify-content-between flex-column blogsOnLandingPage"
                     >
                       <Box>
-                        <img
-                          src={content.imgsrc}
-                          alt="Blog"
-                          style={{
-                            borderRadius: "15px",
-                            width: "100%",
-                            height: "auto",
-                          }}
-                        />
+                        <div className="blogsOnLandingPage-imgDiv">
+                          <img
+                            src={content.imgsrc}
+                            alt="Blog"
+                            style={{
+                              borderRadius: "15px",
+                              width: "100%",
+                              height: "auto",
+                            }}
+                          />
+                          <h6>Read more</h6>
+                        </div>
                         <Box
                           sx={{
                             display: "flex",
@@ -619,7 +633,7 @@ export default function Resources() {
                         </ul>
                       </Box>
                     </Box>
-                  </React.Fragment>
+                  </Link>
                 ))
               )}
             </Box>

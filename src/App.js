@@ -1,7 +1,6 @@
 import { useState, useEffect, CSSProperties } from "react";
 import GridLoader from "react-spinners/GridLoader";
 import logo from "./logo.svg";
-import "./App.css";
 import Navbar from "./Components/Navbar";
 import LandingPage from "./Pages/LandingPage";
 import ServicesPage from "./Pages/ServicesPage";
@@ -15,8 +14,10 @@ import BlogContent from "./Components/BlogContent";
 import ServiceContentPage from "./Pages/ServiceContentPage";
 import { MdHeight } from "react-icons/md";
 import { height } from "@mui/system";
+import "./App.css";
 
 function App() {
+ 
   return (
     <div style={{ background: "var(--bg-color)" }}>
       <Router>
