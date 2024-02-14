@@ -70,7 +70,7 @@ const ServicesPage = () => {
           </div>
         </div>
       ) : (
-        <div className="w-100 img-container position-relative overflow-x-hidden">
+        <div className="w-100 img-container position-relative overflow-x-hidden servicePage-wholeDiv">
           <div className="img-overlay-7 position-absolute z-0">
             <img src={image} alt="" className="" />
           </div>
@@ -87,7 +87,7 @@ const ServicesPage = () => {
                 Your biggest business challenges.{" "}
                 <span style={{ color: "var(--main-text-color)" }}>Solved.</span>{" "}
               </h1>
-              <div className="services-container gallery d-flex gap-1 mb-lg-5 marginTop-0">
+              <div className="services-container gallery d-flex gap-1 mb-md-5 marginTop-0 ">
                 <div
                   className="cards d-flex flex-nowrap w-100 "
                   style={{ overflow: "hidden" }}
@@ -281,7 +281,7 @@ const ServicesPage = () => {
                   className=""
                   style={{
                     position: "absolute",
-                    zIndex: 998,
+                    zIndex: 8,
                     left: "11%",
                     top: "-2px",
                   }}
@@ -289,14 +289,14 @@ const ServicesPage = () => {
                 <img
                   src={arrowDown}
                   alt="arrowDown"
-                  className=" position-absolute bottom-30 z-3"
+                  className=" position-absolute bottom-30 z-3 arrowDownService"
                   style={{ right: "2%", cursor: "pointer" }}
                   onClick={handleSidecutClick}
                 />
               </div>
 
               <div
-                className="services-container gallery d-flex gap-1 mb-lg-5 marginTop-0"
+                className="services-container gallery d-flex gap-1 mb-md-5 marginTop-0"
                 style={{ overflow: "hidden" }}
               >
                 <div className="cards d-flex flex-nowrap w-100 ">
@@ -490,7 +490,7 @@ const ServicesPage = () => {
             <div
               ref={sidecutRef}
               className="service-box-container  d-flex justify-content-center d-flex flex-column align-items-center"
-              style={{ paddingTop: "10rem", paddingBottom: "10rem" }}
+              style={{ padding: "10rem 5%", }}
             >
               <h1 className="text-light-bg mb-4">
                 Not seeing what you are looking for?
@@ -530,7 +530,7 @@ const ServicesPage = () => {
             </div>
 
             <div
-              className=" d-flex  rating-container z-3 position-relative "
+              className=" d-flex  rating-container z-3 position-relative px-4 "
               style={{
                 paddingTop: "10%",
                 paddingBottom: "10%",
@@ -539,11 +539,9 @@ const ServicesPage = () => {
                 margin: "2%",
               }}
             >
-              {/* <div className="img-overlay-3 position-absolute right-0" >
-      <img src={image} alt="" className="h-75 w-75 " />
-    </div> */}
+              
               <div
-                className="heading faq-heading sticky-top col-md-6 col-12 z-3 fw-medium mb-sm-4"
+                className="heading faq-heading sticky-top col-md-6 col-12 z-3 fw-medium mb-sm-4 mt-4 "
                 style={{
                   color: "var(--background-color)",
                   fontSize: "4.5rem",

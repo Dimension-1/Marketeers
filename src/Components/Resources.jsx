@@ -171,7 +171,7 @@ export default function Resources() {
       style={{ background: "var(--bg-color)" }}
     >
       <div className="img-overlay-7 position-absolute z-0">
-        <img src={image} alt="" className="" />
+        <img src={image} alt="" className="resources-img-side" />
       </div>
       <Box
         sx={{ backgroundColor: "var(--bg-color)", padding: "94px 10px 10px" }}
@@ -557,7 +557,7 @@ export default function Resources() {
                     <Box
                       sx={{
                         backgroundColor: "#fff",
-                        width: "360px",
+                        width: "100%",
                         overflow: "hidden",
                         cursor: "pointer",
                       }}
@@ -571,7 +571,7 @@ export default function Resources() {
                             style={{
                               borderRadius: "15px",
                               width: "100%",
-                              height: "auto",
+                              height: "auto",aspectRatio:16/9
                             }}
                           />
                           <h6>Read more</h6>
@@ -607,7 +607,7 @@ export default function Resources() {
                               lineHeight: "1",
                             }}
                           >
-                            {content.name}
+                            {content.name.slice(0,38)}...
                           </Typography>
                         </Box>
                       </Box>

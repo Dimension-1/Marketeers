@@ -94,7 +94,7 @@ const ServiceContentPage = () => {
             {selectedService.headline}
           </Link>
 
-          <h1 className=" main-heading text-light-bg font-7">
+          <h1 className=" main-heading text-light-bg font-7 slide-up">
             {selectedService.heading}
           </h1>
           <p
@@ -319,7 +319,7 @@ const ServiceContentPage = () => {
                       transitionDuration: "100ms",
                       transitionBehavior: "normal",
                     }}
-                    initial={{ y: "100%", opacity: 0 }}
+                    initial={{ y: "50%", opacity: 0 }}
                     whileInView={{ y: "0%", opacity: 1 }}
                   >
                     <h2
@@ -342,8 +342,8 @@ const ServiceContentPage = () => {
                       transitionDuration: "100ms",
                       transitionBehavior: "normal",
                     }}
-                    initial={{ x: "100%", opacity: 0 }}
-                    whileInView={{ x: "0%", opacity: 1 }}
+                    initial={{ y: "50%", opacity: 0 }}
+                    whileInView={{ y: "0%", opacity: 1 }}
                   >
                     <h3 class="h4 line-height-1-1" style={{ fontSize: "2rem" }}>
                       The<br></br>Challenge
@@ -368,8 +368,8 @@ const ServiceContentPage = () => {
                       transitionDuration: "100ms",
                       transitionBehavior: "normal",
                     }}
-                    initial={{ x: "-100%", opacity: 0 }}
-                    whileInView={{ x: "0%", opacity: 1 }}
+                    initial={{ y: "50%", opacity: 0 }}
+                    whileInView={{ y: "0%", opacity: 1 }}
                   >
                     <h3 class="h4 line-height-1-1" style={{ fontSize: "2rem" }}>
                       The<br></br>Solution
@@ -392,7 +392,7 @@ const ServiceContentPage = () => {
                       transitionDuration: "100ms",
                       transitionBehavior: "normal",
                     }}
-                    initial={{ y: "-100%", opacity: 0 }}
+                    initial={{ y: "50%", opacity: 0 }}
                     whileInView={{ y: "0%", opacity: 1 }}
                   >
                     <h3

@@ -43,7 +43,43 @@
     height: 4rem;
     margin-bottom: 3rem;
 }
-
+.servicePage-wholeDiv{
+    padding-top: 1rem;
+}
 .servicePage-box p {
     font-size: 1.2rem;
+}
+@media (width<=770px) {
+    .servicePage-wholeDiv{
+        padding-top: 2rem;
+    }
+    .servicePage-card-gradient{
+        display: none;
+    }
+    .servicePage-box{
+        width: 100%;
+        height: fit-content;
+    }
+    .arrowDownService{
+        right: 0 !important;
+    }
+    .services-container{
+        margin-bottom: 0 !important;
+    }
+    
+}
+@media (width<=450px) {
+    .servicePage-wholeDiv{
+        padding-top: 3rem;
+    }
+    .services-container{
+        margin: 0 auto !important;
+    }
+    .services-container .cards{
+        margin-bottom: 1rem !important;
+        margin-right: 0rem !important;
+    }
+    .arrowDownService{
+        display: none !important;
+    }
 }

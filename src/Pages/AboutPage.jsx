@@ -60,7 +60,7 @@ const AboutPage = () => {
           </div>
         </div>
       ) : (
-        <div className="w-100 img-container position-relative overflow-x-hidden z-3">
+        <div className="w-100 img-container position-relative overflow-x-hidden z-3 servicePage-wholeDiv">
           <div className="img-overlay-7 position-absolute z-0">
             <img src={image} alt="" className="" />
           </div>
@@ -73,14 +73,14 @@ const AboutPage = () => {
           <div className="content-wrapper z-3">
             <Navbar />
 
-            <div className="header-container d-flex flex-column  justify-content-center align-items-center z-3">
+            <div className="header-container d-flex flex-column  justify-content-center align-items-center z-3 " >
               <img
                 src={aboutIcon}
                 alt="aboutIcon"
                 className=""
                 style={{
                   position: "absolute",
-                  zIndex: 998,
+                  zIndex: 8,
                   left: "11%",
                   top: "-2px",
                 }}
@@ -92,7 +92,7 @@ const AboutPage = () => {
                 style={{ right: "-1px", cursor: "pointer" }}
                 onClick={handleSidecutClick}
               />
-              <h1 className="mt-4 p-4 m-md-5 main-heading text-light-bg font-7 slide-up">
+              <h1 className="mt-4 p-4 m-md-5 main-heading text-light-bg font-5 slide-up">
                 Charting a Bold Course for 1,000 Businesses to Enrich{" "}
                 <span style={{ color: "var(--main-text-color)" }}>
                   1 Billion Lives.
@@ -245,15 +245,15 @@ const AboutPage = () => {
             </div>
 
             <div
-              className=" d-flex  rating-container z-3"
+              className=" d-flex  rating-container z-3 anitext"
               style={{
-                padding:'5% 10%',
-                height:'90vh',
+                padding:'10vh 10%',
+                height:'100%',
                 backgroundColor: "var(--secondary-bg)",
                 position: "relative",
               }}
             >
-              <h1 className="m-md-1 main-heading">
+              <h1 className="m-md-1 main-heading aboutPage">
                 <WhyMarketeer pageContent={`Nothing has such power to broaden the mind as the ability to
                 investigate systematically and truly all that comes under thy
                 observation in life.`} contentFontSize={'3.5rem'} contentColor={'white'}/>

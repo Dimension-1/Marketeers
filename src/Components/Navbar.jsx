@@ -115,15 +115,15 @@ const Navbar = () => {
                 display: "flex",
                 width: "50px",
                 height: "50px",
-                padding: "17.82px 19.46px 17.81px 19.42px",
+                padding: "10px",
                 justifyContent: "center",
                 alignItems: "center",
-                rotate: "90deg",
+                rotate: "-90deg",
                 cursor: "pointer",
                 display: "none",
               }}
             >
-              <img src={pencil} alt="" style={{ rotate: "90deg" }} />
+              <img src={pencil} alt="" style={{ rotate: "90deg" ,width:'1.5rem'}} />
             </span>
           </Link>
 
@@ -137,7 +137,7 @@ const Navbar = () => {
               display: "flex",
               width: "50px",
               height: "50px",
-              padding: "17.82px 19.46px 17.81px 19.42px",
+              padding: "10px",
               justifyContent: "center",
               alignItems: "center",
 
@@ -178,7 +178,7 @@ const Navbar = () => {
       )}
 
       {/* {isSidebarOpen && ( */}
-        <div ref={sidebarRef} className={`sidebar `} style={{ zIndex: "999" ,right:isSidebarOpen? '0' : '-100%'}}>
+        <div ref={sidebarRef} className={`sidebar `} style={{ zIndex: "9999" ,right:isSidebarOpen? '0' : '-100%'}}>
           <span
             className="close-icon text-light-bg h-effect"
             style={{ cursor: "pointer" }}

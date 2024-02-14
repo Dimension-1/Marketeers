@@ -58,14 +58,14 @@ const ContactPage = () => {
       ) : (
         <div className="main">
           <Navbar />
-          <div className=" w-100 pb-3 img-container position-relative">
+          <div className=" w-100 pb-3 img-container position-relative servicePage-wholeDiv">
             <div className="img-overlay position-absolute right-0 z-1">
               <img src={image} alt="" className="" />
             </div>
             <div className="img-overlay-2 position-absolute">
               <img src={image} alt="" className="" />
             </div>
-            <div className="content-wrapper" style={{ zIndex: "800" }}>
+            <div className="content-wrapper" style={{ zIndex: "8" }}>
               <img
                 src={contactIcon}
                 alt="contactIcon"
@@ -74,7 +74,7 @@ const ContactPage = () => {
                   position: "absolute",
                   zIndex: 999,
                   left: "11%",
-                  top: "-2px",
+                  top: "0px",
                 }}
               />
               <div
@@ -83,7 +83,7 @@ const ContactPage = () => {
               >
                 <div className="p-md-5 mt-4">
                   <h1
-                    className=" p-4 main-heading font-7 slide-up"
+                    className=" p-4 main-heading font-5 slide-up"
                     style={{ color: "var(--secondary-bg)" }}
                   >
                     We thought you’d never ask!{" "}
@@ -116,7 +116,7 @@ const ContactPage = () => {
                 <img
                   src={arrowDown}
                   alt="arrowDown"
-                  className=" position-absolute bottom-50 z-3"
+                  className=" position-absolute bottom-50 z-3 pc-element"
                   style={{ right: "-1px", cursor: "pointer" }}
                   onClick={handleSidecutClick}
                   ref={sidecutRef}

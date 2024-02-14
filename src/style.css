@@ -512,7 +512,7 @@ to {
 
 @media (max-width: 770px) {
   .faq-heading {
-    font-size: 2rem !important;
+    font-size: 2.7rem !important;
   }
 
   .font-2 {
@@ -867,6 +867,9 @@ to {
   background-color: var(--custom-btn);
   border-radius: 40px;
 }
+.aboutPage .whyMarketeer-content{
+  font-size: 4rem !important;
+}
 
 /*-------------------- feedback slider pc---------------------------------  */
 
@@ -1196,9 +1199,20 @@ to {
   }
 }
 
+@media (width<=1100px) {
+  .aboutPage .whyMarketeer-content{
+    font-size: 3.5rem !important;
+  }
+  .resources-img-side{
+    display: none;
+    }
+}
 @media (width<=1000px) {
   .font-5 {
     font-size: 4rem;
+  }
+  .aboutPage .whyMarketeer-content{
+    font-size: 3rem !important;
   }
 }
 
@@ -1207,6 +1221,8 @@ to {
     font-size: 3rem;
   }
 }
+
+
 
 @media (width>=768px) {
   .mobile-element{
@@ -1228,8 +1244,8 @@ to {
     /* Adjust the padding as needed */
     box-sizing: border-box;
     border-radius: 20px;
-  
   }
+  
   .green-border-landingPage{
     margin: 0 !important;
   }
@@ -1262,10 +1278,16 @@ to {
   .sm-ratings h2{
     font-size: 3rem !important;
   }
+  .aboutPage .whyMarketeer-content{
+    font-size: 2.7rem !important;
+  }
 }
 
 /*  */
 @media (width<=500px) {
+  .aboutPage .whyMarketeer-content{
+    font-size: 2.4rem !important;
+  }
   .blog-headline {
     font-size: 2rem !important;
 }.landPageBlog{
@@ -1277,6 +1299,9 @@ to {
   }
 .rating-container{
   padding: 2% !important ;
+}
+.anitext{
+  padding:5vh 1rem 10vh 1rem !important;
 }
 .rating-main-div{
   width: 100vw;

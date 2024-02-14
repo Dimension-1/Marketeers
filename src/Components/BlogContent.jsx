@@ -224,7 +224,8 @@ const BlogContent = () => {
     >
       <div className="d-flex justify-content-between mb-lg-5 mb-md-3 sm-col">
         <div className="blog-heading d-flex flex-column justify-content-between align-items-baseline gap-3 ">
-          <Link to={"/resources/all"}
+          <Link
+            to={"/resources/all"}
             className="btn mt-md-4 button-bigt"
             style={{ color: "var(--main-text-color)", cursor: "pointer" }}
           >
@@ -240,7 +241,7 @@ const BlogContent = () => {
           </Link>
 
           <h1
-            className=" blog-headline w-75"
+            className=" blog-headline w-75 slide-up"
             style={{
               fontSize: "5rem",
               color: "var( --primary-text)",
@@ -532,139 +533,148 @@ const BlogContent = () => {
             </div>
           </div>
           <div className="cols blog-sm d-flex gap-4 justify-content-center align-items-start ">
-          <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage">
-            <Link
-              to={{
-                pathname: "/blogs/1",
-              }}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <div>
-                <div className="blogsOnLandingPage-imgDiv">
-                  <img
-                    src={blog}
-                    alt="img blog-img-sm"
-                    className=" blog w-100"
-                  />
-                  <h6>Read more</h6>
-                </div>
+            <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage">
+              <Link
+                to={{
+                  pathname: "/blogs/1",
+                }}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <div>
+                  <div className="blogsOnLandingPage-imgDiv">
+                    <img
+                      src={blog}
+                      alt="img blog-img-sm"
+                      className=" blog w-100"
+                    />
+                    <h6>Read more</h6>
+                  </div>
 
-                <div className="d-flex justify-content-between">
-                  <p
-                    className="pt-2"
-                    style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                  <div className="d-flex justify-content-between">
+                    <p
+                      className="pt-2"
+                      style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                    >
+                      Blog
+                    </p>
+                    <p
+                      className="pt-2"
+                      style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                    >
+                      October 23, 2023
+                    </p>
+                  </div>
+                  <h4
+                    style={{
+                      color: "var(--primary-text)",
+                      fontSize: "1.75rem",
+                    }}
                   >
-                    Blog
-                  </p>
-                  <p
-                    className="pt-2"
-                    style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                    Startup Market Sizing: Founder's Guide to TAM ...
+                    {/* Startup Market Sizing: Founder's Guide to TAM SAM SOM */}
+                  </h4>
+                  <div
+                    className="btn mt-md-4"
+                    style={{ color: "var(--text-color)", cursor: "pointer" }}
                   >
-                    October 23, 2023
-                  </p>
+                    Pay-Per-Click Advertising (PPC)
+                  </div>
                 </div>
-                <h4
-                  style={{ color: "var(--primary-text)", fontSize: "1.75rem" }}
-                >
-                  Startup Market Sizing: Founder's Guide to TAM ... 
-                  {/* Startup Market Sizing: Founder's Guide to TAM SAM SOM */}
-                </h4>
-                <div
-                  className="btn mt-md-4"
-                  style={{ color: "var(--text-color)", cursor: "pointer" }}
-                >
-                  Pay-Per-Click Advertising (PPC)
-                </div>
-              </div>
-            </Link>
-          </div>
+              </Link>
+            </div>
 
-          <div className="col-12 col-md-4 col-lg-4 d-flex flex-column  blogsOnLandingPage">
-            <Link
-              to={{ pathname: "/blogs/2" }}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <div>
-                <div className="blogsOnLandingPage-imgDiv">
-                  <img
-                    src={blog2}
-                    alt="img blog-img-sm"
-                    className=" blog w-100"
-                  />
-                  <h6>Read more</h6>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <p
-                    className="pt-2"
-                    style={{ color: "var(--text-color)", fontSize: "1rem" }}
+            <div className="col-12 col-md-4 col-lg-4 d-flex flex-column  blogsOnLandingPage">
+              <Link
+                to={{ pathname: "/blogs/2" }}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <div>
+                  <div className="blogsOnLandingPage-imgDiv">
+                    <img
+                      src={blog2}
+                      alt="img blog-img-sm"
+                      className=" blog w-100"
+                    />
+                    <h6>Read more</h6>
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <p
+                      className="pt-2"
+                      style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                    >
+                      Blog
+                    </p>
+                    <p
+                      className="pt-2"
+                      style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                    >
+                      October 2, 2023
+                    </p>
+                  </div>
+                  <h4
+                    style={{
+                      color: "var(--primary-text)",
+                      fontSize: "1.75rem",
+                    }}
                   >
-                    Blog
-                  </p>
-                  <p
-                    className="pt-2"
-                    style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                    7 Simple Steps to Ace Your Startup Market Research
+                  </h4>
+                  <div
+                    className="btn mt-md-4"
+                    style={{ color: "var(--text-color)", cursor: "initial" }}
                   >
-                    October 2, 2023
-                  </p>
+                    Email and SMS Marketing
+                  </div>
                 </div>
-                <h4
-                  style={{ color: "var(--primary-text)", fontSize: "1.75rem" }}
-                >
-                  7 Simple Steps to Ace Your Startup Market Research
-                </h4>
-                <div
-                  className="btn mt-md-4"
-                  style={{ color: "var(--text-color)", cursor: "initial" }}
-                >
-                  Email and SMS Marketing
-                </div>
-              </div>
-            </Link>
-          </div>
+              </Link>
+            </div>
 
-          <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage ">
-            <Link
-              to={{ pathname: "/blogs/3" }}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <div className="">
-                <div className="blogsOnLandingPage-imgDiv">
-                  <img
-                    src={blog3}
-                    alt="img blog-img-sm"
-                    className=" blog w-100"
-                  />
-                  <h6>Read more</h6>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <p
-                    className="pt-2"
-                    style={{ color: "var( --text-color)", fontSize: "1rem" }}
+            <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage ">
+              <Link
+                to={{ pathname: "/blogs/3" }}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <div className="">
+                  <div className="blogsOnLandingPage-imgDiv">
+                    <img
+                      src={blog3}
+                      alt="img blog-img-sm"
+                      className=" blog w-100"
+                    />
+                    <h6>Read more</h6>
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <p
+                      className="pt-2"
+                      style={{ color: "var( --text-color)", fontSize: "1rem" }}
+                    >
+                      Blog
+                    </p>
+                    <p
+                      className="pt-2"
+                      style={{ color: "var( --text-color)", fontSize: "1rem" }}
+                    >
+                      September 27, 2023
+                    </p>
+                  </div>
+                  <h4
+                    style={{
+                      color: "var( --primary-text)",
+                      fontSize: "1.75rem",
+                    }}
                   >
-                    Blog
-                  </p>
-                  <p
-                    className="pt-2"
-                    style={{ color: "var( --text-color)", fontSize: "1rem" }}
+                    Research and Planning for a New Business in 4 Steps
+                  </h4>
+                  <div
+                    className="btn mt-md-4"
+                    style={{ color: "var(--text-color)", cursor: "initial" }}
                   >
-                    September 27, 2023
-                  </p>
+                    Influencer Marketing
+                  </div>
                 </div>
-                <h4
-                  style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}
-                >
-                  Research and Planning for a New Business in 4 Steps
-                </h4>
-                <div
-                  className="btn mt-md-4"
-                  style={{ color: "var(--text-color)", cursor: "initial" }}
-                >
-                  Influencer Marketing
-                </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
