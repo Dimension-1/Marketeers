@@ -27,7 +27,7 @@ At Marketeers, we believe in the power of creativity, technology, and strategic 
 Ready to take your business to the next level? Contact us today to learn more about how Marketeers can help you achieve your goals.
 
 Email: contact@marketeers.ai 
-Website: [www.marketeers.com](https://marketeers.vercel.app/)  
+Website: [www.marketeers.vercel.app](https://marketeers.vercel.app/)  
 
 Follow us on [Twitter](https://twitter.com/marketeers) | [Facebook](https://www.facebook.com/marketeers) | [Instagram](https://www.instagram.com/marketeers)
 
