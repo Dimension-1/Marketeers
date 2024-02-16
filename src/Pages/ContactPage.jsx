@@ -1,28 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
-import GridLoader from "react-spinners/GridLoader";
+
 import Navbar from "../Components/Navbar";
 import "../style.css";
 //import image from "../assets/Section.jpg.png";
 import image from "../assets/DesktopBlue.svg";
-import icon from "../assets/asterisk.svg";
-import Services from "../Components/Services";
-import Scrollbar from "smooth-scrollbar";
-import WhyMarketeer from "../Components/WhyMarketeer";
-import Ratings from "../Components/Ratings";
-import WhyUs from "../Components/WhyUs";
-import Sidecut from "../assets/Sidecut.svg.svg";
-import WhoTrustsUs from "../Components/WhoTrustsUs";
-import Testimonials from "../Components/Testimonials";
-import Blogs from "../Components/Blogs";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
-import greaterThan from "../assets/greater-than.svg";
 import contactIcon from "../assets/ContactUs.svg";
 import arrowDown from "../assets/ArrowDown.svg";
 import logo from "../assets/finalLogo.ico";
@@ -50,7 +33,6 @@ const ContactPage = () => {
       {loading ? (
         <div className="loading-overlay">
           <Navbar />
-          {/* <GridLoader color={"#8aabc4"} loading={loading} size={20} /> */}
           <div className="logo-container">
             <img src={logo} alt="" className="loading-logo" />
           </div>

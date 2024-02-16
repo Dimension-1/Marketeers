@@ -1,7 +1,4 @@
-import { useState, useEffect, CSSProperties } from "react";
-import GridLoader from "react-spinners/GridLoader";
-import logo from "./logo.svg";
-import Navbar from "./Components/Navbar";
+import { useState, useEffect } from "react";
 import LandingPage from "./Pages/LandingPage";
 import ServicesPage from "./Pages/ServicesPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -10,24 +7,40 @@ import ContactPage from "./Pages/ContactPage";
 import AboutPage from "./Pages/AboutPage";
 import ResourcesPage from "./Pages/ResourcePage";
 import BlogPage from "./Pages/BlogPage";
-import BlogContent from "./Components/BlogContent";
 import ServiceContentPage from "./Pages/ServiceContentPage";
-import { MdHeight } from "react-icons/md";
-import { height } from "@mui/system";
 import "./App.css";
+import axios from "axios";
+import Loading from "./Components/Loading";
 
+// ------------------------------------------------------------
 function App() {
- 
+  const [blogData, setBlogData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get("https://sheetdb.io/api/v1/hdreqxp52ghx1")
+      .then((data) => {
+        setBlogData(data.data);
+        setLoading(false)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+
+
   return (
     <div style={{ background: "var(--bg-color)" }}>
       <Router>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={loading? <Loading/> : <LandingPage blogData={blogData.slice(0, 3)}/>} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/about" element={<AboutPage />} />
 
-          <Route path="/resources/:filter" element={<ResourcesPage />} />
+          <Route path="/resources/:filter" element={<ResourcesPage blogData={blogData}/>} />
           <Route path="/blogs/:id" element={<BlogPage />} />
 
           {/* Correct the parameter name to match the one used in ServiceContentPage */}

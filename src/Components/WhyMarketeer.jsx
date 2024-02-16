@@ -32,7 +32,6 @@ const WhyMarketeer = ({ pageTitle, pageContent ,contentFontSize,contentColor}) =
             {finalText.map((char, index) => {
               const start = index / finalText.length;
               const end = start + 1 / finalText.length;
-              console.log([start, end]);
               return (
                 <MotionSpan
                   key={index}

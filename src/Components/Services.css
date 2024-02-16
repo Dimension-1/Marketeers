@@ -69,9 +69,7 @@
     
 }
 @media (width<=450px) {
-    .servicePage-wholeDiv{
-        padding-top: 3rem;
-    }
+   
     .services-container{
         margin: 0 auto !important;
     }

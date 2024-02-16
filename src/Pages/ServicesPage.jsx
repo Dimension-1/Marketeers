@@ -3,9 +3,7 @@ import "../App.css";
 import SVG from "../assets/SVG.svg";
 import { Link } from "react-router-dom";
 import forecast from "../assets/arrow-up.svg";
-import plusIcon from "../assets/div.whyus__expand.svg";
 import image from "../assets/DesktopBlue.svg";
-import minusIcon from "../assets/minusIcon.svg";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
@@ -530,11 +528,11 @@ const ServicesPage = () => {
             </div>
 
             <div
-              className=" d-flex  rating-container z-3 position-relative px-4 "
+              className=" d-flex  rating-container z-3 position-relative  "
               style={{
                 paddingTop: "10%",
                 paddingBottom: "10%",
-                paddingInline: "2%",
+                paddingInline: "5%",
                 backgroundColor: "var(--secondary-bg)",
                 margin: "2%",
               }}
@@ -553,44 +551,7 @@ const ServicesPage = () => {
               </div>
               <div className="frequent-que col-md-6 col-12 z-3">
                 <div className="faq-containers">
-                  {/* {questionAnswers.map((qa, index) => (
-                    <div key={index} className="mb-4 faq-padding green-border">
-                      <div
-                        className={`question faq-question mb-0 text d-flex justify-content-between align-items-center ${
-                          openAnswers[index] ? "open" : ""
-                        }`}
-                        style={{
-                          color: "var(--text-color)",
-                          cursor: "pointer",
-                        }}
-                        id={`question${index + 1}`}
-                        onClick={() => toggleAnswer(index)}
-                      >
-                        <span
-                          className="span"
-                          style={{ zIndex: 1, fontSize: "1.6rem" }}
-                        >
-                          {` ${qa.question}`}
-                        </span>
-                        <img
-                          src={openAnswers[index] ? minusIcon : plusIcon}
-                          alt=""
-                          style={{ height: "100%", width: "6%" }}
-                        />
-                      </div>
-                      <div
-                        className="answer faq-answer text border-none"
-                        id={`answer${index + 1}`}
-                        style={{
-                          color: "var(--text-color)",
-                          fontSize: "1.25rem",
-                          display: openAnswers[index] ? "block" : "none",
-                        }}
-                      >
-                        {qa.answer}
-                      </div>
-                    </div>
-                  ))} */}
+             
                   {questionAnswers.map((qa, index) => (
                     <>
                       <div className="green-border d-flex justify-content-center "></div>

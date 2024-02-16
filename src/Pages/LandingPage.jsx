@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "../Components/Navbar";
-
 import image from "../assets/DesktopBlue.svg";
 import Services from "../Components/Services";
 import WhyMarketeer from "../Components/WhyMarketeer";
@@ -14,32 +13,20 @@ import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import greaterThan from "../assets/greater-than.svg";
 import asterisk from "../assets/asterisk.svg";
-import { useSpring, animated } from "react-spring";
-import logo from "../assets/finalLogo.ico";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Link } from "react-router-dom";
-import CardStacking from "../Components/CardStacking";
 import "../style.css";
 // ----------------------------------------------
-const LandingPage = () => {
+const LandingPage = ({blogData}) => {
   const targetRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
-  const [loading, setLoading] = useState(true);
 
-  // this will changed to back it was
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 1000);
-  // }, []);
 
-  // useEffect(() => {
-  //   console.log("Page loaded, scrolling to top");
-  //   setTimeout(() => {
-  //     window.scrollTo(0, 0);
-  //   }, 100);
-  // }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  }, []);
 
   const ref = useRef(null); // Create a ref for the sidecut image
   const { scrollYProgress } = useScroll({
@@ -57,15 +44,7 @@ const LandingPage = () => {
 
   return (
     <>
-      {!loading ? (
-        <div className="loading-overlay">
-          <Navbar />
-          {/* <GridLoader color={"#8aabc4"} loading={loading} size={20} /> */}
-          <div className="logo-container">
-            <img src={logo} alt="" className="loading-logo" />
-          </div>
-        </div>
-      ) : (
+     
         <>
           <div className="main main-content">
             <Navbar />
@@ -207,7 +186,7 @@ const LandingPage = () => {
               <WhoTrustsUs />
               <Testimonials />
 
-              <Blogs />
+              <Blogs blogData={blogData}/>
               <Contact
                 title="Interested but don’t know where to start?"
                 fontSize="2.63rem"
@@ -225,7 +204,6 @@ const LandingPage = () => {
             </div>
           )}
         </>
-      )}
     </>
   );
 };

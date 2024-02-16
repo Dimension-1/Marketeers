@@ -13,69 +13,15 @@ import { MdCancel } from "react-icons/md";
 import "./Resources.css";
 import resourceIcon from "../assets/Resources.svg";
 import { useNavigate, useLocation, useParams, Link } from "react-router-dom";
-import blog2 from "../assets/blog-image2.png";
-import blog3 from "../assets/blog3.png";
 import image from "../assets/DesktopBlue.svg";
 // ... other imports
 
-export default function Resources() {
+export default function Resources({ data }) {
   const navigate = useNavigate();
   const location = useLocation();
   const { filter: initialFilter } = useParams();
   const [selectedFilter, setSelectedFilter] = useState(initialFilter);
 
-  const data = [
-    {
-      id: 1,
-      imgsrc:
-        "https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg",
-      type: "Blog",
-      Publishedon: "October 23, 2023",
-      name: `Startup Market Sizing: Founder's Guide to TAM`,
-      filter: "Online Reputation Management",
-    },
-    {
-      id: 2,
-      imgsrc: blog2,
-      type: "Blog",
-      Publishedon: "September 7, 2023",
-      name: `7 Simple Steps to Ace Your Startup Market Research`,
-      filter: "Pay-Per-Click Advertising (PPC)",
-    },
-    {
-      id: 3,
-      imgsrc: blog3,
-      type: "Blog",
-      Publishedon: "November 18, 2023",
-      name: `Research and Planning for a New Business in 4 Steps`,
-      filter: "Email and SMS Marketing",
-    },
-    {
-      id: 1,
-      imgsrc:
-        "https://assets-global.website-files.com/64e8bbf4a8e46c39e0352f6e/653fbff5cabfba49d46f0767_Rectangle%20486.jpg",
-      type: "Blog",
-      Publishedon: "October 23, 2023",
-      name: `Startup Market Sizing: Founder's Guide to TAM`,
-      filter: "Online Reputation Management",
-    },
-    {
-      id: 2,
-      imgsrc: blog2,
-      type: "Blog",
-      Publishedon: "September 7, 2023",
-      name: `7 Simple Steps to Ace Your Startup Market Research`,
-      filter: "Pay-Per-Click Advertising (PPC)",
-    },
-    {
-      id: 3,
-      imgsrc: blog3,
-      type: "Blog",
-      Publishedon: "November 18, 2023",
-      name: `Research and Planning for a New Business in 4 Steps`,
-      filter: "Email and SMS Marketing",
-    },
-  ];
   const categories = [
     "Pay-Per-Click Advertising (PPC)",
     "Email and SMS Marketing",
@@ -129,7 +75,6 @@ export default function Resources() {
   };
 
   useEffect(() => {
-    console.log("location.state:", location.state);
     const isFromCaseStudyButton = initialFilter === "CaseStudy";
     const filterToUse = isFromCaseStudyButton
       ? "Case Study"
@@ -203,11 +148,11 @@ export default function Resources() {
               flexDirection: "column",
               marginTop: "110px",
               marginInline: "auto",
-              marginLeft:'115px'
+              marginLeft: "115px",
             }}
             className="resources-text slide-up "
           >
-           <Typography
+            <Typography
               sx={{
                 color: "var(--secondary-bg)",
                 fontWeight: "500",
@@ -566,12 +511,13 @@ export default function Resources() {
                       <Box>
                         <div className="blogsOnLandingPage-imgDiv">
                           <img
-                            src={content.imgsrc}
+                            src={content.image}
                             alt="Blog"
                             style={{
                               borderRadius: "15px",
                               width: "100%",
-                              height: "auto",aspectRatio:16/9
+                              height: "auto",
+                              aspectRatio: 16 / 9,
                             }}
                           />
                           <h6>Read more</h6>
@@ -585,10 +531,10 @@ export default function Resources() {
                           }}
                         >
                           <Typography sx={{ color: "#43554b", opacity: "0.4" }}>
-                            {content.type}
+                            Blog
                           </Typography>
                           <Typography sx={{ color: "#43554b", opacity: "0.4" }}>
-                            {content.Publishedon}
+                            {content.date}
                           </Typography>
                         </Box>
                         <Box
@@ -607,7 +553,7 @@ export default function Resources() {
                               lineHeight: "1",
                             }}
                           >
-                            {content.name.slice(0,38)}...
+                            {content.title.slice(0, 38)}{content.title.length > 38 && '...'}
                           </Typography>
                         </Box>
                       </Box>
@@ -628,7 +574,7 @@ export default function Resources() {
                               padding: "6px 10px",
                             }}
                           >
-                            {content.filter}
+                            {content.category}
                           </li>
                         </ul>
                       </Box>

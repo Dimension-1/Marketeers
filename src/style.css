@@ -245,10 +245,12 @@ text p {
 to {
   transform: translateX(-100%);
 }
-.button-bigt:hover{
+
+.button-bigt:hover {
   background-color: rgb(224, 238, 244) !important;
   transition: all 300ms;
 }
+
 .main {
   overflow: hidden;
 }
@@ -259,7 +261,7 @@ to {
 
 .content-wrapper {
   position: relative;
-  margin-top: 5.5%;
+  margin-top: 6%;
 }
 
 .blog-heading-1 {
@@ -339,15 +341,18 @@ to {
   display: flex;
   flex-direction: column;
 }
-.company-cards > div{
+
+.company-cards>div {
   height: 70%;
   overflow: hidden;
 }
+
 .whyUs-1imgList,
-.whyUs-2imgList{
+.whyUs-2imgList {
   height: 100%;
   transition: all 200ms ease-in-out;
 }
+
 .company-cards-border {
   height: 15rem;
   padding: 1.6em;
@@ -418,43 +423,55 @@ to {
 
 .getInTouch {
   display: flex;
- position: relative;
- height: 50%;
+  position: relative;
+  height: 50%;
 }
-
+.rating-container {
+  border-radius: 2rem;
+  margin: 2%;
+}
 .get-div {
   height: 100%;
   overflow: hidden;
   transition: all 200ms ease-in-out;
 }
-.get-div-p1{
+
+.get-div-p1 {
   color: #000 !important;
   height: 100%;
   transition: all 200ms ease-in-out;
-  
+
 }
+
 .get-div-p2 {
   color: #000 !important;
 
   height: 100%;
   transition: all 200ms ease-in-out;
-  transform:translateX(10%) translateY(0%) 
+  transform: translateX(10%) translateY(0%)
 }
-.get-div-img{
-  transform: rotate(180deg) translateX(110%); transition: all 200ms ease-in-out;
+
+.get-div-img {
+  transform: rotate(180deg) translateX(110%);
+  transition: all 200ms ease-in-out;
 }
+
 .getInTouch:hover .get-div-p1 {
- transform:translateX(10%) translateY(-100%)  !important;
+  transform: translateX(10%) translateY(-100%) !important;
 }
+
 .getInTouch:hover .get-div-p2 {
- transform:translateX(0%) translateY(-100%)  !important;
+  transform: translateX(0%) translateY(-100%) !important;
 }
+
 .getInTouch:hover .get-div-span {
- scale: 1.6;
+  scale: 1.6;
 }
+
 .getInTouch:hover .get-div-img {
- transform: translateX(0%) rotate(180deg) ;
+  transform: translateX(0%) rotate(180deg);
 }
+
 .sm-none {
   display: none;
 }
@@ -603,7 +620,7 @@ to {
     display: none;
   }
 
-  
+
 
   .mt-sm {
     margin-top: 2% !important;
@@ -867,7 +884,8 @@ to {
   background-color: var(--custom-btn);
   border-radius: 40px;
 }
-.aboutPage .whyMarketeer-content{
+
+.aboutPage .whyMarketeer-content {
   font-size: 4rem !important;
 }
 
@@ -1022,29 +1040,36 @@ to {
   transform: translateY(-100%);
 
 }
+
 @media (width<=750px) {
-  .project-card-container{
+  .project-card-container {
     flex-direction: column;
     margin-left: 0vh;
   }
-  .gradient{
+
+  .gradient {
     display: none;
   }
-  .projectCard{
+
+  .projectCard {
     width: 100%;
   }
 }
+
 @media (width<=380px) {
-  .projectCard{
+  .projectCard {
     height: 220px;
   }
-  .projectCard p{
+
+  .projectCard p {
     margin-top: 50px;
   }
-  .font-10{
+
+  .font-10 {
     font-size: 3.3rem;
   }
 }
+
 /* ----------------contact section---------------------- */
 
 .contact-card {
@@ -1117,7 +1142,7 @@ to {
 
 /* ---------------service--------------------- */
 
-.servicePage-card  {
+.servicePage-card {
   position: relative;
   z-index: 10;
 }
@@ -1164,18 +1189,21 @@ to {
 
 }
 
-.servicePageButton{
-    transition: all 300ms ease-in-out;
+.servicePageButton {
+  transition: all 300ms ease-in-out;
 }
-.servicePageButton:hover{
+
+.servicePageButton:hover {
   /* scale: 1.1; */
   background-color: rgb(0, 157, 255) !important;
   color: white;
 }
-.servicePageButton span{
+
+.servicePageButton span {
   scale: 0.5;
 }
-.servicePageButton:hover span{
+
+.servicePageButton:hover span {
   scale: 1;
   transition: all 300ms ease-in-out;
   background-color: rgb(255, 255, 255) !important;
@@ -1189,10 +1217,24 @@ to {
 
 /* media queries -------------------------------------------> */
 
+@media (width>=1450px) {
+
+  .swiper {
+    width: 450px !important;
+    height: 570px !important;
+  }
+
+  .swiper-slide {
+    width: 450px !important;
+    height: 570px !important;
+  }
+}
+
 @media (width<=1450px) {
   .font-5 {
     font-size: 5rem;
   }
+
 
   .hero-section-headingImg {
     height: 60px;
@@ -1200,18 +1242,21 @@ to {
 }
 
 @media (width<=1100px) {
-  .aboutPage .whyMarketeer-content{
+  .aboutPage .whyMarketeer-content {
     font-size: 3.5rem !important;
   }
-  .resources-img-side{
+
+  .resources-img-side {
     display: none;
-    }
+  }
 }
+
 @media (width<=1000px) {
   .font-5 {
     font-size: 4rem;
   }
-  .aboutPage .whyMarketeer-content{
+
+  .aboutPage .whyMarketeer-content {
     font-size: 3rem !important;
   }
 }
@@ -1225,17 +1270,20 @@ to {
 
 
 @media (width>=768px) {
-  .mobile-element{
+  .mobile-element {
     display: none !important;
   }
-  .sm-ratings{
+
+  .sm-ratings {
     gap: 2rem !important;
   }
 }
+
 @media (width<=768px) {
-  .pc-element{
+  .pc-element {
     display: none !important;
   }
+
   .header-container {
     background-color: rgba(27, 26, 31, 0.8);
     width: 100%;
@@ -1245,82 +1293,129 @@ to {
     box-sizing: border-box;
     border-radius: 20px;
   }
-  
-  .green-border-landingPage{
+
+  .green-border-landingPage {
     margin: 0 !important;
   }
+
   .font-5 {
     font-size: 3rem;
   }
+
   .hero-section-headingImg {
     display: none;
   }
-  .vh-90{
+
+  .vh-90 {
     height: 90vh;
   }
-  .record{
+
+  .record {
     left: 0 !important;
     width: 50%;
     margin-inline: 25%;
   }
-  .sm-ratings{
+
+  .sm-ratings {
     aspect-ratio: 1/1;
     gap: 1rem;
-    margin-inline: 0 ;
+    margin-inline: 0;
     margin-bottom: 1rem !important;
     padding-bottom: 1rem !important;
     padding-top: 0 !important;
     height: 310px !important;
-  } 
-  .sm-ratings img{
+  }
+
+  .sm-ratings img {
     width: 4.5rem;
   }
-  .sm-ratings h2{
+
+  .sm-ratings h2 {
     font-size: 3rem !important;
   }
-  .aboutPage .whyMarketeer-content{
+
+  .aboutPage .whyMarketeer-content {
     font-size: 2.7rem !important;
+  }
+  .noPaddingAtMobile{
+    padding: 0 !important;
+  }
+  .noMarginAtMobile{
+    margin: 0 !important;
   }
 }
 
 /*  */
 @media (width<=500px) {
-  .aboutPage .whyMarketeer-content{
+  .content-wrapper {
+    margin-top: 12% !important;
+  }
+
+  .blog-content-container {
+    margin-top: 18% !important;
+  }
+
+  .blog-content-wholeDiv {
+    padding: 4% !important;
+  }
+
+  .aboutPage .whyMarketeer-content {
     font-size: 2.4rem !important;
   }
+
   .blog-headline {
     font-size: 2rem !important;
-}.landPageBlog{
-  padding: 1% !important;
-}
-  .record{
+  }
+
+  .landPageBlog {
+    padding: 1% !important;
+  }
+
+  .record {
     width: 75%;
     margin-inline: 12.5%;
   }
-.rating-container{
-  padding: 2% !important ;
-}
-.anitext{
-  padding:5vh 1rem 10vh 1rem !important;
-}
-.rating-main-div{
-  width: 100vw;
-  transform: translateX(-2rem);
-}
-.landPage-main-div{
-  width: 100vw;
-  transform: translateX(-1.5rem);
-}
-  .sm-ratings{
+
+  .market-headline {
+    padding-right: 0rem;
+  }
+
+  .rating-container {
+    padding: 2% !important;
+  }
+
+  .anitext {
+    padding: 5vh 1rem 10vh 1rem !important;
+  }
+
+  .rating-main-div {
+    width: 100vw;
+    transform: translateX(-2rem);
+  }
+
+  .landPage-main-div {
+    width: 100vw;
+    transform: translateX(-1.5rem);
+  }
+
+  .sm-ratings {
     aspect-ratio: 1/1;
-   
-  } 
-  .sm-ratings .card img{
+
+  }
+
+  .sm-ratings .card img {
     width: 4.5rem;
     height: 4.5rem !important;
   }
-  .sm-ratings h2{
+
+  .sm-ratings h2 {
     font-size: 3rem !important;
+  }
+  .noPaddingAtMobile{
+    padding: 0 !important;
+  }
+  .noMarginAtMobile{
+    margin: 0 !important;
   }
 }
 
@@ -1329,29 +1424,36 @@ to {
   .font-5 {
     font-size: 2.5rem;
   }
-  .whyMarketeer-content{
+
+  .whyMarketeer-content {
     font-size: 2rem !important;
   }
+
   .sm-ratings {
     height: 210px !important;
     gap: 1rem;
     place-content: center !important;
   }
-  .sm-ratings h2{
+
+  .sm-ratings h2 {
     font-size: 2rem !important;
   }
-  .sm-ratings h4{
+
+  .sm-ratings h4 {
     font-size: 1.1rem !important;
   }
-  .sm-ratings .card{
-   padding: 1rem !important;
-   height: 200px !important;
+
+  .sm-ratings .card {
+    padding: 1rem !important;
+    height: 200px !important;
   }
+
   .swiper {
     width: 300px;
     height: 410px;
   }
 }
+
 /*  */
 @media (width<=350px) {
   .font-5 {

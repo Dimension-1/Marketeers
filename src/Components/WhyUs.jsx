@@ -1,36 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./WhyUs.css";
-import ReactDOM from "react-dom";
-import plusIcon from "../assets/div.whyus__expand.svg";
-import image from "../assets/Section.jpg.png";
-import minusIcon from "../assets/minusIcon.svg";
-import { motion } from "framer-motion";
-const WhyUs = ({ targetRef }) => {
-  const [openAnswers, setOpenAnswers] = useState([false, false, false]);
 
-  const toggleAnswer = (index) => {
-    setOpenAnswers((prevOpenAnswers) => {
-      const updatedAnswers = [...prevOpenAnswers];
-      updatedAnswers[index] = !updatedAnswers[index];
-      return updatedAnswers;
-    });
-  };
+const WhyUs = () => {
 
-  useEffect(() => {
-    // Scroll to the WhyUs section when the component mounts
-    if (targetRef.current) {
-      const yOffset = -60;
-      const y =
-        targetRef.current.getBoundingClientRect().top +
-        window.pageYOffset +
-        yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  }, [targetRef]);
+ 
+
+
 
   return (
     <div
-      ref={targetRef}
       className="container whyus-sm d-flex"
       style={{ paddingTop: "10%", marginBottom: "10%", zIndex: "998" }}
     >

@@ -51,9 +51,9 @@ const Navbar = () => {
         class="d-flex position-fixed top-0 w-100 justify-content-between align-items-center mb-5"
         style={{ zIndex: "997", paddingRight: "2rem" }}
       >
-        <div className="logo z-3" style={{ zIndex: "1000" }}>
+        <div className="logo z-3" style={{ zIndex: "9999" }}>
           <Link to="/">
-            <img src={logo} alt="" />
+            <img src={logo} alt="" style={{transform:'translateY(-20%)'}}/>
           </Link>
         </div>
         <div

@@ -1,18 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
-import GridLoader from "react-spinners/GridLoader";
 import "../App.css";
-import Services from "../Components/Services";
-import SVG from "../assets/SVG.svg";
-import forecast from "../assets/arrow-up.svg";
-import plusIcon from "../assets/div.whyus__expand.svg";
 import image from "../assets/DesktopBlue.svg";
-import minusIcon from "../assets/minusIcon.svg";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
@@ -27,6 +15,8 @@ import value3 from "../assets/value3.svg";
 import value4 from "../assets/value4.svg";
 import logo from "../assets/finalLogo.ico";
 import { motion } from "framer-motion";
+
+// -----------------------------
 const AboutPage = () => {
   const sidecutRef = useRef(null); // Create a ref for the sidecut image
   const [loading, setLoading] = useState(true);
@@ -54,7 +44,6 @@ const AboutPage = () => {
       {loading ? (
         <div className="loading-overlay">
           <Navbar />
-          {/* <GridLoader color={"#8aabc4"} loading={loading} size={20} /> */}
           <div className="logo-container">
             <img src={logo} alt="" className="loading-logo" />
           </div>
@@ -73,7 +62,7 @@ const AboutPage = () => {
           <div className="content-wrapper z-3">
             <Navbar />
 
-            <div className="header-container d-flex flex-column  justify-content-center align-items-center z-3 " >
+            <div className="header-container d-flex flex-column  justify-content-center align-items-center z-3 ">
               <img
                 src={aboutIcon}
                 alt="aboutIcon"
@@ -247,16 +236,20 @@ const AboutPage = () => {
             <div
               className=" d-flex  rating-container z-3 anitext"
               style={{
-                padding:'10vh 10%',
-                height:'100%',
+                padding: "10vh 10%",
+                height: "100%",
                 backgroundColor: "var(--secondary-bg)",
                 position: "relative",
               }}
             >
               <h1 className="m-md-1 main-heading aboutPage">
-                <WhyMarketeer pageContent={`Nothing has such power to broaden the mind as the ability to
+                <WhyMarketeer
+                  pageContent={`Nothing has such power to broaden the mind as the ability to
                 investigate systematically and truly all that comes under thy
-                observation in life.`} contentFontSize={'3.5rem'} contentColor={'white'}/>
+                observation in life.`}
+                  contentFontSize={"3.5rem"}
+                  contentColor={"white"}
+                />
               </h1>
               {/* <h1 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>
                 Nothing has such power to broaden the mind as the ability to

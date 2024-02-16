@@ -5,9 +5,9 @@ import blog2 from "../assets/blog-image2.png";
 import blog3 from "../assets/blog3.png";
 import { Link } from "react-router-dom";
 
-const Blogs = () => {
+const Blogs = ({ blogData }) => {
   const [isSuccess, setIsSuccess] = useState(false);
-
+  console.log(blogData);
   function Submit(e) {
     e.preventDefault();
     const formEle = document.querySelector("form");
@@ -34,18 +34,6 @@ const Blogs = () => {
       });
   }
 
-  const blogData = [
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-  ];
-
   // useEffect(() => {
   //   console.log("Page loaded, scrolling to top");
   //   window.scroll({
@@ -56,8 +44,14 @@ const Blogs = () => {
   // }, []);
 
   return (
-    <div className=" z-3 position-relative bg-white rating-container gap-4 p-md-5 landPage-main-div" style={{margin:0}}>
-      <div style={{ paddingLeft: "7%", paddingRight: "7%" }} className="landPageBlog">
+    <div
+      className=" z-3 position-relative bg-white rating-container gap-4 p-md-5 landPage-main-div"
+      style={{ margin: 0 }}
+    >
+      <div
+        style={{ paddingLeft: "7%", paddingRight: "7%" }}
+        className="landPageBlog"
+      >
         <div className="d-flex justify-content-between align-items-center">
           <h1
             className="pt-3 pb-3 blog-headline "
@@ -94,142 +88,65 @@ const Blogs = () => {
           </div>
         </div>
         <div className="cols blog-sm d-flex gap-4 justify-content-center align-items-start ">
-          <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage">
-            <Link
-              to={{
-                pathname: "/blogs/1",
-              }}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <div>
-                <div className="blogsOnLandingPage-imgDiv">
-                  <img
-                    src={blog}
-                    alt="img blog-img-sm"
-                    className=" blog w-100"
-                  />
-                  <h6>Read more</h6>
-                </div>
+          {blogData.map((element, idx) => {
+            return (
+              <div
+                className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage"
+                key={idx}
+              >
+                <Link
+                  to={{
+                    pathname: element.blogUrl,
+                  }}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <div>
+                    <div className="blogsOnLandingPage-imgDiv">
+                      <img
+                        src={element.image}
+                        alt="img blog-img-sm"
+                        className=" blog w-100"
+                      />
+                      <h6>Read more</h6>
+                    </div>
 
-                <div className="d-flex justify-content-between">
-                  <p
-                    className="pt-2"
-                    style={{ color: "var(--text-color)", fontSize: "1rem" }}
-                  >
-                    Blog
-                  </p>
-                  <p
-                    className="pt-2"
-                    style={{ color: "var(--text-color)", fontSize: "1rem" }}
-                  >
-                    October 23, 2023
-                  </p>
-                </div>
-                <h4
-                  style={{ color: "var(--primary-text)", fontSize: "1.75rem" }}
-                >
-                  Startup Market Sizing: Founder's Guide to TAM ... 
-                  {/* Startup Market Sizing: Founder's Guide to TAM SAM SOM */}
-                </h4>
-                <div
-                  className="btn mt-md-4"
-                  style={{ color: "var(--text-color)", cursor: "pointer" }}
-                >
-                  Pay-Per-Click Advertising (PPC)
-                </div>
+                    <div className="d-flex justify-content-between">
+                      <p
+                        className="pt-2"
+                        style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                      >
+                        Blog
+                      </p>
+                      <p
+                        className="pt-2"
+                        style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                      >
+                        {element.date}
+                      </p>
+                    </div>
+                    <h4
+                      style={{
+                        color: "var(--primary-text)",
+                        fontSize: "1.75rem",
+                      }}
+                    >
+                      {element.title.slice(0,40)}{element.title.length > 40 && '...'}
+                      {/* Startup Market Sizing: Founder's Guide to TAM SAM SOM */}
+                    </h4>
+                    <div
+                      className="btn mt-md-4"
+                      style={{ color: "var(--text-color)", cursor: "pointer" }}
+                    >
+                      {element.category}
+                    </div>
+                  </div>
+                </Link>
               </div>
-            </Link>
-          </div>
-
-          <div className="col-12 col-md-4 col-lg-4 d-flex flex-column  blogsOnLandingPage">
-            <Link
-              to={{ pathname: "/blogs/2" }}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <div>
-                <div className="blogsOnLandingPage-imgDiv">
-                  <img
-                    src={blog2}
-                    alt="img blog-img-sm"
-                    className=" blog w-100"
-                  />
-                  <h6>Read more</h6>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <p
-                    className="pt-2"
-                    style={{ color: "var(--text-color)", fontSize: "1rem" }}
-                  >
-                    Blog
-                  </p>
-                  <p
-                    className="pt-2"
-                    style={{ color: "var(--text-color)", fontSize: "1rem" }}
-                  >
-                    October 2, 2023
-                  </p>
-                </div>
-                <h4
-                  style={{ color: "var(--primary-text)", fontSize: "1.75rem" }}
-                >
-                  7 Simple Steps to Ace Your Startup Market Research
-                </h4>
-                <div
-                  className="btn mt-md-4"
-                  style={{ color: "var(--text-color)", cursor: "initial" }}
-                >
-                  Email and SMS Marketing
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage ">
-            <Link
-              to={{ pathname: "/blogs/3" }}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <div className="">
-                <div className="blogsOnLandingPage-imgDiv">
-                  <img
-                    src={blog3}
-                    alt="img blog-img-sm"
-                    className=" blog w-100"
-                  />
-                  <h6>Read more</h6>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <p
-                    className="pt-2"
-                    style={{ color: "var( --text-color)", fontSize: "1rem" }}
-                  >
-                    Blog
-                  </p>
-                  <p
-                    className="pt-2"
-                    style={{ color: "var( --text-color)", fontSize: "1rem" }}
-                  >
-                    September 27, 2023
-                  </p>
-                </div>
-                <h4
-                  style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}
-                >
-                  Research and Planning for a New Business in 4 Steps
-                </h4>
-                <div
-                  className="btn mt-md-4"
-                  style={{ color: "var(--text-color)", cursor: "initial" }}
-                >
-                  Influencer Marketing
-                </div>
-              </div>
-            </Link>
-          </div>
+            );
+          })}
         </div>
       </div>
 
-      
       {/* form section  */}
       <form className="form" onSubmit={(e) => Submit(e)}>
         {isSuccess ? (
@@ -320,7 +237,7 @@ const Blogs = () => {
                       style={{
                         rotate: "180deg",
                         marginLeft: "0.5rem",
-                        marginRight:'2rem'
+                        marginRight: "2rem",
                       }}
                     />
                   </span>
@@ -416,3 +333,138 @@ const Blogs = () => {
 };
 
 export default Blogs;
+
+// <div className="cols blog-sm d-flex gap-4 justify-content-center align-items-start ">
+//           <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage">
+//             <Link
+//               to={{
+//                 pathname: "/blogs/1",
+//               }}
+//               style={{ textDecoration: "none", color: "inherit" }}
+//             >
+//               <div>
+//                 <div className="blogsOnLandingPage-imgDiv">
+//                   <img
+//                     src={blog}
+//                     alt="img blog-img-sm"
+//                     className=" blog w-100"
+//                   />
+//                   <h6>Read more</h6>
+//                 </div>
+
+//                 <div className="d-flex justify-content-between">
+//                   <p
+//                     className="pt-2"
+//                     style={{ color: "var(--text-color)", fontSize: "1rem" }}
+//                   >
+//                     Blog
+//                   </p>
+//                   <p
+//                     className="pt-2"
+//                     style={{ color: "var(--text-color)", fontSize: "1rem" }}
+//                   >
+//                     October 23, 2023
+//                   </p>
+//                 </div>
+//                 <h4
+//                   style={{ color: "var(--primary-text)", fontSize: "1.75rem" }}
+//                 >
+//                   Startup Market Sizing: Founder's Guide to TAM ...
+//                   {/* Startup Market Sizing: Founder's Guide to TAM SAM SOM */}
+//                 </h4>
+//                 <div
+//                   className="btn mt-md-4"
+//                   style={{ color: "var(--text-color)", cursor: "pointer" }}
+//                 >
+//                   Pay-Per-Click Advertising (PPC)
+//                 </div>
+//               </div>
+//             </Link>
+//           </div>
+
+//           <div className="col-12 col-md-4 col-lg-4 d-flex flex-column  blogsOnLandingPage">
+//             <Link
+//               to={{ pathname: "/blogs/2" }}
+//               style={{ textDecoration: "none", color: "inherit" }}
+//             >
+//               <div>
+//                 <div className="blogsOnLandingPage-imgDiv">
+//                   <img
+//                     src={blog2}
+//                     alt="img blog-img-sm"
+//                     className=" blog w-100"
+//                   />
+//                   <h6>Read more</h6>
+//                 </div>
+//                 <div className="d-flex justify-content-between">
+//                   <p
+//                     className="pt-2"
+//                     style={{ color: "var(--text-color)", fontSize: "1rem" }}
+//                   >
+//                     Blog
+//                   </p>
+//                   <p
+//                     className="pt-2"
+//                     style={{ color: "var(--text-color)", fontSize: "1rem" }}
+//                   >
+//                     October 2, 2023
+//                   </p>
+//                 </div>
+//                 <h4
+//                   style={{ color: "var(--primary-text)", fontSize: "1.75rem" }}
+//                 >
+//                   7 Simple Steps to Ace Your Startup Market Research
+//                 </h4>
+//                 <div
+//                   className="btn mt-md-4"
+//                   style={{ color: "var(--text-color)", cursor: "initial" }}
+//                 >
+//                   Email and SMS Marketing
+//                 </div>
+//               </div>
+//             </Link>
+//           </div>
+
+//           <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage ">
+//             <Link
+//               to={{ pathname: "/blogs/3" }}
+//               style={{ textDecoration: "none", color: "inherit" }}
+//             >
+//               <div className="">
+//                 <div className="blogsOnLandingPage-imgDiv">
+//                   <img
+//                     src={blog3}
+//                     alt="img blog-img-sm"
+//                     className=" blog w-100"
+//                   />
+//                   <h6>Read more</h6>
+//                 </div>
+//                 <div className="d-flex justify-content-between">
+//                   <p
+//                     className="pt-2"
+//                     style={{ color: "var( --text-color)", fontSize: "1rem" }}
+//                   >
+//                     Blog
+//                   </p>
+//                   <p
+//                     className="pt-2"
+//                     style={{ color: "var( --text-color)", fontSize: "1rem" }}
+//                   >
+//                     September 27, 2023
+//                   </p>
+//                 </div>
+//                 <h4
+//                   style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}
+//                 >
+//                   Research and Planning for a New Business in 4 Steps
+//                 </h4>
+//                 <div
+//                   className="btn mt-md-4"
+//                   style={{ color: "var(--text-color)", cursor: "initial" }}
+//                 >
+//                   Influencer Marketing
+//                 </div>
+//               </div>
+//             </Link>
+//           </div>
+//         </div>

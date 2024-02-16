@@ -13,32 +13,23 @@ import trackrecordimg from "../assets/tractrecordimg.svg";
 import "./Ratings.css";
 import {motion, useScroll, useTransform} from 'framer-motion'
 import { duration } from "@mui/material";
-const Ratings = ({ targetRef }) => {
+const Ratings = () => {
   const ref = useRef(null);
   const {scrollYProgress} = useScroll({
     target:ref,
     offset:['0 1', '1 1']
   })
   const y = useTransform(scrollYProgress,[0.1,0.9],['-200%','100%'])
-  const handleSidecutClick = () => {
-    if (targetRef.current) {
-      const yOffset = -60;
-      const y =
-        targetRef.current.getBoundingClientRect().top +
-        window.pageYOffset +
-        yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  };
+  
 
-  // useEffect(() => {
-  //   console.log("Page loaded, scrolling to top");
-  //   window.scroll({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  useEffect(() => {
+    console.log("Page loaded, scrolling to top");
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <motion.div ref={ref} className="position-relative">
@@ -214,7 +205,6 @@ const Ratings = ({ targetRef }) => {
         alt="arrowDown"
         className="arrowDown position-absolute bottom-50 z-3"
         style={{ right: "1.2%", cursor: "pointer",y }}
-        onClick={handleSidecutClick}
       />
     </motion.div>
   );

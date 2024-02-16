@@ -1,7 +1,4 @@
-.rating-container {
-  border-radius: 2rem;
-  margin: 2%;
-}
+
 .hoverToSpin:hover .rotating-icon{
   animation-name: spinIcon;
   animation-duration: 3s;

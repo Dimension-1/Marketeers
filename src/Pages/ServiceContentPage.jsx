@@ -37,14 +37,14 @@ const ServiceContentPage = () => {
     });
   };
 
-  // useEffect(() => {
-  //   console.log("Page loaded, scrolling to top");
-  //   window.scroll({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  useEffect(() => {
+    console.log("Page loaded, scrolling to top");
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   // Find the selected service data from the JSON
   const selectedService = serviceData.services.find(
@@ -74,10 +74,10 @@ const ServiceContentPage = () => {
   return (
     <div className="w-100 img-container position-relative overflow-x-hidden">
       <Navbar />
-      <div className="header-container d-flex flex-column  gap-1 mb-lg-5 mt-5">
+      <div className="header-container d-flex flex-column  gap-1 mb-lg-5 mt-5 noPaddingAtMobile">
         <div
           className="service-detailedContent"
-          style={{ marginLeft: "5%", marginRight: "15%", padding: "2%" }}
+          style={{ marginLeft: "5%", marginRight: "5%", padding: "2%",marginBottom:'1rem' }}
         >
           <Link to={'/services'}
             className="btn mt-md-4 button-bigt"
@@ -94,7 +94,7 @@ const ServiceContentPage = () => {
             {selectedService.headline}
           </Link>
 
-          <h1 className=" main-heading text-light-bg font-7 slide-up">
+          <h1 className=" main-heading text-light-bg font-5 slide-up mt-4">
             {selectedService.heading}
           </h1>
           <p
@@ -104,23 +104,24 @@ const ServiceContentPage = () => {
             {selectedService.subheading}
           </p>
         </div>
-
+{/* -------------------------------------------- */}
         <div
-          className="service-needs d-flex  rating-container z-3 position-relative justify-content-between"
+          className="service-needs d-flex  rating-container z-3 position-relative justify-content-between noMarginAtMobile "
           style={{
             paddingTop: "10%",
             paddingBottom: "10%",
             backgroundColor: "var(--secondary-bg)",
-            paddingInline: "5%",
+            paddingInline: "10%",
           }}
         >
           <div
-            className="heading faq-heading sticky-top col-md-6 col-12 z-3 fw-medium mb-sm-4"
+            className="heading faq-heading sticky-top col-md-6 col-12 z-3 fw-medium mb-sm-4  "
             style={{
               color: "var(--background-color)",
               fontSize: "4.5rem",
               zIndex: "1000",
               lineHeight: "1",
+              paddingTop:'1rem'
             }}
           >
             Why you need the service
@@ -164,7 +165,7 @@ const ServiceContentPage = () => {
               ))}
           </ul>
         </div>
-
+{/* ---------------------------------------------- */}
         <div class="container-small">
           <div class="single__wrapper">
             <div class="column-50 flex-vertical is-single-process">
@@ -235,7 +236,7 @@ const ServiceContentPage = () => {
         </div>
         {/* whyus------------------------------ */}
         <div
-          className="d-flex flex-column text-light-bg gap-4"
+          className="d-flex flex-column text-light-bg gap-4 "
           style={{ padding: "5%" }}
         >
           <h1 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>
@@ -285,7 +286,7 @@ const ServiceContentPage = () => {
         </div>
         {/* ------------------------------- */}
         <div
-          className=" service-needs d-flex  rating-container z-3 position-relative justify-content-between "
+          className=" service-needs d-flex  rating-container z-3 position-relative justify-content-between noMarginAtMobile"
           style={{
             marginTop: "10%",
             marginBottom: "10%",
@@ -316,7 +317,7 @@ const ServiceContentPage = () => {
                         "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
                       transformStyle: "preserve-3d",
                       opacity: "1",
-                      transitionDuration: "100ms",
+                      transitionDuration: "200ms",
                       transitionBehavior: "normal",
                     }}
                     initial={{ y: "50%", opacity: 0 }}
@@ -339,7 +340,7 @@ const ServiceContentPage = () => {
                       transformStyle: "preserve-3d",
                       opacity: "1",
                       backgroundColor: "var(--bg-color)",
-                      transitionDuration: "100ms",
+                      transitionDuration: "200ms",
                       transitionBehavior: "normal",
                     }}
                     initial={{ y: "50%", opacity: 0 }}
@@ -365,7 +366,7 @@ const ServiceContentPage = () => {
                       transformStyle: "preserve-3d",
                       opacity: "1",
                       backgroundColor: "white",
-                      transitionDuration: "100ms",
+                      transitionDuration: "200ms",
                       transitionBehavior: "normal",
                     }}
                     initial={{ y: "50%", opacity: 0 }}
@@ -389,7 +390,7 @@ const ServiceContentPage = () => {
                       transformStyle: "preserve-3d",
                       opacity: "1",
                       backgroundColor: "#8aabc3",
-                      transitionDuration: "100ms",
+                      transitionDuration: "200ms",
                       transitionBehavior: "normal",
                     }}
                     initial={{ y: "50%", opacity: 0 }}
@@ -414,7 +415,7 @@ const ServiceContentPage = () => {
         {/* -------------------------------- */}
         <div
           className="service-box-container  d-flex justify-content-center d-flex flex-column align-items-center"
-          style={{ paddingTop: "10rem", paddingBottom: "10rem" }}
+          style={{ paddingTop: "10rem", paddingBottom: "10rem" ,paddingInline:'3%'}}
         >
           <h1 className="text-light-bg mb-4 text-align-end d-flex align-items-end flex-column">
             {selectedService &&
