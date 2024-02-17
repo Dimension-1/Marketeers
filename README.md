@@ -22,23 +22,15 @@ NOTE: PROJECT SETUP GUIDE (IF YOU WANT TO CLONE THE REPO IN THE LOCAL SYSTEM)
    - Replace `<project_directory>` with the name of the directory created during cloning.
 
 3. **Install Dependencies**: 
-   - If the project uses npm:
+   - The project uses npm:
      ```
      npm install
-     ```
-   - If it uses Yarn:
-     ```
-     yarn install
      ```
 
 4. **Start Development Server**: 
    - Start the development server:
      ```
      npm start
-     ```
-     or
-     ```
-     yarn start
      ```
 
 5. **View the Application**: 
