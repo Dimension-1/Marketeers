@@ -13,6 +13,7 @@ NOTE: PROJECT SETUP GUIDE (IF YOU WANT TO CLONE THE REPO IN THE LOCAL SYSTEM)
 1. **Clone the Repository**: 
    - Clone the project repository using Git:
      git clone <repository_url>
+   - To get the repository_url: : <a href="https://github.com/Dimension-1/Marketeers">Click Here</a>
 
 2. **Navigate to Project Directory**: 
    - Open your terminal/command prompt and navigate to the cloned project directory:
