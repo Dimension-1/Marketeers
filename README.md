@@ -39,8 +39,8 @@ NOTE: PROJECT SETUP GUIDE (IF YOU WANT TO CLONE THE REPO IN THE LOCAL SYSTEM)
 5. **View the Application**: 
    - Once the server starts, open your web browser and navigate to `http://localhost:3000` (or another specified port) to view the React application.
 
-6. **Additional Setup for Animation, Data Fetching, and Swiper.js**:
+ **Additional Setup for Animation, Data Fetching, and Swiper.js**:
    - For animation using Framer Motion, data fetching with Axios, and implementing sliders with Swiper.js, ensure that these dependencies are already included in your `package.json` file.
    - You may need to import and configure these libraries in your React components according to their respective documentation.
-   - For Swiper.js, make sure to follow the setup instructions provided in the Swiper.js documentation to initialize and customize your sliders.
+   - Ensure that your Axios requests are properly configured to connect to your Google Sheet or any other API endpoint for dynamic content generation.
 
