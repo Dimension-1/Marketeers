@@ -18,11 +18,13 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000);
     axios
       .get("https://sheetdb.io/api/v1/hdreqxp52ghx1")
       .then((data) => {
         setBlogData(data.data);
-        setLoading(false)
       })
       .catch((error) => {
         console.log(error);
@@ -35,7 +37,8 @@ function App() {
     <div style={{ background: "var(--bg-color)" }}>
       <Router>
         <Routes>
-          <Route path="/" element={loading? <Loading/> : <LandingPage blogData={blogData.slice(0, 3)}/>} />
+          <Route path="/" element={<LandingPage blogData={blogData.slice(0, 3)}/>} />
+          {/* <Route path="/" element={loading? <Loading/> : <LandingPage blogData={blogData.slice(0, 3)}/>} /> */}
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/about" element={<AboutPage />} />

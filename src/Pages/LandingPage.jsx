@@ -15,17 +15,19 @@ import greaterThan from "../assets/greater-than.svg";
 import asterisk from "../assets/asterisk.svg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "../style.css";
+import Loading from "../Components/Loading";
 // ----------------------------------------------
-const LandingPage = ({blogData}) => {
+const LandingPage = ({ blogData }) => {
   const targetRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
-
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
+      setLoading(false);
+    }, 1000);
   }, []);
 
   const ref = useRef(null); // Create a ref for the sidecut image
@@ -44,166 +46,166 @@ const LandingPage = ({blogData}) => {
 
   return (
     <>
-     
-        <>
-          <div className="main main-content">
-            <Navbar />
-            <div
-              className={` w-full m-4  pb-3 img-container position-relative ${
-                isHovered ? "blur" : ""
-              }`}
-            >
-              <motion.div ref={ref}>
-                <div className="img-overlay position-absolute right-0 z-1">
-                  <img src={image} alt="" className="" />
-                </div>
-                <div className="img-overlay-2 position-absolute">
-                  <img src={image} alt="" className="" />
-                </div>
-                <div className="content-wrapper" style={{ zIndex: "800" }}>
-                  <div className="header-container vh-90 d-flex justify-content-center align-items-center">
-                    <div className="header text-center d-flex justify-content-center align-items-center flex-column">
-                      <h4
-                        className="mb-0"
-                        style={{ color: "var(--text-color)", fontSize: "1rem" }}
-                      >
-                        Crafting Campaigns That Captivate & Convert
-                      </h4>
-                      <h1 className="p-3 main-heading text-light-bg font-5">
-                        Empowering
+    {  loading && <Loading />}
+      <>
+        <div className="main main-content">
+          <Navbar />
+          <div
+            className={` w-full m-4  pb-3 img-container position-relative ${
+              isHovered ? "blur" : ""
+            }`}
+          >
+            <motion.div ref={ref}>
+              <div className="img-overlay position-absolute right-0 z-1">
+                <img src={image} alt="" className="" />
+              </div>
+              <div className="img-overlay-2 position-absolute">
+                <img src={image} alt="" className="" />
+              </div>
+              <div className="content-wrapper" style={{ zIndex: "800" }}>
+                <div className="header-container vh-90 d-flex justify-content-center align-items-center">
+                  <div className="header text-center d-flex justify-content-center align-items-center flex-column">
+                    <h4
+                      className="mb-0"
+                      style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                    >
+                      Crafting Campaigns That Captivate & Convert
+                    </h4>
+                    <h1 className="p-3 main-heading text-light-bg font-5">
+                      Empowering
+                      <img
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                        src={asterisk}
+                        alt="star"
+                        className="svg-icon custom-button "
+                        style={{ padding: "1.1rem 3rem" }}
+                      />
+                      <span className="d-flex m-0 align-items-center  text-color ">
                         <img
-                          onMouseEnter={() => setIsHovered(true)}
-                          onMouseLeave={() => setIsHovered(false)}
-                          src={asterisk}
-                          alt="star"
-                          className="svg-icon custom-button "
-                          style={{ padding: "1.1rem 3rem" }}
+                          src="https://assets-global.website-files.com/63793925c7db23ce040b0824/64f5c38109cfeef5f12e09ae_Image.jpg"
+                          alt="button"
+                          className=" svg-icon custom-button-2 hero-section-headingImg"
                         />
-                        <span className="d-flex m-0 align-items-center  text-color ">
-                          <img
-                            src="https://assets-global.website-files.com/63793925c7db23ce040b0824/64f5c38109cfeef5f12e09ae_Image.jpg"
-                            alt="button"
-                            className=" svg-icon custom-button-2 hero-section-headingImg"
-                          />
-                          <motion.span
-                            className="switch hero-section-buisnessFor pc-element"
-                            style={{
-                              color: "var(--main-text-color)",
-                              y: buisnessForY,
-                              x: buisnessForX,
-                            }}
-                          >
-                            Businesses for
-                          </motion.span>
-                          <motion.span
-                            className="switch hero-section-buisnessFor mobile-element"
-                            style={{
-                              color: "var(--main-text-color)",
-                              y: mobileForY,
-                            }}
-                          >
-                            Businesses for
-                          </motion.span>
-                        </span>
                         <motion.span
-                          className="text-color switch  align-items-center pc-element"
+                          className="switch hero-section-buisnessFor pc-element"
                           style={{
                             color: "var(--main-text-color)",
                             y: buisnessForY,
-                            x: marketLeadershipX,
-                            display:'flex'
+                            x: buisnessForX,
                           }}
                         >
-                          Market Leadership
-                          <img
-                            src={greaterThan}
-                            alt="star"
-                            className="svg-icon none custom-button"
-                            style={{ padding: "1.1rem 3rem" }}
-                          />
+                          Businesses for
                         </motion.span>
                         <motion.span
-                          className="text-color switch   mobile-element"
+                          className="switch hero-section-buisnessFor mobile-element"
                           style={{
                             color: "var(--main-text-color)",
                             y: mobileForY,
-                            display:'flex',
                           }}
                         >
-                          Market Leadership
+                          Businesses for
                         </motion.span>
-                      </h1>
-                    </div>
-
-                    <img
-                      src={Sidecut}
-                      alt="Sidecut"
-                      className="sidecut-image position-absolute bottom-0"
-                      style={{
-                        right: "2.5%",
-                        width: "8%",
-                        cursor: "pointer",
-                        fill: "white",
-                      }}
-                      onClick={() =>
-                        window.scrollTo({
-                          top: window.innerHeight + 300,
-                          behavior: "smooth",
-                        })
-                      }
-                    />
+                      </span>
+                      <motion.span
+                        className="text-color switch  align-items-center pc-element"
+                        style={{
+                          color: "var(--main-text-color)",
+                          y: buisnessForY,
+                          x: marketLeadershipX,
+                          display: "flex",
+                        }}
+                      >
+                        Market Leadership
+                        <img
+                          src={greaterThan}
+                          alt="star"
+                          className="svg-icon none custom-button"
+                          style={{ padding: "1.1rem 3rem" }}
+                        />
+                      </motion.span>
+                      <motion.span
+                        className="text-color switch   mobile-element"
+                        style={{
+                          color: "var(--main-text-color)",
+                          y: mobileForY,
+                          display: "flex",
+                        }}
+                      >
+                        Market Leadership
+                      </motion.span>
+                    </h1>
                   </div>
+
+                  <img
+                    src={Sidecut}
+                    alt="Sidecut"
+                    className="sidecut-image position-absolute bottom-0"
+                    style={{
+                      right: "2.5%",
+                      width: "8%",
+                      cursor: "pointer",
+                      fill: "white",
+                    }}
+                    onClick={() =>
+                      window.scrollTo({
+                        top: window.innerHeight + 300,
+                        behavior: "smooth",
+                      })
+                    }
+                  />
                 </div>
-                <div
-                  className="spacer vh-50 pc-element"
-                  style={{ marginBottom: "100vh" }}
-                ></div>
-                <div
-                  className="spacer vh-50 mobile-element"
-                  style={{ marginBottom: "50vh" }}
-                ></div>
-                <div
-                  className="green-border d-flex justify-content-center pt-0 z-3 position-sticky green-border-landingPage"
-                  style={{
-                    left: "50%",
-                    marginRight: "1rem",
-                    marginLeft: "1rem",
-                  }}
-                ></div>
-                {/* hero section ends here with the animation part------------- */}
-              </motion.div>
-              <div id="sidecut">
-                <WhyMarketeer
-                  pageTitle="Why we exist?"
-                  pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
-                />
               </div>
-
-              <Services title="Services" displayCard={true} />
-              <Ratings targetRef={targetRef} />
-              <WhyUs targetRef={targetRef} />
-
-              <WhoTrustsUs />
-              <Testimonials />
-
-              <Blogs blogData={blogData}/>
-              <Contact
-                title="Interested but don’t know where to start?"
-                fontSize="2.63rem"
+              <div
+                className="spacer vh-50 pc-element"
+                style={{ marginBottom: "100vh" }}
+              ></div>
+              <div
+                className="spacer vh-50 mobile-element"
+                style={{ marginBottom: "50vh" }}
+              ></div>
+              <div
+                className="green-border d-flex justify-content-center pt-0 z-3 position-sticky green-border-landingPage"
+                style={{
+                  left: "50%",
+                  marginRight: "1rem",
+                  marginLeft: "1rem",
+                }}
+              ></div>
+              {/* hero section ends here with the animation part------------- */}
+            </motion.div>
+            <div id="sidecut">
+              <WhyMarketeer
+                pageTitle="Why we exist?"
+                pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
               />
+            </div>
 
-              <Footer />
-            </div>
+            <Services title="Services" displayCard={true} />
+            <Ratings targetRef={targetRef} />
+            <WhyUs targetRef={targetRef} />
+
+            <WhoTrustsUs />
+            <Testimonials />
+
+            <Blogs blogData={blogData} />
+            <Contact
+              title="Interested but don’t know where to start?"
+              fontSize="2.63rem"
+            />
+
+            <Footer />
           </div>
-          {isHovered && (
-            <div className={`hover-text ${isHovered ? "active" : ""}`}>
-              <p>
-                <span style={{ fontWeight: "bold" }}>Marketeers</span>: Your
-                Vision, Our Expertise – We Are Your Marketing Architects.
-              </p>
-            </div>
-          )}
-        </>
+        </div>
+        {isHovered && (
+          <div className={`hover-text ${isHovered ? "active" : ""}`}>
+            <p>
+              <span style={{ fontWeight: "bold" }}>Marketeers</span>: Your
+              Vision, Our Expertise – We Are Your Marketing Architects.
+            </p>
+          </div>
+        )}
+      </>
     </>
   );
 };

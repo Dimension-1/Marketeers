@@ -81,7 +81,7 @@ const ServicesPage = () => {
           <div className="content-wrapper ">
             <Navbar />
             <div className="header-container d-flex flex-column  justify-content-center align-items-center">
-              <h1 className=" p-4 main-heading text-light-bg font-5 mt-4 slide-up ">
+              <h1 style={{marginInline:'5%'}} className=" p-4 main-heading text-light-bg font-5 mt-4 slide-up ">
                 Your biggest business challenges.{" "}
                 <span style={{ color: "var(--main-text-color)" }}>Solved.</span>{" "}
               </h1>
