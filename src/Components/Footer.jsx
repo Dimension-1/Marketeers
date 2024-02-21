@@ -171,7 +171,7 @@ const Footer = () => {
           className="col-6 d-flex footer-font text-light footer-sm-2"
           style={{ opacity: "0.6" }}
         >
-          Build by Marketeers
+          Build by Dimension1
         </div>
         <div
           className="col-6 d-flex justify-content-end footer-font align-items-center gap-3 text-light"

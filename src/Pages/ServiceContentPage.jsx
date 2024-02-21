@@ -74,7 +74,7 @@ const ServiceContentPage = () => {
   return (
     <div className="w-100 img-container position-relative overflow-x-hidden">
       <Navbar />
-      <div className="header-container d-flex flex-column  gap-1 mb-lg-5 mt-5 noPaddingAtMobile">
+      <div className="header-container d-flex flex-column  gap-1 mb-lg-5 mt-4rem noPaddingAtMobile">
         <div
           className="service-detailedContent"
           style={{ marginLeft: "5%", marginRight: "5%", padding: "2%",marginBottom:'1rem' }}

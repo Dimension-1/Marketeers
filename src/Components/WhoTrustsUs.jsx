@@ -67,7 +67,7 @@ const WhoTrustsUs = () => {
               return (
                 <motion.div
                   whileInView={{ scale: 1 }}
-                  initial={{ scale: 0.8 }}
+                  initial={{ scale:0 }}
                   transition={{ duration: 1 }}
                   delay={12 - idx}
                   style={{ aspectRatio: 1 / 1.2, width: "90%", height: "100%" }}
@@ -141,7 +141,7 @@ const WhoTrustsUs = () => {
           <motion.div
             className="col-4 col-lg-2 "
             whileInView={{ scale: 1 }}
-            initial={{ scale: 0.8 }}
+            initial={{ scale: 0 }}
             transition={{ duration: 1 }}
             delay={1} // Delay of 1 second
           >
@@ -165,7 +165,7 @@ const WhoTrustsUs = () => {
           <motion.div
             className="col-4 mt-sm col-lg-2 "
             whileInView={{ scale: 1 }}
-            initial={{ scale: 0.8 }}
+            initial={{ scale:0 }}
             transition={{ duration: 1 }}
             delay={2.5}
           >
@@ -192,7 +192,7 @@ const WhoTrustsUs = () => {
           <motion.div
             className="col-4 mt-sm col-lg-2 "
             whileInView={{ scale: 1 }}
-            initial={{ scale: 0.8 }}
+            initial={{ scale:0 }}
             transition={{ duration: 1 }}
             delay={3.9}
           >
@@ -221,7 +221,7 @@ const WhoTrustsUs = () => {
           <motion.div
             className="col-4 col-lg-2"
             whileInView={{ scale: 1 }}
-            initial={{ scale: 0.8 }}
+            initial={{ scale:0 }}
             transition={{ duration: 1 }}
             delay={4.2}
           >
@@ -248,7 +248,7 @@ const WhoTrustsUs = () => {
           <motion.div
             className="col-4 col-lg-2"
             whileInView={{ scale: 1 }}
-            initial={{ scale: 0.8 }}
+            initial={{ scale:0 }}
             transition={{ duration: 1 }}
             delay={2.7}
           >
@@ -272,7 +272,7 @@ const WhoTrustsUs = () => {
           <motion.div
             className="col-4 col-lg-2"
             whileInView={{ scale: 1 }}
-            initial={{ scale: 0.8 }}
+            initial={{ scale:0 }}
             transition={{ duration: 2 }}
             delay={1.4}
           >
@@ -294,14 +294,14 @@ const WhoTrustsUs = () => {
             </div>
           </motion.div>
         </div>
-        <motion.div
+        <div
           className="row mt-3"
-          whileInView={{ scale: 1 }}
-          initial={{ scale: 0.8 }}
-          transition={{ duration: 1 }}
-          delay={3.3}
+          
         >
-          <div className="col-4 col-lg-2">
+          <motion.div className="col-4 col-lg-2" whileInView={{ scale: 1 }}
+          initial={{ scale:0 }}
+          transition={{ duration: 1 }}
+          delay={3.3}>
             <div className="company-cards text-center d-flex justify-content-center align-items-center">
               <motion.div>
                 <img
@@ -318,14 +318,14 @@ const WhoTrustsUs = () => {
                 />
               </motion.div>
             </div>
-          </div>
+          </motion.div>
           <div className="col-4 col-lg-2">
             <div className="company-cards-border"></div>
           </div>
           <motion.div
             className="col-4 col-lg-2"
             whileInView={{ scale: 1 }}
-            initial={{ scale: 0.8 }}
+            initial={{ scale:0 }}
             transition={{ duration: 1 }}
             delay={4.5}
           >
@@ -352,7 +352,7 @@ const WhoTrustsUs = () => {
           <motion.div
             className="col-4 col-lg-2"
             whileInView={{ scale: 1 }}
-            initial={{ scale: 0.8 }}
+            initial={{ scale:0 }}
             transition={{ duration: 1 }}
             delay={1.7}
           >
@@ -373,7 +373,7 @@ const WhoTrustsUs = () => {
               </motion.div>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
 
         <img
           src={load}

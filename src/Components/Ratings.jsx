@@ -50,10 +50,10 @@ const Ratings = () => {
       >
         <div className=" sm-ratings pt-sm pt-md-5  col-lg-4 col-md-4  padding d-flex  " style={{width:'30%'}}>
           <div
-            className="card d-flex justify-content-between"
+            className="card d-flex justify-content-between hoverToScaleUp"
             style={{ height: "300px" }}
           >
-            <img src={stats} alt="img" className="align-self-end" />
+            <img src={stats} alt="img" className="align-self-end scaleUp-icon" />
             <div className="text-effect">
               <motion.h2
                 className="m-0 rating-sm"

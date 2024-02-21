@@ -16,6 +16,7 @@ import asterisk from "../assets/asterisk.svg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "../style.css";
 import Loading from "../Components/Loading";
+import Cookie from "../Components/Cookie";
 // ----------------------------------------------
 const LandingPage = ({ blogData }) => {
   const targetRef = useRef(null);
@@ -197,6 +198,7 @@ const LandingPage = ({ blogData }) => {
             <Footer />
           </div>
         </div>
+        <Cookie/>
         {isHovered && (
           <div className={`hover-text ${isHovered ? "active" : ""}`}>
             <p>

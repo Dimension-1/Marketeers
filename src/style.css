@@ -402,7 +402,9 @@ to {
 }
 
 
-
+.mt-4rem{
+  margin-top: 4.5rem !important;
+}
 .sticky {
   position: sticky;
   top: 0;
@@ -801,6 +803,7 @@ to {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 9999;
   text-align: center;
   transform: translateY(100%);
   /* Initially position it below the viewport */
@@ -897,7 +900,7 @@ to {
 }
 
 .swiper-slide {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   background-color: #cfdee9;
   padding: 2rem;
   padding-bottom: 1rem;
@@ -1017,7 +1020,7 @@ to {
   border-radius: 20px;
   background-image: linear-gradient(to right, #414344, #074a81);
   transform: translateY(100%);
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 
 .projectCard:hover .gradient {
@@ -1103,9 +1106,11 @@ to {
   color: white !important;
 }
 
+.contact-form input {
+  border: 1px solid rgba(128, 128, 128, 0) !important;
+}
 .contact-form input:hover {
   border: 1px solid grey !important;
-  /* box-sizing:content-box; */
 }
 
 .contact-form button:hover {
@@ -1350,7 +1355,9 @@ to {
   .content-wrapper {
     margin-top: 12% !important;
   }
-
+.cookie-mainDiv{
+  flex-direction: column;
+}
   .blog-content-container {
     margin-top: 18% !important;
   }
