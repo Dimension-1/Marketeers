@@ -18,7 +18,7 @@ export default function Services({ title, displayCard }) {
     target: ref,
     offset: ["0.7 1", "1.1 1"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ["200px", "-1200px"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["150px", "-1000px"]);
   const serviceCardsArray = [
     {
       serviceName: "Pay-Per-Click-Advertising",
@@ -43,11 +43,11 @@ export default function Services({ title, displayCard }) {
     {
       serviceName: "Customer Experience Strategy",
       image: SVG,
-    },
-    {
-      serviceName: "Marketing Consultation and Strategy",
-      image: marketing,
-    },
+      },
+      {
+        serviceName: "Marketing Consultation and Strategy",
+        image: marketing,
+      },
   ];
   return (
     <>
