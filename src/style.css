@@ -1169,7 +1169,7 @@ to {
   border-radius: 20px;
   background-image: linear-gradient(to right, #414344, #074a81);
   transform: translateY(100%);
-  transition: transform 0.3s;
+  transition: transform 0.2s;
 }
 
 .servicePage-card:hover .servicePage-card-gradient {
@@ -1222,6 +1222,13 @@ to {
 
 /* media queries -------------------------------------------> */
 
+@media (width>=1600px) {
+
+  .card-overflowing{
+    width: 90% !important;
+    margin-inline: 5% !important;
+  }
+}
 @media (width>=1450px) {
 
   .swiper {

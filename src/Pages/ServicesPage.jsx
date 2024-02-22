@@ -294,10 +294,10 @@ const ServicesPage = () => {
               </div>
 
               <div
-                className="services-container gallery d-flex gap-1 mb-md-5 marginTop-0"
+                className="services-container gallery d-flex gap-1 mb-md-5 marginTop-0 "
                 style={{ overflow: "hidden" }}
               >
-                <div className="cards d-flex flex-nowrap w-100 ">
+                <div className="cards d-flex flex-nowrap w-100 card-overflowing">
                   <Link
                     to={`/service/${encodeURIComponent(serviceName4)}`}
                     className="servicePage-box  d-flex justify-content-between flex-column servicePage-card"

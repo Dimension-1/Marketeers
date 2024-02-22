@@ -171,7 +171,9 @@ const Footer = () => {
           className="col-6 d-flex footer-font text-light footer-sm-2"
           style={{ opacity: "0.6" }}
         >
+          <Link to="https://www.dimension-1.com" target="_blank" style={{textDecoration:'none' , color:'inherit'}}>
           Build by Dimension1
+          </Link>
         </div>
         <div
           className="col-6 d-flex justify-content-end footer-font align-items-center gap-3 text-light"
