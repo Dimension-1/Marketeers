@@ -34,14 +34,14 @@ const Blogs = ({ blogData }) => {
       });
   }
 
-  // useEffect(() => {
-  //   console.log("Page loaded, scrolling to top");
-  //   window.scroll({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  useEffect(() => {
+    // console.log("Page loaded, scrolling to top");
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <div
@@ -333,138 +333,3 @@ const Blogs = ({ blogData }) => {
 };
 
 export default Blogs;
-
-// <div className="cols blog-sm d-flex gap-4 justify-content-center align-items-start ">
-//           <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage">
-//             <Link
-//               to={{
-//                 pathname: "/blogs/1",
-//               }}
-//               style={{ textDecoration: "none", color: "inherit" }}
-//             >
-//               <div>
-//                 <div className="blogsOnLandingPage-imgDiv">
-//                   <img
-//                     src={blog}
-//                     alt="img blog-img-sm"
-//                     className=" blog w-100"
-//                   />
-//                   <h6>Read more</h6>
-//                 </div>
-
-//                 <div className="d-flex justify-content-between">
-//                   <p
-//                     className="pt-2"
-//                     style={{ color: "var(--text-color)", fontSize: "1rem" }}
-//                   >
-//                     Blog
-//                   </p>
-//                   <p
-//                     className="pt-2"
-//                     style={{ color: "var(--text-color)", fontSize: "1rem" }}
-//                   >
-//                     October 23, 2023
-//                   </p>
-//                 </div>
-//                 <h4
-//                   style={{ color: "var(--primary-text)", fontSize: "1.75rem" }}
-//                 >
-//                   Startup Market Sizing: Founder's Guide to TAM ...
-//                   {/* Startup Market Sizing: Founder's Guide to TAM SAM SOM */}
-//                 </h4>
-//                 <div
-//                   className="btn mt-md-4"
-//                   style={{ color: "var(--text-color)", cursor: "pointer" }}
-//                 >
-//                   Pay-Per-Click Advertising (PPC)
-//                 </div>
-//               </div>
-//             </Link>
-//           </div>
-
-//           <div className="col-12 col-md-4 col-lg-4 d-flex flex-column  blogsOnLandingPage">
-//             <Link
-//               to={{ pathname: "/blogs/2" }}
-//               style={{ textDecoration: "none", color: "inherit" }}
-//             >
-//               <div>
-//                 <div className="blogsOnLandingPage-imgDiv">
-//                   <img
-//                     src={blog2}
-//                     alt="img blog-img-sm"
-//                     className=" blog w-100"
-//                   />
-//                   <h6>Read more</h6>
-//                 </div>
-//                 <div className="d-flex justify-content-between">
-//                   <p
-//                     className="pt-2"
-//                     style={{ color: "var(--text-color)", fontSize: "1rem" }}
-//                   >
-//                     Blog
-//                   </p>
-//                   <p
-//                     className="pt-2"
-//                     style={{ color: "var(--text-color)", fontSize: "1rem" }}
-//                   >
-//                     October 2, 2023
-//                   </p>
-//                 </div>
-//                 <h4
-//                   style={{ color: "var(--primary-text)", fontSize: "1.75rem" }}
-//                 >
-//                   7 Simple Steps to Ace Your Startup Market Research
-//                 </h4>
-//                 <div
-//                   className="btn mt-md-4"
-//                   style={{ color: "var(--text-color)", cursor: "initial" }}
-//                 >
-//                   Email and SMS Marketing
-//                 </div>
-//               </div>
-//             </Link>
-//           </div>
-
-//           <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage ">
-//             <Link
-//               to={{ pathname: "/blogs/3" }}
-//               style={{ textDecoration: "none", color: "inherit" }}
-//             >
-//               <div className="">
-//                 <div className="blogsOnLandingPage-imgDiv">
-//                   <img
-//                     src={blog3}
-//                     alt="img blog-img-sm"
-//                     className=" blog w-100"
-//                   />
-//                   <h6>Read more</h6>
-//                 </div>
-//                 <div className="d-flex justify-content-between">
-//                   <p
-//                     className="pt-2"
-//                     style={{ color: "var( --text-color)", fontSize: "1rem" }}
-//                   >
-//                     Blog
-//                   </p>
-//                   <p
-//                     className="pt-2"
-//                     style={{ color: "var( --text-color)", fontSize: "1rem" }}
-//                   >
-//                     September 27, 2023
-//                   </p>
-//                 </div>
-//                 <h4
-//                   style={{ color: "var( --primary-text)", fontSize: "1.75rem" }}
-//                 >
-//                   Research and Planning for a New Business in 4 Steps
-//                 </h4>
-//                 <div
-//                   className="btn mt-md-4"
-//                   style={{ color: "var(--text-color)", cursor: "initial" }}
-//                 >
-//                   Influencer Marketing
-//                 </div>
-//               </div>
-//             </Link>
-//           </div>
-//         </div>

@@ -637,6 +637,7 @@ const BlogContent = ({ blogData }) => {
                 </Link>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
