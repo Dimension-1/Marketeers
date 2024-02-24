@@ -224,7 +224,7 @@ const BlogContent = ({ blogData }) => {
         </div>
         <div className="row" style={{ paddingTop: "7%" }}>
           {/* sidebar */}
-          <div className="col-4 toc-column ">
+          <div className="col-4 toc-column position-sticky top-0">
             <button
               className="goBack-btn p-3 d-flex justify-content-between gap-2 button-bigt"
               onClick={goBack}
@@ -232,7 +232,7 @@ const BlogContent = ({ blogData }) => {
               <img src={goback} alt="" />
               Go Back
             </button>
-            <div className="green-border d-flex justify-content-center mt-5 z-3 position-sticky w-75"></div>
+            <div className="green-border d-flex justify-content-center mt-5 z-3  w-75"></div>
             <div className="subheading" style={{ paddingBottom: "1rem" }}>
               Table of contents
             </div>

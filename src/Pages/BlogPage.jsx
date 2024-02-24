@@ -75,7 +75,7 @@ const BlogPage = () => {
         </div>
       ) : (
         <div
-          className="d-flex justify-content-center flex-column overflow-hidden "
+          className="d-flex justify-content-center flex-column "
           style={{ background: "var(--bg-color)" }}
         >
           <Navbar />

@@ -103,7 +103,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
   }, []);
 
   return (
-    <div className="position-relative" style={{marginTop:'2rem'}}>
+    <div className="position-relative overflow-hidden " style={{marginTop:'2rem'}}>
       {showOverlayImage && (
         <div
           className="img-overlay position-absolute z-1"
