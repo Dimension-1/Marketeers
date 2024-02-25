@@ -490,9 +490,9 @@ const ServicesPage = () => {
               className="service-box-container  d-flex justify-content-center d-flex flex-column align-items-center"
               style={{ padding: "10rem 5%", }}
             >
-              <h1 className="text-light-bg mb-4">
+              <h2 className="text-light-bg mb-4">
                 Not seeing what you are looking for?
-              </h1>
+              </h2>
               <div
                 className="svg-icon d-flex servicePageButton"
                 style={{

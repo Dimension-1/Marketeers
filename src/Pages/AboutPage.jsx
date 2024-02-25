@@ -81,12 +81,12 @@ const AboutPage = () => {
                 style={{ right: "-1px", cursor: "pointer" }}
                 onClick={handleSidecutClick}
               />
-              <h1 className="mt-4 p-4 m-md-5 main-heading text-light-bg font-5 slide-up">
+              <h2 className="mt-4 p-4 m-md-5 main-heading text-light-bg font-5 slide-up">
                 Charting a Bold Course for 1,000 Businesses to Enrich{" "}
                 <span style={{ color: "var(--main-text-color)" }}>
                   1 Billion Lives.
                 </span>{" "}
-              </h1>
+              </h2>
               <WhyMarketeer
                 pageTitle="Our Mission
             "
@@ -99,9 +99,9 @@ const AboutPage = () => {
               className=" d-flex flex-column text-light-bg gap-4"
               style={{ padding: "5%" }}
             >
-              <h1 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>
+              <h2 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>
                 Our Values
-              </h1>
+              </h2>
 
               <div className="row d-flex justify-content-center align-items-baseline ">
                 <div className="col-6 col-lg-3 gap-3 d-flex flex-column">
@@ -242,7 +242,7 @@ const AboutPage = () => {
                 position: "relative",
               }}
             >
-              <h1 className="m-md-1 main-heading aboutPage">
+              <h2 className="m-md-1 main-heading aboutPage">
                 <WhyMarketeer
                   pageContent={`Nothing has such power to broaden the mind as the ability to
                 investigate systematically and truly all that comes under thy
@@ -250,12 +250,8 @@ const AboutPage = () => {
                   contentFontSize={"3.5rem"}
                   contentColor={"white"}
                 />
-              </h1>
-              {/* <h1 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>
-                Nothing has such power to broaden the mind as the ability to
-                investigate systematically and truly all that comes under thy
-                observation in life.
-              </h1> */}
+              </h2>
+             
               <img
                 src={apostophy}
                 alt="apostophy"

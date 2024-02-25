@@ -26,12 +26,12 @@ const Testimonials = () => {
           className="col-lg-5 col-12 p-lg-3 testimonials-section-1"
           style={{ display: "grid", placeContent: "center" }}
         >
-          <h1 className=" text-light-bg" style={{ fontSize: "5rem" }}>
+          <h2 className=" text-light-bg" style={{ fontSize: "5rem" }}>
             Hear it from
-          </h1>
-          <h1 className=" text-light-bg" style={{ fontSize: "5rem" }}>
+          </h2>
+          <h2 className=" text-light-bg" style={{ fontSize: "5rem" }}>
             our clients
-          </h1>
+          </h2>
           <button
             className="d-flex position-relative align-items-center justify-content-between "
             style={{

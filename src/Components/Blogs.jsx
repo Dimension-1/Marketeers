@@ -53,7 +53,7 @@ const Blogs = ({ blogData }) => {
         className="landPageBlog"
       >
         <div className="d-flex justify-content-between align-items-center">
-          <h1
+          <h2
             className="pt-3 pb-3 blog-headline "
             style={{
               fontSize: "5rem",
@@ -61,7 +61,7 @@ const Blogs = ({ blogData }) => {
             }}
           >
             Our Latest resources
-          </h1>
+          </h2>
           <div
             className=" blogsOnLandingPage-arrow2"
             style={{

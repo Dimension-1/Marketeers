@@ -455,7 +455,7 @@ const BlogContent = ({ blogData }) => {
             style={{ paddingLeft: "7%", paddingRight: "7%", paddingTop: "7%" }}
           >
             <div className="d-flex justify-content-between align-items-center">
-              <h1
+              <h2
                 className="pt-3 pb-3 blog-headline "
                 style={{
                   fontSize: "5rem",
@@ -463,7 +463,7 @@ const BlogContent = ({ blogData }) => {
                 }}
               >
                 Related Resources
-              </h1>
+              </h2>
               <div
                 className="arrow-sm"
                 style={{

@@ -12,6 +12,7 @@ import analysis from "../assets/analysis.svg";
 import marketing from "../assets/marketing.svg";
 import SVG from "../assets/SVG.svg";
 
+// ------------------------------------------------------------
 export default function Services({ title, displayCard }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -43,11 +44,11 @@ export default function Services({ title, displayCard }) {
     {
       serviceName: "Customer Experience Strategy",
       image: SVG,
-      },
-      {
-        serviceName: "Marketing Consultation and Strategy",
-        image: marketing,
-      },
+    },
+    {
+      serviceName: "Marketing Consultation and Strategy",
+      image: marketing,
+    },
   ];
   return (
     <>
@@ -64,8 +65,8 @@ export default function Services({ title, displayCard }) {
         <img src={image} alt="" className="" />
       </div>
       <motion.div ref={ref} className="projects-container">
-        <div className="projects ">
-          <h1 className="font-10 text-light-bg">{title}</h1>
+        <div className="projects position-sticky top-0">
+          <h2 className="font-5 text-light-bg">{title}</h2>
           <motion.div
             className="project-card-container pc-element"
             style={{ x: y }}

@@ -180,9 +180,12 @@ const ServiceContentPage = () => {
               </ul>
             </div>
             {/* ---------------------------------------------- */}
-            <div class="container-small">
-              <div class="single__wrapper">
-                <div class="column-50 flex-vertical is-single-process">
+            <div class="container-small" >
+              <div
+                class="single__wrapper"
+              
+              >
+                <div class="column-50 flex-vertical is-single-process toc-column position-sticky top-0">
                   <div class="spacing-container-04 hide-on-mobile"></div>
                   <div class="single_process-sticky-heading ">
                     <h2
@@ -194,13 +197,16 @@ const ServiceContentPage = () => {
                     <div class="p-body lighter opacity-05 w-dyn-bind-empty"></div>
                   </div>
                 </div>
-                <div class="column-50 flex-vertical">
+                <div class="column-50 flex-vertical ">
                   <div class="spacing-container-04 hide-on-mobile"></div>
                   <div class="spacing-container-04 hide-on-mobile"></div>
-                  <div className="single-process-wrap">
+                  <div
+                    className="single-process-wrap"
+                    style={{ paddingBottom: "20%",  }}
+                  >
                     {selectedService.theProcess &&
                       selectedService.theProcess.map((process, index) => (
-                        <div key={index} className="single-service">
+                        <div key={index} className="single-service toc-column position-sticky top-0">
                           <div
                             className="single__process-item-wrapper"
                             style={{ backgroundColor: "var(--custom-btn)" }}
@@ -253,9 +259,9 @@ const ServiceContentPage = () => {
               className="d-flex flex-column text-light-bg gap-4 "
               style={{ padding: "5%" }}
             >
-              <h1 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>
+              <h2 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>
                 Why Us?
-              </h1>
+              </h2>
 
               <div className="row d-flex justify-content-center align-items-baseline ">
                 {selectedService.whyUs &&
@@ -511,10 +517,11 @@ const ServiceContentPage = () => {
               </Link>
             </div>
           </div>
+          {/* ------------------------------------ */}
           <div style={{ paddingLeft: "2%" }}>
             <Services title="More Services" displayCard={false} />
           </div>
-
+          {/* -------------------------------------------- */}
           <div
             className="z-3 position-relative bg-white rating-container gap-4 "
             style={{
