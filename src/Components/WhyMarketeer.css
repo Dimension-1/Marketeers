@@ -1,0 +1,60 @@
+.why-marketeer-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .why-marketeer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 55px;
+  }
+  
+  .why-marketeer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .why-marketeer-title {
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+    font-size: 24px;
+    font-weight: bold;
+    color: gray;
+    
+  }
+  
+  .why-marketeer-title h4 {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--primary-color);
+    position: sticky;
+  top: 80px;
+  height: fit-content;
+  
+  top: 4em;
+
+    /* color:white */
+  }
+  
+  .why-marketeer-text {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .why-marketeer-text-content {
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+   
+    font-size: 3em;
+    line-height: 1;
+  }
+  
+  @media (min-width: 1024px) {
+    .why-marketeer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  

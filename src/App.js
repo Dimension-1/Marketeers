@@ -8,6 +8,7 @@ import AboutPage from "./Pages/AboutPage";
 import ResourcesPage from "./Pages/ResourcePage";
 import BlogPage from "./Pages/BlogPage";
 import ServiceContentPage from "./Pages/ServiceContentPage";
+import TestPage from "./Pages/TesttPage";
 import "./App.css";
 import axios from "axios";
 import Loading from "./Components/Loading";
@@ -42,7 +43,7 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/about" element={<AboutPage />} />
-
+          <Route path="/test" element={<TestPage />} />
           <Route path="/resources/:filter" element={<ResourcesPage blogData={blogData}/>} />
           <Route path="/blogs/:id" element={<BlogPage />} />
 

@@ -17,6 +17,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import "../style.css";
 import Loading from "../Components/Loading";
 import Cookie from "../Components/Cookie";
+import SplitScreen from '../Components/SplitScreen'
+
 // ----------------------------------------------
 const LandingPage = ({ blogData }) => {
   const targetRef = useRef(null);
@@ -45,6 +47,8 @@ const LandingPage = ({ blogData }) => {
     ["0%", "-10%"]
   );
 
+
+  
   return (
     <>
     {  loading && <Loading />}
@@ -165,22 +169,35 @@ const LandingPage = ({ blogData }) => {
                 className="spacer vh-50 mobile-element"
                 style={{ marginBottom: "50vh" }}
               ></div>
-              <div
-                className="green-border d-flex justify-content-center pt-0 z-3 position-sticky green-border-landingPage"
+              {/* <div
+                className="green-border d-flex justify-content-center pt-0 z-3 position-sticky green-border-landingPage  "
                 style={{
                   left: "50%",
                   marginRight: "1rem",
                   marginLeft: "1rem",
                 }}
-              ></div>
+              ></div> */}<div
+                  className="green-border d-flex justify-content-center pt-0 z-3 position-sticky green-border-landingPage  "
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      //  marginRight: "1rem",
+                      //   marginLeft: "1rem",
+                         width: "79%",
+                        //  maxWidth: "1200px", // Adjust for your max width
+                        //   minWidth: "1200px",  // Optional: minimum width
+                        //  transform: "translateX(-50%)", // Ensures it stays centered
+                                     }}
+></div>
+
               {/* hero section ends here with the animation part------------- */}
             </motion.div>
-            <div id="sidecut">
-              <WhyMarketeer
-                pageTitle="Why we exist?"
-                pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
-              />
-            </div>
+            <div id="" className="container">
+               <SplitScreen
+                    pageTitle="Why we exist?"
+                 pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
+                               />
+                      </div>
 
             <Services title="Services" displayCard={true} />
             <Ratings targetRef={targetRef} />

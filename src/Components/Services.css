@@ -2,6 +2,7 @@
     overflow-x: hidden;  display: flex;
     position: relative;
     z-index: 9999;
+   
 }
     
 
@@ -9,6 +10,7 @@
     height: 300px;
     width: 300px;
     padding: 1rem;
+   
     margin-left: 1rem;
     background-color: var(--custom-btn);
     border-radius: 1.5rem;
@@ -27,7 +29,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-sizing: border-box;
-    flex: 0 0 auto; /* Fix the size, don't allow shrinking */
+    flex: 0 0 auto; 
     aspect-ratio: 3/2;
 }
 .service-box img {
@@ -37,6 +39,7 @@
 
 .service-box p {
     font-size: 1.2rem;
+    
 }
 .servicePage-box img {
     width: 4rem;
@@ -48,6 +51,7 @@
 }
 .servicePage-box p {
     font-size: 1.2rem;
+    
 }
 @media (width<=770px) {
     .servicePage-wholeDiv{
