@@ -78,15 +78,24 @@ const LandingPage = ({ blogData }) => {
                       Crafting Campaigns That Captivate & Convert
                     </h4>
                     <h1 className="p-3 main-heading text-light-bg font-5">
-                    <div> Empowering
+                    <div style={
+                      {
+                        display: "flex"
+                      }
+                    }> Empowering
                       <img
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                         src={asterisk}
                         alt="star"
                         className="svg-icon custom-button "
-                        style={{ padding: "1.1rem 3rem" }}
-                      /></div>
+                        style={{ padding: "2rem 4rem" ,
+                        height: ".9em",
+                        marginTop: "2rem",
+                        }}
+                      />
+
+                      </div>
                      
                       <span className="d-flex m-0 align-items-center  text-color ">
                         <img
