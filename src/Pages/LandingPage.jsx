@@ -78,7 +78,7 @@ const LandingPage = ({ blogData }) => {
                       Crafting Campaigns That Captivate & Convert
                     </h4>
                     <h1 className="p-3 main-heading text-light-bg font-5">
-                      Empowering
+                    <div> Empowering
                       <img
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
@@ -86,7 +86,8 @@ const LandingPage = ({ blogData }) => {
                         alt="star"
                         className="svg-icon custom-button "
                         style={{ padding: "1.1rem 3rem" }}
-                      />
+                      /></div>
+                     
                       <span className="d-flex m-0 align-items-center  text-color ">
                         <img
                           src="https://assets-global.website-files.com/63793925c7db23ce040b0824/64f5c38109cfeef5f12e09ae_Image.jpg"
