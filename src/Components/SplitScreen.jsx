@@ -54,7 +54,9 @@ const WhyMarketeer = ({ pageTitle, pageContent, contentFontSize, contentColor })
             <motion.div
               className="why-marketeer-text-content"
               style={{
-                fontSize: contentFontSize || "2.5rem",
+                fontSize: contentFontSize || "2.8rem",
+                fontWeight: 500,
+                lineHeight: 1.3,
                 color: contentColor || "var(--text-color)",
               }}
             >

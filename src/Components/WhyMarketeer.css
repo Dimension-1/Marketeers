@@ -1,10 +1,10 @@
 .why-marketeer-container {
     position: relative;
-    min-height: 100vh;
+    min-height: 50vh;
   }
   
   .why-marketeer-content {
-    max-width: 1200px;
+    max-width: 82%;
     margin: 0 auto;
     padding: 80px 55px;
   }
@@ -14,41 +14,45 @@
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  
+ 
   .why-marketeer-title {
     position: sticky;
     top: 80px;
-    height: fit-content;
-    font-size: 24px;
-    font-weight: bold;
-    color: gray;
     
+    color: gray;
+     font-family: 'MyCustomFont', sans-serif;
+     font-size: 1.1em;
+     font-weight: 500;
+
+  }
+
+  .height{
+    max-height: 50vh;
   }
   
   .why-marketeer-title h4 {
-    font-size: 17px;
-    font-weight: bold;
-    color: var(--primary-color);
-    position: sticky;
-  top: 80px;
-  height: fit-content;
-  
-  top: 4em;
-
-    /* color:white */
+      position: sticky;
+    top: 80px;
+    
+    color: gray;
+     font-family: 'MyCustomFont', sans-serif;
+     font-size: 1.2em;
+     font-weight: 500;
   }
   
   .why-marketeer-text {
     position: relative;
     z-index: 10;
+ 
   }
   
   .why-marketeer-text-content {
-    letter-spacing: 0.2rem;
-    font-weight: 500;
+    /* letter-spacing: 0.2rem; */
    
-    font-size: 3em;
-    line-height: 1;
+ 
+   font-family: "MyCustomFont",sans-serif;
+
+   
   }
   
   @media (min-width: 1024px) {

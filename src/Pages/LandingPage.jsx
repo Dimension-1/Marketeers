@@ -44,7 +44,7 @@ const LandingPage = ({ blogData }) => {
   const marketLeadershipX = useTransform(
     scrollYProgress,
     [0, 1],
-    ["0%", "-10%"]
+    ["0%", "-26.2%"]
   );
 
 
@@ -60,6 +60,7 @@ const LandingPage = ({ blogData }) => {
               isHovered ? "blur" : ""
             }`}
           >
+          
             <motion.div ref={ref}>
               <div className="img-overlay position-absolute right-0 z-1">
                 <img src={image} alt="" className="" />
@@ -192,12 +193,14 @@ const LandingPage = ({ blogData }) => {
 
               {/* hero section ends here with the animation part------------- */}
             </motion.div>
-            <div id="" className="container">
+           </div>
+        </div> 
+            {/* <div id="" className="hieght"> */}
                <SplitScreen
                     pageTitle="Why we exist?"
-                 pageContent="At marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
+                 pageContent="At Marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
                                />
-                      </div>
+                      {/* </div> */}
 
             <Services title="Services" displayCard={true} />
             <Ratings targetRef={targetRef} />
@@ -213,8 +216,7 @@ const LandingPage = ({ blogData }) => {
             />
 
             <Footer />
-          </div>
-        </div>
+
         <Cookie/>
         {isHovered && (
           <div className={`hover-text ${isHovered ? "active" : ""}`}>

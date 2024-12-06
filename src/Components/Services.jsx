@@ -66,7 +66,7 @@ export default function Services({ title, displayCard }) {
       </div>
       <motion.div ref={ref} className="projects-container">
         <div className="projects position-sticky top-0">
-          <h2 className="font-semibold text-[8em] mx-[1.3em] text-light-bg">{title}</h2>
+          <h2 className="font-semibold font-custom text-[8em] mx-[1.3em] text-light-bg">{title}</h2>
           <motion.div
             className="project-card-container pc-element"
             style={{ x: y }}

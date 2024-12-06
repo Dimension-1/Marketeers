@@ -51,7 +51,7 @@ const WhyMarketeer = ({ pageTitle, pageContent, contentFontSize, contentColor })
             }}
           >
             {pageTitle && (
-              <h4 className="text-2xl font-bold text-primary">{pageTitle}</h4>
+              <h4 className=" font-title">{pageTitle}</h4>
             )}
           </motion.div>
 

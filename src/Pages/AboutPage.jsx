@@ -49,7 +49,7 @@ const AboutPage = () => {
           </div>
         </div>
       ) : (
-        <div className="w-100 img-container position-relative overflow-x-hidden z-3 servicePage-wholeDiv">
+        <div className="w-100 mx-1 img-container position-relative overflow-x-hidden z-3 servicePage-wholeDiv">
           <div className="img-overlay-7 position-absolute z-0">
             <img src={image} alt="" className="" />
           </div>
