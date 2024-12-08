@@ -17,9 +17,11 @@ export default function Services({ title, displayCard }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0.7 1", "1.1 1"],
+    // offset: ["0.7 1", "1.1 1"],
+    offset: ["start end", "end start"]
   });
-  const y = useTransform(scrollYProgress, [0, 1], ["150px", "-1000px"]);
+  // const y = useTransform(scrollYProgress, [0, 1], ["150px", "-1000px"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["50%", "-75%"])
   const serviceCardsArray = [
     {
       serviceName: "Pay-Per-Click-Advertising",
@@ -65,11 +67,12 @@ export default function Services({ title, displayCard }) {
         <img src={image} alt="" className="" />
       </div>
       <motion.div ref={ref} className="projects-container">
-        <div className="projects position-sticky top-0">
+        <div className="projects position-sticky top-10">
           <h2 className="font-semibold font-custom text-[8em] mx-[1.3em] text-light-bg">{title}</h2>
+          <div >
           <motion.div
             className="project-card-container pc-element"
-            style={{ x: y }}
+            style={{ x :y}}
           >
             {serviceCardsArray.map((card, idx) => {
               return (
@@ -82,6 +85,7 @@ export default function Services({ title, displayCard }) {
               );
             })}
           </motion.div>
+          </div>
           <motion.div
             className="project-card-container  mobile-element"
             style={{ display: "flex" }}

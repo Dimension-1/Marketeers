@@ -18,6 +18,7 @@ const WhyUs = () => {
           color: "var(--text-color)",
           fontSize: "1.25rem",
           height: "60px",
+          paddingTop: "90px",
         }}
       >
         Why Us?

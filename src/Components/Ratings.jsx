@@ -46,7 +46,7 @@ const Ratings = () => {
       />
       <div
         className="d-flex z-3 position-relative rating-container rating-main-div"
-        style={{ backgroundColor: "var(--secondary-bg)",padding:'5%' }}
+        style={{ backgroundColor: "var(--secondary-bg)",padding:'5%', marginTop: "12%" }}
       >
         <div className=" sm-ratings pt-sm pt-md-5  col-lg-4 col-md-4  padding d-flex  " style={{width:'30%'}}>
           <div

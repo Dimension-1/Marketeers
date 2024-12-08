@@ -18,6 +18,7 @@ import "../style.css";
 import Loading from "../Components/Loading";
 import Cookie from "../Components/Cookie";
 import SplitScreen from '../Components/SplitScreen'
+import ScrollCards from "../Components/horijontalScroll";
 
 // ----------------------------------------------
 const LandingPage = ({ blogData }) => {
@@ -52,7 +53,10 @@ const LandingPage = ({ blogData }) => {
   return (
     <>
     {  loading && <Loading />}
+    {/* <Services title="Services" displayCard={true} /> */}
+
       <>
+        
         <div className="main main-content">
           <Navbar />
           <div
@@ -212,7 +216,10 @@ const LandingPage = ({ blogData }) => {
                                />
                       {/* </div> */}
 
-            <Services title="Services" displayCard={true} />
+            {/* <Services title="Services" displayCard={true} /> */}
+            <ScrollCards /> 
+
+
             <Ratings targetRef={targetRef} />
             <WhyUs targetRef={targetRef} />
 
