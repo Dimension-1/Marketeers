@@ -38,8 +38,8 @@ const WhyMarketeer = ({ pageTitle, pageContent, contentFontSize, contentColor })
   );
 
   return (
-    <motion.div ref={containerRef} className="why-marketeer-container">
-      <div className="why-marketeer-content">
+    <motion.div ref={containerRef} className="max-w-[79%] mx-auto mt-10">
+      <div className="">
         <div className="why-marketeer-grid">
           <motion.div
             className="why-marketeer-title"

@@ -57,9 +57,11 @@ export default function ScrollCards({title, displayCard}) {
   const x = useTransform(scrollYProgress, [0, 1], ["90%", "-65%"])
 
   return (
-    <section ref={targetRef} className="relative">
-      <div className="projects position-sticky top-10 ">
-      <h2 className="font-semibold mt-[7rem] font-custom text-[8em] mx-[1.3em] text-light-bg">Services</h2>
+    <section ref={targetRef} className="relative]">
+      <div className=" position-sticky top-10 ">
+      <div className='max-w-[79%] mx-auto'>
+      <h2 className="font-semibold mt-[7rem] font-custom text-[8em] text-light-bg">Services</h2>
+      </div>
         <div className="flex-1 overflow-hidden">
           <motion.div 
             style={{ x }} 

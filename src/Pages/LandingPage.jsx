@@ -18,7 +18,7 @@ import "../style.css";
 import Loading from "../Components/Loading";
 import Cookie from "../Components/Cookie";
 import SplitScreen from '../Components/SplitScreen'
-import ScrollCards from "../Components/horijontalScroll";
+import ScrollCards from "../Components/ScrollCards";
 
 // ----------------------------------------------
 const LandingPage = ({ blogData }) => {
@@ -53,14 +53,12 @@ const LandingPage = ({ blogData }) => {
   return (
     <>
     {  loading && <Loading />}
-    {/* <Services title="Services" displayCard={true} /> */}
-
       <>
         
-        <div className="main main-content">
+        <div className="main main-content" >
           <Navbar />
           <div
-            className={` w-full m-4  pb-3 img-container position-relative ${
+            className={` w-[79%] mx-auto  pb-3 img-container position-relative ${
               isHovered ? "blur" : ""
             }`}
           >
@@ -191,50 +189,52 @@ const LandingPage = ({ blogData }) => {
                   marginRight: "1rem",
                   marginLeft: "1rem",
                 }}
-              ></div> */}<div
-                  className="green-border d-flex justify-content-center pt-0 z-3 position-sticky green-border-landingPage  "
+              ></div> */}
+              <div className="green-border d-flex justify-content-center pt-0 z-3 position-sticky green-border-landingPage  "
                     style={{
                       marginLeft: "auto",
                       marginRight: "auto",
                       //  marginRight: "1rem",
                       //   marginLeft: "1rem",
-                         width: "79%",
+                        //  width: "79%",
                         //  maxWidth: "1200px", // Adjust for your max width
                         //   minWidth: "1200px",  // Optional: minimum width
                         //  transform: "translateX(-50%)", // Ensures it stays centered
                                      }}
-></div>
+              >
+              </div>
 
               {/* hero section ends here with the animation part------------- */}
             </motion.div>
            </div>
         </div> 
-            {/* <div id="" className="hieght"> */}
-               <SplitScreen
-                    pageTitle="Why we exist?"
-                 pageContent="At Marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
-                               />
-                      {/* </div> */}
+            
+        {/* Why We Exist Section     */}
+        <SplitScreen
+          pageTitle="Why we exist?"
+          pageContent="At Marketeers, we blend innovative thinking and cutting-edge technology to empower businesses, marketers, and visionaries. Our mission is to elevate market presence, uncover groundbreaking strategies, and maximize success potential in the ever-evolving digital landscape."
+        />
 
-            {/* <Services title="Services" displayCard={true} /> */}
-            <ScrollCards /> 
+        {/* Service Section  */}
+        <ScrollCards /> 
 
 
-            <Ratings targetRef={targetRef} />
-            <WhyUs targetRef={targetRef} />
+        <Ratings targetRef={targetRef} />
+        <WhyUs targetRef={targetRef} />
 
-            <WhoTrustsUs />
-            <Testimonials />
+        <WhoTrustsUs />
+        <Testimonials />
 
-            <Blogs blogData={blogData} />
-            <Contact
-              title="Interested but don’t know where to start?"
-              fontSize="2.63rem"
-            />
+        <Blogs blogData={blogData} />
+        <Contact
+          title="Interested but don’t know where to start?"
+          fontSize="2.63rem"
+        />
 
-            <Footer />
+        <Footer />
 
         <Cookie/>
+
         {isHovered && (
           <div className={`hover-text ${isHovered ? "active" : ""}`}>
             <p>
@@ -243,6 +243,7 @@ const LandingPage = ({ blogData }) => {
             </p>
           </div>
         )}
+        
       </>
     </>
   );

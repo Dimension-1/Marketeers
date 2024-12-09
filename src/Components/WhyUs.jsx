@@ -9,7 +9,7 @@ const WhyUs = () => {
 
   return (
     <div
-      className="container whyus-sm d-flex"
+      className="max-w-[79%] mx-auto whyus-sm d-flex"
       style={{ paddingTop: "10%", marginBottom: "10%", zIndex: "998" }}
     >
       <div
