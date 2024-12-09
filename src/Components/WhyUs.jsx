@@ -13,7 +13,7 @@ const WhyUs = () => {
       style={{ paddingTop: "10%", marginBottom: "10%", zIndex: "998" }}
     >
       <div
-        className="heading sticky-top  text-light-bg col-md-6 col-12 z-3 "
+        className="heading sticky-top font-custom  text-light-bg col-md-6 col-12 z-3 "
         style={{
           color: "var(--text-color)",
           fontSize: "1.25rem",
@@ -27,7 +27,7 @@ const WhyUs = () => {
         <div className="faq-containers transition-3ms">
           {questionAnswers.map((qa, index) => (
             <>
-              <div className="green-border d-flex justify-content-center "></div>
+              <div className="green-border opacity-[8%] text-white"></div>
               <Accordion title={qa.question} children={qa.answer} />
             </>
           ))}
@@ -65,7 +65,7 @@ const Accordion = ({ title, children }) => {
   return (
     <div className="accordion-wrapper">
       <div
-        className={`accordion-title ${isOpen ? "open" : ""}`}
+        className={`accordion-title font-custom ${isOpen ? "open" : ""}`}
         onClick={() => setOpen(!isOpen)}
       >
         {title}
