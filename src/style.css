@@ -218,6 +218,12 @@ body {
 
 .green-border {
   padding-top: 3% !important;
+  border-top: 0.8px solid var(--main-text-color);
+  /* Adjust the color and size as needed */
+}
+
+.green-border-small {
+  padding-top: 3% !important;
   border-top: 0.8px solid ;
   /* Adjust the color and size as needed */
 }

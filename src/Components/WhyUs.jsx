@@ -27,7 +27,7 @@ const WhyUs = () => {
         <div className="faq-containers transition-3ms">
           {questionAnswers.map((qa, index) => (
             <>
-              <div className="green-border opacity-[8%] text-white"></div>
+              <div className="green-border-small opacity-[8%] text-white"></div>
               <Accordion title={qa.question} children={qa.answer} />
             </>
           ))}

@@ -27,7 +27,7 @@
 
 .font-custom {
   font-family: 'MyCustomFont', sans-serif;
-  font-size: 1.0582010582010584vw;
+  /* font-size: 1.0582010582010584vw; */
   font-weight: 500;
   line-height: 1.3;
 }
