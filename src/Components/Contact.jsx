@@ -103,7 +103,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
   }, []);
 
   return (
-    <div className="position-relative overflow-hidden bg-transparent" style={{marginTop:'2rem'}}>
+    <div className="position-relative overflow-hidden mx-[1%] rounded-[32px]">
       {showOverlayImage && (
         <div
           className="img-overlay position-absolute z-1"
@@ -111,17 +111,18 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
             transform: "rotate(330deg)",
             left: "-726px",
             top: "-338px",
-            opacity: "0.5",
+            opacity: "0.3",
+            zIndex: "-1",
           }}
         >
           <img src={bg} alt="" className="" />
         </div>
       )}
 
-      <div className="row contact-sm p-md-4 mt-sm-4 z-3 position-relative ">
-        <div className="col-md-6 col-12 d-flex z-3 " style={{ gap: "2.2rem" }}>
-          <div className="row gap-3 h-100 w-100 ">
-            <div className="contact-box d-flex flex-column justify-content-between p-4">
+      <div className="row contact-sm z-3 position-relative h-[80vh] mb-[1%]">
+        <div className="col-md-6 col-12 d-flex -z-3" style={{ gap: "2.2rem" }}>
+          <div className="row gap-3 h-100 w-100 bg-none">
+            <div className="contact-box d-flex flex-column justify-content-between p-4 ">
               <div
                 style={{
                   borderRadius: "50%", // Make it a circle
@@ -148,7 +149,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
               <div>
                 <p
                   className="p-color font-2 fw-medium pl-2"
-                  style={{ color: "var(--text-color)" }}
+                  style={{ fontFamily: "MyCustomFont",fontSize:"2.25rem",  color: "var(--text-color)" }}
                 >
                   UpWork
                 </p>
@@ -181,7 +182,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
               <div>
                 <p
                   className="p-color font-2 fw-medium pl-2"
-                  style={{ color: "var(--text-color)" }}
+                  style={{fontFamily: "MyCustomFont",fontSize:"2.25rem",  color: "var(--text-color)" }}
                 >
                   Linkedin
                 </p>
@@ -189,7 +190,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
             </div>
           </div>
 
-          <div className="row gap-3 w-100 ">
+          <div className="row gap-3 w-100 bg-transparent">
             <div className="contact-box d-flex flex-column justify-content-between p-4 ">
               <div
                 style={{
@@ -217,7 +218,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
               <div>
                 <p
                   className="p-color font-2 fw-medium pl-2"
-                  style={{ color: "var(--text-color)" }}
+                  style={{fontFamily: "MyCustomFont",fontSize:"2.25rem",  color: "var(--text-color)" }}
                 >
                   Fiverr
                 </p>
@@ -250,9 +251,9 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
               <div>
                 <p
                   className="p-color font-2 fw-medium pl-2"
-                  style={{ color: "var(--text-color)" }}
+                  style={{fontFamily: "MyCustomFont",fontSize:"2.25rem",  color: "var(--text-color)" }}
                 >
-                  Book meeting
+                  Book a meeting
                 </p>
               </div>
             </div>
@@ -264,7 +265,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
             <div>
               <h1
                 className=" mb-4"
-                style={{ color: "var(--secondary-bg)", fontSize }}
+                style={{fontFamily: "MyCustomFont",fontSize:"3rem", color: "var(--secondary-bg)" }}
               >
                 {title}
               </h1>
@@ -282,6 +283,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                       background: "rgba(220, 239, 216, 0.05)",
                       padding: "15px",
                       border: "none", // Set border to none
+                      fontFamily: "MyCustomFont",
                     }}
                   >
                     Thank you! Your submission has been received!
@@ -309,6 +311,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                           padding: "15px",
                           border: "none", // Set border to none
                           color: "var(--text-color)",
+                          fontFamily: "MyCustomFont",
                         }}
                         placeholder="Name*"
                       />
@@ -327,6 +330,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                           padding: "15px",
                           border: "none", // Set border to none
                           color: "var(--text-color)",
+                          fontFamily: "MyCustomFont",
                         }}
                         placeholder="Email*"
                       />
@@ -347,6 +351,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                           padding: "15px",
                           border: "none", // Set border to none
                           color: "var(--text-color)",
+                          fontFamily: "MyCustomFont",
                         }}
                         placeholder="Phone"
                       />
@@ -365,6 +370,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                           padding: "15px",
                           border: "none", // Set border to none
                           color: "var(--text-color)",
+                          fontFamily: "MyCustomFont",
                         }}
                         placeholder="Subject*"
                       />
@@ -384,6 +390,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                         padding: "6%",
                         border: "none", // Set border to none
                         color: "var(--text-color)",
+                        fontFamily: "MyCustomFont",
                       }}
                       placeholder="Your message*"
                     />
@@ -397,6 +404,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                       border: "none", // Set border to none
                       color: "var(--bg-color)",
                       fontSize: "1.25rem",
+                      fontFamily: "MyCustomFont",
                     }}
                   >
                     Send Message
@@ -406,7 +414,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
             </div>
 
             <div >
-              <p style={{ color: "var(--text-color)" }}>Or email us at:</p>
+              <p style={{fontFamily: "MyCustomFont", color: "var(--text-color)" }}>Or email us at:</p>
               <div
                 className="button w-100 m-1 mt-3 d-flex align-items-center fw-medium  email-copy"
                 style={{
@@ -418,6 +426,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                   fontSize: "1.25rem",
                   opacity: "0.8",
                   position: "relative",
+                  fontFamily: "MyCustomFont",
                 }}
                 onClick={handleCopyClick}
               >
@@ -440,9 +449,10 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                     alignItems: "center",
                     justifyContent: "center",
                     width: "100%",
+                    fontFamily: "MyCustomFont",
                   }}
                 >
-                  <span style={{ textAlign: "center" }}>
+                  <span style={{ fontFamily: "MyCustomFont",textAlign: "center" }}>
                     contact@marketeers.ai
                   </span>
                 </div>

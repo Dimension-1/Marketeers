@@ -54,7 +54,7 @@ export default function ScrollCards({title, displayCard}) {
     offset: ["start end", "end end"]
   })
 
-  const x = useTransform(scrollYProgress, [0, 1], ["90%", "-65%"])
+  const x = useTransform(scrollYProgress, [0, 1], ["120%", "-50%"])
 
   return (
     <section ref={targetRef} className="relative]">

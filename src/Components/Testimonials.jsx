@@ -19,8 +19,8 @@ const Testimonials = () => {
   return (
     <div className="position-relative ">
       <div
-        className="d-flex testimonials-md justify-content-center align-items-center z-3 position-relative "
-        style={{ paddingTop: "10%", paddingBottom: "10%" }}
+        className="d-flex justify-content-center align-items-center z-3 position-relative "
+        style={{ paddingTop: "10%", paddingBottom: "10%", paddingLeft:"4%", paddingRaght:"4%" }}
       >
         <div
           className="col-lg-5 col-12 p-lg-3 testimonials-section-1"
