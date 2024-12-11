@@ -47,7 +47,7 @@ const WhyMarketeer = ({ pageTitle, pageContent, contentFontSize, contentColor })
               opacity: titleOpacity,
             }}
           >
-            {pageTitle && <h4>{pageTitle}</h4>}
+            {pageTitle && <h4 className="">{pageTitle}</h4>}
           </motion.div>
 
           <motion.div ref={textRef} className="why-marketeer-text">

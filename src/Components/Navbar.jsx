@@ -53,7 +53,7 @@ const Navbar = () => {
       >
         <div className="logo z-3" style={{ zIndex: "9999" }}>
           <Link to="/">
-            <img src={logo} alt="" style={{transform:'translateY(-20%)'}}/>
+            <img width="300px" src={logo} alt="" style={{transform:'translateY(-20%)'}}/>
           </Link>
         </div>
         <div
