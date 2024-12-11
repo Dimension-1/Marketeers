@@ -112,7 +112,7 @@ export default function Resources({ data }) {
 
   return (
     <div
-      className="overflow-x-hidden "
+      className="overflow-x-hidden"
       style={{ background: "var(--bg-color)" }}
     >
       <div className="img-overlay-7 position-absolute z-0">

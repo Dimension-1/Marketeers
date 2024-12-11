@@ -45,17 +45,20 @@ const Blogs = ({ blogData }) => {
 
   return (
     <div
-      className=" z-3 position-relative bg-white rating-container gap-4 p-md-5 landPage-main-div"
-      style={{ margin: 0 }}
+      className=" z-3 position-relative bg-white rating-container mx-[1%] gap-4 p-md-5 landPage-main-div"
+      style={{ margin: "1%" }}
     >
       <div
-        style={{ paddingLeft: "7%", paddingRight: "7%" }}
+        style={{ paddingLeft: "10%", paddingRight: "10%" }}
         className="landPageBlog"
       >
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="d-flex justify-content-between align-items-center"
+          // style={{ paddingLeft: "12.5%", paddingRight: "12.5%" }}
+        >
           <h2
             className="pt-3 pb-3 blog-headline "
             style={{
+              fontFamily:"MyCustomFont",
               fontSize: "5rem",
               color: "var( --primary-text)",
             }}
@@ -169,12 +172,13 @@ const Blogs = ({ blogData }) => {
         ) : (
           <div
             className="subscribe pt-lg-5 pb-lg-5  d-lg-flex d-md-flex pt-3 mt-md-5 subscriptions"
-            style={{ paddingLeft: "5rem", paddingRight: "5rem" }}
+            style={{ paddingLeft: "10%", paddingRight: "10%" }}
           >
             <div className="col-md-6 col-7 d-flex flex-column justify-content-between">
               <h2
                 className="w-75 subscription"
                 style={{
+                  fontFamily:"MyCustomFont",
                   fontSize: "2.5rem",
                   color: "var(--primary-text)",
                   fontWeight: "500",
@@ -192,6 +196,7 @@ const Blogs = ({ blogData }) => {
                     color: "var(--text-color)",
                     fontSize: "1.5rem",
                     fontWeight: "500",
+                    fontFamily:"MyCustomFont",
                   }}
                   type="text"
                   id="subscribe"
@@ -213,6 +218,7 @@ const Blogs = ({ blogData }) => {
                   fontSize: "1.3rem",
                   fontWeight: "500",
                   opacity: "0.8",
+                  fontFamily:"MyCustomFont",
                 }}
               >
                 Sign up for our newsletter to discover winning trends before
@@ -226,6 +232,7 @@ const Blogs = ({ blogData }) => {
                     style={{
                       backgroundColor: "transparent",
                       fontSize: "1.5rem",
+                      fontFamily:"MyCustomFont",
                     }}
                   >
                     Subscribe
@@ -254,7 +261,7 @@ const Blogs = ({ blogData }) => {
 
       <div
         className="subscribe pt-3 mt-md-5 subscription-sm"
-        style={{ paddingLeft: "5rem", paddingRight: "5rem" }}
+        style={{ paddingLeft: "15%", paddingRight: "10%" }}
       >
         <div className="col-12 d-flex flex-column justify-content-between ">
           <h2
@@ -274,6 +281,7 @@ const Blogs = ({ blogData }) => {
               fontSize: "1.3rem",
               fontWeight: "500",
               opacity: "0.8",
+              fontFamily:"MyCustomFont",
             }}
           >
             Sign up for our newsletter to discover winning trends before your
@@ -289,6 +297,7 @@ const Blogs = ({ blogData }) => {
                 color: "var(--text-color)",
                 fontSize: "1.5rem",
                 fontWeight: "500",
+                fontFamily:"MyCustomFont",
               }}
               placeholder="Email"
               required
@@ -306,6 +315,7 @@ const Blogs = ({ blogData }) => {
                   backgroundColor: "transparent",
                   color: "var(--primary-text)",
                   fontSize: "1.5rem",
+                  fontFamily:"MyCustomFont",
                 }}
               >
                 Subscribe

@@ -42,10 +42,10 @@
     font-family: "MyCustomFont";
 }
 .font-custom {
-    font-family: "MyCustomFont";
-    font-weight : 500;
+    font-family: "MyCustomFont", sans-serif;
+    font-weight : 800;
     font-size: 11.2em;
-    line-height:1.1;
+    /* line-height:em; */
 }
 .servicePage-box img {
     width: 4rem;

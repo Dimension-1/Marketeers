@@ -38,7 +38,7 @@ const WhyMarketeer = ({ pageTitle, pageContent, contentFontSize, contentColor })
   );
 
   return (
-    <motion.div ref={containerRef} className="max-w-[79%] mx-auto mt-10">
+    <motion.div ref={containerRef} className="max-w-[75%] px-[10px] mx-auto mt-10 pb-[8em]">
       <div className="">
         <div className="why-marketeer-grid">
           <motion.div

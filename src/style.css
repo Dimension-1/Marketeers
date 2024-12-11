@@ -28,6 +28,35 @@ body {
     /* font-weight: normal;
     font-style: normal; */
   }
+
+  @font-face {
+    font-family: 'MyCustomFontRoundedBold';
+   src:
+    /* url('./assets/fonts/Helvetica-Bold.ttf') format('truetype'); */
+         /* url('./assets/fonts/Helvetica-BoldOblique.ttf') format('truetype'),
+         url('./assets/fonts/Helvetica-Oblique.ttf') format('truetype'), */ 
+         /* src: url('./assets/fonts/Helvetica.ttf') format('truetype'); */
+         /* url('./assets/fonts/helvetica-compressed-5871d14b6903a.otf') format('truetype'),
+         url('./assets/fonts/helvetica-light-587ebe5a59211.ttf') format('truetype'),*/
+         url('./assets/fonts/helvetica-rounded-bold-5871d05ead8de.otf') format('truetype'); 
+    /* font-weight: normal;
+    font-style: normal; */
+  }
+
+  @font-face {
+    font-family: 'MyCustomFontLight';
+   src:
+    /* url('./assets/fonts/Helvetica-Bold.ttf') format('truetype'); */
+         /* url('./assets/fonts/Helvetica-BoldOblique.ttf') format('truetype'),
+         url('./assets/fonts/Helvetica-Oblique.ttf') format('truetype'), */ 
+         /* src: url('./assets/fonts/Helvetica.ttf') format('truetype'); */
+         /* url('./assets/fonts/helvetica-compressed-5871d14b6903a.otf') format('truetype'),*/
+         url('./assets/fonts/helvetica-light-587ebe5a59211.ttf') format('truetype'), 
+         /* url('./assets/fonts/helvetica-rounded-bold-5871d05ead8de.otf') format('truetype');  */
+    /* font-weight: normal;
+    font-style: normal; */
+  }
+
 @font-face {
   font-family: 'MyCustomFont';
   /* src: url('./assets/fonts/Helvetica-Bold.ttf') format('truetype'),
@@ -219,6 +248,8 @@ body {
 .green-border {
   padding-top: 3% !important;
   border-top: 0.8px solid var(--main-text-color);
+  width: 75%;
+  padding: 10px;
   /* Adjust the color and size as needed */
 }
 
@@ -339,7 +370,7 @@ to {
 .header-container {
   background-color: rgba(27, 26, 31, 0.8);
   width: 95%;
-  padding: 20px;
+  padding: px;
   margin: 2.5%;
   /* Adjust the padding as needed */
   box-sizing: border-box;
@@ -348,9 +379,9 @@ to {
 }
 
 .sidecut-image {
-  width: 100px;
+  /* width: 100px; */
   /* Adjust the width as needed */
-  height: auto;
+  /* height: auto; */
   /* Adjust the height as needed */
   z-index: 1;
   /* Ensure it appears above other elements */
@@ -453,7 +484,7 @@ to {
 .sm-ratings {
   flex-direction: column;
   width: 31%;
-  margin-inline: 1.66%;
+  margin-inline: 1%;
 }
 
 .getInTouch {
@@ -1015,8 +1046,8 @@ to {
 
 .projectCard {
   cursor: pointer;
-  height: 300px;
-  width: 300px;
+  height: 360px;
+  width: 360px;
   aspect-ratio: 1/1;
   background-color: #2f3438;
   border-radius: 20px;
@@ -1048,8 +1079,8 @@ to {
 .projectCard .gradient {
   position: absolute;
   inset: 0;
-  width: 300px;
-  height: 300px;
+  width: 360px;
+  height: 360px;
   border-radius: 20px;
   background-image: linear-gradient(to right, #414344, #074a81);
   transform: translateY(100%);

@@ -26,10 +26,10 @@ const Testimonials = () => {
           className="col-lg-5 col-12 p-lg-3 testimonials-section-1"
           style={{ display: "grid", placeContent: "center" }}
         >
-          <h2 className=" text-light-bg" style={{ fontSize: "5rem" }}>
+          <h2 className=" text-light-bg mb-0" style={{ fontFamily: "MyCustomFont", fontSize: "5rem",lineHeight:"1"}}>
             Hear it from
           </h2>
-          <h2 className=" text-light-bg" style={{ fontSize: "5rem" }}>
+          <h2 className=" text-light-bg mb-0 " style={{fontFamily: "MyCustomFont", fontSize: "5rem",lineHeight:"1"}}>
             our clients
           </h2>
           <button

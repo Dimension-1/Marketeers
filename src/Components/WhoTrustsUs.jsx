@@ -43,6 +43,7 @@ const WhoTrustsUs = () => {
             width: "100vw",
             transform: "translateX(-1.5rem)",
             padding: "2rem 0.5rem 4rem 0.5rem",
+            fontFamily:  "MyCustomFont",
           }}
         >
           <h2
@@ -52,6 +53,7 @@ const WhoTrustsUs = () => {
               border: "1px solid grey",
               borderRadius: "20px",
               width: "fit-content",
+              fontFamily:  "MyCustomFont",
             }}
           >
             Who Trusts Us?
@@ -61,6 +63,7 @@ const WhoTrustsUs = () => {
               display: "grid",
               gridTemplateColumns: "auto auto auto",
               rowGap: "0.5rem",
+              fontFamily:  "MyCustomFont",
             }}
           >
             {imgArray.map((element, idx) => {
@@ -90,6 +93,7 @@ const WhoTrustsUs = () => {
                           transform: `translateY(${down ? "-100%" : "0%"})`,
                         }}
                         className="whyUs-2imgList whyUs-belowImg"
+
                       />
                     </motion.div>
                   ) : (
@@ -99,6 +103,7 @@ const WhoTrustsUs = () => {
                         alt=""
                         style={{
                           visibility: "hidden",
+                          fontFamily:  "MyCustomFont",
                         }}
                         className="whyUs-1imgList whyUs-topImg"
                       />
@@ -129,16 +134,16 @@ const WhoTrustsUs = () => {
         <img src={image} alt="" className="" />
       </div>
       <div
-        className="gap-4 rating-container p-4 position-relative z-3 pc-element"
+        className="gap-4 m-[1%] rounded-[1rem]  p-2 position-relative z-3 pc-element"
         style={{ backgroundColor: "var(--secondary-bg)" }}
       >
         <div className="row ">
           <div className="col-8 col-lg-4">
             <div
               className="who-trust-us fw-semibold bg-transparent "
-              style={{ fontSize: "2.6rem", color: "var(--primary-text)" }}
+              style={{ fontFamily: "MyCustomFont", fontSize: "2.63rem", color: "var(--primary-text)" }}
             >
-              <h2>Who trusts us?</h2>
+              <h2 style={{fontFamily: "MyCustomFont", fontSize: "2.63rem", fontWeight:"500" }}>Who trusts us?</h2>
             </div>
           </div>
           <motion.div

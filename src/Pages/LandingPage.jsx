@@ -41,11 +41,11 @@ const LandingPage = ({ blogData }) => {
   });
   const mobileForY = useTransform(scrollYProgress, [0, 1], ["0vh", "70vh"]);
   const buisnessForY = useTransform(scrollYProgress, [0, 1], ["0vh", "110vh"]);
-  const buisnessForX = useTransform(scrollYProgress, [0, 1], ["0%", "-110%"]);
+  const buisnessForX = useTransform(scrollYProgress, [0, 1], ["0%", "-104%"]);
   const marketLeadershipX = useTransform(
     scrollYProgress,
     [0, 1],
-    ["0%", "-26.2%"]
+    ["0%", "-22.5%"]
   );
 
 
@@ -58,7 +58,7 @@ const LandingPage = ({ blogData }) => {
         <div className="main main-content" >
           <Navbar />
           <div
-            className={` w-[79%] mx-auto  pb-3 img-container position-relative ${
+            className={` w-full mx-auto  pb-3 img-container position-relative ${
               isHovered ? "blur" : ""
             }`}
           >

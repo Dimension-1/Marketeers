@@ -58,14 +58,14 @@ export default function ScrollCards({title, displayCard}) {
 
   return (
     <section ref={targetRef} className="relative]">
-      <div className=" position-sticky top-10 ">
-      <div className='max-w-[79%] mx-auto'>
-      <h2 className="font-semibold mt-[7rem] font-custom text-[8em] text-light-bg">Services</h2>
+      <div className=" position-sticky top-0 py-[5em] ">
+      <div className='max-w-[75%] mx-auto'>
+      <h2 className="mt-[6rem] font-custom text-[8em] text-light-bg">Services</h2>
       </div>
         <div className="flex-1 overflow-hidden">
           <motion.div 
             style={{ x }} 
-            className="flex gap-4  pb-0 h-full items-center"
+            className="flex gap-4 -pt-[10em] pb-0 h-full items-center"
           >
            {serviceCardsArray.map((card, idx) => {
               return (
@@ -95,7 +95,7 @@ export default function ScrollCards({title, displayCard}) {
             })}
           </motion.div>
       </div>
-      <div className="h-[150vh]" aria-hidden="true" />
+      <div className="h-[70vh]" aria-hidden="true" />
     </section>
   )
 }

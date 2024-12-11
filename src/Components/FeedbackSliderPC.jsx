@@ -82,12 +82,12 @@ export default function FeedbackSliderPC() {
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
             <div>
-              <div style={{ display: "flex", gap: "1rem" }}>
-                <h6 className="">{testimonial.number} of 131</h6>
-                <h6 className="">Read more</h6>
+              <div style={{ fontFamily:"MyCustomFont", display: "flex", gap: "1rem" }}>
+                <h6 style={{fontFamily:"MyCustomFont", fontSize:"1.2rem"}} className="my-auto">{testimonial.number} of 131</h6>
+                <h6 style={{fontFamily:"MyCustomFont", fontSize:"1.2rem"}} className="my-auto">Read more</h6>
               </div>
               <div>
-                <p style={{ color: "grey", marginTop: "1rem" }}>
+                <p style={{ fontFamily:"MyCustomFont", fontSize: "1.3rem", color: "grey", marginTop: "1rem" }}>
                   {testimonial.content}{" "}
                 </p>
               </div>
@@ -104,8 +104,8 @@ export default function FeedbackSliderPC() {
             >
               <img src={testimonial.image} alt="photo" />
               <div>
-                <h5>{testimonial.person}</h5>
-                <h5 style={{ color: "grey" }}>{testimonial.place}</h5>
+                <h5  style={{ fontFamily:"MyCustomFont",fontSize: "1.3rem", color: "black" }} >{testimonial.person}</h5>
+                <h5 className="text-uppercase" style={{ fontFamily:"MyCustomFont",fontSize: ".8rem", letterSpacing: ".15em", color: "gray" }} >{testimonial.place}</h5>
               </div>
             </div>
           </SwiperSlide>

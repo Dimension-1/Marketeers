@@ -9,19 +9,22 @@ const WhyUs = () => {
 
   return (
     <div
-      className="max-w-[79%] mx-auto whyus-sm d-flex"
+      className="max-w-[75%] mx-auto whyus-sm d-flex"
       style={{ paddingTop: "10%", marginBottom: "10%", zIndex: "998" }}
     >
       <div
-        className="heading sticky-top font-custom  text-light-bg col-md-6 col-12 z-3 "
+        className="heading sticky-top  font-custom  text-light-bg col-md-6 col-12 z-3 "
         style={{
           color: "var(--text-color)",
-          fontSize: "1.25rem",
+          fontSize: "1.33em",
+          fontFamily:  "MyCustomFont",
+          fontWeight: "400",
+          lineHeight: "1.4",
           height: "60px",
-          paddingTop: "90px",
+          marginTop: "0px",
         }}
       >
-        Why Us?
+        Why us?
       </div>
       <div className="frequent-que col-md-6 col-12 z-3">
         <div className="faq-containers transition-3ms">
