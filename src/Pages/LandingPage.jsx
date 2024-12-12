@@ -71,7 +71,7 @@ const LandingPage = ({ blogData }) => {
                 <img src={image} alt="" className="" />
               </div>
               <div className="content-wrapper" style={{ zIndex: "800" }}>
-                <div className="header-container vh-90 d-flex justify-content-center align-items-center">
+                <div className="header-container mx-[1%] vh-90 d-flex justify-content-center align-items-center">
                   <div className="header text-center d-flex justify-content-center align-items-center flex-column">
                     <h4
                       className="mb-0"
@@ -160,8 +160,8 @@ const LandingPage = ({ blogData }) => {
                     alt="Sidecut"
                     className="sidecut-image position-absolute bottom-0"
                     style={{
-                      right: "2.5%",
-                      width: "8%",
+                      right: "0%",
+                      width: "9%",
                       cursor: "pointer",
                       fill: "white",
                     }}
