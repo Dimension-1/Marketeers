@@ -40,7 +40,7 @@ const ContactPage = () => {
       ) : (
         <div className="main">
           <Navbar />
-          <div className=" w-100 pb-3 img-container position-relative servicePage-wholeDiv">
+          <div className="pb-3 img-container position-relative servicePage-wholeDiv">
             <div className="img-overlay position-absolute right-0 z-1">
               <img src={image} alt="" className="" />
             </div>
@@ -55,31 +55,32 @@ const ContactPage = () => {
                 style={{
                   position: "absolute",
                   zIndex: 999,
-                  left: "11%",
+                  left: "14%",
                   top: "0px",
                 }}
               />
               <div
-                className="pt-4 pb-4 header-container flex-column d-flex justify-content-center align-items-center"
+                className="pt-4 mx-[1%] px-[10%] pb-4 header-container flex-column d-flex justify-content-center align-items-center"
                 style={{ padding: "" }}
               >
-                <div className="p-md-5 mt-4">
+                <div className="p-md-5 mt-4 mx-[1%]">
                   <h1
                     className=" p-4 main-heading font-5 slide-up"
                     style={{ color: "var(--secondary-bg)" }}
                   >
                     We thought you’d never ask!{" "}
-                    <span style={{ color: "var(--main-text-color)" }}>
+                    <span style={{ fontFamily:"MyCustomFont", color: "var(--main-text-color)" }}>
                       {" "}
                       Let’s talk!
                     </span>{" "}
                   </h1>
                   <p
                     className="p-4 pb-0"
-                    style={{ color: "var(--secondary-bg)" }}
+                    style={{fontFamily:"MyCustomFont", color: "var(--secondary-bg)" }}
                   >
                     <span
                       style={{
+                        fontFamily:"MyCustomFont",
                         color: "var(--text-color)",
                         borderBottom: "1px solid var(--text-color)",
                       }}
@@ -91,7 +92,7 @@ const ContactPage = () => {
 
                   <Contact
                     title="Drop us a message:"
-                    fontSize="1.3rem"
+                    fontSize="1.5rem"
                     showOverlayImage={false}
                   />
                 </div>

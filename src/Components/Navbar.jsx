@@ -49,7 +49,7 @@ const Navbar = () => {
     <>
       <div
         class="d-flex position-fixed top-0 w-100 justify-content-between align-items-center mb-5"
-        style={{ zIndex: "997", paddingRight: "2rem" }}
+        style={{ zIndex: "997", paddingRight: "2rem", marginLeft:"auto", marginRight:"auto" }}
       >
         <div className="logo z-3" style={{ zIndex: "9999" }}>
           <Link to="/">

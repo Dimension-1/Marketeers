@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Box from "@mui/material/Box";
 import photo from "../assets/author-photo.png";
 import arrow from "../assets/arrow-review.svg";
 import image from "../assets/DesktopBlue.svg";
@@ -6,12 +7,14 @@ import FeedbackSliderPC from "./FeedbackSliderPC";
 
 const Testimonials = () => {
   const [activeButton, setActiveButton] = useState("Fiver");
+  const [filter , setFilter] = useState("UpWork");
   const activeText = "UpWork";
   const inactiveText = "Fiverr";
   const [isActive, setIsActive] = useState(true);
 
-  const toggleButton = () => {
-    setIsActive(!isActive);
+  const toggleButton = (filter) => {
+    // setIsActive(!isActive);
+    setFilter(filter)
   };
 
  
@@ -32,7 +35,7 @@ const Testimonials = () => {
           <h2 className=" text-light-bg mb-0 " style={{fontFamily: "MyCustomFont", fontSize: "5rem",lineHeight:"1"}}>
             our clients
           </h2>
-          <button
+          {/* <button
             className="d-flex position-relative align-items-center justify-content-between "
             style={{
               width: "18rem",
@@ -85,7 +88,63 @@ const Testimonials = () => {
             >
               <span>Upwork</span>
             </div>
-          </button>
+          </button> */}
+          {/* </Box> */}
+          <Box
+            sx={{ marginTop: "15px", marginLeft: "16%", marginRight: "12.5%" }}
+            className="resources-navbar"
+          >
+            <Box
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                border: "2px solid rgba(220,239,216,.07)",
+                boxSizing: "border-box",
+                borderRadius: "35px",
+                width: "fit-content",
+                cursor: "pointer",
+                padding: "1px",
+              }}
+              className="resources-navbar-content"
+            >
+              <button
+                style={{
+                  padding: "10px 30px",
+                  color: filter === "UpWork" ? "#262d29" : "rgba(220,239,216,.7)",
+                  backgroundColor:
+                    filter === "UpWork" ? "var(--main-text-color)" : "transparent",
+                  borderRadius: "35px",
+                  outline: "none",
+                  border: "none",
+                  fontSize: "17px",
+                  cursor: "pointer",
+                  fontFamily:"MyCustomFont",
+                }}
+                onClick={() => toggleButton("UpWork") }
+              >
+                UpWork
+              </button>
+              <button
+                style={{
+                  padding: " 10px 30px",
+                  color: filter === "Fiverr" ? "#262d29" : "rgba(220,239,216,.7)",
+                  backgroundColor:
+                    filter === "Fiverr"
+                      ? "var(--main-text-color)"
+                      : "transparent",
+                  borderRadius: "35px",
+                  outline: "none",
+                  border: "none",
+                  fontSize: "17px",
+                  cursor: "pointer",
+                  fontFamily:"MyCustomFont",
+                }}
+                onClick={() => toggleButton("Fiverr")}
+              >
+                Fiverr
+              </button>
+            </Box>
+          </Box>
         </div>
         <div className="col-lg-7 col-12 testimonials-section-1 p-lg-3 d-flex justify-content-center align-items-center gap-md-5 gap-lg-5 gap-1">
           <FeedbackSliderPC />

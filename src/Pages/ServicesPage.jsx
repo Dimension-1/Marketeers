@@ -80,14 +80,15 @@ const ServicesPage = () => {
           </div>
           <div className="content-wrapper ">
             <Navbar />
-            <div className="header-container d-flex flex-column  justify-content-center align-items-center">
-              <h1 style={{marginInline:'5%'}} className=" p-4 main-heading text-light-bg font-5 mt-4 slide-up ">
+
+            <div className="header-container d-flex flex-column mx-[1%] justify-content-center align-items-center">
+              <h1 style={{marginInline:'15%', fontFamily:"MyCustomFont", marginTop: "9rem"}} className=" py-6 px-2 main-heading text-light-bg font-5 slide-up tracking-tight">
                 Your biggest business challenges.{" "}
                 <span style={{ color: "var(--main-text-color)" }}>Solved.</span>{" "}
               </h1>
-              <div className="services-container gallery d-flex gap-1 mb-md-5 marginTop-0 ">
+              <div className=" gap-1 mb-md-5 marginTop-0 ">
                 <div
-                  className="cards d-flex flex-nowrap w-100 "
+                  className="cards d-flex flex-nowrap  "
                   style={{ overflow: "hidden" }}
                 >
                   <Link
@@ -96,12 +97,12 @@ const ServicesPage = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <div className="servicePage-card-gradient"></div>
-                    <span className="d-flex justify-content-between">
+                    <span className="d-flex justify-content-between justify-start">
                       <img src={forecast} className="" alt="" />
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
-                        height="17"
+                        height="20"
                         viewBox="0 0 17 17"
                         fill="none"
                       >
@@ -128,7 +129,7 @@ const ServicesPage = () => {
                     <div className="content">
                       <p
                         className="p-color font-2 flex-end market-headline fw-medium"
-                        style={{ color: "var(--text-color)" }}
+                        style={{ fontFamily:"MyCustomFont", color: "var(--text-color)" }}
                       >
                         Pay-Per-Click Advertising (PPC)
                       </p>
@@ -280,7 +281,7 @@ const ServicesPage = () => {
                   style={{
                     position: "absolute",
                     zIndex: 8,
-                    left: "11%",
+                    left: "15%",
                     top: "-2px",
                   }}
                 />
@@ -532,38 +533,47 @@ const ServicesPage = () => {
               style={{
                 paddingTop: "10%",
                 paddingBottom: "10%",
-                paddingInline: "5%",
+                paddingLeft:"16%",
+                paddingRight:"12%",
                 backgroundColor: "var(--secondary-bg)",
-                margin: "2%",
+                marginTop: "2%",
+                marginBottom: "2%",
+                marginInline: "1%"
               }}
             >
               
               <div
-                className="heading faq-heading sticky-top col-md-6 col-12 z-3 fw-medium mb-sm-4 mt-4 "
+                className="heading faq-heading sticky-top col-md-6 col-12 z-3 fw-medium mb-sm-4 mt-4"
                 style={{
                   color: "var(--background-color)",
-                  fontSize: "4.5rem",
+                  fontSize: "4.9rem",
                   zIndex: "1000",
-                  lineHeight: "1.2",
+                  lineHeight: "1.1",
+                  fontFamily:"MyCustomFont",
+                  fontWeight:"600",
+                  paddingRight:"10rem",
+                  marginInline: "0%"
                 }}
               >
-                Frequently Asked Questions
+                Frequently asked questions
               </div>
               <div className="frequent-que col-md-6 col-12 z-3">
                 <div className="faq-containers">
              
                   {questionAnswers.map((qa, index) => (
                     <>
-                      <div className="green-border d-flex justify-content-center "></div>
+                      <div className="green-border-service d-flex justify-content-center "></div>
                       <Accordion title={qa.question} children={qa.answer} />
                     </>
                   ))}
-                  <div className="green-border d-flex justify-content-center pt-4"></div>
+                  <div className="green-border-service d-flex justify-content-center pt-4"></div>
                 </div>
               </div>
             </div>
+
             <Contact />
             <Footer />
+
           </div>
         </div>
       )}
@@ -575,11 +585,11 @@ export default ServicesPage;
 const Accordion = ({ title, children }) => {
   const [isOpen, setOpen] = React.useState(false);
   return (
-    <div className="accordion-wrapper">
+    <div className="accordion-wrapper mt-0">
       <div
-        className={`accordion-title ${isOpen ? "open" : ""}`}
         onClick={() => setOpen(!isOpen)}
-        style={{color:'white'}}
+        style={{fontFamily:"MyCustomFont", fontSize:"1.4em" ,color:'gray', fontWeight:"500", marginTop:"1.5rem", marginBottom:"2.5rem", letterSpacing:"-0.025rem" }}
+        className={`accordion-title ${isOpen ? "open" : ""}`}
       >
         {title}
       </div>

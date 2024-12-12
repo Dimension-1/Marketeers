@@ -4,7 +4,7 @@ import image from "../assets/DesktopBlue.svg";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
-import WhyMarketeer from "../Components/WhyMarketeer";
+import WhyMarketeer from "../Components/SplitScreen";
 import arrowDown from "../assets/ArrowDown.svg";
 import aboutIcon from "../assets/About Us.svg";
 import apostophy from "../assets/apostrophy.svg";
@@ -15,6 +15,7 @@ import value3 from "../assets/value3.svg";
 import value4 from "../assets/value4.svg";
 import logo from "../assets/finalLogo.ico";
 import { motion } from "framer-motion";
+import Tracktext from "../Components/TrackText";
 
 // -----------------------------
 const AboutPage = () => {
@@ -41,6 +42,7 @@ const AboutPage = () => {
 
   return (
     <>
+    
       {loading ? (
         <div className="loading-overlay">
           <Navbar />
@@ -48,9 +50,11 @@ const AboutPage = () => {
             <img src={logo} alt="" className="loading-logo" />
           </div>
         </div>
+        
       ) : (
-        <div className="w-100 mx-1 img-container position-relative overflow-x-hidden z-3 servicePage-wholeDiv">
-          <div className="img-overlay-7 position-absolute z-0">
+        <div>
+        <div className=" img-container position-relative z-3 servicePage-wholeDiv">
+          <div className="img-overlay-7 position-absolute z-0 ">
             <img src={image} alt="" className="" />
           </div>
           <div
@@ -59,10 +63,11 @@ const AboutPage = () => {
           >
             <img src={image} alt="" className="" />
           </div>
+          
           <div className="content-wrapper z-3">
             <Navbar />
 
-            <div className="header-container d-flex flex-column  justify-content-center align-items-center z-3 ">
+            <div className="header-container mx-[1%] pl-[12%] pr-[15%] d-flex flex-column  justify-content-center align-items-center z-3 ">
               <img
                 src={aboutIcon}
                 alt="aboutIcon"
@@ -70,7 +75,7 @@ const AboutPage = () => {
                 style={{
                   position: "absolute",
                   zIndex: 8,
-                  left: "11%",
+                  left: "15%",
                   top: "-2px",
                 }}
               />
@@ -88,8 +93,7 @@ const AboutPage = () => {
                 </span>{" "}
               </h2>
               <WhyMarketeer
-                pageTitle="Our Mission
-            "
+                pageTitle="Our Mission"
                 pageContent="Building Bridges in the Digital World, At marketeers, we are driven by a vision to connect, empower, and transform. Inspired by the endless possibilities of the digital era, our mission is to guide entrepreneurs, businesses, and visionaries in navigating the digital landscape. We're not just about marketing; we're about creating a future where every digital interaction makes a difference, building a better, more connected world."
               />
             </div>
@@ -97,9 +101,9 @@ const AboutPage = () => {
             <div
               ref={sidecutRef}
               className=" d-flex flex-column text-light-bg gap-4"
-              style={{ padding: "5%" }}
+              style={{ paddingTop: "5%",paddingBottom: "5%", paddingLeft: "15%", paddingRight: "12.5%" }}
             >
-              <h2 className="m-md-1 main-heading" style={{ fontSize: "5rem" }}>
+              <h2 className="m-md-1 main-heading" style={{ fontFamily:"MYCustomFont", fontSize: "5rem" }}>
                 Our Values
               </h2>
 
@@ -237,16 +241,14 @@ const AboutPage = () => {
               className=" d-flex  rating-container z-3 anitext"
               style={{
                 padding: "10vh 10%",
-                height: "100%",
+                height: "70vh",
                 backgroundColor: "var(--secondary-bg)",
                 position: "relative",
               }}
             >
-              <h2 className="m-md-1 main-heading aboutPage">
-                <WhyMarketeer
-                  pageContent={`Nothing has such power to broaden the mind as the ability to
-                investigate systematically and truly all that comes under thy
-                observation in life.`}
+              <h2 className="m-md-1 my-auto">
+                <Tracktext
+                  pageContent={`Nothing has such power to broaden the mind as the ability to investigate systematically and truly all that comes under thy observation in life.`}
                   contentFontSize={"3.5rem"}
                   contentColor={"white"}
                 />
@@ -268,6 +270,7 @@ const AboutPage = () => {
             <Contact />
             <Footer />
           </div>
+        </div>
         </div>
       )}
     </>

@@ -112,8 +112,8 @@ export default function Resources({ data }) {
 
   return (
     <div
-      className="overflow-x-hidden"
-      style={{ background: "var(--bg-color)" }}
+      className="overflow-x-hidden mx-[0.65%] mb-2"
+      style={{ background: "var(--bg-color)"}}
     >
       <div className="img-overlay-7 position-absolute z-0">
         <img src={image} alt="" className="resources-img-side" />
@@ -137,7 +137,7 @@ export default function Resources({ data }) {
             style={{
               position: "absolute",
               zIndex: 998,
-              left: "11%",
+              left: "15%",
               top: "0px",
             }}
           />
@@ -148,7 +148,7 @@ export default function Resources({ data }) {
               flexDirection: "column",
               marginTop: "110px",
               marginInline: "auto",
-              marginLeft: "115px",
+              marginLeft: "16%",
             }}
             className="resources-text slide-up "
           >
@@ -158,9 +158,10 @@ export default function Resources({ data }) {
                 fontWeight: "500",
                 fontSize: "4.5em",
                 lineHeight: "0",
+                fontFamily:"MyCustomFont"
               }}
             >
-              <span style={{ color: "var(--main-text-color)" }}>
+              <span style={{ fontFamily:"MyCustomFont", fontSize: "5rem" , color: "var(--main-text-color)" }}>
                 Transform Your Strategy{" "}
               </span>{" "}
               with Proven
@@ -169,15 +170,16 @@ export default function Resources({ data }) {
               sx={{
                 color: "var(--secondary-bg)",
                 fontWeight: "500",
-                fontSize: "4.5em",
                 lineHeight: "2.5",
+                fontFamily:"MyCustomFont",
+                fontSize: "5rem"
               }}
             >
               Marketing Success Stories
             </Typography>
           </Box>
           <Box
-            sx={{ marginTop: "15px", marginLeft: "150px" }}
+            sx={{ marginTop: "15px", marginLeft: "16%", marginRight: "12.5%" }}
             className="resources-navbar"
           >
             <Box
@@ -204,6 +206,7 @@ export default function Resources({ data }) {
                   border: "none",
                   fontSize: "17px",
                   cursor: "pointer",
+                  fontFamily:"MyCustomFont",
                 }}
                 onClick={() => handleFilterChange("all")}
               >
@@ -222,6 +225,7 @@ export default function Resources({ data }) {
                   border: "none",
                   fontSize: "17px",
                   cursor: "pointer",
+                  fontFamily:"MyCustomFont",
                 }}
                 onClick={() => handleFilterChange("Blog")}
               >
@@ -243,6 +247,7 @@ export default function Resources({ data }) {
                   border: "none",
                   fontSize: "17px",
                   cursor: "pointer",
+                  fontFamily:"MyCustomFont",
                 }}
                 onClick={() => handleFilterChange("Case Study")}
               >
@@ -262,6 +267,7 @@ export default function Resources({ data }) {
                   border: "none",
                   fontSize: "17px",
                   cursor: "pointer",
+                  fontFamily:"MyCustomFont",
                 }}
                 onClick={() => handleFilterChange("Download")}
               >
@@ -269,7 +275,7 @@ export default function Resources({ data }) {
               </button>
             </Box>
           </Box>
-          <Box sx={{ borderRadius: "0px" }}>
+          <Box sx={{ borderRadius: "0px"  }}>
             <Accordion
               sx={{
                 backgroundColor: "rgba(27, 26, 31, 0.8)",
@@ -281,7 +287,7 @@ export default function Resources({ data }) {
               <AccordionSummary
                 aria-controls="panel1a-content"
                 id="panel1a-header"
-                style={{ margin: "0", justifyContent: "flex-end" }}
+                style={{ fontFamily:"MyCustomFont", margin: "0", justifyContent: "flex-end" }}
               >
                 <Typography
                   sx={{
@@ -291,6 +297,7 @@ export default function Resources({ data }) {
                     borderTopRightRadius: "10px",
                     color: "rgba(67,85,75,.8)",
                     marginRight: "20px",
+                    fontFamily:"MyCustomFont",
                   }}
                 >
                   {<IoFilter style={{ marginRight: "10px" }} />}Filter
@@ -302,6 +309,7 @@ export default function Resources({ data }) {
                   margin: "0",
                   borderBottom: "transparent",
                   padding: "30px 150px",
+                  fontFamily:"MyCustomFont",
                 }}
                 className="resources-filter"
               >
@@ -319,6 +327,7 @@ export default function Resources({ data }) {
                     placeholder="Search ..."
                     sx={{
                       width: "100%",
+                      fontFamily:"MyCustomFont",
                     }}
                     value={searchQuery}
                     onChange={handleSearchChange}
@@ -332,7 +341,7 @@ export default function Resources({ data }) {
                     }}
                   >
                     Showing{" "}
-                    <span style={{ fontWeight: "bold" }}>
+                    <span style={{ fontFamily:"MyCustomFont", fontWeight: "bold" }}>
                       {filteredData.length}
                     </span>{" "}
                     items
@@ -422,6 +431,7 @@ export default function Resources({ data }) {
                               ":hover": {
                                 transform: "scale(6.5)",
                               },
+                              fontFamily:"MyCustomFont",
                             }}
                             onClick={() => removeCategory(category)}
                           />
@@ -463,8 +473,9 @@ export default function Resources({ data }) {
                   <Typography
                     sx={{
                       color: "#43554b",
-                      fontSize: "1.5rem",
+                      fontSize: "1.8rem",
                       fontWeight: 500,
+                      fontFamily:"MyCustomFont",
                     }}
                   >
                     No results found.
@@ -474,6 +485,8 @@ export default function Resources({ data }) {
                       color: "rgba(67,85,75,.6)",
                       marginTop: "10px",
                       textAlign: "center",
+                      fontFamily:"MyCustomFont",
+                      fontSize:"1.2rem"
                     }}
                   >
                     Try different keywords or{" "}
@@ -485,6 +498,8 @@ export default function Resources({ data }) {
                         borderBottom: "1px solid #43554b",
                         color: "#43554b",
                         cursor: "pointer",
+                        fontFamily:"MyCustomFont",
+                        fontSize:"1.2rem"
                       }}
                       onClick={() => handlereset()}
                     >
@@ -497,7 +512,7 @@ export default function Resources({ data }) {
                   <Link
                     to={`/blogs/${content.id}`}
                     key={index}
-                    style={{ textDecoration: "none" }}
+                    style={{ fontFamily:"MyCustomFont", textDecoration: "none" }}
                   >
                     <Box
                       sx={{
@@ -518,6 +533,7 @@ export default function Resources({ data }) {
                               width: "100%",
                               height: "auto",
                               aspectRatio: 16 / 9,
+                              fontFamily:"MyCustomFont",
                             }}
                           />
                           <h6>Read more</h6>
@@ -572,6 +588,7 @@ export default function Resources({ data }) {
                               borderRadius: "1000px",
                               width: "fit-content",
                               padding: "6px 10px",
+                              fontFamily:"MyCustomFont",
                             }}
                           >
                             {content.category}

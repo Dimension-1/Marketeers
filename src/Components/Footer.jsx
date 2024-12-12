@@ -40,7 +40,8 @@ const Footer = () => {
         backgroundColor: "var(--custom-btn)",
         borderRadius: "1.5rem",
         zIndex: "99",
-        margin:'1%'
+        marginLeft:'1%',
+        marginRight:'1%',
       }}
     >
       <div className="row  d-flex justify-content-between ">

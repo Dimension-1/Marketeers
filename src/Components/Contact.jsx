@@ -6,6 +6,7 @@ import meet from "../assets/meet.svg";
 import copyIcon from "../assets/copyIcon.svg";
 import bg from "../assets/mainbg.png";
 import image from "../assets/DesktopBlue.svg";
+import { color } from "framer-motion";
 
 const Contact = ({ title, fontSize, showOverlayImage = true }) => {
   const [isSuccess, setIsSuccess] = useState(false);
@@ -197,7 +198,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                   borderRadius: "50%", // Make it a circle
                   background: "var(--bg-color)",
                   display: "flex",
-                  width: "64.75px",
+                  width: "64px",
                   height: "64.75px",
                   padding: "17.82px 19.46px 17.81px 19.42px",
                   justifyContent: "center",
@@ -291,7 +292,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                 </div>
               ) : (
                 <form
-                  className="form contact-form"
+                  className="form contact-form w-full"
                   onSubmit={handleSubmit}
                   noValidate
                   ref={formRef}
@@ -396,7 +397,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                     />
                   </div>
                   <button
-                    className="button w-100 m-1 mt-3 d-flex align-items-center fw-medium justify-content-center "
+                    className="button hover:text-black w-100 m-1 mt-3 d-flex align-items-center fw-medium justify-content-center "
                     style={{
                       borderRadius: "14px",
                       background: "var(--main-text-color)",
@@ -405,6 +406,10 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                       color: "var(--bg-color)",
                       fontSize: "1.25rem",
                       fontFamily: "MyCustomFont",
+                      // hover:{
+                      //   color: "var(--bg-color)",
+                      //   background: "var(--main-text-color)"
+                      // }
                     }}
                   >
                     Send Message
@@ -421,7 +426,7 @@ const Contact = ({ title, fontSize, showOverlayImage = true }) => {
                   borderRadius: "14px",
                   background: "transparent",
                   padding: "28px",
-                  border: "3px solid var(--input-fields)",
+                  border: "0.5px solid gray",
                   color: "var(--secondary-bg)",
                   fontSize: "1.25rem",
                   opacity: "0.8",

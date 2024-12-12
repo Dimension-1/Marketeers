@@ -70,7 +70,8 @@ body {
   font-style: normal; */
 }
 :root {
-  --main-text-color: #8aabc4;
+  --main-text-color:#5CB6FA;
+  --secondary-text-color: #b6c0c8;
   /* Define a text color variable */
   --bg-color: #26292b;
   /* Define a background color variable */
@@ -247,7 +248,7 @@ body {
 
 .green-border {
   padding-top: 3% !important;
-  border-top: 0.8px solid var(--main-text-color);
+  border-top: 0.8px solid rgb(70, 69, 69);
   width: 75%;
   padding: 10px;
   /* Adjust the color and size as needed */
@@ -255,7 +256,13 @@ body {
 
 .green-border-small {
   padding-top: 3% !important;
-  border-top: 0.8px solid ;
+  border-top: 0.8px solid rgb(200, 197, 197);
+  /* Adjust the color and size as needed */
+}
+
+.green-border-service {
+  padding-top: 3% !important;
+  border-top: 0.8px solid rgb(200, 197, 197);
   /* Adjust the color and size as needed */
 }
 
@@ -369,9 +376,9 @@ to {
 
 .header-container {
   background-color: rgba(27, 26, 31, 0.8);
-  width: 95%;
-  padding: px;
-  margin: 2.5%;
+  /* width: 95%; */
+  /* padding: px; */
+  /* margin: 1%; */
   /* Adjust the padding as needed */
   box-sizing: border-box;
   border-radius: 20px;
@@ -559,7 +566,7 @@ to {
   width: 30%;
   padding: 1rem 1rem;
   /* Example padding values with rem units */
-  margin-left: 1rem;
+  margin-left: 0.2rem;
   /* background-color: rgba(27, 26, 31, 9); Button background color */
   background-color: var(--custom-btn);
   border-radius: 1.5rem;
@@ -1184,9 +1191,9 @@ to {
 }
 
 .email-copy:hover {
-  border: 3px solid rgb(221, 212, 212) !important;
+  border: 0.5px solid rgb(221, 212, 212) !important;
   transition: all 300ms ease-in-out;
-  color: aliceblue !important;
+  color: rgb(167, 205, 239) !important;
 }
 
 
