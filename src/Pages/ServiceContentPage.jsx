@@ -26,6 +26,7 @@ import value11 from "../assets/tabler_wave-triangle.svg";
 import value12 from "../assets/Vector (2).svg";
 import { motion } from "framer-motion";
 import Loading from "../Components/Loading";
+import ScrollCards from "../Components/ScrollCards";
 const ServiceContentPage = () => {
   const { serviceName } = useParams();
   const [openAnswers, setOpenAnswers] = useState([false, false, false]);
@@ -81,6 +82,7 @@ const ServiceContentPage = () => {
       {loading ? (
         <Loading />
       ) : (
+        <>
         <>
           <div className="header-container d-flex flex-column  gap-1 mb-lg-5 mt-4rem noPaddingAtMobile">
             <div
@@ -524,9 +526,12 @@ const ServiceContentPage = () => {
             </div>
           </div>
           {/* ------------------------------------ */}
-          <div style={{fontFamily:"MyCustomFont", paddingLeft: "2%" }}>
-            <Services title="More Services" displayCard={false} />
-          </div>
+          {/* <div style={{fontFamily:"MyCustomFont", paddingLeft: "2%" }}> */}
+        </> 
+          <ScrollCards title="More Services" displayCard={false} />
+          
+        <>
+          {/* </div> */}
           {/* -------------------------------------------- */}
           <div
             className="z-3 position-relative bg-white rating-container gap-4 "
@@ -809,6 +814,7 @@ const ServiceContentPage = () => {
               </div>
             </div>
 
+        </>
         </>
       )}
       <Contact />

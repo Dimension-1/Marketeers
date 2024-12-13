@@ -47,7 +47,7 @@ const serviceCardsArray = [
   },
 ];
 
-export default function ScrollCards({title, displayCard}) {
+export default function ScrollCards({title='Services', displayCard}) {
   const targetRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -60,7 +60,7 @@ export default function ScrollCards({title, displayCard}) {
     <section ref={targetRef} className="relative]">
       <div className=" position-sticky top-0 py-[5em] ">
       <div className='max-w-[75%] mx-auto'>
-      <h2 className="mt-[6rem] font-custom text-[8em] text-light-bg">Services</h2>
+      <h2 className="mt-[6rem] font-custom text-[8em] text-light-bg">{title}</h2>
       </div>
         <div className="flex-1 overflow-hidden">
           <motion.div 
