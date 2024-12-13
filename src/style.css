@@ -74,6 +74,8 @@ body {
   --secondary-text-color: #b6c0c8;
   /* Define a text color variable */
   --bg-color: #26292b;
+  --background: linear-gradient(to right, rgb(53, 56, 132), rgb(48, 50, 120), rgb(42, 42, 107));
+
   /* Define a background color variable */
   --main-font-size: 16px;
   /* Define a font size variable */
@@ -81,7 +83,7 @@ body {
   --background-color: rgb(62, 83, 102);
   --background-color-opacity: rgba(75, 62, 102, 0.2);
   --text-color: #9ca0a4;
-  --secondary-bg: #d8e0ef;
+  --secondary-bg: #daf1ff;
   --primary-text: #435055;
   --custom-btn: rgb(136, 166, 189, 0.09);
   --border: rgb(199, 216, 220);
@@ -90,7 +92,7 @@ body {
   --transparent-bg: #395699;
   --secondary-text-color: #030506;
   --primary-bg: rgba(27, 26, 31, 0.8);
-  --opacity-bg: rgb(138, 171, 196, 0.4);
+  --opacity-bg:  #daf1ff;
 }
 
 .text-light-bg {
@@ -101,8 +103,13 @@ body {
   color: var(--main-text-color) !important;
 }
 
+.background{
+  background-color: var(--background);
+}
+
 .img-overlay {
   background-size: cover;
+  background-color: var(--background);
   transform: rotate(360deg);
   left: -50vw;
   top: -150px;
@@ -263,6 +270,14 @@ body {
 .green-border-service {
   padding-top: 3% !important;
   border-top: 0.8px solid rgb(200, 197, 197);
+  /* Adjust the color and size as needed */
+}
+
+.green-border-blur {
+  margin-right: 2rem;
+  padding-top: 3% !important;
+  border-top: 0.8px solid rgb(83, 82, 82);
+  opacity: 0.5;
   /* Adjust the color and size as needed */
 }
 

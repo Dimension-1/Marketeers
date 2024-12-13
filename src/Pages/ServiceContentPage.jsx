@@ -95,12 +95,13 @@ const ServiceContentPage = () => {
               <Link
                 to={"/services"}
                 className="btn mt-md-4 button-bigt"
-                style={{ color: "var(--main-text-color)", cursor: "pointer" }}
+                style={{fontFamily: "MyCustomFont", color: "var(--main-text-color)", cursor: "pointer" }}
               >
                 <span
                   style={{
                     color: "var(--secondary-text-color)",
                     fontWeight: "500",
+                    fontFamily: "MyCustomFont",
                   }}
                 >
                   Services /{" "}
@@ -108,12 +109,12 @@ const ServiceContentPage = () => {
                 {selectedService.headline}
               </Link>
 
-              <h1 className=" main-heading text-light-bg font-5 slide-up mt-4">
+              <h1 className=" main-heading text-light-bg font-5 slide-up mt-4" style={{fontFamily: "MyCustomFont",}}>
                 {selectedService.heading}
               </h1>
               <p
                 className="p-color font-1 flex-end market-headline"
-                style={{ color: "var(--text-color)" }}
+                style={{fontFamily: "MyCustomFont", color: "var(--text-color)" }}
               >
                 {selectedService.subheading}
               </p>
@@ -133,6 +134,7 @@ const ServiceContentPage = () => {
                 style={{
                   color: "var(--background-color)",
                   fontSize: "4.5rem",
+                  fontFamily: "MyCustomFont",
                   zIndex: "1000",
                   lineHeight: "1",
                   paddingTop: "1rem",
@@ -159,6 +161,8 @@ const ServiceContentPage = () => {
                         listStyle: "none",
                         position: "relative",
                         paddingLeft: "30px",
+                        color: "darkslategray",
+                        fontFamily: "MyCustomFont",
                       }}
                     >
                       <img
@@ -189,7 +193,7 @@ const ServiceContentPage = () => {
                   <div class="spacing-container-04 hide-on-mobile"></div>
                   <div class="single_process-sticky-heading ">
                     <h2
-                      style={{ color: "white", fontSize: "4rem" }}
+                      style={{ fontFamily: "MyCustomFont",color: "white", fontSize: "4rem" }}
                       class="line-height-1 h3 is-process"
                     >
                       The Process
@@ -202,14 +206,14 @@ const ServiceContentPage = () => {
                   <div class="spacing-container-04 hide-on-mobile"></div>
                   <div
                     className="single-process-wrap"
-                    style={{ paddingBottom: "20%",  }}
+                    style={{fontFamily: "MyCustomFont", paddingBottom: "20%",  }}
                   >
                     {selectedService.theProcess &&
                       selectedService.theProcess.map((process, index) => (
                         <div key={index} className="single-service toc-column position-sticky top-0">
                           <div
                             className="single__process-item-wrapper"
-                            style={{ backgroundColor: "var(--custom-btn)" }}
+                            style={{fontFamily: "MyCustomFont", backgroundColor: "var(--custom-btn)" }}
                           >
                             <div className="single__process-number-wrap text-accent">
                               <div
@@ -217,21 +221,22 @@ const ServiceContentPage = () => {
                                 style={{
                                   color: "var(--main-text-color)",
                                   fontSize: "2.63rem",
+                                  fontFamily: "MyCustomFont",
                                 }}
                               >
-                                {index + 1}
+                                0{index + 1}
                               </div>
                             </div>
                             <div className="single__proces-content-holder">
                               <h3
                                 className="p-leading is-bigger text-balance text-light"
-                                style={{ fontSize: "1.7rem" }}
+                                style={{fontFamily: "MyCustomFont", fontSize: "1.7rem" }}
                               >
                                 {process.step}
                               </h3>
                               <div
                                 className="p-body-normal line-height-1-2 lighter opacity-05 text-balance"
-                                style={{ fontSize: "1.13rem" }}
+                                style={{ fontFamily: "MyCustomFont",fontSize: "1.13rem" }}
                               >
                                 {process.description &&
                                   process.description
@@ -283,7 +288,7 @@ const ServiceContentPage = () => {
                       />
 
                       <div
-                        className="green-border d-flex justify-content-center pt-0 z-3 position-sticky"
+                        className="green-border-blur d-flex justify-content-center pt-0 z-3 position-sticky"
                         style={{ left: "50%" }}
                       ></div>
                       <motion.h4
@@ -349,7 +354,7 @@ const ServiceContentPage = () => {
                       >
                         <h2
                           class="h2 is-smaller is-success-story"
-                          style={{ color: "var(--bg-color)" }}
+                          style={{ fontFamily:"MyCustomFont", color: "var(--bg-color)" }}
                         >
                           Success <br></br>Story
                         </h2>
@@ -372,11 +377,11 @@ const ServiceContentPage = () => {
                       >
                         <h3
                           class="h4 line-height-1-1"
-                          style={{ fontSize: "2rem" }}
+                          style={{ fontFamily:"MyCustomFont",fontSize: "2rem" }}
                         >
                           The<br></br>Challenge
                         </h3>
-                        <div class="p-body-normal opacity-06">
+                        <div style={{fontFamily:"MyCustomFont",}} class="p-body-normal opacity-06">
                           {selectedService.successStory.challenge}
                         </div>
                       </motion.div>
@@ -401,11 +406,11 @@ const ServiceContentPage = () => {
                       >
                         <h3
                           class="h4 line-height-1-1"
-                          style={{ fontSize: "2rem" }}
+                          style={{ fontFamily:"MyCustomFont",fontSize: "2rem" }}
                         >
                           The<br></br>Solution
                         </h3>
-                        <div class="p-body-normal opacity-06">
+                        <div style={{fontFamily:"MyCustomFont",}} class="p-body-normal opacity-06">
                           {selectedService.successStory.solution}
                         </div>
                       </motion.div>
@@ -427,13 +432,13 @@ const ServiceContentPage = () => {
                         whileInView={{ y: "0%", opacity: 1 }}
                       >
                         <h3
-                          style={{ color: "#27292B", fontSize: "2rem" }}
+                          style={{ fontFamily:"MyCustomFont",color: "#27292B", fontSize: "2rem" }}
                           class="h4 line-height-1-1"
                         >
                           The<br></br>
                           Result
                         </h3>
-                        <div class="p-body-normal opacity-06 text-balance">
+                        <div style={{fontFamily:"MyCustomFont",}} class="p-body-normal opacity-06 text-balance">
                           {selectedService.successStory.result}
                         </div>
                       </motion.div>
@@ -451,14 +456,14 @@ const ServiceContentPage = () => {
                 paddingInline: "3%",
               }}
             >
-              <h1 className="text-light-bg mb-4 text-align-end d-flex align-items-end flex-column">
+              <h1 style={{fontFamily:"MyCustomFont",}} className="text-light-bg mb-4 text-align-end d-flex align-items-end flex-column">
                 {selectedService &&
                   selectedService.contact &&
                   selectedService.contact.split("\n").map((text, index) => (
                     <p
                       className="text-light-bg"
                       key={index}
-                      style={{ margin: 0, padding: 0 }}
+                      style={{fontFamily:"MyCustomFont", margin: 0, padding: 0 }}
                     >
                       {text}
                     </p>
@@ -466,13 +471,14 @@ const ServiceContentPage = () => {
               </h1>
               <Link
                 to="/contact"
-                style={{ textDecoration: "none", color: "inherit" }}
+                style={{fontFamily:"MyCustomFont", textDecoration: "none", color: "inherit" }}
               >
                 <div
                   className="svg-icon d-flex  getInTouch"
                   style={{
                     padding: "0.6rem 1rem",
                     marginLeft: "1rem",
+                    fontFamily:"MyCustomFont",
                     fontSize: "1.2rem",
                     fontWeight: "500",
                     alignItems: "center",
@@ -487,11 +493,11 @@ const ServiceContentPage = () => {
                   }}
                 >
                   <div className="get-div">
-                    <p className="get-div-p1" style={{ margin: 0, padding: 0 }}>
+                    <p className="get-div-p1" style={{fontFamily:"MyCustomFont", margin: 0, padding: 0 }}>
                       {" "}
                       Get in touch
                     </p>
-                    <p className="get-div-p2" style={{ margin: 0, padding: 0 }}>
+                    <p className="get-div-p2" style={{fontFamily:"MyCustomFont", margin: 0, padding: 0 }}>
                       {" "}
                       Don't be shy
                     </p>
@@ -518,7 +524,7 @@ const ServiceContentPage = () => {
             </div>
           </div>
           {/* ------------------------------------ */}
-          <div style={{ paddingLeft: "2%" }}>
+          <div style={{fontFamily:"MyCustomFont", paddingLeft: "2%" }}>
             <Services title="More Services" displayCard={false} />
           </div>
           {/* -------------------------------------------- */}
@@ -535,6 +541,7 @@ const ServiceContentPage = () => {
               <h1
                 className="pt-3 pb-3 blog-headline "
                 style={{
+                  fontFamily:"MyCustomFont",
                   fontSize: "5rem",
                   color: "var( --primary-text)",
                 }}
@@ -570,7 +577,7 @@ const ServiceContentPage = () => {
                   to={{
                     pathname: "/blogs/1",
                   }}
-                  style={{ textDecoration: "none", color: "inherit" }}
+                  style={{fontFamily:"MyCustomFont", textDecoration: "none", color: "inherit" }}
                 >
                   <div className="">
                     <div className="blogsOnLandingPage-imgDiv">
@@ -579,18 +586,18 @@ const ServiceContentPage = () => {
                         alt="img blog-img-sm"
                         className=" blog w-100"
                       />
-                      <h6>Read more</h6>
+                      <h6 style={{fontFamily:"MyCustomFont",}} >Read more</h6>
                     </div>
                     <div className="d-flex justify-content-between">
                       <p
                         className="pt-2"
-                        style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                        style={{fontFamily:"MyCustomFont", color: "var(--text-color)", fontSize: "1rem" }}
                       >
                         Blog
                       </p>
                       <p
                         className="pt-2"
-                        style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                        style={{fontFamily:"MyCustomFont", color: "var(--text-color)", fontSize: "1rem" }}
                       >
                         October 23, 2023
                       </p>
@@ -599,13 +606,14 @@ const ServiceContentPage = () => {
                       style={{
                         color: "var(--primary-text)",
                         fontSize: "1.75rem",
+                        fontFamily:"MyCustomFont",
                       }}
                     >
                       Startup Market Sizing: Founder's Guide to TAM SAM SOM
                     </h4>
                     <div
                       className="btn mt-md-4"
-                      style={{ color: "var(--text-color)", cursor: "pointer" }}
+                      style={{ fontFamily:"MyCustomFont",color: "var(--text-color)", cursor: "pointer" }}
                     >
                       Pay-Per-Click Advertising (PPC)
                     </div>
@@ -616,7 +624,7 @@ const ServiceContentPage = () => {
               <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage">
                 <Link
                   to={{ pathname: "/blogs/2" }}
-                  style={{ textDecoration: "none", color: "inherit" }}
+                  style={{fontFamily:"MyCustomFont", textDecoration: "none", color: "inherit" }}
                 >
                   <div>
                     <div className="blogsOnLandingPage-imgDiv">
@@ -625,18 +633,18 @@ const ServiceContentPage = () => {
                         alt="img blog-img-sm"
                         className=" blog w-100"
                       />
-                      <h6>Read more</h6>
+                      <h6 style={{fontFamily:"MyCustomFont",}}>Read more</h6>
                     </div>
                     <div className="d-flex justify-content-between">
                       <p
                         className="pt-2"
-                        style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                        style={{ fontFamily:"MyCustomFont",color: "var(--text-color)", fontSize: "1rem" }}
                       >
                         Blog
                       </p>
                       <p
                         className="pt-2"
-                        style={{ color: "var(--text-color)", fontSize: "1rem" }}
+                        style={{fontFamily:"MyCustomFont", color: "var(--text-color)", fontSize: "1rem" }}
                       >
                         October 2, 2023
                       </p>
@@ -645,13 +653,14 @@ const ServiceContentPage = () => {
                       style={{
                         color: "var(--primary-text)",
                         fontSize: "1.75rem",
+                        fontFamily:"MyCustomFont",
                       }}
                     >
                       7 Simple Steps to Ace Your Startup Market Research
                     </h4>
                     <div
                       className="btn mt-md-4"
-                      style={{ color: "var(--text-color)", cursor: "initial" }}
+                      style={{ fontFamily:"MyCustomFont",color: "var(--text-color)", cursor: "initial" }}
                     >
                       Email and SMS Marketing
                     </div>
@@ -662,7 +671,7 @@ const ServiceContentPage = () => {
               <div className="col-12 col-md-4 col-lg-4 d-flex flex-column blogsOnLandingPage">
                 <Link
                   to={{ pathname: "/blogs/3" }}
-                  style={{ textDecoration: "none", color: "inherit" }}
+                  style={{ fontFamily:"MyCustomFont",textDecoration: "none", color: "inherit" }}
                 >
                   <div className="">
                     <div className="blogsOnLandingPage-imgDiv">
@@ -677,6 +686,7 @@ const ServiceContentPage = () => {
                       <p
                         className="pt-2"
                         style={{
+                          fontFamily:"MyCustomFont",
                           color: "var( --text-color)",
                           fontSize: "1rem",
                         }}
@@ -686,6 +696,7 @@ const ServiceContentPage = () => {
                       <p
                         className="pt-2"
                         style={{
+                          fontFamily:"MyCustomFont",
                           color: "var( --text-color)",
                           fontSize: "1rem",
                         }}
@@ -695,6 +706,7 @@ const ServiceContentPage = () => {
                     </div>
                     <h4
                       style={{
+                        fontFamily:"MyCustomFont",
                         color: "var( --primary-text)",
                         fontSize: "1.75rem",
                       }}
@@ -703,7 +715,7 @@ const ServiceContentPage = () => {
                     </h4>
                     <div
                       className="btn mt-md-4"
-                      style={{ color: "var(--text-color)", cursor: "initial" }}
+                      style={{fontFamily:"MyCustomFont", color: "var(--text-color)", cursor: "initial" }}
                     >
                       Influencer Marketing
                     </div>
@@ -713,19 +725,17 @@ const ServiceContentPage = () => {
             </div>
           </div>
 
-          <div
+          {/* <div
             className=" d-flex  rating-container z-3 position-relative "
             style={{
               padding: "10%",
               backgroundColor: "var(--secondary-bg)",
             }}
           >
-            {/* <div className="img-overlay-3 position-absolute right-0" >
-      <img src={image} alt="" className="h-75 w-75 " />
-    </div> */}
             <div
               className="heading faq-heading sticky-top  col-md-6 col-12 z-3 fw-medium mb-sm-4"
               style={{
+                fontFamily:"MyCustomFont",
                 color: "var(--background-color)",
                 fontSize: "4rem",
                 zIndex: "1000",
@@ -741,14 +751,64 @@ const ServiceContentPage = () => {
                     <Accordion title={qa.question} children={qa.answer} />
                   ))
                 ) : (
-                  <p>
+                  <p style={{fontFamily:"MyCustomFont",}}>
                     No questions and answers available for the selected service.
                   </p>
                 )}
                 <div className="green-border d-flex justify-content-center pt-4"></div>
               </div>
             </div>
-          </div>
+          </div> */}
+
+            <div
+              className=" d-flex  rating-container z-3 position-relative  "
+              style={{
+                paddingTop: "10%",
+                paddingBottom: "10%",
+                paddingLeft:"16%",
+                paddingRight:"12%",
+                backgroundColor: "var(--secondary-bg)",
+                marginTop: "2%",
+                marginBottom: "2%",
+                marginInline: "1%"
+              }}
+            >
+              
+              <div
+                className="heading faq-heading sticky-top col-md-6 col-12 z-3 fw-medium mb-sm-4 mt-4"
+                style={{
+                  color: "var(--background-color)",
+                  fontSize: "4.9rem",
+                  zIndex: "1000",
+                  lineHeight: "1.1",
+                  fontFamily:"MyCustomFont",
+                  fontWeight:"600",
+                  paddingRight:"10rem",
+                  marginInline: "0%"
+                }}
+              >
+                Frequently asked questions
+              </div>
+              <div className="frequent-que col-md-6 col-12 z-3">
+                <div className="faq-containers">
+             
+                {selectedService && selectedService.questionAnswers ? (
+                  selectedService.questionAnswers.map((qa, index) => (
+                    <>
+                    <div className="green-border-service d-flex justify-content-center "></div>
+                    <Accordion title={qa.question} children={qa.answer} />
+                    </>
+                  ))
+                ) : (
+                  <p style={{fontFamily:"MyCustomFont",}}>
+                    No questions and answers available for the selected service.
+                  </p>
+                )}
+                  <div className="green-border-service d-flex justify-content-center pt-4"></div>
+                </div>
+              </div>
+            </div>
+
         </>
       )}
       <Contact />
@@ -762,20 +822,17 @@ export default ServiceContentPage;
 const Accordion = ({ title, children }) => {
   const [isOpen, setOpen] = React.useState(false);
   return (
-    <>
-      <div className="green-border d-flex justify-content-center pt-4"></div>
-      <div className="accordion-wrapper">
-        <div
-          className={`accordion-title ${isOpen ? "open" : ""}`}
-          onClick={() => setOpen(!isOpen)}
-          style={{ color: "white" }}
-        >
-          {title}
-        </div>
-        <div className={`accordion-item ${!isOpen ? "collapsed" : ""}`}>
-          <div className="accordion-content">{children}</div>
-        </div>
+    <div className="accordion-wrapper mt-0">
+      <div
+        onClick={() => setOpen(!isOpen)}
+        style={{fontFamily:"MyCustomFont", fontSize:"1.4em" ,color:'gray', fontWeight:"500", marginTop:"1.5rem", marginBottom:"2.5rem", letterSpacing:"-0.025rem" }}
+        className={`accordion-title ${isOpen ? "open" : ""}`}
+      >
+        {title}
       </div>
-    </>
+      <div className={`accordion-item ${!isOpen ? "collapsed" : ""}`}>
+        <div className="accordion-content">{children}</div>
+      </div>
+    </div>
   );
 };
